@@ -19,8 +19,6 @@
 </head>
 <body>
     <!-- contactBackground -->
-
-    <!-- 1-2-3-4-5-6-7-8-9-0 -->
     <!-- charging -->
     <div class="charging">
         <div class="row">
@@ -823,9 +821,59 @@
             </div>
         </div> 
     </main>
+    <div class="cursor"></div>
     
-    
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Pokedex</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <figure>
+            <img src="./public/Imgs/project.png" class="modalProjectImage" alt="project-img" width="">
+          </figure>
+          <div class="square row">
+            <div class="col-6">
+                <h3>Information</h3>
+                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quos reprehenderit odit facere necessitatibus </div>
+            </div>
+            <div class="col-6">
+                <h3>Technologies</h3>
+                <div class="icon p-1 d-flex border">
+                    <div class="icon m-2">Y</div>
+                    <div class="icon m-2">Y</div>
+                    <div class="icon m-2">Y</div>
+                    <div class="icon m-2">Y</div>
+                    <div class="icon m-2">Y</div>
+                    <div class="icon m-2">Y</div>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-5">
+                <h3 class="border bg-info">Project Link</h3>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- javascript -->
+     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./public/Js/modals.js"></script>
 

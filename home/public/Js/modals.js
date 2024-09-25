@@ -43,8 +43,6 @@ function showPDetails(value) {
             let defaultText = button.getAttribute('data-default');
             console.log("Default figcaption text:", defaultText);
             // alert("Figcaption text: " + defaultText); // Muestra el valor por defecto en una alerta
-
-
             showPDetails(defaultText)
 
         });

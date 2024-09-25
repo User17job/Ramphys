@@ -13,6 +13,36 @@ body::-webkit-scrollbar-thumb{
     background: linear-gradient(to bottom, #94a3b8, #f4f6ff);
     border-radius: 6px;
 }
+/*  */
+
+/* Estilo para la bolita que sigue el mouse */
+/* Estilo para la bolita que sigue el mouse */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(55deg,   #0369a1 30%, #020617 100%);
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, background-color 0.2s ease;
+    z-index: 1000;
+    animation: rotate 5s linear infinite;
+}
+cursor:hover{
+    background-image: linear-gradient(5deg,   #0369a1 30%, #f9fafb 100%);
+}
+
+/* Cambia la bolita al pasar sobre enlaces */
+a:hover ~ .cursor {
+    width: 40px;
+    height: 40px;
+    background-color: #00bcd4;
+}
+
+
+/*  */
+
 .container-fluid{
     max-width: 100%;
     min-width: 100%;
@@ -166,13 +196,6 @@ a:hover{
     animation: rotate 5s linear infinite;
 }
 
-@keyframes rotate{
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
-}
 
 /* service section */
 .services{
@@ -271,12 +294,11 @@ a:hover{
     position:absolute;
     border-radius: 25px;
     opacity: 86%;
+    transition: 0.5s;
 }
 .projectImage:hover{
     opacity:100%;
-
 }
-
 
 /* stack section styles */
 .stack {
@@ -299,7 +321,6 @@ a:hover{
     background-color: #ffffff;
     transform: rotate(28deg); /* Slight rotation */
     color: #020617;
-    /* font-size: 25px; ; */
     font-weight: 600;
     box-shadow:-5px -5px 6px  #0505ff ; 
 }
@@ -803,6 +824,39 @@ a:hover{
     }
 }
 
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
 
 
+
+.modal-header{
+    background-color: #040b2b;
+    color: #f4f6ff;
+    
+    h1{
+        text-align: center;
+    }
+}
+.modal-body{
+    background-color: #040b2b;
+    color: #f4f6ff;
+}
+.modal-footer{
+background-color: #040b2b;
+    ;
+    color: #f4f6ff;
+}
+.modalProjectImage{
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    margin:  auto 5px;
+
+
+}
 
