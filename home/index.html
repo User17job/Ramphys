@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="./public/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/Css/index.css">
+    <link rel="stylesheet" href="./public/Css/responsive.css">
+    <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css">
+    <link rel="stylesheet" href="./public/Css/charging.css">
+
+
+    <link rel="shortcut" href="./public/Imgs/Artybylogo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- contactBackground -->
+
+    <!-- 1-2-3-4-5-6-7-8-9-0 -->
+    <!-- charging -->
+    <div class="charging">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="loader">
+                      <p>loading</p>
+                      <div class="words">
+                        <span class="word">buttons</span>
+                        <span class="word">forms</span>
+                        <span class="word">switches</span>
+                        <span class="word">cards</span>
+                        <span class="word">buttons</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+
+    <main class="container-fluid border p-3" id="container">
+        <!-- navbar -->
+        <div class="row  p-0 " id="navbar">
+            <div class="col-3">
+                <figure class="navLogo">
+                    <img src="./public/Imgs/Artybylogo.svg" width="85" height="85" alt="artyby logo">
+                    <!-- <figcaption class="fs-3 my-3 name">Ramphys</figcaption> -->
+                </figure>
+            </div>
+            <div class="col-9 p-3 navLInksC d-flex justify-content-end">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="toggle my-2">
+                    <div class="bars" id="bar1"></div>
+                    <div class="bars" id="bar2"></div>
+                    <div class="bars" id="bar3"></div>
+                </label>
+                
+                <section class="navLInks">
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('home')">Home+</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('about')">About</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('portfolio')">Portfolio</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('services')">Servicios</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('contact')">Contact</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem" onclick="navigateTo('blog')">Blog</a>
+                </section>
+            
+                
+                <div class="m-2">
+                    <button class="navbutton" onclick="navigateTo('hire')">Hire me</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- welcome section -->
+        <div class="row" id="welcome">
+            <div class="welcomeSecBackground">.</div>
+            
+            <div class="col  " id="welcome-container">
+                <section class="row p-2 gy-3" id="">
+                    <div class="col-12 col-lg-7">
+                        <section class=" welcome-des p-2"> 
+
+                            <!-- title -->
+                             <h2 class="welcome-h2">Soy Ramphys</h2>
+                             <h1 class="welcome-h1 my-3">Diseñador web <code class="more">+</code> <br> Desarrollador web</h1>
+                             <p class="my-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam, libero unde porro ipsum ?</p>
+                             <div class="WelcomeLinks p-0 my-3 justify-content-center">
+                                <a href="javascript:void(0);" class="m-3" onclick="navigateTo('cv')"><button class="DownloadCv bg-info">Download CV</button></a>
+                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('linkedin')"><img src="./public/Imgs/LinkedinWhite.svg" class="welIcon" alt="icon-linkedin" width="35" height="35"></a>
+                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('github')"><img src="./public/Imgs/GithubWhite.svg" class="welIcon" alt="icon-github" width="35" height="35"></a>
+                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('instagram')"><img src="./public/Imgs/InstagramWhite.svg" class="welIcon" alt="icon-instagram" width="35" height="35"></a>
+                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('freecodecamp')"><img src="./public/Imgs/Freecodecampwhite.svg" class="welIcon" alt="icon-freecodecamp" width="35" height="35"></a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-5 ">
+                        <section class=" welcome-img position-relative" >
+                            <figure class="imgItem ">
+                                <div class="rotateDiv "></div>
+                            </figure>
+                            <figure class="imgItem">
+                                <img src="./public/Imgs/project.png" alt="welcome Picture" width="100%" height="100%" >
+                            </figure>
+
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- service section -->
+         <div class="row ">
+            <div class="col  services position-relative">
+                <div class="servicesBackground"></div>
+                <!-- title -->
+                <section class="row ">
+                    <div class="col ">
+                        <h3 class="text-center serviceTitle">Servicios</h3>    
+                    </div>
+                </section>
+                <!-- info -->
+                <section class="row justify-content-center">
+                    <div class="col-9 my-3 ">
+                        <h3 class="text-center fs-6" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nemo aliquam deleniti ducimus nisi quas dolores neque vero quisquam consequuntur sapiente laborum. Provident fugit a recusandae incidunt architecto ea esse.z</h3>    
+                    </div>
+                </section>
+                <!-- sercvices -->
+                 <section class="row p-3 ">
+                    <div class="col ">
+                        <section>
+                            <ul class="g-0  serviceList">
+                                <li class="row p-2  serviceItem">
+                                    <div class="col-12 col-md-4  p-3 serviceName"> -- Service</div>
+                                    <div class="col-12 col-md-8 serviceDescription  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
+                                </li>
+                            
+                                <li class="row p-2  serviceItem">
+                                    <div class="col-12 col-md-4  p-3 serviceName"> -- Service</div>
+                                    <div class="col-12 col-md-8 serviceDescription  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
+                                </li>
+                       
+                                <li class="row p-2  serviceItem">
+                                    <div class="col-12 col-md-4  p-3 serviceName"> -- Service</div>
+                                    <div class="col-12 col-md-8 serviceDescription  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
+                                </li>
+                      
+                                <li class="row p-2  serviceItem">
+                                    <div class="col-12 col-md-4  p-3 serviceName"> -- Service</div>
+                                    <div class="col-12 col-md-8 serviceDescription  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
+                                </li>
+                           
+                                <li class="row p-2  serviceItem">
+                                    <div class="col-12 col-md-4  p-3 serviceName"> -- Service</div>
+                                    <div class="col-12 col-md-8 serviceDescription  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
+                                </li>
+                            </ul>
+                
+                                <p class="serviceLink text-end">
+                                    <!-- link -->
+                                    <a href="javascript:void(0);"   onclick="navigateTo('services')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
+                                </p>
+                        </section>
+                    </div>
+                    
+                 </section>
+            </div>
+         </div>
+
+        <!-- Proyects section -->
+        <div class="row">
+            <div class="col  projects">
+                <div class="projectBackground"></div>
+
+                <!-- title -->
+                <section class="row">
+                    <div class="col">
+                        <h3 class="text-center projectsTitle" >Mis Proyectos mas recientes</h3>    
+                    </div>
+                </section>
+                <!-- info -->
+                <section class="row  justify-content-center">
+                    <div class="col-9 my-5">
+                        <h3 class="text-center fs-6" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor rem quos porro ratione voluptate suscipit non nihil quisquam tempora. </h3>    
+                    </div>
+                </section>
+                
+                <!-- Projects -->
+                <section class="row p-3 ">
+                    <div class="col-12 col-md-6  p-3 ">
+                        <section>
+                           <figure class="p-2 projectFigure">
+                            <img src="./public/Imgs/project.png" class="projectImage" alt="Project-image">
+                            <a href="">
+                                <figcaption class="d-flex justify-content-center"> viewDatails <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26" ></figcaption>
+                            </a>
+                           </figure>
+                        </section>
+                    </div>
+
+                    <div class="col-12 col-md-6  p-3 ">
+                        <section>
+                           <figure class="p-2 projectFigure">
+                            <img src="" alt="Project-image">
+                            <a href="">
+                                <figcaption class="d-flex justify-content-center"> viewDatails <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26" ></figcaption>
+                            </a>
+                           </figure>
+                        </section>
+                    </div>
+
+                    <div class="col-12 col-md-6  p-3 ">
+                        <section>
+                           <figure class="p-2 projectFigure">
+                            <img src="./public/Imgs/project.png" class="projectImage" alt="Project-image">
+                            <a href="">
+                                <figcaption class="d-flex justify-content-center"> viewDatails <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26" ></figcaption>
+                            </a>
+                           </figure>
+                        </section>
+                    </div>
+                    
+                    <div class="col-12 col-md-6  p-3 ">
+                        <section>
+                           <figure class="p-2 projectFigure">
+                            <img src="" alt="Project-image">
+                            <a href="">
+                                <figcaption class="d-flex justify-content-center"> viewDatails <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26" ></figcaption>
+                            </a>
+                           </figure>
+                        </section>
+                    </div>
+                    <p class="text-end">
+                        <!-- link -->
+                        <a href="javascript:void(0);"   onclick="navigateTo('portfolio')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
+                    </p>
+               
+                </section>
+
+
+            </div>
+        </div>
+
+        <!-- Stack section -->
+        <div class="row ">
+            <div class="col stack  position-relative ">
+                <div class="stackBackground"></div>
+                <!-- animation of stack -->
+                <div class="animContainer" id="animContainer">
+                    <!-- names -->
+                     <div class="stackNameC  ">
+                         <div class="d-flex left p-2 justify-content-center" id="StackNames">
+                             <span class="m-3">js</span>
+                             <span class="m-3">css</span>
+                             <span class="m-3">html</span>
+                             <span class="m-3">boptstrap</span>
+                             <span class="m-3">php</span>
+                             <span class="m-3">python</span>
+                             <span class="m-3">Laravel</span>
+                             <span class="m-3">Django</span>
+                             <span class="m-3">sass</span>
+                             <span class="m-3">mysql</span>
+                             <span class="m-3">excel</span>
+                             <span class="m-3">canva</span>
+                             <span class="m-3">miro</span>
+                             <span class="m-3">figma</span>
+                             <span class="m-3">inkspace</span>
+                             <span class="m-3">photoshop</span>
+                             <!-- <span class="m-3">affinity</span> -->
+                         </div>
+                     </div>
+                    <!-- icons -->
+                     <div class="stackIconsC">
+                         <div class="d-flex right p-2 justify-content-center" id="StackIcons">
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                             <span class="StackIcon m-2">
+                                 <img src="public/Imgs/js.png" alt="" width="55" height="55">
+                             </span>
+                         </div>
+                     </div>
+                </div>
+
+
+                <!-- options -->
+                 <div class="row ">
+                    <div class="col-5 col-md-3 p-5  text-center" >
+                        <div class="row p-0 border d-flex justify-content-center stackOptions">
+                            <div class="col-12 col-md-5 stackOption " id="StackAnimation">Animation</div>
+                            <div class="col-12 col-md-4 stackOption" id="StackGallery">Gallery</div>
+                        </div>
+                    </div>
+                 </div>
+                <!-- title -->
+                <section class="row ">
+                    <div class="col ">
+                        <h3 class="text-center stackTitle" >Stack</h3>    
+                    </div>
+                </section>
+                <!-- info -->
+                <section class="row justify-content-center">
+                    <div class="col-9 my-3 ">
+                        <h3 class="text-center fs-6" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi iste minima voluptates tempore, nostrum esse accusantium aliquam asperiores.</h3>    
+                    </div>
+                </section>
+                
+                <!-- stack -->
+                <section class="row justify-content-center p-3 ">
+                    <div class="col-6  " id="stackImage">
+                        <section class="">
+                           <figure class="stackImage">
+                            <img src="./public/Imgs/Artybylogo.svg"  alt="Logo-image" id="StackImg">
+             
+                           </figure>
+                        </section>
+                    </div>
+
+                    <!-- second option for Stack -->
+                    <div class="col-10  border" id="stack_gallery_filter">
+                        <!-- filter -->
+                         <div class="row justify-content-center ">
+                            <div class="col col-md-5 border m-3  Gallery ">
+                               <nav>
+                                <ul class="d-flex">
+                                    <a href="cvc"  class="m-2">lowest</a>
+                                    <a href="cvc"  class="m-2">medium</a>
+                                    <a href="cvc"  class="m-2">normal</a>
+                                    <a href="cvc"  class="m-2">high</a>
+                                    <a href="cvc"  class="m-2">pro</a>
+                                </ul>
+                               </nav>
+                            </div>
+                         </div>
+                         
+                        <section class="row text-center  p-2" id="stack_gallery">
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border GalleryIcon">JAvaScript Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                            <div class="col-4 col-md-2 p-2 ">
+                                <div class="border">Icon</div>
+                            </div>
+                        </section>
+                    </div>                    
+                </section>             
+            </div>
+        </div>
+
+        <!-- about section -->
+        <div class="row about">
+            <div class="col my-3 ">
+                <!-- title -->
+                <section class="row ">
+                    <div class="col ">
+                        <h3 class="text-center aboutTitle" >Acerca de mi</h3>    
+                    </div>
+                </section>
+                
+                <section class="row justify-content-center aboutsectionContainer">
+                    <div class="col-md-9 col-11 aboutsection aboutUno  bg-light p-5">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam vitae placeat reiciendis asperiores accusamus iste. Ratione similique voluptatem ex, enim quasi maxime beatae natus autem tempore rem ea, minus eius!
+                        <br><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, tenetur minus natus necessitatibus eveniet.
+               
+                    </div>
+                    <div class="col-md-9 col-11 aboutsection aboutDos p-3">
+                        <p class="aboutLink">
+                            <!-- link -->
+                            <a href="javascript:void(0);"   onclick="navigateTo('about')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
+                        </p>
+                    </div>
+                  
+                    
+                </section>
+            </div>
+        </div> 
+
+        <!-- Collaborations section -->
+        <div class="row collaborations">
+            <div class="col my-3 ">
+                <!-- content -->
+                <section class="row justify-content-center ">
+                    <div class="col-12  p-2">
+                        <!-- <section class="row border carouselCol">
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border"><br>Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border"><br>Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border"><br>Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border"><br>Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border"><br>Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border">Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border">Artyby</figcaption>
+                            </figure>
+                            <figure class="col-2 d-flex border">
+                                <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="">
+                                <figcaption class="border">Artyby</figcaption>
+                            </figure>
+                        </section> -->
+
+                        <section class="row p-2 carousel-container position-relative">
+                            <h2 class="position-absolute colaborationsTitle text-center">Colaboraciones</h2>
+                            <div class="carousel-trackk d-flex">
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex ">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="">Artyby</figcaption>
+                                </figure>
+                                <!-- <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure> -->
+                        
+                                <!-- Duplicate the items for infinite scrolling -->
+                                <!-- <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure>
+                                <figure class="col-5 d-flex border">
+                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="border">Artyby</figcaption>
+                                </figure>
+                            -->
+                                <!-- Continue duplicating as needed for smooth infinite scroll -->
+                            </div>
+                        </section>
+                        
+                    </div>
+                </section>
+            </div>
+        </div> 
+
+        <!-- Blog Section -->
+        <div class="row ">
+            <div class="col blog ">
+                <!-- title -->
+                <section class="row ">
+                    <div class="col ">
+                        <h3 class="text-center blogTitle">Acerca de Mi Blog</h3>    
+                    </div>
+                </section>
+                <!-- Info -->
+                <section class="row justify-content-center">
+                    <div class="col-9 my-3 ">
+                        <h6 class="text-center">La vida y el crecimiento de un programdor sin importar su area, suele ser una aventura que no muchos estarian dispuestos a Emprender. por eso cree <a href="" >UnprogramaYYo</a> y compartir mas acerca del tema y sus aderidos </h6>    
+                    </div>
+                </section>
+                <!-- Layout for pc design -->
+                <section class="row layout justify-content-center ">
+                    <div class="col p-3 " id="BlogContainer">
+                        <section class="row  p-3 ">
+                            <div class="col-3 ">
+                                <div class="border element">Una laptop de frente</div>
+                            </div>
+                            <div class="col-3 ">
+                                <div class="border element">una silueta de alguien</div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="border element">codigo binario tip omatrix</div>
+                            </div>
+                        </section>
+
+                        <section class="row  p-3 ">
+                            <div class="col-3 my-2 ">
+                                <div class="border element">una imagen de una lupa</div>
+                            </div>
+                            <div class="col-6 my-2" id="blog">
+                                <a href="javascript:void(0);"   onclick="navigateTo('blog')">
+                                    <div class="border element text-center"> 
+                                        <h1>UnProgramaYYo</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-3 my-2 ">
+                                <div class="border  lay"> felicidad</div>
+                            </div>
+                            <div class="col-4 my-2 ">
+                                <div class="border element layy">Informacion</div>
+                            </div>
+                            <div class="col-5 my-2 ">
+                                <div class="border element layy">dos siluetas caminando hacia el destino</div>
+                            </div>
+                        </section>
+                          
+
+                    </div>
+                </section> 
+
+                 <!-- Carousel for another designs -->
+                <section class="row carouselC justify-content-center ">
+
+                    <div class="col-6 blogEl border" id="blog">
+                        <div class="  text-center"><h1>Blog</h1></div>
+                    </div> 
+                    
+                    <div class="carousel" id="BlogContainer">
+                        <div class="carousel-track">
+                            <div class="el">
+                                <div class="elBord">hi</div>
+                            </div>     
+                            <div class="el">
+                                <div class="elBord">hi</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">im</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">Ramphys</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">a web developer</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">and you?</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">what do you do?</div>
+                            </div>
+                    
+                            <!-- Duplicado del contenido para efecto infinito -->
+                            <div class="el">
+                                <div class="elBord">hi</div>
+                            </div>     
+                            <div class="el">
+                                <div class="elBord">hi</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">im</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">Ramphys</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">a web developer</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">and you?</div>
+                            </div>
+                            <div class="el">
+                                <div class="elBord">what do you do?</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>        
+
+            </div>
+        </div> 
+ 
+        <!-- contact section -->
+        <div class="row ">
+            <div class="col  contact  position-relative">
+                <div class="contactBackground"></div>
+                <div class="contactBackgroundItem"></div>
+                <!-- title -->
+                <section class="row ">
+                    <div class="col ">
+                        <h3 class="text-start contactTitle" >Informacion de contacto</h3>    
+                    </div>
+                </section>
+                
+                <section class="row justify-content-center p-2 ">
+                    <div class="col-12 p-3">
+                       <section class="row">
+                        <div class="col-12 col-md-7 p-5  contact-data ">                      
+                            <section class=" ContactData justify-content-center text-center">
+                                <figure >
+                                    <img src="./public/Imgs/ArtybylogoWhiteLogo.svg" alt="Artybylogo" width="255" height="255">
+                                </figure>
+                                
+                                <ul class="g-0  contactServiceList p-3">                
+                                    <li class="row p-0 m-2 contactServiceItem ">
+                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName "><b>LLamar </b></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="tel:+18295237077" >555 555 5555</a></div>
+                                    </li>
+                                    <li class="row p-0 m-2 contactServiceItem ">
+                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName"><b>Escribir a WhatsApp</b></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="https://wa.link/wss1yb" target="_blank">555 555 5555</a></div>
+                                    </li>
+                                    <li class="row p-0 m-2 contactServiceItem ">
+                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName "><b>Dejar Un Email</b></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="mailto:ramphys.g.c.p@gmail.com" target="_blank">555 555 5555 </a></div>
+                                    </li>
+                                </ul>
+
+                            </section>
+                        </div>
+                        <div class="col-12 col-md-5  contact-form">
+
+                            <!-- title -->
+                            <h2 class="contactFormTitle text-center">Trabajemos Juntos</h2>
+                            <br> 
+                            <div class="contactFormText text-center">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus et temporibus quibusdam labore recusandae illum ipsam sint laboriosam.
+                            </div>
+                            <form action="" class="contactForm my-5">
+                                <div class="row">
+                                    <div class=" col-6">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="First name" aria-label="First name">
+                                    </div>
+                                    <div class=" col-6">
+                                        <label for="lastName" class="form-label">Last name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name">
+                                    </div>
+                                    <div class=" col-6">
+                                        <label for="Email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email">
+                                    </div>
+                                    <div class=" col-6">
+                                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                                        <input type="number" class="form-control" id="phoneNumber" placeholder="Phone number" aria-label="Phone Number">
+                                    </div>
+                                    <div class=" ">
+                                        <label for="service" class="form-label">Elija un servicio</label>
+                                        <select class="form-select" id="service" aria-label="defaul">
+                                            <option class="text-dark text-b" selected>Opciones de servicios</option>
+                                            <option class="text-dark text-b" value="1">One</option>
+                                            <option class="text-dark text-b" value="2">Two</option>
+                                            <option class="text-dark text-b" value="3">Three</option>
+                                          </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Textarea" class="form-label">Coment</label>
+                                        <textarea class="form-control" id="Textarea" placeholder="Comentario" rows="3"></textarea>
+                                      </div>
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="col-3">
+                                        <div class="submitButtonC justify-content-end d-flex">
+                                            <button class="p" type="submit">send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>                            
+                        </div>
+                       </section>
+
+                    </div>
+                </section>
+            </div>
+        </div> 
+
+        <!-- footer section -->
+        <div class="row my-">
+            <div class="col my-3 ">
+                <section class="row justify-content-center " id="footer">
+                    <div class="col-12 text-start my-3">
+                        <!-- /* From Uiverse.io by Galahhad */  -->
+                        <label class="bb8-toggle">
+                              <input class="bb8-toggle__checkbox" type="checkbox">
+                              <div class="bb8-toggle__container">
+                                <div class="bb8-toggle__scenery">
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="bb8-toggle__star"></div>
+                                  <div class="tatto-1"></div>
+                                  <div class="tatto-2"></div>
+                                  <div class="gomrassen"></div>
+                                  <div class="hermes"></div>
+                                  <div class="chenini"></div>
+                                  <div class="bb8-toggle__cloud"></div>
+                                  <div class="bb8-toggle__cloud"></div>
+                                  <div class="bb8-toggle__cloud"></div>
+                                </div>
+                                <div class="bb8">
+                                  <div class="bb8__head-container">
+                                    <div class="bb8__antenna"></div>
+                                    <div class="bb8__antenna"></div>
+                                    <div class="bb8__head"></div>
+                                  </div>
+                                  <div class="bb8__body"></div>
+                                </div>
+                                <div class="artificial__hidden">
+                                  <div class="bb8__shadow"></div>
+                                </div>
+                              </div>
+                        </label>
+                    </div>
+      
+                    <!-- logo -->
+                    <div class="col-12 ">
+                       <figure class="footerLogo d-flex justify-content-center" >
+                            <img src="./public/Imgs/Artybylogo.svg" alt="artyby logo" widthwidth="255" height="255">
+                       </figure>
+                    </div>
+                    <!-- links -->
+                    <div class="col-12 text-center my-3">
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('home')">Home+</a>
+                        </b>
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('about')">About</a>
+                        </b>
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('portfolio')">Portfolio</a>
+                        </b>
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('services')">Servicios</a>
+                        </b>
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('contact')">Contact</a>
+                        </b>
+                        <b>
+                            <a href="javascript:void(0);" class="mx-3 footerLink" onclick="navigateTo('blog')">Blog</a>
+                        </b>
+                    </div>
+                    <!--up  -->
+                    <div class="col-12 text-end goUpButton">
+                        <b>Hacia arriba <img src="./public/Imgs/Arrow.svg" width="16" height="16" alt="arrow icon"></b>
+                    </div>
+                    <!-- rights -->
+                    <div class="col-12 text-center">
+                        <b><a href="javascript:void(0);" class="mx-3 rights" onclick="navigateTo('user17job')">&copy; User17job All rights reserve</a></b>
+                    </div>
+
+                </section>
+                
+            </div>
+        </div> 
+    </main>
+    
+    
+    <!-- javascript -->
+    <script src="./public/Js/bootstrap.bundle.min.js"></script>
+    <script src="./public/Js/externalLinks.js"></script>
+    <script src="./public/Js/charging.js"></script>
+
+    <script src="./public/Js/scrollreveal.js" ></script>
+    <script src="./public/Js/scrolls.js" ></script>
+
+    <script src="./public/Js/index.js"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    
+</body>
+</html>
