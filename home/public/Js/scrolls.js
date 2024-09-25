@@ -5,9 +5,10 @@ window.addEventListener('load', function() {
   
  window.sr = ScrollReveal();
 
+  sr.reveal('.navLInkItem');
+
   sr.reveal('.text-center')
- 
-  
+
   sr.reveal('.serviceTitle');
   sr.reveal('.serviceItem', {
     duration: 1000,

@@ -62,9 +62,10 @@ a:hover{
     position: relative;
     top: 15%;
 }
-.home{
+.homeL{
     text-decoration: underline;
 }
+
 .navLInks{
     display: flex;
     text-underline-offset:  10px; /* Separa la línea del texto */
@@ -230,7 +231,7 @@ a:hover{
     border-radius: 25px;
     background-image: linear-gradient(55deg, #94a3b8 8%, #0369a1 100%);
     position:relative;
-    box-shadow: 1px 1px  18px #94a3b8;
+    box-shadow: 1px 1px  6px #020617;
 }
 .projectFigure > a > figcaption{
     position: absolute;
@@ -289,7 +290,7 @@ a:hover{
     color: #020617;
     /* font-size: 25px; ; */
     font-weight: 600;
-    box-shadow:5px 5px 6px  #0505ff ; 
+    box-shadow:-5px -5px 6px  #0505ff ; 
 }
 
 /* icons */
