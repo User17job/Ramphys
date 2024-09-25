@@ -1,0 +1,794 @@
+body{
+    background-color: #020617;
+    color: #f9fafb;
+    /* max-width: 100%;
+    min-width: 100%; */
+    overflow: hidden;
+    transition: 0.6s;
+}
+body::-webkit-scrollbar{
+    background-color: #020617;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #94a3b8, #f4f6ff);
+    border-radius: 6px;
+}
+.container-fluid{
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    z-index: 5;
+}
+.charge{
+    opacity:100% ;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover{
+    color: #0369a1;
+    text-decoration: underline;
+}
+/* navbar styles */
+
+/* menu button */
+.toggle,  #checkbox {
+    display: none;
+}
+/* menu button */
+
+#navbar{
+    font-family: fredoka;
+    font-weight: 700;
+    height: 90px;
+    z-index:555 ;
+    transition:0.5s;
+}
+.scrolled{
+    position: fixed;
+    width:99.5%;   
+    background-color: #020617;
+    top: 0%;  
+}
+  
+.navLogo{
+    height: 100%;   
+    margin: 0% 5%;
+    display: flex;
+}
+
+.navLogo > figcaption{
+    position: relative;
+    top: 15%;
+}
+
+.navLInks{
+    display: flex;
+
+    text-underline-offset:  10px; /* Separa la línea del texto */
+    text-decoration-thickness: 6px;
+}
+.navbutton {
+    background-image: linear-gradient(55deg,   #0369a1 10%, rgb(1, 1, 52) 100%);
+    border: solid #94a3b8;
+    color:#f9fafb;
+    font-weight: 500;
+    padding: 5px 25px;
+    width: 125px;
+    border-radius: 18px;
+
+}
+.navbutton:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+.navbutton:active{
+    background-image: linear-gradient(55deg, rgb(0, 0, 73)10%, purple 100%);
+    transform: scale(1);
+    color: #0369a1;
+}
+
+/* welcome section styles*/
+#welcome{
+    position: relative;
+}
+#welcome-container{
+    position: relative;
+    top: 22px;    
+}
+
+.welcome-des, .welcome-img{
+    height: 450px ;
+}
+.more{
+    color: #0369a1;
+}
+.WelcomeLinks{
+    margin-left: -15px;
+}
+.WelcomeLinks>a>button:hover, .WelcomeLinks>a>img:hover{
+    transform: scale(1.05);
+}
+.WelcomeLinks>a>button:active, .WelcomeLinks>a>img:active{
+    transform: scale(0.96);
+}
+
+
+.welcome-h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.welcome-h1{
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.DownloadCv{
+    padding:1% 3%;
+    margin: 0.66% 0%;
+    border: solid 0.6px;
+    background-image: linear-gradient(55deg,   #0369a1 10%, rgb(1, 1, 52) 100%);
+    border: solid #94a3b8;
+    color:#f9fafb;
+    font-weight: 500;
+    border-radius: 18px;
+} 
+.welIcon{
+    margin: 0% 5px;
+}
+.imgItem{
+    width: 350px;
+    height: 350px;
+    border-radius: 35px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+        border-radius: 35px
+    }
+
+}
+.rotateDiv{
+    transform: rotate(55deg);
+    width:100%;
+    height:100%;
+    position: relative;
+    border-radius: 35px;
+    background-color: #0369a1;
+
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+/* service section */
+.services{
+    margin-top: 195px;
+    background-image: linear-gradient(65deg, #020617 35%, #036aa136 100%);
+}
+.serviceTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.serviceList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.serviceItem{
+    margin-bottom: 0px;
+    border: solid #0369a1 1px;
+    border-top: solid transparent;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    transition: 0.5s;
+}
+.serviceItem:hover{
+    background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.serviceName {
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(to right, #f4f6ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* project styles */
+.projects{
+    margin-top: 195px;
+    position: relative;
+}
+.projectsTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.projectFigure{
+    height: 555px;
+    border-radius: 25px;
+    background-image: linear-gradient(55deg, #94a3b8 8%, #0369a1 100%);
+    position:relative;
+    box-shadow: 1px 1px  18px #94a3b8;
+}
+.projectFigure > a > figcaption{
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 69px;
+    border-radius: 15px;
+    display: grid;
+    font-size: 25px;
+    place-items: center;
+    transition: 0.5s;
+    opacity: 55%;
+}
+.projectFigure > a > figcaption:hover{
+    opacity: 100%;
+    background-color: #0369a1;
+    border: #0369a1 solid;
+    color: aliceblue;
+}
+.projectFigure > a > figcaption:active{
+    color: #0369a1;
+}
+.projectImage{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    object-fit: fill;
+    position:absolute;
+    border-radius: 25px;
+}
+
+
+/* stack section styles */
+.stack {
+    margin-top: 195px;
+    position: relative;
+}
+.animContainer{
+    z-index: -5;
+}
+/* names */
+.stackNameC { /* container */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveNames 16.6s linear infinite;
+}
+#StackNames {
+    position: relative;
+    background-color: #ffffff;
+    transform: rotate(28deg); /* Slight rotation */
+    color: #020617;
+    /* font-size: 25px; ; */
+    font-weight: 600;
+    box-shadow:5px 5px 6px  #0505ff ; 
+}
+
+/* icons */
+.stackIconsC {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveIcons 16s linear infinite;
+    z-index: -5;
+}
+#StackIcons {
+    position: relative;
+    background-color: #ffffff32;
+    box-shadow:5px 5px 6px  #0505ff ; 
+    /* filter: blur(5px); */
+    color: #020617;
+    transform: rotate(-28deg); /* Slight rotation */
+}
+
+/* Animations */
+@keyframes moveNames {
+    from { transform: translate(-50%, -50%) translate(-1300px, -850px); }
+    to{ transform: translate(-50%, -50%) translate(1300px, 850px); }
+    /* 100% { transform: translate(-50%, -50%) translate(-1300px, -850px); } */
+}
+
+@keyframes moveIcons {
+    from{ transform: translate(-50%, -50%) translate(1300px, -850px); }
+    to{ transform: translate(-50%, -50%) translate(-1300px, 850px); }
+    /* 100% { transform: translate(-50%, -50%) translate(1300px, -850px); } */
+}
+
+.stackTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stackOptions{
+    border-radius:  16px;
+    background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);
+    overflow: hidden;
+}
+.stackOption{
+    font-weight:600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.stackOption:hover{
+    text-decoration: underline;
+    font-weight:100;
+}
+
+#stack_gallery_filter{
+    position: relative;
+}
+#stack_gallery_filter::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left:0;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: blur(5px); /* Aplica un desenfoque de 5px */
+    transition: filter 0.5s ease-in-out; /* Transición suave */
+    z-index: -5;
+}
+.Gallery{
+    filter: blur(0px);
+}
+.stack_gallery{
+    z-index: 6;
+}
+
+.GalleryIcon{
+    height: 6rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.GalleryIcon:hover{
+   box-shadow: -5px 0px 5px yellow; 
+}
+
+.stackImage{
+    /* border: solid blue; */
+    position: relative;
+}
+#StackImg{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* about styles */
+.about{
+    margin-top: 160px;
+}
+.aboutTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.aboutsectionContainer{
+    position: relative;
+    padding: 6%;
+    height: 505px;
+}
+
+.aboutsection{
+    position:relative;
+    height: 305px;
+    border:#0369a1 solid;
+    border-radius:55px;
+}
+.aboutUno{
+    z-index: 6;
+    overflow: hidden;
+}
+.aboutDos{
+    left: 55px;
+    top:-250px;
+    z-index: 5;
+}
+.aboutLink{
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    width:  90px;
+    border: #d0c0bc;
+    z-index: 55;
+}
+
+
+
+/* Carousel for collaboration */
+/* .collaborations{
+
+} */
+.colaborationsTitle{
+    font-size: 60px;
+    top: 16%;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px #0369a1;
+  }
+  
+  .carousel-trackk {
+    display: flex;
+    justify-content: space-between;
+    animation: scroll 50s linear infinite;
+  }
+  
+  .carousel-trackk figure {
+    flex: 0 0 16.66%; /* Esto asegura que haya 6 imágenes visibles a la vez */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #020617;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Duplicamos las imágenes para que se desplace infinitamente */
+  .carousel-trackk figure:nth-last-child(-n+6) {
+    display: block;
+  }
+  
+
+
+/* lay out and blog section styles */
+.blog{
+    margin-top: 150px;
+}
+.blogTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.layout{
+    height: 760px;
+    display: blok;
+    background-color:  #040b2b;
+}
+.element{
+    height: 200px;
+    border-radius: 16px;
+}
+.lay{
+    height: 440px; 
+    border-radius: 16px; 
+}
+.layy{
+    position: relative;
+    top: -216px;
+}
+/* carousel */
+.carouselC{
+    display: none;
+}
+
+
+/*  contact section styles */
+.contact{
+    margin-top: 150px;
+}
+.contactTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-data{
+    display: flex;
+    flex-direction: column;
+}
+.contactServiceItem{
+    /* margin-bottom: 5px; */
+    border: solid #0369a1;
+    border-top: solid transparent;
+    border-left: solid transparent;
+    border-right: solid transparent;
+}
+.contactServiceDescription{
+    font-size: 20px;
+    transition: 0.5s;
+    a{
+        color: #94a3b8;
+    }
+    a:hover{
+        color: #0369a1;
+    }
+}
+
+.contactServiceDescription:hover{
+    color: #4d557b;
+    cursor: pointer;
+}
+.contact-form{
+    background-color: #040b2b;
+    border-radius: 15px;
+    .contactFormTitle{
+        padding: -5px;
+        font-size: 50px;
+        font-weight: bold;
+        background: linear-gradient(25deg, #f4f6ff, #0369a1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .contactFormText{
+        color:#94a3b8;
+    }
+    input::placeholder, textarea::placeholder{
+        color: #4d557b;
+    }
+    input:focus, textarea:focus{
+        background-color: transparent;
+        color: aliceblue;
+    }
+    input, select, textarea{
+        background-color: transparent;
+        color: aliceblue;
+    }
+    select>option{
+        background-color: #94a3b8;
+        color: aliceblue;
+    }
+}
+ 
+.submitButtonC > button{
+    background-image: linear-gradient(55deg,   #0369a1 10%, #020617 100%);
+    border: solid aliceblue;
+    color: aliceblue;
+    padding: 6px 26px;
+    border-radius: 9px;
+}
+
+/* /* footer styles */
+#footer{
+    font-family: fredoka;
+    text-decoration: none;
+    background-color: #04081f;
+}
+.footerLogo>img{ 
+    animation: arribaAbajo 1s linear infinite;
+}
+.footerLink, .goUpButton{
+    color: #0369a1;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footerLink:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.rights{
+    color: aliceblue;
+}
+
+
+/* decorations */
+.welcomeSecBackground{
+    width: 56px;
+    height: 56px;
+    border-radius:  55%; 
+    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 45%, transparent 100%);
+    position: absolute;
+    left: 0%;
+    top: 55.6%;
+    filter: blur(5px);
+    z-index: -5;
+    animation: derecha 5s ease-in-out infinite;
+}
+.servicesBackground {
+    width: 456px;
+    height: 456px;
+    border-radius:  55%;
+    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
+    position: absolute;
+    left: 0%;
+    top: 55.6%;
+    filter: blur(5px);
+    z-index: -5;
+    animation: square 20s infinite ease-in-out;
+}
+.stackBackground{
+    position: absolute;
+    width: 756px;
+    height: 756px;
+    border-radius:  55%;
+    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
+    z-index: -5;
+    left: 50%;
+    top: 65.6%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: 55px;
+}
+
+.projectBackground{
+    position: absolute;
+    width: 2166px;
+    height: 2166px;
+    border-radius:  55%;
+    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
+    z-index: -5;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    /* z-index: 5; */
+    backdrop-filter: 55px;
+    /* animation: animat linear 195s  infinite; */
+}
+
+.contactBackground{
+    position: absolute;
+    width: 555px;
+    height: 555px;
+    border-radius:  55%;
+    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
+    z-index: -5;
+    left: -15%;
+    top: -55px;
+    backdrop-filter: 55px;
+    animation: animat linear 195s  infinite;
+}
+.contactBackgroundItem{
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    border-radius:  55%;
+    background-image:  radial-gradient(  rgba(5, 5, 255, 0.453) 10%,  #0206179e 45%, transparent 100%);
+    z-index: -55;
+    left: 55px;
+    top: 515px;
+
+    animation: animat linear 155s  infinite;
+}
+
+
+
+@keyframes square {
+    0% {
+        top: 0;
+        left: -50%;
+    }
+    25% {
+        top: 0;
+        left: 100%; /* Mover a la derecha */
+    }
+    50% {
+        top: 90%; /* Mover hacia abajo */
+        left: 100%;
+    }
+    75% {
+        top: 90%; /* Mover hacia abajo */
+        left: -50%; /* Mover a la izquierda */
+    }
+    100% {
+        top: 0; /* Volver al punto de partida */
+        left: -50%;
+    }
+}
+@keyframes animat {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 75px;
+        left: 750px;
+    }
+    50% {
+        top: 500px;
+        left: 600px;
+    }
+
+    75%{
+        top: 200px;
+        left: 600px;
+    }
+    95%{
+        top: 500px;
+        left: -600px;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes derecha {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    50% {
+        top: 0px;
+        left: 220px;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes arribaAbajo {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: 555px;
+        left: 0px;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes crecer {
+    0% {
+       transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
