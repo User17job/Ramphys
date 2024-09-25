@@ -233,7 +233,13 @@ a:hover{
     position:relative;
     box-shadow: 1px 1px  6px #020617;
 }
-.projectFigure > a > figcaption{
+.projectFigure:hover{
+    /* opacity: 10%; */
+    cursor: pointer;
+    box-shadow: inset 1px 1px   6px #020617;
+
+}
+.projectFigure >  figcaption{
     position: absolute;
     left: 50%;
     top: 92%;
@@ -247,13 +253,13 @@ a:hover{
     transition: 0.5s;
     opacity: 55%;
 }
-.projectFigure > a > figcaption:hover{
+.projectFigure >  figcaption:hover{
     opacity: 100%;
     background-color: #0369a1;
     border: #0369a1 solid;
     color: aliceblue;
 }
-.projectFigure > a > figcaption:active{
+.projectFigure >  figcaption:active{
     color: #0369a1;
 }
 .projectImage{
@@ -264,6 +270,11 @@ a:hover{
     object-fit: fill;
     position:absolute;
     border-radius: 25px;
+    opacity: 86%;
+}
+.projectImage:hover{
+    opacity:100%;
+
 }
 
 
@@ -461,7 +472,8 @@ a:hover{
   .carousel-trackk figure {
     flex: 0 0 16.66%; /* Esto asegura que haya 6 imágenes visibles a la vez */
     display: flex;
-    flex-direction: column;
+    
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     background-color: #020617;

@@ -1,0 +1,44 @@
+{
+    "projects":[
+        {
+            "id": 0,
+            "name": "0",
+            "Description":"Proyectos",
+            "img":"http://127.0.0.1:5500/home/",
+            "Stack":"Stack",
+             "link":"http://127.0.0.1:5500/home/"
+        },
+        {
+            "id": 1,
+            "name": "Project 1",
+            "Description":"Un proyecto sin trasendencia",
+            "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
+            "Stack":"javascript, Html, Css",
+             "link":"http://127.0.0.1:5500/home/public/Imgs/project.png"
+        },
+        {
+            "id": 2,
+            "name": "Project 2",
+            "Description":"calculadora cintifica en el navegador",
+            "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
+            "Stack":"javascript, Html, Css",
+            "link":"http://127.0.0.1:5500/home/public/Imgs/GithubWhite.svg"
+        },
+        {
+            "id": 3,
+            "name": "Project 3",
+            "Description":"Un proyecto muy curioso",
+            "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
+            "Stack":"javascript, Html, Css",
+             "link":"http://127.0.0.1:5500/home/public/Imgs/Artybylogo.svg"
+        },
+        {
+            "id": 4,
+            "name": "Project 4",
+            "Description":"Una Landing page atractiva",
+            "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
+            "Stack":"javascript, Html, Css",
+             "link":"http://127.0.0.1:5500/home/public/Imgs/PeopleAvatar.svg"
+        }
+    ]
+}
