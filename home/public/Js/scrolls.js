@@ -26,12 +26,12 @@ window.addEventListener('load', function() {
 
   sr.reveal('.stack', {
       duration: 2500,
-      origin:'left',
+      origin:'right',
       distance: '150px'
   });
   sr.reveal('.about', {
       duration: 2500,
-      origin:'right',
+      origin:'left',
       distance: '150px',
       reset: true
   });
