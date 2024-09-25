@@ -62,10 +62,11 @@ a:hover{
     position: relative;
     top: 15%;
 }
-
+.home{
+    text-decoration: underline;
+}
 .navLInks{
     display: flex;
-
     text-underline-offset:  10px; /* Separa la línea del texto */
     text-decoration-thickness: 6px;
 }
