@@ -5,8 +5,6 @@ window.addEventListener('load', function() {
   
  window.sr = ScrollReveal();
 
-  sr.reveal('.navLInkItem');
-
   sr.reveal('.text-center')
 
   sr.reveal('.serviceTitle');
@@ -23,12 +21,13 @@ window.addEventListener('load', function() {
       reset: true,
   });
   sr.reveal('.projectFigure');
-
-  sr.reveal('.stack', {
+  
+  sr.reveal('.stackOptions', {
       duration: 2500,
       origin:'right',
       distance: '150px'
   });
+
   sr.reveal('.about', {
       duration: 2500,
       origin:'left',

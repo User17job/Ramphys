@@ -5,7 +5,24 @@
             "name": "0",
             "Description":"Proyectos",
             "img":"http://127.0.0.1:5500/home/",
-            "Stack":"Stack",
+            "Stack":[
+                {
+                    "name":"JavaScript",
+                    "image":"./public/Imgs/stackImgs/LogosJavascript.svg"
+                },
+                {
+                    "name":"HTML",
+                    "image":"./public/Imgs/stackImgs/LogosHtml5.svg" 
+                },
+                {   
+                    "name":"CSS",
+                    "image":"./public/Imgs/stackImgs/LogosCss3.svg"
+                },
+                {
+                    "name":"Sass",
+                    "image":"./public/Imgs/stackImgs/LogosSass.svg"
+                }
+            ],
              "link":"http://127.0.0.1:5500/home/"
         },
         {
@@ -13,7 +30,20 @@
             "name": "Project 1",
             "Description":"Un proyecto sin trasendencia",
             "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
-            "Stack":"javascript, Html, Css",
+            "Stack":[
+                {
+                    "name":"JavaScript",
+                    "image":"./public/Imgs/stackImgs/LogosJavascript.svg"
+                },
+                {
+                    "name":"HTML",
+                    "image":"./public/Imgs/stackImgs/LogosHtml5.svg" 
+                },
+                {   
+                    "name":"CSS",
+                    "image":"./public/Imgs/stackImgs/LogosCss3.svg"
+                }
+            ],
              "link":"http://127.0.0.1:5500/home/public/Imgs/project.png"
         },
         {
@@ -21,7 +51,24 @@
             "name": "Project 2",
             "Description":"calculadora cintifica en el navegador",
             "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
-            "Stack":"javascript, Html, Css",
+            "Stack":[
+                {
+                    "name":"JavaScript",
+                    "image":"./public/Imgs/stackImgs/LogosJavascript.svg"
+                },
+                {
+                    "name":"HTML",
+                    "image":"./public/Imgs/stackImgs/LogosHtml5.svg"
+                },
+                {   
+                    "name":"CSS",
+                    "image":"./public/Imgs/stackImgs/LogosCss3.svg"
+                },
+                {
+                    "name":"Bootstrap",
+                    "image":"./public/Imgs/stackImgs/LogosBootstrap.svg"
+                }
+            ],
             "link":"http://127.0.0.1:5500/home/public/Imgs/GithubWhite.svg"
         },
         {
@@ -29,7 +76,32 @@
             "name": "Project 3",
             "Description":"Un proyecto muy curioso",
             "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
-            "Stack":"javascript, Html, Css",
+            "Stack":[
+                {
+                    "name":"JavaScript",
+                    "image":"./public/Imgs/stackImgs/LogosJavascript.svg"
+                },
+                {
+                    "name":"HTML",
+                    "image":"./public/Imgs/stackImgs/LogosHtml5.svg"
+                },
+                {   
+                    "name":"CSS",
+                    "image":"./public/Imgs/stackImgs/LogosCss3.svg"
+                },
+                {
+                    "name":"PhP",
+                    "image":"./public/Imgs/stackImgs/LogosPhp.svg"
+                },
+                {
+                    "name":"MySQL",
+                    "image":"./public/Imgs/stackImgs/LogosMysql.svg"
+                },
+                {
+                    "name":"Laravel",
+                    "image":"./public/Imgs/stackImgs/LogosLaravel.svg"
+                }
+            ],
              "link":"http://127.0.0.1:5500/home/public/Imgs/Artybylogo.svg"
         },
         {
@@ -37,7 +109,25 @@
             "name": "Project 4",
             "Description":"Una Landing page atractiva",
             "img":"http://127.0.0.1:5500/home/public/Imgs/project.png",
-            "Stack":"javascript, Html, Css",
+            "Stack":[
+                {
+                    "name":"JavaScript",
+                    "image":"./public/Imgs/stackImgs/LogosJavascript.svg"
+                },
+                {
+                    "name":"HTML",
+                    "image":"./public/Imgs/stackImgs/LogosHtml5.svg"
+                },
+                {
+                    "name":"CSS",
+                    "image":"./public/Imgs/stackImgs/LogosCss3.svg"
+                },
+                {
+                    "name":"TypeScript",
+                    "image":"./public/Imgs/stackImgs/LogosTypescript.svg"
+                }
+            ],
+
              "link":"http://127.0.0.1:5500/home/public/Imgs/PeopleAvatar.svg"
         }
     ]

@@ -1,3 +1,7 @@
+@media screen and (width < 1005px){
+
+}
+
 @media screen and (width < 860px){
 
   #checkbox {
@@ -107,8 +111,8 @@
   }
 
 }
-@media screen and (width < 750px){
-
+@media screen and (width < 755px){
+  
     /*service  */
     .serviceName{
         font-size: 26px;
@@ -118,10 +122,42 @@
         text-align: center;
     }
     
+    /* projects */
+    /* stack */
+    #stack_gallery_filter{
+      position: relative;
+      border-radius: 10px;
+      height: 460px;
+      overflow-y: scroll;
+      transition: 0.6s;
+      background-color: #f9fafb39;
+  }
+  #stack_gallery_filter::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    filter: none; /* Aplica un desenfoque de 5px */
+    transition: filter 0.5s ease-in-out; /* Transición suave */
+    z-index: -5;
+  }
+    /* about  */
+    .aboutUno{
+      z-index: 6;
+      overflow: hidden;
+      font-size: 17px;
+      font-weight: 500;
+  }
+
     /*  */
     .layout{
         display: none;
     }
+
+
     /*  */
     .carouselC{
         display: block;
@@ -178,9 +214,24 @@
             transform: translateX(-50%);
         }
     }
+    @keyframes moveNames {
+      from { transform: translate(-50%, -50%) translate(-1000px, -550px); }
+      to{ transform: translate(-50%, -50%) translate(1000px, 550px); }
+      /* 100% { transform: translate(-50%, -50%) translate(-1300px, -850px); } */
+  }
+  
+  @keyframes moveIcons {
+      from{ transform: translate(-50%, -50%) translate(1000px, -550px); }
+      to{ transform: translate(-50%, -50%) translate(-1000px, 550px); }
+      /* 100% { transform: translate(-50%, -50%) translate(1300px, -850px); } */
+  }
 }
 
 @media screen and (width < 550px){
+
+  body{
+    padding: 5px;
+  }
   /*welcome images and animation  */
   .navLInks{
     opacity: 0%;
@@ -200,12 +251,10 @@
     border-radius: 5px;
   }
 
-
   .welcome-img{
     top: 6.6rem;
   }
   /* navbar */
-
 
   .welcome-h1{
     font-size: 45px;
@@ -214,11 +263,20 @@
   .welcome-img{
     margin-top: 4em;
   } 
+  #StackImg{
+    transform: scale(1.6);
+  }
+  .aboutsectionContainer{
+    justify-content: start;
+  }
   .aboutUno{
     overflow-y: scroll;
   }
+  .aboutDos{
+    left: 35px;
+}
   .aboutLink{
-    left: 67%;
+    left: 66%;
   }
   .colaborationsTitle{
     font-size: 55px;
@@ -226,4 +284,40 @@
     font-weight: bold;
   }
 }
+
+@media screen and (height < 575px){
+  .navLInks{
+    opacity: 0%;
+    background-color: #f9fafb;
+    height: 225px;
+    width: 80%;
+    top: 85pc;
+    left: 50%;
+    z-index: 8;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* flex-direction: column;
+    justify-content: center; */
+    text-align: center;
+    position: absolute;    
+    transition: 0.5s;    
+    border-radius: 5px;
+  }
+  .navLInkItem{
+    /* background-color: transparent; */
+    color: #020617;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+  }
+
+  .welcome-img{
+    margin-top: -1em;
+  }
+}
+
+
 

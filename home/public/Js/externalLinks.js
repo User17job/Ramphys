@@ -16,6 +16,11 @@ function navigateTo(page) {
         'instagram': 'https://www.instagram.com//ramphys_/',
         'freecodecamp': 'https://www.freecodecamp.org/user17job',
         'user17job':'https://user17job.github.io/User17job.inc./',
+
+        "project1":"http://127.0.0.1:5500/home/index.html",
+        "project2":"http://127.0.0.1:5500/project2/index.html",
+        "project3":"http://127.0.0.1:5500/project3/index.html",
+        "project4":"http://127.0.0.1:5500/project4/index.html",
     };
 
     window.location.href = urls[page], '_blank';
