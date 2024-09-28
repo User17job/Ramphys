@@ -544,42 +544,6 @@ a:hover{
   .carousel-trackk figure:nth-last-child(-n+6) {
     display: block;
   }
-  
-
-
-/* lay out and blog section styles */
-.blog{
-    margin-top: 150px;
-}
-.blogTitle{
-    font-size: 60px;
-    font-weight: bold;
-    background: linear-gradient(25deg, #0369a1, #f4f6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.layout{
-    height: 760px;
-    display: blok;
-    background-color:  #040b2b;
-}
-.element{
-    height: 200px;
-    border-radius: 16px;
-}
-.lay{
-    height: 440px; 
-    border-radius: 16px; 
-}
-.layy{
-    position: relative;
-    top: -216px;
-}
-/* carousel */
-.carouselC{
-    display: none;
-}
-
 
 /*  contact section styles */
 .contact{

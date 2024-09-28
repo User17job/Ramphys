@@ -7,9 +7,11 @@
     
     <link rel="stylesheet" href="./public/Css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/Css/index.css">
+    <link rel="stylesheet" href="./public/Css/blog.css">
     <link rel="stylesheet" href="./public/Css/responsive.css">
     <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css">
     <link rel="stylesheet" href="./public/Css/charging.css">
+
     <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg">
 
    
@@ -58,12 +60,12 @@
                 </label>
                 
                 <section class="navLInks">
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem homeL" onclick="navigateTo('home')">Home+</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem aboutL" onclick="navigateTo('about')">About</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem portfolioL" onclick="navigateTo('portfolio')">Portfolio</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem serviceL" onclick="navigateTo('services')">Servicios</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem contactL" onclick="navigateTo('contact')">Contact</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem blogL" onclick="navigateTo('blog')">Blog</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem homeL" onclick="navigateTo('home')">Home+</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem aboutL" onclick="navigateTo('about')">About</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem portfolioL" onclick="navigateTo('portfolio')">Portfolio</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem serviceL" onclick="navigateTo('services')">Servicios</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem contactL" onclick="navigateTo('contact')">Contact</a>
+                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem blogL" onclick="navigateTo('blog')">Blog</a>
                 </section>
             
                 <div class="m-2">
@@ -553,38 +555,43 @@
                 </section>
                 <!-- Layout for pc design -->
                 <section class="row layout justify-content-center ">
-                    <div class="col p-3 " id="BlogContainer">
+                    <!-- <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog__back"> -->
+                    <div class="col p-3 " id="BlogContainer ">
+
                         <section class="row  p-3 ">
                             <div class="col-3 ">
-                                <div class="border element">Una laptop de frente</div>
+                                <div class="border element blog8"><img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img" alt="Laptop-img">
+                                    <img src="./public/Imgs/stackImgs/LogosHtml5.svg" class="blog8__aditional" width="22" height="22" alt="">
+                                </div>
                             </div>
                             <div class="col-3 ">
-                                <div class="border element">una silueta de alguien</div>
+                                <div class="border element blog6"><img src="./public/Imgs/blogImgs/hombre.png" class="blog6__img" alt="hombre"></div>
                             </div>
                             <div class="col-6 ">
-                                <div class="border element">codigo binario tip omatrix</div>
+                                <div class="border element blog2"><img src="./public/Imgs/blogImgs/image.png" class="blog2__img" alt="matrix-img"></div>
                             </div>
                         </section>
 
                         <section class="row  p-3 ">
                             <div class="col-3 my-2 ">
-                                <div class="border element">una imagen de una lupa</div>
+                                <div class="border element blog7"><img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img"></div>
                             </div>
-                            <div class="col-6 my-2" id="blog">
+                            <div class="col-6 my-2 blog5" id="blog">
                                 <a href="javascript:void(0);"   onclick="navigateTo('blog')">
-                                    <div class="border element text-center"> 
+                                    <div class="border element text-center position-relative"> 
+                                        <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
                                         <h1>UnProgramaYYo</h1>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-3 my-2 ">
-                                <div class="border  lay"> felicidad</div>
+                                <div class="border  lay blog1"> felicidad</div>
                             </div>
                             <div class="col-4 my-2 ">
-                                <div class="border element layy">Informacion</div>
+                                <div class="border element layy blog4">Informacion</div>
                             </div>
                             <div class="col-5 my-2 ">
-                                <div class="border element layy">dos siluetas caminando hacia el destino</div>
+                                <div class="border element layy blog3">dos siluetas caminando hacia el destino</div>
                             </div>
                         </section>
                           
