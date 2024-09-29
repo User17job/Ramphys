@@ -776,6 +776,40 @@ a:hover{
         left: 0;
     }
 }
+
+@keyframes animAgujero {
+    10%{
+        background-image: radial-gradient(#0369a1, #02283c, #05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff, #286789, transparent, #02283c);
+    }
+    20% {
+        background-image: radial-gradient(#0228cc, #05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff, #286789, transparent, #02283c, #0369a1);
+    }
+    30%{
+        background-image: radial-gradient(#05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff, #286789, transparent, #02283c, #0369a1, #02283c);
+    }
+    40%{
+        background-image: radial-gradient(transparent, #84d4ff, #0369a1, #f4f6ff, #286789, transparent, #02283c, #0369a1, #02283c, #05a3f8);
+    }
+    50% {
+        background-image: radial-gradient(#84d4ff, #0369a1, #f4f6ff, #286789, transparent, #02283c, #0369a1, #02283c, #05a3f8, transparent);
+    }
+    60% {
+        background-image: radial-gradient(#0369a1, #f4f6ff, #286789, transparent, #02283c, #0369a1, #02283c, #05a3f8, transparent, #84d4ff,);
+    }
+    70% {
+        background-image: radial-gradient(#f4f6ff, #286789, transparent, #02283c, #0369a1, #02283c, #05a3f8, transparent, #84d4ff, #0369a1,);
+    }
+    80% {
+        background-image: radial-gradient(#286789, transparent, #02283c, #0369a1, #02283c, #05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff,);
+    }
+    90% {
+        background-image: radial-gradient(transparent, #02283c, #0369a1, #02283c, #05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff, #286789,);
+    }
+    100% {
+        background-image: radial-gradient(#02283c, #0369a1, #02283c, #05a3f8, transparent, #84d4ff, #0369a1, #f4f6ff, #286789, transparent);
+    }
+} 
+
 @keyframes derecha {
     0% {
         top: 0;
@@ -807,6 +841,17 @@ a:hover{
     }
 }
 
+@keyframes aparecer {
+    0% {
+       opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity:1;
+    }
+}
 @keyframes crecer {
     0% {
        transform: scale(1);
