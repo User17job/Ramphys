@@ -23,7 +23,7 @@
 }
 
 /* From Uiverse.io by kennyotsu */ 
-.card {
+.carta {
     /* color used to softly clip top and bottom of the .words container */
     --bg-color: #020617;
     background-color: var(--bg-color);

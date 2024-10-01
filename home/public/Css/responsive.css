@@ -1,6 +1,4 @@
-@media screen and (width < 1005px){
-
-}
+/* blog */
 
 @media screen and (width < 860px){
 
@@ -165,9 +163,9 @@
     }
     .blogEl{
         position: absolute;
-        width: 300px;
+        width: 320px;
         height: 300px;
-        background-color: #f9fafb;
+        background-color: #f9fafb07;
         color: #020617;
         z-index: 5;
         top: 50%;
@@ -198,7 +196,7 @@
         border: 1px solid black;
         text-align: center;
         padding: 20px;
-        background-color: #f9fafb;
+        background-color: #0369a1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -232,7 +230,6 @@
   body{
     padding: 5px;
   }
-  /*welcome images and animation  */
   .navLInks{
     opacity: 0%;
     background-color: #f9fafb;
@@ -285,7 +282,7 @@
   }
 }
 
-@media screen and (height < 575px){
+@media screen and (height < 575px) and (width < 550px){
   .navLInks{
     opacity: 0%;
     background-color: #f9fafb;
@@ -297,15 +294,12 @@
     transform: translate(-50%, -50%);
     display: grid;
     grid-template-columns: auto auto auto;
-    /* flex-direction: column;
-    justify-content: center; */
     text-align: center;
     position: absolute;    
     transition: 0.5s;    
     border-radius: 5px;
   }
   .navLInkItem{
-    /* background-color: transparent; */
     color: #020617;
     width: 100px;
     height: 50px;

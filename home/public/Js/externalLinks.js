@@ -23,7 +23,13 @@ function navigateTo(page) {
         "project4":"http://127.0.0.1:5500/project4/index.html",
     };
 
-    window.location.href = urls[page], '_blank';
+    // window.location.href = urls[page], '_blank';
+
+    if (urls[page]) {
+        window.open(urls[page], '_blank');
+    } else {
+        console.error('URL not found for platform:', page);
+    }
 }
 
 

@@ -25,7 +25,7 @@
     <div class="charging">
         <div class="row">
             <div class="col">
-                <div class="card">
+                <div class="carta">
                     <div class="loader">
                       <p>loading</p>
                       <div class="words">
@@ -128,45 +128,126 @@
                         <h3 class="text-center fs-6 " >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nemo aliquam deleniti ducimus nisi quas dolores neque vero quisquam consequuntur sapiente laborum. Provident fugit a recusandae incidunt architecto ea esse.z</h3>    
                     </div>
                 </section>
-                <!-- sercvices -->
-                 <section class="row p-3 ">
-                    <div class="col ">
+               
+                 <!-- sercvices -->
+                <section class="row p-3">
+                    <div class="col">
                         <section>
-                            <ul class="g-0  serviceList">
-                                <li class="row p-2  serviceItem">
-                                    <div class="col-12 col-md-4  p-3 serviceName subtitle"> -- Service</div>
-                                    <div class="col-12 col-md-8 serviceDescription text  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
-                                </li>
-                            
-                                <li class="row p-2  serviceItem">
-                                    <div class="col-12 col-md-4  p-3 serviceName subtitle"> -- Service</div>
-                                    <div class="col-12 col-md-8 serviceDescription text  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
-                                </li>
-                       
-                                <li class="row p-2  serviceItem">
-                                    <div class="col-12 col-md-4  p-3 serviceName subtitle"> -- Service</div>
-                                    <div class="col-12 col-md-8 serviceDescription text  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
-                                </li>
-                      
-                                <li class="row p-2  serviceItem">
-                                    <div class="col-12 col-md-4  p-3 serviceName subtitle"> -- Service</div>
-                                    <div class="col-12 col-md-8 serviceDescription text  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
-                                </li>
-                           
-                                <li class="row p-2  serviceItem">
-                                    <div class="col-12 col-md-4  p-3 serviceName subtitle"> -- Service</div>
-                                    <div class="col-12 col-md-8 serviceDescription text  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.</div>
-                                </li>
-                            </ul>
-                
-                                <p class="serviceLink text-end">
-                                    <!-- link -->
-                                    <a href="javascript:void(0);"   onclick="navigateTo('services')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
-                                </p>
+                        <!-- Lista original que se muestra solo en pantallas grandes -->
+                        <ul class="g-0 serviceList d-none d-md-block">
+                          <li class="row p-2 serviceItem">
+                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
+                            <div class="col-12 col-md-8 serviceDescription text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                            </div>
+                          </li>
+
+                          <li class="row p-2 serviceItem">
+                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
+                            <div class="col-12 col-md-8 serviceDescription text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                            </div>
+                          </li>
+
+                          <li class="row p-2 serviceItem">
+                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
+                            <div class="col-12 col-md-8 serviceDescription text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                            </div>
+                          </li>
+
+                          <li class="row p-2 serviceItem">
+                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
+                            <div class="col-12 col-md-8 serviceDescription text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                            </div>
+                          </li>
+
+                          <li class="row p-2 serviceItem">
+                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
+                            <div class="col-12 col-md-8 serviceDescription text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                            </div>
+                          </li>
+                          <!-- Repite para los demás servicios -->
+                        </ul>
+                    
+                        <!-- Acordeón que se muestra solo en pantallas pequeñas -->
+                        <div class="accordion d-md-none" id="serviceAccordion">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button subtitle subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Servicio 1
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class=" accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#serviceAccordion">
+                              <div class="accordion-body text text-center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Servicio 2
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#serviceAccordion">
+                              <div class="accordion-body text ">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Servicio 3
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#serviceAccordion">
+                              <div class="accordion-body text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                              <button class="accordion-button subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Servicio 4
+                              </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#serviceAccordion">
+                              <div class="accordion-body text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Servicio 5
+                              </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#serviceAccordion">
+                              <div class="accordion-body text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+  
+                        <p class="serviceLink text-end">
+                          <!-- link -->
+                          <a href="javascript:void(0);" onclick="navigateTo('services')">Ver Más <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"></a>
+                        </p>
                         </section>
                     </div>
-                    
-                 </section>
+                </section>
             </div>
          </div>
 
@@ -189,55 +270,55 @@
                 </section>
                 
                 <!-- Projects -->
-                <section class="row p-3 ">
-                    <div class="col-12 col-md-6 p-3">
-                        <section>
+                <section class="row p-2 border justify-content-center gx-4">
+                    <div class="col-12 col-sm-8 col-md-5 m-2 p-3">
+                        <section class="">
                             <figure class="p-2 projectFigure">
-                                <img src="./public/Imgs/project.png" class="projectImage" alt="Project-image">
-                                <figcaption class="d-flex justify-content-center modalBtn" data-default="1">
-                                    View Details
-                                    <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26">
-                                </figcaption>
+                                <div class="card">
+                                  <div class="top-section">
+                                    <img src="./public/Imgs/projectsImg/Pokedex.png" class="projectImage" alt=""/>
+
+                                    <div class="borde"></div>
+                                    <div class="icons">
+                                      <div class="logo">
+                                        <img src="./public/Imgs/projectsImg/pokedexIcon.png" alt="project">
+                                      </div>
+                                      <div class="info">
+                                        <a href="javascript:void(0);" onclick="navigateTo('project1')"> <img src="./public/Imgs/PArrow.svg" class="projectLink" width="25" height="25" alt="arrowSquare icon"> </a>
+                                        <a href="javascript:void(0);" onclick="navigateTo('github')"> <img src="./public/Imgs/Info.svg" class="projectLink" width="25" height="25" alt="arrowSquare icon"> </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="bottom-section">
+                                    <span class="title fs-4">Pokedex</span>
+                                    <div class="square row my-3">
+                                        <div class="col-6 text-center">
+                                            <h5>Información</h5>
+                                            <div class="text">Si eres fan de pokemon, este es un proyecto donde podras acceder a una amplia variedad de pokenmos buscando por nombre o id. vamos pruebalo!!</div>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <h5>Tecnologías</h5>
+                                            <div class="card-icons p-1" >
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
                             </figure>
                         </section>
                     </div>
                     
-                    <div class="col-12 col-md-6 p-3">
-                        <section>
-                            <figure class="p-2 projectFigure">
-                                <img src="" alt="Project-image">
-                                <figcaption class="d-flex justify-content-center modalBtn" data-default="2">
-                                    View Details
-                                    <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26">
-                                </figcaption>
-                            </figure>
-                        </section>
-                    </div>
-                    
-                    <div class="col-12 col-md-6 p-3">
-                        <section>
-                            <figure class="p-2 projectFigure">
-                                <img src="./public/Imgs/project.png" class="projectImage" alt="Project-image">
-                                <figcaption class="d-flex justify-content-center modalBtn" data-default="3">
-                                    View Details
-                                    <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26">
-                                </figcaption>
-                            </figure>
-                        </section>
-                    </div>
-                    
-                    <div class="col-12 col-md-6 p-3">
-                        <section>
-                            <figure class="p-2 projectFigure">
-                                <img src="" alt="Project-image">
-                                <figcaption class="d-flex justify-content-center modalBtn" data-default="4">
-                                    View Details
-                                    <img src="./public/Imgs/arrowSquare.svg" alt="arrowSquare icon" width="26" height="26">
-                                </figcaption>
-                            </figure>
-                        </section>
-                    </div>
-                    
+                 
                     
                     <p class="text-end">
                         <!-- link -->
@@ -474,7 +555,6 @@
                 <!-- content -->
                 <section class="row justify-content-center ">
                     <div class="col-12  p-2">
-                
                         <section class="row p-2 carousel-container position-relative">
                             <h2 class="position-absolute colaborationsTitle text-center title">Colaboraciones</h2>
                             <div class="carousel-trackk d-flex">
@@ -483,56 +563,16 @@
                                     <figcaption class="subtitle">Artyby</figcaption>
                                 </figure>
                                 <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
+                                    <img src="public/Imgs/unprgramayyo.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="subtitle">UnProgramaYYo</figcaption>
                                 </figure>
                                 <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
+                                    <img src="public/Imgs/user17job.svg" width="76" height="76" alt="Artyby Logo">
+                                    <figcaption class="subtitle">User17job</figcaption>
                                 </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
-                                </figure>
-                                <!-- <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure> -->
                         
-                                <!-- Duplicate the items for infinite scrolling -->
-                                <!-- <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure>
-                                <figure class="col-5 d-flex border">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="border">Artyby</figcaption>
-                                </figure>
-                            -->
-                                <!-- Continue duplicating as needed for smooth infinite scroll -->
                             </div>
                         </section>
-                        
                     </div>
                 </section>
             </div>
@@ -568,13 +608,16 @@
                                 <div class="border element blog6"><img src="./public/Imgs/blogImgs/hombre.png" class="blog6__img" alt="hombre"></div>
                             </div>
                             <div class="col-6 ">
-                                <div class="border element blog2"><img src="./public/Imgs/blogImgs/image.png" class="blog2__img" alt="matrix-img"></div>
+                                <div class="border element blog2">
+                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img" alt="matrix-img">
+                                </div>
                             </div>
                         </section>
 
                         <section class="row  p-3 ">
                             <div class="col-3 my-2 ">
-                                <div class="border element blog7"><img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img"></div>
+                                <div class="border element blog7"><img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
+                                </div>
                             </div>
                             <div class="col-6 my-2 blog5" id="blog">
                                 <a href="javascript:void(0);"   onclick="navigateTo('blog')">
@@ -590,10 +633,15 @@
                                 </div>
                             </div>
                             <div class="col-4 my-2 ">
-                                <div class="border element layy blog4">Informacion</div>
+                                <div class="border element layy blog4">
+                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
+                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
+                                </div>
                             </div>
                             <div class="col-5 my-2 ">
-                                <div class="border element layy blog3">dos siluetas caminando hacia el destino</div>
+                                <div class="border element layy blog3">
+                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
+                                </div>
                             </div>
                         </section>
                           
@@ -604,55 +652,92 @@
                  <!-- Carousel for another designs -->
                 <section class="row carouselC justify-content-center ">
 
-                    <div class="col-6 blogEl border" id="blog">
-                        <div class="  text-center"><h1>Blog</h1></div>
-                    </div> 
-                    
+                    <div class="col-6 my-2 blogEl blog " id="blog">
+                        <a href="javascript:void(0);"   onclick="navigateTo('blog')">
+                            <div class="border element text-center position-relative"> 
+                                <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
+                                <h1>UnProgramaYYo</h1>
+                            </div>
+                        </a>
+
+                        <p class="subtitle text-light">A new World</p>
+                    </div>
+
                     <div class="carousel" id="BlogContainer">
                         <div class="carousel-track">
                             <div class="el">
-                                <div class="elBord">hi</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
+                                </div>
                             </div>     
                             <div class="el">
-                                <div class="elBord">hi</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
+                          
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">im</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/WHOA.png" alt="blog-background" class="blog1__back position-absolute">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">Ramphys</div>
+                                <div class="elBord position-relative">
+                                  <img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">a web developer</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">and you?</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img position-absolute" alt="Laptop-img">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">what do you do?</div>
+                                <div class="elBord position-relative">   
+                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img position-absolute" alt="matrix-img">
+                                </div>
                             </div>
                     
                             <!-- Duplicado del contenido para efecto infinito -->
-                            <div class="el">
-                                <div class="elBord">hi</div>
+                            <    <div class="el">
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
+                                </div>
                             </div>     
                             <div class="el">
-                                <div class="elBord">hi</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
+                          
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">im</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/WHOA.png" alt="blog-background" class="blog1__back position-absolute">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">Ramphys</div>
+                                <div class="elBord position-relative">
+                                  <img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">a web developer</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">and you?</div>
+                                <div class="elBord position-relative">
+                                    <img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img position-absolute" alt="Laptop-img">
+                                </div>
                             </div>
                             <div class="el">
-                                <div class="elBord">what do you do?</div>
+                                <div class="elBord position-relative">   
+                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img position-absolute" alt="matrix-img">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -708,7 +793,7 @@
                             <div class="contactFormText text-center">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus et temporibus quibusdam labore recusandae illum ipsam sint laboriosam.
                             </div>
-                            <form  class="contactForm my-5"  name="contact" netlify>
+                            <form  class="contactForm my-5" method="post"  name="contact" netlify>
                                 <div class="row">
                                     <div class=" col-6">
                                         <label for="name" class="form-label">Name</label>
@@ -845,54 +930,10 @@
     <div class="cursor"></div>
     <!-- cursor -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Pokedex</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <figure>
-            <img src="./public/Imgs/project.png" class="modalProjectImage" alt="project-img" width="">
-          </figure>
-          <div class="square row my-3">
-            <div class="col-6">
-                <h3>Information</h3>
-                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quos reprehenderit odit facere necessitatibus</div>
-            </div>
-            <div class="col-6">
-                <h3>Technologies</h3>
-                <div class="modal-icons p-1 ">
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                    <div class="MIcons border">Y</div>
-                </div>
-            </div>
-          </div>
-          <div class="row my-5 justify-content-center">
-            <div class="col-4">
-               <a href="javascript:void(0);" class="m-0 p-3" onclick="navigateTo(`project1`)"><button class="DownloadCv px-3">Project Link</button></a>
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-    </div>
     <!-- javascript -->
     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./public/Js/modals.js"></script>
+
 
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
     <script src="./public/Js/externalLinks.js"></script>
