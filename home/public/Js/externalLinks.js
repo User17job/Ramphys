@@ -1,6 +1,6 @@
 function navigateTo(page) {
     const urls = {
-        'home': 'https://ramphystb.netlify.app/',
+        // 'home': 'https://ramphystb.netlify.app/',
         'about': 'https://ramphystb-about.netlify.app/',
         'portfolio': 'https://ramphystb-portafolio.netlify.app/',
         'services': 'https://ramphystb-service.netlify.app/',
@@ -16,6 +16,10 @@ function navigateTo(page) {
         'instagram': 'https://www.instagram.com//ramphys_/',
         'freecodecamp': 'https://www.freecodecamp.org/user17job',
         'user17job':'https://user17job.github.io/User17job.inc./',
+
+        'llamar':'tel:+18295237077',
+        'email':'mailto:ramphys.g.c.p@gmail.com',
+        'whatsapp':'https://wa.link/wss1yb',
 
         "project1":"http://127.0.0.1:5500/home/index.html",
         "project2":"http://127.0.0.1:5500/project2/index.html",

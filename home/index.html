@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     
+    <title>Home</title>
+
     <link rel="stylesheet" href="./public/Css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/Css/index.css">
-    <link rel="stylesheet" href="./public/Css/blog.css">
-    <link rel="stylesheet" href="./public/Css/responsive.css">
+
     <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css">
     <link rel="stylesheet" href="./public/Css/charging.css">
+    <link rel="stylesheet" href="./public/Css/responsive.css">  
 
     <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg">
 
-   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- contactBackground -->
+
     <!-- charging -->
     <div class="charging">
         <div class="row">
@@ -36,8 +36,7 @@
                         <span class="word">buttons</span>
                       </div>
                     </div>
-                  </div>
-                  
+                </div>
             </div>
         </div>
     </div>
@@ -48,9 +47,10 @@
             <div class="col-3">
                 <figure class="navLogo">
                     <img src="./public/Imgs/Artybylogo.svg" width="85" height="85" alt="artyby logo">
-                    <!-- <figcaption class="fs-3 my-3 name">Ramphys</figcaption> -->
                 </figure>
             </div>
+
+            <!-- responsive menu -->
             <div class="col-9 p-3 navLInksC d-flex justify-content-end">
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" class="toggle my-2">
@@ -60,12 +60,12 @@
                 </label>
                 
                 <section class="navLInks">
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem homeL" onclick="navigateTo('home')">Home+</a>
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem aboutL" onclick="navigateTo('about')">About</a>
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem portfolioL" onclick="navigateTo('portfolio')">Portfolio</a>
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem serviceL" onclick="navigateTo('services')">Servicios</a>
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem contactL" onclick="navigateTo('contact')">Contact</a>
-                    <a href="javascript:void(0);" target="_blank" class="m-0 p-3 navLInkItem blogL" onclick="navigateTo('blog')">Blog</a>
+                    <a class="m-0 p-3 navLInkItem homeL">Home+</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem aboutL" onclick="navigateTo('about')">About</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem portfolioL" onclick="navigateTo('portfolio')">Portfolio</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem serviceL" onclick="navigateTo('services')">Servicios</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem contactL" onclick="navigateTo('contact')">Contact</a>
+                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem blogL" onclick="navigateTo('blog')">Blog</a>
                 </section>
             
                 <div class="m-2">
@@ -212,19 +212,19 @@
                               </div>
                             </div>
                           </div>
-
                           <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
-                              <button class="accordion-button subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 Servicio 4
                               </button>
                             </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#serviceAccordion">
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#serviceAccordion">
                               <div class="accordion-body text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
                               </div>
                             </div>
                           </div>
+
                           
                           <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
@@ -270,9 +270,9 @@
                 </section>
                 
                 <!-- Projects -->
-                <section class="row p-2 border justify-content-center gx-4">
-                    <div class="col-12 col-sm-8 col-md-5 m-2 p-3">
-                        <section class="">
+                <section class="row p-2 justify-content-center gx-4 projectsC ">
+                    <div class="col-12 col-sm-8 col-md-5 m-2 p-3 ">
+                        <section class=" ">
                             <figure class="p-2 projectFigure">
                                 <div class="card">
                                   <div class="top-section">
@@ -299,16 +299,10 @@
                                         <div class="col-6 text-center">
                                             <h5>Tecnologías</h5>
                                             <div class="card-icons p-1" >
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosHtml5.svg">
                                                 <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosBootstrap.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosJavascript.svg">
+                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosTypescript.svg">
                                             </div>
                                         </div>
                                       </div>
@@ -317,17 +311,12 @@
                             </figure>
                         </section>
                     </div>
-                    
-                 
-                    
+
                     <p class="text-end">
                         <!-- link -->
                         <a href="javascript:void(0);"   onclick="navigateTo('portfolio')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
                     </p>
-               
                 </section>
-
-
             </div>
         </div>
 
@@ -521,7 +510,9 @@
 
         <!-- about section -->
         <div class="row about">
-            <div class="col my-3 ">
+            <div class="col my-3  position-relative">
+                <div class="AboutBackground"></div>
+
                 <!-- title -->
                 <section class="row ">
                     <div class="col ">
@@ -553,24 +544,31 @@
         <div class="row collaborations">
             <div class="col my-3 ">
                 <!-- content -->
+                 <!-- background -->
+
                 <section class="row justify-content-center ">
                     <div class="col-12  p-2">
                         <section class="row p-2 carousel-container position-relative">
-                            <h2 class="position-absolute colaborationsTitle text-center title">Colaboraciones</h2>
+                            <h2 class="position-absolute colaborationsTitle text-center title">Branding</h2>
                             <div class="carousel-trackk d-flex">
                                 <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">Artyby</figcaption>
+                                    <img src="public/Imgs/Artybylogo.svg" width="100" height="100" alt="Artyby Logo">
                                 </figure>
                                 <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/unprgramayyo.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">UnProgramaYYo</figcaption>
+                                    <img src="public/Imgs/unprgramayyo.svg" width="106" height="106" alt="Artyby Logo">
                                 </figure>
                                 <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/user17job.svg" width="76" height="76" alt="Artyby Logo">
-                                    <figcaption class="subtitle">User17job</figcaption>
+                                    <img src="public/Imgs/user17job.svg" width="106" height="100" alt="Artyby Logo">
                                 </figure>
-                        
+                                <figure class="col-5 d-flex mx-4">
+                                    <img src="public/Imgs/How'stech.svg" width="76" height="76" alt="Artyby Logo">
+                                </figure>
+                                <figure class="col-5 d-flex mx-4">
+                                    <img src="public/Imgs/TwoEyesMainLogoTwo.svg" fill="white" width="106" height="176" alt="Artyby Logo">
+                                </figure>
+                                <figure class="col-5 d-flex mx-4">
+                                    <img src="public/Imgs/SportDream.svg" fill="white" width="150" height="150" alt="Artyby Logo">
+                                </figure>
                             </div>
                         </section>
                     </div>
@@ -589,13 +587,12 @@
                 </section>
                 <!-- Info -->
                 <section class="row justify-content-center">
-                    <div class="col-9 my-3 ">
+                    <div class="col-9 my-0 ">
                         <h6 class="text-center">La vida y el crecimiento de un programdor sin importar su area, suele ser una aventura que no muchos estarian dispuestos a Emprender. por eso cree <a href="" >UnprogramaYYo</a> y compartir mas acerca del tema y sus aderidos </h6>    
                     </div>
                 </section>
                 <!-- Layout for pc design -->
                 <section class="row layout justify-content-center ">
-                    <!-- <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog__back"> -->
                     <div class="col p-3 " id="BlogContainer ">
 
                         <section class="row  p-3 ">
@@ -650,20 +647,18 @@
                 </section> 
 
                  <!-- Carousel for another designs -->
-                <section class="row carouselC justify-content-center ">
-
-                    <div class="col-6 my-2 blogEl blog " id="blog">
+                <section class="row carouselC justify-content-center  ">
+                    <div class="col-6 my-0 blogEl blog " id="blog">
                         <a href="javascript:void(0);"   onclick="navigateTo('blog')">
-                            <div class="border element text-center position-relative"> 
-                                <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
-                                <h1>UnProgramaYYo</h1>
-                            </div>
+                        <div class="border element text-center position-relative"> 
+                            <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
+                            <h1>UnProgramaYYo</h1>
+                        </div>
                         </a>
-
                         <p class="subtitle text-light">A new World</p>
                     </div>
 
-                    <div class="carousel" id="BlogContainer">
+                    <div class="carousel " id="BlogContainer">
                         <div class="carousel-track">
                             <div class="el">
                                 <div class="elBord position-relative">
@@ -703,7 +698,7 @@
                             </div>
                     
                             <!-- Duplicado del contenido para efecto infinito -->
-                            <    <div class="el">
+                            <div class="el">
                                 <div class="elBord position-relative">
                                     <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
                                 </div>
@@ -740,10 +735,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
+                    </div>    
                 </section>        
-
             </div>
         </div> 
  
@@ -771,15 +764,15 @@
                                 <ul class="g-0  contactServiceList p-3">                
                                     <li class="row p-0 m-2 contactServiceItem ">
                                         <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle "><b>LLamar </b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="tel:+18295237077" >555 555 5555</a></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="javascript:void(0);" onclick="navigateTo('llamar')">555 555 5555</a></div>
                                     </li>
                                     <li class="row p-0 m-2 contactServiceItem ">
                                         <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"><b>Escribir a WhatsApp</b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="https://wa.link/wss1yb" target="_blank">WhatsApp.yo</a></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a  href="javascript:void(0);" onclick="navigateTo('whatsapp')">WhatsApp.yo</a></div>
                                     </li>
                                     <li class="row p-0 m-2 contactServiceItem ">
                                         <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle "><b>Dejar Un Email</b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="mailto:ramphys.g.c.p@gmail.com" target="_blank">@Ramphys </a></div>
+                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="javascript:void(0)" onclick="navigateTo('email')">@Ramphys </a></div>
                                     </li>
                                 </ul>
 
@@ -815,11 +808,12 @@
                                         <label for="service" class="form-label">Elija un servicio</label>
                                         <select class="form-select" id="service" aria-label="defaul">
                                             <option class="text-dark text-b" selected>Opciones de servicios</option>
-                                            <option class="text-dark text-b" value="1">Web Development</option>
-                                            <option class="text-dark text-b" value="2">Web Design</option>
-                                            <option class="text-dark text-b" value="3">Grafic Design</option>
-                                            <option class="text-dark text-b" value="4">Microsoft Office</option>
-                                            <option class="text-dark text-b" value="5">Creacion de marca</option>
+                                            <option class="text-dark text-b" value="1">Desarrollo Web</option>
+                                            <option class="text-dark text-b" value="2">Diseno web</option>
+                                            <option class="text-dark text-b" value="3">Estilizacion web</option>
+                                            <option class="text-dark text-b" value="4">Diseno grafico</option>
+                                            <option class="text-dark text-b" value="5">Microsoft Office</option>
+                                            <option class="text-dark text-b" value="6">Creacion de marca</option>
                                           </select>
                                     </div>
                                     <div class="mb-3">
@@ -850,7 +844,7 @@
                     <div class="col-12 text-start my-3">
                         <!-- /* From Uiverse.io by Galahhad */  -->
                         <label class="bb8-toggle">
-                              <input class="bb8-toggle__checkbox" type="checkbox">
+                              <input class="bb8-toggle__checkbox" type="checkbox" id="modeToggle">
                               <div class="bb8-toggle__container">
                                 <div class="bb8-toggle__scenery">
                                   <div class="bb8-toggle__star"></div>
@@ -933,7 +927,8 @@
     <!-- javascript -->
     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    
+    <script src="./public/Js/mode.js"></script>
 
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
     <script src="./public/Js/externalLinks.js"></script>

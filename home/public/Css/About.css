@@ -1,0 +1,44 @@
+
+/* about styles */
+.about{
+    margin-top: 160px;
+}
+.aboutTitle{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(25deg, #0369a1, #f4f6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.aboutsectionContainer{
+    position: relative;
+    padding: 6%;
+    height: 505px;
+    justify-content: center;
+}
+
+.aboutsection{
+    position:relative;
+    height: 305px;
+    border:#0369a1 solid;
+    border-radius:55px;
+}
+.aboutUno{
+    z-index: 6;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 500;
+}
+.aboutDos{
+    left: 55px;
+    top:-250px;
+    z-index: 5;
+}
+.aboutLink{
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    width:  90px;
+    border: #d0c0bc;
+    z-index: 55;
+}

@@ -17,16 +17,11 @@ checkbox.addEventListener('change', function() {
 let change=5;
 window.addEventListener('scroll', function() {
   if (window.scrollY > 150) {
-    // alert('You have scrolled 150px or more.');
     document.getElementById('navbar').classList.add('scrolled');
-    // document.getElementById('navbar').style.opacity="5%";
-
-    // Add any action you want to trigger here
   }
   else {
     document.getElementById('navbar').classList.remove('scrolled');
     document.getElementById('navbar').style.opacity="100%";
-    // Add any action you want to trigger here
     }
 });
 
@@ -36,15 +31,12 @@ const optiontwo = document.getElementById('StackAnimation');
 
 const img_cont = document.getElementById('stackImage')
 const anim_cont = document.getElementById('animContainer')
-// const gallery_cont = document.getElementById('stack_gallery')
 const gallery_filter = document.getElementById('stack_gallery_filter')
-
 
 optionOne.addEventListener('click', showOptionOne)
 optiontwo.addEventListener('click', showOptionTwo)
   
-
-  function showOptionTwo() {
+function showOptionTwo() {
   gallery_filter.style.display="none";
   
   anim_cont.style.display="block";
@@ -69,5 +61,5 @@ const goUp = document.querySelector('.goUpButton').addEventListener('click', goU
 function goUpp() { 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 } 
- goUpp() 
+goUpp() 
 
