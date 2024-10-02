@@ -1,6 +1,5 @@
-
 /* Carousel for Branding */
-.colaborationsTitle{
+.colaborationsTitle {
   font-size: 80px;
   top: 16%;
   font-weight: bold;
@@ -18,20 +17,21 @@
   display: flex;
   justify-content: space-between;
   animation: scroll 50s linear infinite;
-
 }
 
-.carousel-trackk figure {
+.Colaborationslogos {
   flex: 0 0 16.66%; /* Esto asegura que haya 6 imágenes visibles a la vez */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(#020617 15%, transparent 60%, rgba(0, 0, 0, 0) 100%);
+  background-image: radial-gradient(
+    #020617 15%,
+    transparent 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-
-
 /* Duplicamos las imágenes para que se desplace infinitamente */
-.carousel-trackk figure:nth-last-child(-n+6) {
+.carousel-trackk figure:nth-last-child(-n + 6) {
   display: block;
 }

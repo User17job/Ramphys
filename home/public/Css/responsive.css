@@ -1,11 +1,10 @@
 /* blog */
 
-@media screen and (width < 860px){
-
+@media screen and (width < 860px) {
   #checkbox {
     display: none;
   }
-  
+
   .toggle {
     display: block;
     position: relative;
@@ -17,53 +16,54 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
-  
+
   .bars {
     width: 100%;
     height: 4px;
     background-color: rgb(176, 92, 255);
     border-radius: 4px;
   }
-  
+
   #bar2 {
-    transition-duration: .8s;
+    transition-duration: 0.8s;
   }
-  
-  #bar1,#bar3 {
+
+  #bar1,
+  #bar3 {
     width: 70%;
   }
-  
+
   #checkbox:checked + .toggle .bars {
     position: absolute;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
-  
+
   #checkbox:checked + .toggle #bar2 {
     transform: scaleX(0);
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
-  
+
   #checkbox:checked + .toggle #bar1 {
     width: 100%;
     transform: rotate(45deg);
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
-  
+
   #checkbox:checked + .toggle #bar3 {
     width: 100%;
     transform: rotate(-45deg);
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
-  
+
   #checkbox:checked + .toggle {
-    transition-duration: .5s;
+    transition-duration: 0.5s;
     transform: rotate(180deg);
   }
-  .navLInks{
+  .navLInks {
     opacity: 0%;
-    background-color:#f9fafb;
+    background-color: #f9fafb;
     color: #020617;
     height: 455px;
     width: 65%;
@@ -75,135 +75,136 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    position: absolute;    
-    transition: 0.5s;    
+    position: absolute;
+    transition: 0.5s;
     border-radius: 5px;
   }
-  .navLInkItem{
-      background-color: transparent;
-      color: #020617;
+  .navLInkItem {
+    background-color: transparent;
+    color: #020617;
   }
-  .homeL{
+  .homeL {
     background-color: #f9fafb;
   }
 
-  .navLInkItem:hover{
-      background-color: #f9fafb;
-      color: #0369a1;
-      opacity: 100%;
-      box-shadow: 0px 0px 50;
+  .navLInkItem:hover {
+    background-color: #f9fafb;
+    color: #0369a1;
+    opacity: 100%;
+    box-shadow: 0px 0px 50;
   }
-  
-  .navLInkItem:active{
+
+  .navLInkItem:active {
     background-color: #0369a1;
     transition: 0.5s;
     color: #f9fafb;
   }
 
   /* navbar */
-  #checkbox:checked ~ .navLInks{
+  #checkbox:checked ~ .navLInks {
     top: 65vh;
   }
-  .menu-active{
+  .menu-active {
     overflow: hidden;
   }
-
 }
-@media screen and (width < 755px){
-    /*service  */
-    .serviceName{
-        font-size: 26px;
-        text-align: center;
-    }
-    .serviceDescription{
-        text-align: center;
-    }
-    /* stack */
-    #stack_gallery_filter{
-      position: relative;
-      border-radius: 10px;
-      height: 460px;
-      overflow-y: scroll;
-      transition: 0.6s;
-      background-color: #f9fafb39;
-    }
-    #stack_gallery_filter::before{
-      position: absolute;
-      content: "";
-      top: 0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0);
-      filter: none; /* Aplica un desenfoque de 5px */
-      transition: filter 0.5s ease-in-out; /* Transición suave */
-      z-index: -5;
-    }
+@media screen and (width < 755px) {
+  /*service  */
+  .serviceName {
+    font-size: 26px;
+    text-align: center;
+  }
+  .serviceDescription {
+    text-align: center;
+  }
+  /* stack */
+  #stack_gallery_filter {
+    position: relative;
+    border-radius: 10px;
+    height: 460px;
+    overflow-y: scroll;
+    transition: 0.6s;
+    /* background-color: #f9fafb39; */
+  }
+  #stack_gallery_filter::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0); */
+    filter: none; /* Aplica un desenfoque de 5px */
+    transition: filter 0.5s ease-in-out; /* Transición suave */
+    z-index: -5;
+  }
 
-    /* about  */
-    .aboutUno{
-      z-index: 6;
-      overflow: hidden;
-      font-size: 17px;
-      font-weight: 500;
-    }
+  /* about  */
+  .aboutUno {
+    z-index: 6;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 500;
+  }
 
-    /*  */
-    .layout{
-        display: none;
-    }
+  /*  */
+  .layout {
+    display: none;
+  }
 
-    /*  */
-    .carouselC{
-        display: block;
-        position: relative;
-    }
-    .blogEl{
-        position: absolute;
-        width: 320px;
-        height: 300px;
-        background-color: #f9fafb07;
-        color: #020617;
-        z-index: 5;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }  
-    .carousel {
-        height: 555px;
-        display: grid;
-        place-items: center;
-        width: 100%;
-        margin-top: -85px;
-        overflow: hidden;
-        opacity: 55%;
-    }
-    .carousel-track {
-        display: flex;
-        width: calc(14 * (255px + 40px)); /* 255px element width + 40px margin (20px on each side) */
-        animation: scrolll 30s linear infinite;
-    }
-    .el {
-        flex: 0 0 255px; /* Fixed width of each element */
-        height: 255px;   /* Fixed height of each element */
-        padding: 10px;
-        margin: 0 20px; /* 20px margin on the left and right */
-        box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
-    }
-    .elBord {
-        border: 1px solid black;
-        text-align: center;
-        padding: 20px;
-        background-color: #0369a1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%; /* Ensures the content is centered */
-        box-sizing: border-box;
-    }
+  /*  */
+  .carouselC {
+    display: block;
+    position: relative;
+  }
+  .blogEl {
+    position: absolute;
+    width: 320px;
+    height: 300px;
+    /* background-color: #f9fafb07; */
+    /* color: #020617; */
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel {
+    height: 555px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: -85px;
+    overflow: hidden;
+    opacity: 55%;
+  }
+  .carousel-track {
+    display: flex;
+    width: calc(
+      14 * (255px + 40px)
+    ); /* 255px element width + 40px margin (20px on each side) */
+    animation: scrolll 30s linear infinite;
+  }
+  .el {
+    flex: 0 0 255px; /* Fixed width of each element */
+    height: 255px; /* Fixed height of each element */
+    padding: 10px;
+    margin: 0 20px; /* 20px margin on the left and right */
+    box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
+  }
+  .elBord {
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 20px;
+    /* background-color: #0369a1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures the content is centered */
+    box-sizing: border-box;
+  }
 }
-@media screen and (width < 550px){
-  .navLInks{
+@media screen and (width < 550px) {
+  .navLInks {
     opacity: 0%;
     height: 350px;
     width: 80%;
@@ -215,38 +216,38 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    position: absolute;    
-    transition: 0.5s;    
+    position: absolute;
+    transition: 0.5s;
     border-radius: 5px;
   }
 
-  .welcome-img{
+  .welcome-img {
     top: 6.6rem;
   }
 
   /* navbar */
-  .welcome-h1{
+  .welcome-h1 {
     font-size: 45px;
   }
-  .welcome-img{
+  .welcome-img {
     margin-top: 4em;
-  } 
-  #StackImg{
+  }
+  #StackImg {
     transform: scale(1.6);
   }
-  .aboutsectionContainer{
+  .aboutsectionContainer {
     justify-content: start;
   }
-  .aboutUno{
+  .aboutUno {
     overflow-y: scroll;
   }
-  .aboutDos{
+  .aboutDos {
     left: 35px;
-}
-  .aboutLink{
+  }
+  .aboutLink {
     left: 66%;
   }
-  .colaborationsTitle{
+  .colaborationsTitle {
     font-size: 55px;
     top: 25%;
     font-weight: bold;
@@ -254,7 +255,7 @@
 }
 /* un media queris para el alto */
 @media (max-height: 600px) {
-  .navLInks{
+  .navLInks {
     height: 280px;
     width: 80%;
     top: 55pc;
@@ -263,16 +264,16 @@
     z-index: 5;
     opacity: 100%;
   }
-  .navLInksC{
+  .navLInksC {
     z-index: 1000;
-  } 
-  .navLInkItem{
+  }
+  .navLInkItem {
     background-color: #d8f1ff;
     width: 50%;
     margin: 10px;
     border-radius: 5px;
-  } 
-  .homeL{
+  }
+  .homeL {
     background-color: #f9fafb;
   }
 }

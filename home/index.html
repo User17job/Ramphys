@@ -1,923 +1,1687 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Home</title>
 
-    <link rel="stylesheet" href="./public/Css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/Css/index.css">
+    <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/Css/index.css" />
 
-    <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css">
-    <link rel="stylesheet" href="./public/Css/charging.css">
-    <link rel="stylesheet" href="./public/Css/responsive.css">  
+    <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css" />
+    <link rel="stylesheet" href="./public/Css/charging.css" />
+    <link rel="stylesheet" href="./public/Css/responsive.css" />
 
-    <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg">
+    <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Background -->
     <!-- charging -->
     <div class="charging">
-        <div class="row">
-            <div class="col">
-                <div class="carta">
-                    <div class="loader">
-                      <p>loading</p>
-                      <div class="words">
-                        <span class="word">buttons</span>
-                        <span class="word">forms</span>
-                        <span class="word">switches</span>
-                        <span class="word">cards</span>
-                        <span class="word">buttons</span>
-                      </div>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col">
+          <div class="carta">
+            <div class="loader">
+              <p>loading</p>
+              <div class="words">
+                <span class="word">buttons</span>
+                <span class="word">forms</span>
+                <span class="word">switches</span>
+                <span class="word">cards</span>
+                <span class="word">buttons</span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <main class="container-fluid p-0" id="container">
-        <!-- navbar -->
-        <div class="row  p-0 " id="navbar">
-            <div class="col-3">
-                <figure class="navLogo">
-                    <img src="./public/Imgs/Artybylogo.svg" width="85" height="85" alt="artyby logo">
-                </figure>
-            </div>
+      <!-- navbar -->
+      <div class="row p-0" id="navbar">
+        <div class="col-3">
+          <figure class="navLogo">
+            <img
+              src="./public/Imgs/Artybylogo.svg"
+              width="85"
+              height="85"
+              alt="artyby logo"
+            />
+          </figure>
+        </div>
 
-            <!-- responsive menu -->
-            <div class="col-9 p-3 navLInksC d-flex justify-content-end">
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox" class="toggle my-2">
-                    <div class="bars" id="bar1"></div>
-                    <div class="bars" id="bar2"></div>
-                    <div class="bars" id="bar3"></div>
-                </label>
-                
-                <section class="navLInks">
-                    <a class="m-0 p-3 navLInkItem homeL">Home+</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem aboutL" onclick="navigateTo('about')">About</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem portfolioL" onclick="navigateTo('portfolio')">Portfolio</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem serviceL" onclick="navigateTo('services')">Servicios</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem contactL" onclick="navigateTo('contact')">Contact</a>
-                    <a href="javascript:void(0);" class="m-0 p-3 navLInkItem blogL" onclick="navigateTo('blog')">Blog</a>
-                </section>
-            
-                <div class="m-2">
-                    <button class="navbutton subtitle" onclick="navigateTo('hire')">Hire me</button>
+        <!-- responsive menu -->
+        <div class="col-9 p-3 navLInksC d-flex justify-content-end">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox" class="toggle my-2">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+          </label>
+
+          <section class="navLInks">
+            <a class="m-0 p-3 navLInkItem homeL">Home+</a>
+            <a
+              href="javascript:void(0);"
+              class="m-0 p-3 navLInkItem aboutL"
+              onclick="navigateTo('about')"
+              >About</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="m-0 p-3 navLInkItem portfolioL"
+              onclick="navigateTo('portfolio')"
+              >Portfolio</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="m-0 p-3 navLInkItem serviceL"
+              onclick="navigateTo('services')"
+              >Servicios</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="m-0 p-3 navLInkItem contactL"
+              onclick="navigateTo('contact')"
+              >Contact</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="m-0 p-3 navLInkItem blogL"
+              onclick="navigateTo('blog')"
+              >Blog</a
+            >
+          </section>
+
+          <div class="m-2">
+            <button class="navbutton subtitle" onclick="navigateTo('hire')">
+              Hire me
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- welcome section -->
+      <div class="row" id="welcome">
+        <div class="welcomeSecBackground">.</div>
+
+        <div class="col" id="welcome-container">
+          <section class="row p-2 gy-3" id="">
+            <div class="col-12 col-lg-7">
+              <section class="welcome-des p-2">
+                <!-- title -->
+                <h2 class="welcome-h2 subtitle">Soy Ramphys</h2>
+                <h1 class="welcome-h1 my-3 title">
+                  Diseñador web <code class="more">+</code> <br />
+                  Desarrollador web
+                </h1>
+                <p class="my-4 text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusantium aliquam, libero unde porro ipsum ?
+                </p>
+                <div class="WelcomeLinks my-5 justify-content-center">
+                  <a
+                    href="javascript:void(0);"
+                    class="m-3"
+                    onclick="navigateTo('cv')"
+                    ><button class="DownloadCv">Download CV</button></a
+                  >
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('linkedin')"
+                    ><img
+                      src="./public/Imgs/LinkedinWhite.svg"
+                      class="welIcon"
+                      alt="icon-linkedin"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('github')"
+                    ><img
+                      src="./public/Imgs/GithubWhite.svg"
+                      class="welIcon"
+                      alt="icon-github"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('instagram')"
+                    ><img
+                      src="./public/Imgs/InstagramWhite.svg"
+                      class="welIcon"
+                      alt="icon-instagram"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('freecodecamp')"
+                    ><img
+                      src="./public/Imgs/Freecodecampwhite.svg"
+                      class="welIcon"
+                      alt="icon-freecodecamp"
+                      width="35"
+                      height="35"
+                  /></a>
                 </div>
-                
+              </section>
             </div>
-        </div>
-
-        <!-- welcome section -->
-        <div class="row" id="welcome">
-            <div class="welcomeSecBackground">.</div>
-            
-            <div class="col  " id="welcome-container">
-                <section class="row p-2 gy-3" id="">
-                    <div class="col-12 col-lg-7">
-                        <section class=" welcome-des p-2"> 
-
-                            <!-- title -->
-                             <h2 class="welcome-h2 subtitle">Soy Ramphys</h2>
-                             <h1 class="welcome-h1 my-3 title">Diseñador web <code class="more">+</code> <br> Desarrollador web</h1>
-                             <p class="my-4 text "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam, libero unde porro ipsum ?</p>
-                             <div class="WelcomeLinks p-0 my-5 justify-content-center">
-                                <a href="javascript:void(0);" class="m-3" onclick="navigateTo('cv')"><button class="DownloadCv ">Download CV</button></a>
-                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('linkedin')"><img src="./public/Imgs/LinkedinWhite.svg" class="welIcon" alt="icon-linkedin" width="35" height="35"></a>
-                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('github')"><img src="./public/Imgs/GithubWhite.svg" class="welIcon" alt="icon-github" width="35" height="35"></a>
-                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('instagram')"><img src="./public/Imgs/InstagramWhite.svg" class="welIcon" alt="icon-instagram" width="35" height="35"></a>
-                                <a href="javascript:void(0);" class="m-0" onclick="navigateTo('freecodecamp')"><img src="./public/Imgs/Freecodecampwhite.svg" class="welIcon" alt="icon-freecodecamp" width="35" height="35"></a>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-12 col-lg-5 ">
-                        <section class=" welcome-img position-relative" >
-                            <figure class="imgItem ">
-                                <div class="rotateDiv "></div>
-                            </figure>
-                            <figure class="imgItem">
-                                <img src="./public/Imgs/PeopleAvatar.svg" alt="welcome Picture" width="100%" height="100%" >
-                            </figure>
-
-                        </section>
-                    </div>
-                </section>
+            <div class="col-12 col-lg-5">
+              <section class="welcome-img position-relative">
+                <figure class="imgItem">
+                  <div class="rotateDiv"></div>
+                </figure>
+                <figure class="imgItem">
+                  <img
+                    src="./public/Imgs/PeopleAvatar.svg"
+                    alt="welcome Picture"
+                    width="100%"
+                    height="100%"
+                  />
+                </figure>
+              </section>
             </div>
+          </section>
         </div>
+      </div>
 
-        <!-- service section -->
-         <div class="row ">
-            <div class="col  services position-relative">
-                <div class="servicesBackground"></div>
-                <!-- title -->
-                <section class="row ">
-                    <div class="col ">
-                        <h3 class="text-center serviceTitle title">Servicios</h3>    
+      <!-- service section -->
+      <div class="row">
+        <div class="col services position-relative">
+          <div class="servicesBackground baki"></div>
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center serviceTitle title">Servicios</h3>
+            </div>
+          </section>
+          <!-- info -->
+          <section class="row justify-content-center">
+            <div class="col-9 my-3">
+              <h3 class="text-center fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+                nemo aliquam deleniti ducimus nisi quas dolores neque vero
+                quisquam consequuntur sapiente laborum. Provident fugit a
+                recusandae incidunt architecto ea esse.z
+              </h3>
+            </div>
+          </section>
+
+          <!-- sercvices -->
+          <section class="row p-3">
+            <div class="col">
+              <section>
+                <!-- Lista original que se muestra solo en pantallas grandes -->
+                <ul class="g-0 serviceList d-none d-md-block">
+                  <li class="row p-2 serviceItem">
+                    <div class="col-12 col-md-4 p-3 serviceName subtitle">
+                      -- Service
                     </div>
-                </section>
-                <!-- info -->
-                <section class="row justify-content-center">
-                    <div class="col-9 my-3 ">
-                        <h3 class="text-center fs-6 " >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nemo aliquam deleniti ducimus nisi quas dolores neque vero quisquam consequuntur sapiente laborum. Provident fugit a recusandae incidunt architecto ea esse.z</h3>    
+                    <div class="col-12 col-md-8 serviceDescription text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis fuga officiis molestiae dolor, atque quod sapiente
+                      veritatis.
                     </div>
-                </section>
-               
-                 <!-- sercvices -->
-                <section class="row p-3">
-                    <div class="col">
-                        <section>
-                        <!-- Lista original que se muestra solo en pantallas grandes -->
-                        <ul class="g-0 serviceList d-none d-md-block">
-                          <li class="row p-2 serviceItem">
-                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
-                            <div class="col-12 col-md-8 serviceDescription text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                            </div>
-                          </li>
+                  </li>
 
-                          <li class="row p-2 serviceItem">
-                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
-                            <div class="col-12 col-md-8 serviceDescription text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                            </div>
-                          </li>
+                  <li class="row p-2 serviceItem">
+                    <div class="col-12 col-md-4 p-3 serviceName subtitle">
+                      -- Service
+                    </div>
+                    <div class="col-12 col-md-8 serviceDescription text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis fuga officiis molestiae dolor, atque quod sapiente
+                      veritatis.
+                    </div>
+                  </li>
 
-                          <li class="row p-2 serviceItem">
-                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
-                            <div class="col-12 col-md-8 serviceDescription text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                            </div>
-                          </li>
+                  <li class="row p-2 serviceItem">
+                    <div class="col-12 col-md-4 p-3 serviceName subtitle">
+                      -- Service
+                    </div>
+                    <div class="col-12 col-md-8 serviceDescription text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis fuga officiis molestiae dolor, atque quod sapiente
+                      veritatis.
+                    </div>
+                  </li>
 
-                          <li class="row p-2 serviceItem">
-                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
-                            <div class="col-12 col-md-8 serviceDescription text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                            </div>
-                          </li>
+                  <li class="row p-2 serviceItem">
+                    <div class="col-12 col-md-4 p-3 serviceName subtitle">
+                      -- Service
+                    </div>
+                    <div class="col-12 col-md-8 serviceDescription text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis fuga officiis molestiae dolor, atque quod sapiente
+                      veritatis.
+                    </div>
+                  </li>
 
-                          <li class="row p-2 serviceItem">
-                            <div class="col-12 col-md-4 p-3 serviceName subtitle"> -- Service</div>
-                            <div class="col-12 col-md-8 serviceDescription text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                            </div>
-                          </li>
-                          <!-- Repite para los demás servicios -->
-                        </ul>
-                    
-                        <!-- Acordeón que se muestra solo en pantallas pequeñas -->
-                        <div class="accordion d-md-none" id="serviceAccordion">
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button subtitle subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Servicio 1
-                              </button>
-                            </h2>
-                            <div id="collapseOne" class=" accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#serviceAccordion">
-                              <div class="accordion-body text text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                              </div>
-                            </div>
-                          </div>
+                  <li class="row p-2 serviceItem">
+                    <div class="col-12 col-md-4 p-3 serviceName subtitle">
+                      -- Service
+                    </div>
+                    <div class="col-12 col-md-8 serviceDescription text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis fuga officiis molestiae dolor, atque quod sapiente
+                      veritatis.
+                    </div>
+                  </li>
+                  <!-- Repite para los demás servicios -->
+                </ul>
 
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Servicio 2
-                              </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#serviceAccordion">
-                              <div class="accordion-body text ">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                              </div>
-                            </div>
-                          </div>
+                <!-- Acordeón que se muestra solo en pantallas pequeñas -->
+                <div class="accordion d-md-none" id="serviceAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button subtitle subtitle"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Servicio 1
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#serviceAccordion"
+                    >
+                      <div class="accordion-body text text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis fuga officiis molestiae dolor, atque quod
+                        sapiente veritatis.
+                      </div>
+                    </div>
+                  </div>
 
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Servicio 3
-                              </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#serviceAccordion">
-                              <div class="accordion-body text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Servicio 4
-                              </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#serviceAccordion">
-                              <div class="accordion-body text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                              </div>
-                            </div>
-                          </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button subtitle collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Servicio 2
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#serviceAccordion"
+                    >
+                      <div class="accordion-body text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis fuga officiis molestiae dolor, atque quod
+                        sapiente veritatis.
+                      </div>
+                    </div>
+                  </div>
 
-                          
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                              <button class="accordion-button subtitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Servicio 5
-                              </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#serviceAccordion">
-                              <div class="accordion-body text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga officiis molestiae dolor, atque quod sapiente veritatis.
-                              </div>
-                            </div>
-                          </div>
-                         
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button subtitle collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Servicio 3
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#serviceAccordion"
+                    >
+                      <div class="accordion-body text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis fuga officiis molestiae dolor, atque quod
+                        sapiente veritatis.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button subtitle collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        Servicio 4
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#serviceAccordion"
+                    >
+                      <div class="accordion-body text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis fuga officiis molestiae dolor, atque quod
+                        sapiente veritatis.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button
+                        class="accordion-button subtitle collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        Servicio 5
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#serviceAccordion"
+                    >
+                      <div class="accordion-body text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis fuga officiis molestiae dolor, atque quod
+                        sapiente veritatis.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="serviceLink text-end">
+                  <!-- link -->
+                  <a href="javascript:void(0);" onclick="navigateTo('services')"
+                    >Ver Más
+                    <img
+                      src="./public/Imgs/arrowSquare.svg"
+                      width="16"
+                      height="16"
+                      alt="arrowSquare icon"
+                  /></a>
+                </p>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Proyects section -->
+      <div class="row">
+        <div class="col projects">
+          <div class="projectBackground baki"></div>
+
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center projectsTitle title">
+                Mis Proyectos mas recientes
+              </h3>
+            </div>
+          </section>
+          <!-- info -->
+          <section class="row justify-content-center">
+            <div class="col-9 my-5">
+              <h3 class="text-center fs-6">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                dolor rem quos porro ratione voluptate suscipit non nihil
+                quisquam tempora.
+              </h3>
+            </div>
+          </section>
+
+          <!-- Projects -->
+          <section class="row p-2 justify-content-center gx-4 projectsC">
+            <div class="col-12 col-sm-8 col-md-5 m-2 p-3">
+              <section class=" ">
+                <figure class="p-2 projectFigure">
+                  <div class="card">
+                    <div class="top-section">
+                      <img
+                        src="./public/Imgs/projectsImg/Pokedex.png"
+                        class="projectImage"
+                        alt=""
+                      />
+
+                      <div class="borde"></div>
+                      <div class="icons">
+                        <div class="logo">
+                          <img
+                            src="./public/Imgs/projectsImg/pokedexIcon.png"
+                            alt="project"
+                          />
                         </div>
-  
-                        <p class="serviceLink text-end">
-                          <!-- link -->
-                          <a href="javascript:void(0);" onclick="navigateTo('services')">Ver Más <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"></a>
-                        </p>
-                        </section>
+                        <div class="info">
+                          <a
+                            href="javascript:void(0);"
+                            onclick="navigateTo('project1')"
+                          >
+                            <img
+                              src="./public/Imgs/PArrow.svg"
+                              class="projectLink"
+                              width="25"
+                              height="25"
+                              alt="arrowSquare icon"
+                            />
+                          </a>
+                          <a
+                            href="javascript:void(0);"
+                            onclick="navigateTo('github')"
+                          >
+                            <img
+                              src="./public/Imgs/Info.svg"
+                              class="projectLink"
+                              width="25"
+                              height="25"
+                              alt="arrowSquare icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                </section>
+                    <div class="bottom-section">
+                      <span class="title fs-4">Pokedex</span>
+                      <div class="square row my-3">
+                        <div class="col-6 text-center">
+                          <h5>Información</h5>
+                          <div class="text">
+                            Si eres fan de pokemon, este es un proyecto donde
+                            podras acceder a una amplia variedad de pokenmos
+                            buscando por nombre o id. vamos pruebalo!!
+                          </div>
+                        </div>
+                        <div class="col-6 text-center">
+                          <h5>Tecnologías</h5>
+                          <div class="card-icons p-1">
+                            <img
+                              class="MIcons"
+                              src="./public/Imgs/stackImgs/LogosHtml5.svg"
+                            />
+                            <img
+                              class="MIcons"
+                              src="./public/Imgs/stackImgs/LogosCss3.svg"
+                            />
+                            <img
+                              class="MIcons"
+                              src="./public/Imgs/stackImgs/LogosJavascript.svg"
+                            />
+                            <img
+                              class="MIcons"
+                              src="./public/Imgs/stackImgs/LogosTypescript.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </section>
             </div>
-         </div>
 
-        <!-- Proyects section -->
-        <div class="row">
-            <div class="col  projects">
-                <div class="projectBackground"></div>
-
-                <!-- title -->
-                <section class="row">
-                    <div class="col">
-                        <h3 class="text-center projectsTitle title" >Mis Proyectos mas recientes</h3>    
-                    </div>
-                </section>
-                <!-- info -->
-                <section class="row  justify-content-center">
-                    <div class="col-9 my-5">
-                        <h3 class="text-center fs-6 " >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor rem quos porro ratione voluptate suscipit non nihil quisquam tempora. </h3>    
-                    </div>
-                </section>
-                
-                <!-- Projects -->
-                <section class="row p-2 justify-content-center gx-4 projectsC ">
-                    <div class="col-12 col-sm-8 col-md-5 m-2 p-3 ">
-                        <section class=" ">
-                            <figure class="p-2 projectFigure">
-                                <div class="card">
-                                  <div class="top-section">
-                                    <img src="./public/Imgs/projectsImg/Pokedex.png" class="projectImage" alt=""/>
-
-                                    <div class="borde"></div>
-                                    <div class="icons">
-                                      <div class="logo">
-                                        <img src="./public/Imgs/projectsImg/pokedexIcon.png" alt="project">
-                                      </div>
-                                      <div class="info">
-                                        <a href="javascript:void(0);" onclick="navigateTo('project1')"> <img src="./public/Imgs/PArrow.svg" class="projectLink" width="25" height="25" alt="arrowSquare icon"> </a>
-                                        <a href="javascript:void(0);" onclick="navigateTo('github')"> <img src="./public/Imgs/Info.svg" class="projectLink" width="25" height="25" alt="arrowSquare icon"> </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="bottom-section">
-                                    <span class="title fs-4">Pokedex</span>
-                                    <div class="square row my-3">
-                                        <div class="col-6 text-center">
-                                            <h5>Información</h5>
-                                            <div class="text">Si eres fan de pokemon, este es un proyecto donde podras acceder a una amplia variedad de pokenmos buscando por nombre o id. vamos pruebalo!!</div>
-                                        </div>
-                                        <div class="col-6 text-center">
-                                            <h5>Tecnologías</h5>
-                                            <div class="card-icons p-1" >
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosHtml5.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosCss3.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosJavascript.svg">
-                                                <img class="MIcons" src="./public/Imgs/stackImgs/LogosTypescript.svg">
-                                            </div>
-                                        </div>
-                                      </div>
-                                  </div>
-                                </div>
-                            </figure>
-                        </section>
-                    </div>
-
-                    <p class="text-end">
-                        <!-- link -->
-                        <a href="javascript:void(0);"   onclick="navigateTo('portfolio')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
-                    </p>
-                </section>
-            </div>
+            <p class="text-end">
+              <!-- link -->
+              <a href="javascript:void(0);" onclick="navigateTo('portfolio')"
+                >Ver Mas
+                <img
+                  src="./public/Imgs/arrowSquare.svg"
+                  width="16"
+                  height="16"
+                  alt="arrowSquare icon"
+                />
+              </a>
+            </p>
+          </section>
         </div>
+      </div>
 
-        <!-- Stack section -->
-        <div class="row ">
-            <div class="col stack  position-relative ">
-                <div class="stackBackground"></div>
-                <!-- animation of stack -->
-                <div class="animContainer" id="animContainer">
-                    <!-- names -->
-                     <div class="stackNameC  ">
-                         <div class="d-flex left p-2 justify-content-center" id="StackNames">
-                             <span class="m-3">Html</span>
-                             <span class="m-3">Css</span>
-                             <span class="m-3">JavaScript</span>
-                             <span class="m-3">TypeScript</span>
-                             <span class="m-3">Boptstrap</span>
-                             <span class="m-3">Php</span>
-                             <span class="m-3">Python</span>
-                             <span class="m-3">Laravel</span>
-                             <span class="m-3">Django</span>
-                             <span class="m-3">Sass</span>
-                             <span class="m-3">Mysql</span>
-                             <span class="m-3">Excel</span>
-                             <span class="m-3">Canva</span>
-                             <span class="m-3">figma</span>
-                             <span class="m-3">Miro</span>
-                             <span class="m-3">Wix</span>
-                             <span class="m-3">Inkspace</span>
-                             <span class="m-3">Capcut</span>
-                             <!-- <span class="m-3">affinity</span> -->
-                         </div>
-                     </div>
-                    <!-- icons -->
-                     <div class="stackIconsC">
-                         <div class="d-flex right p-2 justify-content-center" id="StackIcons">
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosHtml5.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosCss3.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosJavascript.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosTypescript.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosBootstrap.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosSass.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosPhp.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosMysql.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosLaravel.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosPython.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosDjango.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosMiro.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosWix.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosExcel.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosCanva.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosInkscape.svg" alt="" width="55" height="55">
-                             </span>
-                             <span class="StackIcon m-2">
-                                 <img src="public/Imgs/stackImgs/LogosCapcut.svg" alt="" width="55" height="55">
-                             </span>
-                             <!-- <span class="StackIcon m-2">
+      <!-- Stack section -->
+      <div class="row">
+        <div class="col stack position-relative">
+          <div class="stackBackground baki"></div>
+          <!-- animation of stack -->
+          <div class="animContainer" id="animContainer">
+            <!-- names -->
+            <div class="stackNameC">
+              <div
+                class="d-flex left p-2 justify-content-center"
+                id="StackNames"
+              >
+                <span class="m-3">Html</span>
+                <span class="m-3">Css</span>
+                <span class="m-3">JavaScript</span>
+                <span class="m-3">TypeScript</span>
+                <span class="m-3">Boptstrap</span>
+                <span class="m-3">Php</span>
+                <span class="m-3">Python</span>
+                <span class="m-3">Laravel</span>
+                <span class="m-3">Django</span>
+                <span class="m-3">Sass</span>
+                <span class="m-3">Mysql</span>
+                <span class="m-3">Excel</span>
+                <span class="m-3">Canva</span>
+                <span class="m-3">figma</span>
+                <span class="m-3">Miro</span>
+                <span class="m-3">Wix</span>
+                <span class="m-3">Inkspace</span>
+                <span class="m-3">Capcut</span>
+                <!-- <span class="m-3">affinity</span> -->
+              </div>
+            </div>
+            <!-- icons -->
+            <div class="stackIconsC">
+              <div
+                class="d-flex right p-2 justify-content-center"
+                id="StackIcons"
+              >
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosHtml5.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosCss3.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosJavascript.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosTypescript.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosBootstrap.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosSass.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosPhp.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosMysql.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosLaravel.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosPython.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosDjango.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosMiro.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosWix.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosExcel.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosCanva.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosInkscape.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/LogosCapcut.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
+                </span>
+                <!-- <span class="StackIcon m-2">
                                  <img src="public/Imgs/stackImgs/" alt="" width="55" height="55">
                              </span> -->
-                         </div>
-                     </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center stackTitle title">Stack</h3>
+            </div>
+          </section>
+
+          <!-- options -->
+          <div class="row">
+            <div class="col-5 col-md-4 col-lg-3 p-5 text-center">
+              <div
+                class="row p-0 border d-flex justify-content-center stackOptions"
+              >
+                <div
+                  class="col-12 col-md-5 stackOption subtitle"
+                  id="StackAnimation"
+                >
+                  Animation
+                </div>
+                <div
+                  class="col-12 col-md-4 stackOption subtitle"
+                  id="StackGallery"
+                >
+                  Gallery
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- info -->
+          <section class="row justify-content-center">
+            <div class="col-9 my-2">
+              <h3 class="text-center fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi iste minima voluptates tempore, nostrum esse accusantium
+                aliquam asperiores.
+              </h3>
+            </div>
+          </section>
+
+          <!-- stack -->
+          <section class="row justify-content-center p-3">
+            <div class="col-6" id="stackImage">
+              <section class="">
+                <figure class="stackImage">
+                  <img
+                    src="./public/Imgs/Artybylogo.svg"
+                    alt="Logo-image"
+                    id="StackImg"
+                  />
+                </figure>
+              </section>
+            </div>
+
+            <!-- second option for Stack -->
+            <div class="col-12 col-md-10 border" id="stack_gallery_filter">
+              <section class="row text-center Gallery p-2">
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosHtml5.svg"
+                      alt="html-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosCss3.svg"
+                      alt="Css-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosSass.svg"
+                      alt="Sass-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosBootstrap.svg"
+                      alt="bootstrap-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosJavascript.svg"
+                      alt="javascript-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosTypescript.svg"
+                      alt="TypeScript-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosPhp.svg"
+                      alt="Php-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosLaravel.svg"
+                      alt="Laravel-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosMysql.svg"
+                      alt="Mysql-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosPython.svg"
+                      alt="python-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosDjango.svg"
+                      alt="Django-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosMiro.svg"
+                      alt="Miro-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosWix.svg"
+                      alt="wix-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosCanva.svg"
+                      alt="canva-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosCapcut.svg"
+                      alt="capcut-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosExcel.svg"
+                      alt="excel-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/LogosInkscape.svg"
+                      alt="Inkspace-icon"
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- about section -->
+      <div class="row about">
+        <div class="col my-3 position-relative">
+          <div class="AboutBackground baki"></div>
+
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center aboutTitle title">Acerca de mi</h3>
+            </div>
+          </section>
+
+          <section class="row aboutsectionContainer">
+            <div class="col-md-9 col-11 aboutsection aboutUno p-5">
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quibusdam vitae placeat reiciendis asperiores accusamus iste.
+                Ratione similique voluptatem ex, enim quasi maxime beatae natus
+                autem tempore rem ea, minus eius! <br /><br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                tenetur minus natus necessitatibus eveniet.
+              </p>
+            </div>
+
+            <div class="col-md-9 col-11 aboutsection aboutDos p-3">
+              <p class="aboutLink">
+                <!-- link -->
+                <a href="javascript:void(0);" onclick="navigateTo('about')"
+                  >Ver Mas
+                  <img
+                    src="./public/Imgs/arrowSquare.svg"
+                    width="16"
+                    height="16"
+                    alt="arrowSquare icon"
+                  />
+                </a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Collaborations section -->
+      <div class="row collaborations">
+        <div class="col my-3">
+          <!-- content -->
+          <!-- background -->
+
+          <section class="row justify-content-center">
+            <div class="col-12 p-2">
+              <section class="row p-2 carousel-container position-relative">
+                <h2
+                  class="position-absolute colaborationsTitle text-center title"
+                >
+                  Branding
+                </h2>
+                <div class="carousel-trackk d-flex">
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/Artybylogo.svg"
+                      width="100"
+                      height="100"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/unprgramayyo.svg"
+                      width="106"
+                      height="106"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/user17job.svg"
+                      width="106"
+                      height="100"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/How'stech.svg"
+                      width="76"
+                      height="76"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/TwoEyesMainLogoTwo.svg"
+                      fill="white"
+                      width="106"
+                      height="176"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/SportDream.svg"
+                      fill="white"
+                      width="150"
+                      height="150"
+                      alt="Artyby Logo"
+                    />
+                  </figure>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Blog Section -->
+      <div class="row">
+        <div class="col blog">
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center blogTitle title">Acerca de Mi Blog</h3>
+            </div>
+          </section>
+          <!-- Info -->
+          <section class="row justify-content-center">
+            <div class="col-9 my-0">
+              <h6 class="text-center">
+                La vida y el crecimiento de un programdor sin importar su area,
+                suele ser una aventura que no muchos estarian dispuestos a
+                Emprender. por eso cree <a href="">UnprogramaYYo</a> y compartir
+                mas acerca del tema y sus aderidos
+              </h6>
+            </div>
+          </section>
+          <!-- Layout for pc design -->
+          <section class="row layout justify-content-center">
+            <div class="col p-3" id="BlogContainer ">
+              <section class="row p-3">
+                <div class="col-3">
+                  <div class="border element blog8">
+                    <img
+                      src="./public/Imgs/blogImgs/Laptop.svg"
+                      class="blog8__img"
+                      alt="Laptop-img"
+                    />
+                    <img
+                      src="./public/Imgs/stackImgs/LogosHtml5.svg"
+                      class="blog8__aditional"
+                      width="22"
+                      height="22"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="border element blog6">
+                    <img
+                      src="./public/Imgs/blogImgs/hombre.png"
+                      class="blog6__img"
+                      alt="hombre"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="border element blog2">
+                    <img
+                      src="./public/Imgs/blogImgs/image.png"
+                      class="blog2__img"
+                      alt="matrix-img"
+                    />
+                  </div>
+                </div>
+              </section>
+
+              <section class="row p-3">
+                <div class="col-3 my-2">
+                  <div class="border element blog7">
+                    <img
+                      src="./public/Imgs/blogImgs/lupa.svg"
+                      class="blog7__img"
+                      alt="lupa-img"
+                    />
+                  </div>
+                </div>
+                <div class="col-6 my-2 blog5" id="blog">
+                  <a href="javascript:void(0);" onclick="navigateTo('blog')">
+                    <div class="border element text-center position-relative">
+                      <img
+                        src="./public/Imgs/blogImgs/fondo.png"
+                        alt="blog-background"
+                        class="blog5__back position-absolute"
+                      />
+                      <h1>UnProgramaYYo</h1>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-3 my-2">
+                  <div class="border lay blog1">
+                    <img
+                      src="./public/Imgs/blogImgs/WHOA.png"
+                      alt="blog-background"
+                      class="blog1__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 my-2">
+                  <div class="border element layy blog4">
+                    <img
+                      src="./public/Imgs/blogImgs/Bible.svg"
+                      alt="blog-background"
+                      class="blog4__back position-absolute"
+                    />
+                    <img
+                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
+                      alt="blog-background"
+                      class="blog4__BBack position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="col-5 my-2">
+                  <div class="border element layy blog3">
+                    <img
+                      src="./public/Imgs/blogImgs/Destino.png"
+                      alt="blog-background"
+                      class="blog3__back position-absolute"
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <!-- Carousel for another designs -->
+          <section class="row carouselC justify-content-center">
+            <div class="col-6 my-0 blogEl blog" id="blog">
+              <a href="javascript:void(0);" onclick="navigateTo('blog')">
+                <div class="border element text-center position-relative">
+                  <img
+                    src="./public/Imgs/blogImgs/fondo.png"
+                    alt="blog-background"
+                    class="blog5__back position-absolute"
+                  />
+                  <h1>UnProgramaYYo</h1>
+                </div>
+              </a>
+              <p class="subtitle text-light">A new World</p>
+            </div>
+
+            <div class="carousel" id="BlogContainer">
+              <div class="carousel-track">
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Bible.svg"
+                      alt="blog-background"
+                      class="blog4__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Destino.png"
+                      alt="blog-background"
+                      class="blog3__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/WHOA.png"
+                      alt="blog-background"
+                      class="blog1__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/lupa.svg"
+                      class="blog7__img"
+                      alt="lupa-img"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
+                      alt="blog-background"
+                      class="blog4__BBack position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Laptop.svg"
+                      class="blog8__img position-absolute"
+                      alt="Laptop-img"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/image.png"
+                      class="blog2__img position-absolute"
+                      alt="matrix-img"
+                    />
+                  </div>
                 </div>
 
-
-                <!-- title -->
-                <section class="row ">
-                    <div class="col ">
-                        <h3 class="text-center stackTitle title" >Stack</h3>    
-                    </div>
-                </section>
-
-                <!-- options -->
-                 <div class="row ">
-                    <div class="col-5 col-md-4 col-lg-3 p-5  text-center" >
-                        <div class="row p-0 border d-flex justify-content-center stackOptions">
-                            <div class="col-12 col-md-5 stackOption subtitle" id="StackAnimation">Animation</div>
-                            <div class="col-12 col-md-4 stackOption subtitle" id="StackGallery">Gallery</div>
-                        </div>
-                    </div>
-                 </div>
-
-                <!-- info -->
-                <section class="row justify-content-center">
-                    <div class="col-9 my-2 ">
-                        <h3 class="text-center fs-6" >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Dolore sequi iste minima voluptates tempore, nostrum esse accusantium aliquam asperiores.</h3>    
-                    </div>
-                </section>
-                
-                <!-- stack -->
-                <section class="row justify-content-center p-3 ">
-                    <div class="col-6  " id="stackImage">
-                        <section class="">
-                           <figure class="stackImage">
-                            <img src="./public/Imgs/Artybylogo.svg"  alt="Logo-image" id="StackImg">
-             
-                           </figure>
-                        </section>
-                    </div>
-
-                    <!-- second option for Stack -->
-                    <div class="col-12  col-md-10  border" id="stack_gallery_filter">                         
-                        <section class="row text-center Gallery p-2">
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosHtml5.svg" alt="html-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosCss3.svg" alt="Css-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosSass.svg" alt="Sass-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosBootstrap.svg" alt="bootstrap-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosJavascript.svg" alt="javascript-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosTypescript.svg" alt="TypeScript-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosPhp.svg" alt="Php-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosLaravel.svg" alt="Laravel-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosMysql.svg" alt="Mysql-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosPython.svg" alt="python-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosDjango.svg" alt="Django-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosMiro.svg" alt="Miro-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosWix.svg" alt="wix-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosCanva.svg" alt="canva-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosCapcut.svg" alt="capcut-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosExcel.svg" alt="excel-icon"></div>
-                            </div>
-                            <div class="col-4 col-md-2 p-2 ">
-                                <div class=" GalleryIcon"><img class="inconImg"  src="./public/Imgs/stackImgs/LogosInkscape.svg" alt="Inkspace-icon"></div>
-                            </div>
-                        </section>
-                    </div>                    
-                </section>             
+                <!-- Duplicado del contenido para efecto infinito -->
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Bible.svg"
+                      alt="blog-background"
+                      class="blog4__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Destino.png"
+                      alt="blog-background"
+                      class="blog3__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/WHOA.png"
+                      alt="blog-background"
+                      class="blog1__back position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/lupa.svg"
+                      class="blog7__img"
+                      alt="lupa-img"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
+                      alt="blog-background"
+                      class="blog4__BBack position-absolute"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/Laptop.svg"
+                      class="blog8__img position-absolute"
+                      alt="Laptop-img"
+                    />
+                  </div>
+                </div>
+                <div class="el">
+                  <div class="elBord position-relative">
+                    <img
+                      src="./public/Imgs/blogImgs/image.png"
+                      class="blog2__img position-absolute"
+                      alt="matrix-img"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
+          </section>
         </div>
+      </div>
 
-        <!-- about section -->
-        <div class="row about">
-            <div class="col my-3  position-relative">
-                <div class="AboutBackground"></div>
-
-                <!-- title -->
-                <section class="row ">
-                    <div class="col ">
-                        <h3 class="text-center aboutTitle title" >Acerca de mi</h3>    
-                    </div>
-                </section>
-                
-                <section class="row aboutsectionContainer">
-                    <div class="col-md-9 col-11 aboutsection aboutUno  bg-light p-5">
-                        <p class="text-dark text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam vitae placeat reiciendis asperiores accusamus iste. Ratione similique voluptatem ex, 
-                            enim quasi maxime beatae natus autem tempore rem ea, minus eius!
-                        <br><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, tenetur minus natus necessitatibus eveniet.
-               
-                    </div>
-                    <div class="col-md-9 col-11 aboutsection aboutDos p-3">
-                        <p class="aboutLink">
-                            <!-- link -->
-                            <a href="javascript:void(0);"   onclick="navigateTo('about')">Ver Mas <img src="./public/Imgs/arrowSquare.svg" width="16" height="16" alt="arrowSquare icon"> </a>
-                        </p>
-                    </div>
-                  
-                    
-                </section>
+      <!-- contact section -->
+      <div class="row">
+        <div class="col contact position-relative">
+          <div class="contactBackground baki"></div>
+          <div class="contactBackgroundItem baki"></div>
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-start contactTitle title">
+                Informacion de contacto
+              </h3>
             </div>
-        </div> 
+          </section>
 
-        <!-- Collaborations section -->
-        <div class="row collaborations">
-            <div class="col my-3 ">
-                <!-- content -->
-                 <!-- background -->
+          <section class="row justify-content-center p-2">
+            <div class="col-12 p-3">
+              <section class="row">
+                <div class="col-12 col-md-7 p-5 contact-data">
+                  <section
+                    class="ContactData justify-content-center text-center"
+                  >
+                    <figure>
+                      <img
+                        src="./public/Imgs/ArtybylogoWhiteLogo.svg"
+                        alt="Artybylogo"
+                        width="255"
+                        height="255"
+                      />
+                    </figure>
 
-                <section class="row justify-content-center ">
-                    <div class="col-12  p-2">
-                        <section class="row p-2 carousel-container position-relative">
-                            <h2 class="position-absolute colaborationsTitle text-center title">Branding</h2>
-                            <div class="carousel-trackk d-flex">
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/Artybylogo.svg" width="100" height="100" alt="Artyby Logo">
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/unprgramayyo.svg" width="106" height="106" alt="Artyby Logo">
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/user17job.svg" width="106" height="100" alt="Artyby Logo">
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/How'stech.svg" width="76" height="76" alt="Artyby Logo">
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/TwoEyesMainLogoTwo.svg" fill="white" width="106" height="176" alt="Artyby Logo">
-                                </figure>
-                                <figure class="col-5 d-flex mx-4">
-                                    <img src="public/Imgs/SportDream.svg" fill="white" width="150" height="150" alt="Artyby Logo">
-                                </figure>
-                            </div>
-                        </section>
-                    </div>
-                </section>
-            </div>
-        </div> 
-
-        <!-- Blog Section -->
-        <div class="row ">
-            <div class="col blog ">
-                <!-- title -->
-                <section class="row ">
-                    <div class="col ">
-                        <h3 class="text-center blogTitle title">Acerca de Mi Blog</h3>    
-                    </div>
-                </section>
-                <!-- Info -->
-                <section class="row justify-content-center">
-                    <div class="col-9 my-0 ">
-                        <h6 class="text-center">La vida y el crecimiento de un programdor sin importar su area, suele ser una aventura que no muchos estarian dispuestos a Emprender. por eso cree <a href="" >UnprogramaYYo</a> y compartir mas acerca del tema y sus aderidos </h6>    
-                    </div>
-                </section>
-                <!-- Layout for pc design -->
-                <section class="row layout justify-content-center ">
-                    <div class="col p-3 " id="BlogContainer ">
-
-                        <section class="row  p-3 ">
-                            <div class="col-3 ">
-                                <div class="border element blog8"><img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img" alt="Laptop-img">
-                                    <img src="./public/Imgs/stackImgs/LogosHtml5.svg" class="blog8__aditional" width="22" height="22" alt="">
-                                </div>
-                            </div>
-                            <div class="col-3 ">
-                                <div class="border element blog6"><img src="./public/Imgs/blogImgs/hombre.png" class="blog6__img" alt="hombre"></div>
-                            </div>
-                            <div class="col-6 ">
-                                <div class="border element blog2">
-                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img" alt="matrix-img">
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="row  p-3 ">
-                            <div class="col-3 my-2 ">
-                                <div class="border element blog7"><img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
-                                </div>
-                            </div>
-                            <div class="col-6 my-2 blog5" id="blog">
-                                <a href="javascript:void(0);"   onclick="navigateTo('blog')">
-                                    <div class="border element text-center position-relative"> 
-                                        <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
-                                        <h1>UnProgramaYYo</h1>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-3 my-2 ">
-                                <div class="border  lay blog1"> 
-                                    <img src="./public/Imgs/blogImgs/WHOA.png" alt="blog-background" class="blog1__back position-absolute">
-                                </div>
-                            </div>
-                            <div class="col-4 my-2 ">
-                                <div class="border element layy blog4">
-                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
-                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
-                                </div>
-                            </div>
-                            <div class="col-5 my-2 ">
-                                <div class="border element layy blog3">
-                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
-                                </div>
-                            </div>
-                        </section>
-                          
-
-                    </div>
-                </section> 
-
-                 <!-- Carousel for another designs -->
-                <section class="row carouselC justify-content-center  ">
-                    <div class="col-6 my-0 blogEl blog " id="blog">
-                        <a href="javascript:void(0);"   onclick="navigateTo('blog')">
-                        <div class="border element text-center position-relative"> 
-                            <img src="./public/Imgs/blogImgs/fondo.png" alt="blog-background" class="blog5__back position-absolute">
-                            <h1>UnProgramaYYo</h1>
+                    <ul class="g-0 contactServiceList p-3">
+                      <li class="row p-0 m-2 contactServiceItem">
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
+                          <b>LLamar </b>
                         </div>
-                        </a>
-                        <p class="subtitle text-light">A new World</p>
-                    </div>
-
-                    <div class="carousel " id="BlogContainer">
-                        <div class="carousel-track">
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
-                                </div>
-                            </div>     
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
-                          
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/WHOA.png" alt="blog-background" class="blog1__back position-absolute">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                  <img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img position-absolute" alt="Laptop-img">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">   
-                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img position-absolute" alt="matrix-img">
-                                </div>
-                            </div>
-                    
-                            <!-- Duplicado del contenido para efecto infinito -->
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Bible.svg" alt="blog-background" class="blog4__back position-absolute">
-                                </div>
-                            </div>     
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Destino.png" alt="blog-background" class="blog3__back position-absolute">
-                          
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/WHOA.png" alt="blog-background" class="blog1__back position-absolute">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                  <img src="./public/Imgs/blogImgs/lupa.svg" class="blog7__img" alt="lupa-img">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg" alt="blog-background" class="blog4__BBack position-absolute">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">
-                                    <img src="./public/Imgs/blogImgs/Laptop.svg" class="blog8__img position-absolute" alt="Laptop-img">
-                                </div>
-                            </div>
-                            <div class="el">
-                                <div class="elBord position-relative">   
-                                    <img src="./public/Imgs/blogImgs/image.png" class="blog2__img position-absolute" alt="matrix-img">
-                                </div>
-                            </div>
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
+                          <a
+                            href="javascript:void(0);"
+                            onclick="navigateTo('llamar')"
+                            >555 555 5555</a
+                          >
                         </div>
-                    </div>    
-                </section>        
-            </div>
-        </div> 
- 
-        <!-- contact section -->
-        <div class="row ">
-            <div class="col  contact  position-relative">
-                <div class="contactBackground"></div>
-                <div class="contactBackgroundItem"></div>
-                <!-- title -->
-                <section class="row ">
-                    <div class="col ">
-                        <h3 class="text-start contactTitle title" >Informacion de contacto</h3>    
-                    </div>
-                </section>
-                
-                <section class="row justify-content-center p-2 ">
-                    <div class="col-12 p-3">
-                       <section class="row">
-                        <div class="col-12 col-md-7 p-5  contact-data ">                      
-                            <section class=" ContactData justify-content-center text-center">
-                                <figure >
-                                    <img src="./public/Imgs/ArtybylogoWhiteLogo.svg" alt="Artybylogo" width="255" height="255">
-                                </figure>
-                                
-                                <ul class="g-0  contactServiceList p-3">                
-                                    <li class="row p-0 m-2 contactServiceItem ">
-                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle "><b>LLamar </b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="javascript:void(0);" onclick="navigateTo('llamar')">555 555 5555</a></div>
-                                    </li>
-                                    <li class="row p-0 m-2 contactServiceItem ">
-                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"><b>Escribir a WhatsApp</b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a  href="javascript:void(0);" onclick="navigateTo('whatsapp')">WhatsApp.yo</a></div>
-                                    </li>
-                                    <li class="row p-0 m-2 contactServiceItem ">
-                                        <div class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle "><b>Dejar Un Email</b></div>
-                                        <div class="col-12 col-md-6 p-1  fs-3 contactServiceDescription"><a href="javascript:void(0)" onclick="navigateTo('email')">@Ramphys </a></div>
-                                    </li>
-                                </ul>
-
-                            </section>
+                      </li>
+                      <li class="row p-0 m-2 contactServiceItem">
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
+                          <b>Escribir a WhatsApp</b>
                         </div>
-                        <div class="col-12 col-md-5  contact-form">
-
-                            <!-- title -->
-                            <h2 class="contactFormTitle text-center subtitle">Trabajemos Juntos</h2>
-                            <br> 
-                            <div class="contactFormText text-center">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus et temporibus quibusdam labore recusandae illum ipsam sint laboriosam.
-                            </div>
-                            <form  class="contactForm my-5" method="post"  name="contact" netlify>
-                                <div class="row">
-                                    <div class=" col-6">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="First name" aria-label="First name">
-                                    </div>
-                                    <div class=" col-6">
-                                        <label for="lastName" class="form-label">Last name</label>
-                                        <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name">
-                                    </div>
-                                    <div class=" col-6">
-                                        <label for="Email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email">
-                                    </div>
-                                    <div class=" col-6">
-                                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                                        <input type="number" class="form-control" id="phoneNumber" placeholder="Phone number" aria-label="Phone Number">
-                                    </div>
-                                    <div class=" ">
-                                        <label for="service" class="form-label">Elija un servicio</label>
-                                        <select class="form-select" id="service" aria-label="defaul">
-                                            <option class="text-dark text-b" selected>Opciones de servicios</option>
-                                            <option class="text-dark text-b" value="1">Desarrollo Web</option>
-                                            <option class="text-dark text-b" value="2">Diseno web</option>
-                                            <option class="text-dark text-b" value="3">Estilizacion web</option>
-                                            <option class="text-dark text-b" value="4">Diseno grafico</option>
-                                            <option class="text-dark text-b" value="5">Microsoft Office</option>
-                                            <option class="text-dark text-b" value="6">Creacion de marca</option>
-                                          </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Textarea" class="form-label">Coment</label>
-                                        <textarea class="form-control" id="Textarea" placeholder="Comentario" rows="3"></textarea>
-                                      </div>
-                                </div>
-                                <div class="row justify-content-end">
-                                    <div class="col-3">
-                                        <div class="submitButtonC justify-content-end d-flex">
-                                            <button class="p" type="submit">send</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>                            
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
+                          <a
+                            href="javascript:void(0);"
+                            onclick="navigateTo('whatsapp')"
+                            >WhatsApp.yo</a
+                          >
                         </div>
-                       </section>
-
+                      </li>
+                      <li class="row p-0 m-2 contactServiceItem">
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
+                          <b>Dejar Un Email</b>
+                        </div>
+                        <div
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
+                          <a
+                            href="javascript:void(0)"
+                            onclick="navigateTo('email')"
+                            >@Ramphys
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <div class="col-12 col-md-5 contact-form">
+                  <!-- title -->
+                  <h2 class="contactFormTitle text-center subtitle">
+                    Trabajemos Juntos
+                  </h2>
+                  <br />
+                  <div class="contactFormText text-center">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus et temporibus quibusdam labore recusandae illum
+                    ipsam sint laboriosam.
+                  </div>
+                  <form
+                    class="contactForm my-5"
+                    method="post"
+                    name="contact"
+                    netlify
+                  >
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="First name"
+                          aria-label="First name"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label for="lastName" class="form-label"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lastName"
+                          placeholder="Last name"
+                          aria-label="Last name"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label for="Email" class="form-label">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Email"
+                          aria-label="Email"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label for="phoneNumber" class="form-label"
+                          >Phone Number</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="phoneNumber"
+                          placeholder="Phone number"
+                          aria-label="Phone Number"
+                        />
+                      </div>
+                      <div class=" ">
+                        <label for="service" class="form-label"
+                          >Elija un servicio</label
+                        >
+                        <select
+                          class="form-select"
+                          id="service"
+                          aria-label="defaul"
+                        >
+                          <option class="text-dark text-b" selected>
+                            Opciones de servicios
+                          </option>
+                          <option class="text-dark text-b" value="1">
+                            Desarrollo Web
+                          </option>
+                          <option class="text-dark text-b" value="2">
+                            Diseno web
+                          </option>
+                          <option class="text-dark text-b" value="3">
+                            Estilizacion web
+                          </option>
+                          <option class="text-dark text-b" value="4">
+                            Diseno grafico
+                          </option>
+                          <option class="text-dark text-b" value="5">
+                            Microsoft Office
+                          </option>
+                          <option class="text-dark text-b" value="6">
+                            Creacion de marca
+                          </option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Textarea" class="form-label">Coment</label>
+                        <textarea
+                          class="form-control"
+                          id="Textarea"
+                          placeholder="Comentario"
+                          rows="3"
+                        ></textarea>
+                      </div>
                     </div>
-                </section>
+                    <div class="row justify-content-end">
+                      <div class="col-3">
+                        <div class="submitButtonC justify-content-end d-flex">
+                          <button class="p" type="submit">send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
             </div>
-        </div> 
+          </section>
+        </div>
+      </div>
 
-        <!-- footer section -->
-        <div class="row my-">
-            <div class="col my-3 ">
-                <section class="row justify-content-center " id="footer">
-                    <div class="col-12 text-start my-3">
-                        <!-- /* From Uiverse.io by Galahhad */  -->
-                        <label class="bb8-toggle">
-                              <input class="bb8-toggle__checkbox" type="checkbox" id="modeToggle">
-                              <div class="bb8-toggle__container">
-                                <div class="bb8-toggle__scenery">
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="bb8-toggle__star"></div>
-                                  <div class="tatto-1"></div>
-                                  <div class="tatto-2"></div>
-                                  <div class="gomrassen"></div>
-                                  <div class="hermes"></div>
-                                  <div class="chenini"></div>
-                                  <div class="bb8-toggle__cloud"></div>
-                                  <div class="bb8-toggle__cloud"></div>
-                                  <div class="bb8-toggle__cloud"></div>
-                                </div>
-                                <div class="bb8">
-                                  <div class="bb8__head-container">
-                                    <div class="bb8__antenna"></div>
-                                    <div class="bb8__antenna"></div>
-                                    <div class="bb8__head"></div>
-                                  </div>
-                                  <div class="bb8__body"></div>
-                                </div>
-                                <div class="artificial__hidden">
-                                  <div class="bb8__shadow"></div>
-                                </div>
-                              </div>
-                        </label>
+      <!-- footer section -->
+      <div class="row my-">
+        <div class="col my-3">
+          <section class="row justify-content-center" id="footer">
+            <div class="col-12 text-start my-3">
+              <!-- /* From Uiverse.io by Galahhad */  -->
+              <label class="bb8-toggle">
+                <input
+                  class="bb8-toggle__checkbox"
+                  type="checkbox"
+                  id="modeToggle"
+                />
+                <div class="bb8-toggle__container">
+                  <div class="bb8-toggle__scenery">
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="bb8-toggle__star"></div>
+                    <div class="tatto-1"></div>
+                    <div class="tatto-2"></div>
+                    <div class="gomrassen"></div>
+                    <div class="hermes"></div>
+                    <div class="chenini"></div>
+                    <div class="bb8-toggle__cloud"></div>
+                    <div class="bb8-toggle__cloud"></div>
+                    <div class="bb8-toggle__cloud"></div>
+                  </div>
+                  <div class="bb8">
+                    <div class="bb8__head-container">
+                      <div class="bb8__antenna"></div>
+                      <div class="bb8__antenna"></div>
+                      <div class="bb8__head"></div>
                     </div>
-      
-                    <!-- logo -->
-                    <div class="col-12 ">
-                       <figure class="footerLogo d-flex justify-content-center" >
-                            <img src="./public/Imgs/Artybylogo.svg" alt="artyby logo" widthwidth="255" height="255">
-                       </figure>
-                    </div>
-                    <!-- links -->
-                    <div class="col-12 text-center my-3">
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('home')">Home+</a>
-                        </b>
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('about')">About</a>
-                        </b>
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('portfolio')">Portfolio</a>
-                        </b>
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('services')">Servicios</a>
-                        </b>
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('contact')">Contact</a>
-                        </b>
-                        <b>
-                            <a href="javascript:void(0);" class="mx-3 footerLink " onclick="navigateTo('blog')">Blog</a>
-                        </b>
-                    </div>
-                    <!--up  -->
-                    <div class="col-12 text-end goUpButton subtitle">
-                        <b>Hacia arriba <img src="./public/Imgs/Arrow.svg" width="16" height="16" alt="arrow icon"></b>
-                    </div>
-                    <!-- rights -->
-                    <div class="col-12 text-center subtitle">
-                        <b><a href="javascript:void(0);" class="mx-3 rights" onclick="navigateTo('user17job')">&copy; User17job All rights reserve</a></b>
-                    </div>
-
-                </section>
-                
+                    <div class="bb8__body"></div>
+                  </div>
+                  <div class="artificial__hidden">
+                    <div class="bb8__shadow"></div>
+                  </div>
+                </div>
+              </label>
             </div>
-        </div> 
+
+            <!-- logo -->
+            <div class="col-12">
+              <figure class="footerLogo d-flex justify-content-center">
+                <img
+                  src="./public/Imgs/Artybylogo.svg"
+                  alt="artyby logo"
+                  widthwidth="255"
+                  height="255"
+                />
+              </figure>
+            </div>
+            <!-- links -->
+            <div class="col-12 text-center my-3">
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('home')"
+                  >Home+</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('about')"
+                  >About</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('portfolio')"
+                  >Portfolio</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('services')"
+                  >Servicios</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('contact')"
+                  >Contact</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('blog')"
+                  >Blog</a
+                >
+              </b>
+            </div>
+            <!--up  -->
+            <div class="col-12 text-end goUpButton subtitle">
+              <b
+                >Hacia arriba
+                <img
+                  src="./public/Imgs/Arrow.svg"
+                  width="16"
+                  height="16"
+                  alt="arrow icon"
+              /></b>
+            </div>
+            <!-- rights -->
+            <div class="col-12 text-center subtitle">
+              <b
+                ><a
+                  href="javascript:void(0);"
+                  class="mx-3 rights"
+                  onclick="navigateTo('user17job')"
+                  >&copy; User17job All rights reserve</a
+                ></b
+              >
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <!-- cursor -->
@@ -927,19 +1691,16 @@
     <!-- javascript -->
     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
     <script src="./public/Js/mode.js"></script>
 
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
     <script src="./public/Js/externalLinks.js"></script>
     <script src="./public/Js/charging.js"></script>
 
-    <script src="./public/Js/scrollreveal.js" ></script>
-    <script src="./public/Js/scrolls.js" ></script>
+    <script src="./public/Js/scrollreveal.js"></script>
+    <script src="./public/Js/scrolls.js"></script>
 
-    <script src="./public/Js/index.js"></script>    
-</body>
+    <script src="./public/Js/index.js"></script>
+  </body>
 </html>
-
-
-
