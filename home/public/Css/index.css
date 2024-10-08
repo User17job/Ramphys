@@ -38,10 +38,11 @@ body {
   padding-bottom: 0px;
 }
 body::-webkit-scrollbar {
-  background-color: #020617;
+  background-color: #02061700;
+  /* background: linear-gradient(to left, #020617, #f0f0f0); */
 }
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #94a3b8, #f4f6ff);
+  background: linear-gradient(to bottom, #0369a1, #020617);
   border-radius: 6px;
 }
 
@@ -70,6 +71,20 @@ body::-webkit-scrollbar-thumb {
   opacity: 100%;
 }
 
+.Hi {
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  font-family: Graduate;
+  font-size: 250px;
+  text-shadow: 5px 5px 5px;
+  color: transparent; /* Hace que el relleno sea invisible */
+  -webkit-text-stroke: 3px #0093b8; /* Contorno rojo de 3px */
+  text-align: center;
+  z-index: -555;
+  animation: latir 8.5s Linear infinite;
+  opacity: 25%;
+}
 /* navbar styles */
 /* menu button */
 .toggle,
@@ -85,10 +100,24 @@ body::-webkit-scrollbar-thumb {
   z-index: 555;
   transition: 0.5s;
 }
-.scrolled {
+.scrolledDark {
   position: fixed;
   width: 100%;
   background-color: #020617;
+  top: 0%;
+  left: 1%;
+}
+.scrolledLight {
+  position: fixed;
+  width: 100%;
+  background-color: #f9fafb;
+  top: 0%;
+  left: 1%;
+}
+.scrolledCrazy {
+  position: fixed;
+  width: 100%;
+  background-color: #ea580c;
   top: 0%;
   left: 1%;
 }
@@ -108,16 +137,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navLInks {
+  position: relative;
   display: flex;
-  text-underline-offset: 10px; /* Separa la línea del texto */
+  text-underline-offset: 10px;
   text-decoration-thickness: 6px;
 }
 .navbutton {
-  background-image: linear-gradient(55deg, #0369a1 10%, rgb(1, 1, 52) 100%);
-  border: solid #94a3b8;
-  color: #f9fafb;
   font-weight: 500;
-  padding: 5px 25px;
+  padding: 5px 26px;
   width: 125px;
   border-radius: 18px;
 }
@@ -126,16 +153,68 @@ body::-webkit-scrollbar-thumb {
   transition: 0.1s;
 }
 .navbutton:active {
-  background-image: linear-gradient(55deg, rgb(0, 0, 73) 10%, purple 100%);
   transform: scale(1);
+}
+
+.navbuttonDark {
+  background-image: linear-gradient(55deg, #0369a1 10%, #020617 100%);
+  border: solid #94a3b8;
+  color: #f9fafb;
+}
+.navbuttonDark:active {
+  background-image: linear-gradient(55deg, #020617 10%, #0369a1 100%);
+  color: #94a3b8;
+}
+
+.navbuttonLight {
+  background-image: linear-gradient(55deg, #f9fafb 10%, #0369a1 100%);
+  border: solid #0369a1;
+  color: #e2e2e2;
+}
+.navbuttonLight:active {
+  background-image: linear-gradient(55deg, #0369a1 10%, #f9fafb 100%);
+  color: #81bdde;
+}
+
+.navbuttonCrazy {
+  background-image: linear-gradient(55deg, #ea580c 10%, #020617 100%);
+  border: solid #0369a1;
   color: #0369a1;
+}
+.navbuttonCrazy:active {
+  background-image: linear-gradient(55deg, #020617 10%, #ea580c 100%);
+  color: #f9fafb;
+}
+
+.textBackDark {
+  background: linear-gradient(25deg, #0369a1, #f4f6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackLight {
+  background: linear-gradient(25deg, #f4f6ff, #0369a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackCrazy {
+  background: linear-gradient(25deg, #0369a1, #ea580c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* /* footer styles */
 #footer {
   font-family: fredoka;
   text-decoration: none;
-  background-color: #04081f;
+  background-color: #002e47;
 }
 .footerLogo > img {
   animation: arribaAbajo 1s linear infinite;
@@ -179,4 +258,42 @@ a:hover {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   color: white;
+}
+
+/*  */
+.dropdown {
+  position: relative;
+  top: 15px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 75%;
+  left: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px #0000001a;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+  color: #f9fafb;
+  background-color: #0369a1;
 }

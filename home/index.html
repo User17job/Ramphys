@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="dark">
     <!-- Background -->
     <!-- charging -->
     <div class="charging">
@@ -45,6 +45,7 @@
     </div>
 
     <main class="container-fluid p-0" id="container">
+      <div class="Hi">HI</div>
       <!-- navbar -->
       <div class="row p-0" id="navbar">
         <div class="col-3">
@@ -68,7 +69,19 @@
           </label>
 
           <section class="navLInks">
-            <a class="m-0 p-3 navLInkItem homeL">Home+</a>
+            <!-- <div class="dropdown"> -->
+
+            <div class="dropdown">
+              <a class="m-0 p-3 navLinkItem homeL">Home+</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" id="Dark">Dark Mode</a></li>
+                <li><a class="dropdown-item" id="Light">Light Mode</a></li>
+                <li><a class="dropdown-item" id="Crazy">Crazy Mode</a></li>
+              </ul>
+            </div>
+
+            <!-- </div> -->
+
             <a
               href="javascript:void(0);"
               class="m-0 p-3 navLInkItem aboutL"
@@ -102,7 +115,7 @@
           </section>
 
           <div class="m-2">
-            <button class="navbutton subtitle" onclick="navigateTo('hire')">
+            <button class="navbutton Btnss" onclick="navigateTo('hire')">
               Hire me
             </button>
           </div>
@@ -119,7 +132,7 @@
               <section class="welcome-des p-2">
                 <!-- title -->
                 <h2 class="welcome-h2 subtitle">Soy Ramphys</h2>
-                <h1 class="welcome-h1 my-3 title">
+                <h1 class="welcome-h1 textBackDark my-3 title">
                   Diseñador web <code class="more">+</code> <br />
                   Desarrollador web
                 </h1>
@@ -132,7 +145,7 @@
                     href="javascript:void(0);"
                     class="m-3"
                     onclick="navigateTo('cv')"
-                    ><button class="DownloadCv">Download CV</button></a
+                    ><button class="DownloadCv Btnss">Download CV</button></a
                   >
                   <a
                     href="javascript:void(0);"
@@ -203,11 +216,13 @@
       <!-- service section -->
       <div class="row">
         <div class="col services position-relative">
-          <div class="servicesBackground baki"></div>
+          <div class="servicesBackground"></div>
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-center serviceTitle title">Servicios</h3>
+              <h3 class="text-center serviceTitle title textBackDark">
+                Servicios
+              </h3>
             </div>
           </section>
           <!-- info -->
@@ -442,12 +457,12 @@
       <!-- Proyects section -->
       <div class="row">
         <div class="col projects">
-          <div class="projectBackground baki"></div>
+          <div class="projectBackground"></div>
 
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-center projectsTitle title">
+              <h3 class="text-center projectsTitle title textBackDark">
                 Mis Proyectos mas recientes
               </h3>
             </div>
@@ -570,7 +585,7 @@
       <!-- Stack section -->
       <div class="row">
         <div class="col stack position-relative">
-          <div class="stackBackground baki"></div>
+          <div class="stackBackground"></div>
           <!-- animation of stack -->
           <div class="animContainer" id="animContainer">
             <!-- names -->
@@ -752,7 +767,7 @@
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-center stackTitle title">Stack</h3>
+              <h3 class="text-center stackTitle title textBackDark">Stack</h3>
             </div>
           </section>
 
@@ -968,18 +983,20 @@
       <!-- about section -->
       <div class="row about">
         <div class="col my-3 position-relative">
-          <div class="AboutBackground baki"></div>
+          <div class="AboutBackground"></div>
 
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-center aboutTitle title">Acerca de mi</h3>
+              <h3 class="text-center aboutTitle title textBackDark">
+                Acerca de mi
+              </h3>
             </div>
           </section>
 
           <section class="row aboutsectionContainer">
             <div class="col-md-9 col-11 aboutsection aboutUno p-5">
-              <p class="text">
+              <p class="">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Quibusdam vitae placeat reiciendis asperiores accusamus iste.
                 Ratione similique voluptatem ex, enim quasi maxime beatae natus
@@ -1017,7 +1034,7 @@
             <div class="col-12 p-2">
               <section class="row p-2 carousel-container position-relative">
                 <h2
-                  class="position-absolute colaborationsTitle text-center title"
+                  class="position-absolute colaborationsTitle text-center title textBackDark"
                 >
                   Branding
                 </h2>
@@ -1085,7 +1102,9 @@
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-center blogTitle title">Acerca de Mi Blog</h3>
+              <h3 class="text-center blogTitle title textBackDark">
+                Acerca de Mi Blog
+              </h3>
             </div>
           </section>
           <!-- Info -->
@@ -1352,12 +1371,12 @@
       <!-- contact section -->
       <div class="row">
         <div class="col contact position-relative">
-          <div class="contactBackground baki"></div>
-          <div class="contactBackgroundItem baki"></div>
+          <div class="contactBackground"></div>
+          <div class="contactBackgroundItem"></div>
           <!-- title -->
           <section class="row">
             <div class="col">
-              <h3 class="text-start contactTitle title">
+              <h3 class="text-start contactTitle title textBackDark">
                 Informacion de contacto
               </h3>
             </div>
@@ -1538,7 +1557,7 @@
                     <div class="row justify-content-end">
                       <div class="col-3">
                         <div class="submitButtonC justify-content-end d-flex">
-                          <button class="p" type="submit">send</button>
+                          <button class="p Btnss" type="submit">send</button>
                         </div>
                       </div>
                     </div>
@@ -1657,6 +1676,7 @@
                 >
               </b>
             </div>
+
             <!--up  -->
             <div class="col-12 text-end goUpButton subtitle">
               <b
@@ -1679,20 +1699,21 @@
                 ></b
               >
             </div>
+            <!-- cursor -->
+            <div class="cursor"></div>
+            <!-- cursor -->
           </section>
         </div>
       </div>
     </main>
-
-    <!-- cursor -->
-    <div class="cursor"></div>
-    <!-- cursor -->
 
     <!-- javascript -->
     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="./public/Js/mode.js"></script>
+
+    <script src="./public/Js/responsive.js"></script>
 
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
     <script src="./public/Js/externalLinks.js"></script>

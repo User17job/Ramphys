@@ -5,10 +5,6 @@
 }
 .aboutTitle {
   font-size: 60px;
-  font-weight: bold;
-  background: linear-gradient(25deg, #0369a1, #f4f6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .aboutsectionContainer {
   position: relative;
@@ -29,6 +25,7 @@
   font-size: 20px;
   font-weight: 500;
   background-color: #f4f6ff;
+  color: black;
 }
 .aboutDos {
   left: 55px;

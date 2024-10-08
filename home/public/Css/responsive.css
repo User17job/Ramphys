@@ -1,5 +1,3 @@
-/* blog */
-
 @media screen and (width < 860px) {
   #checkbox {
     display: none;
@@ -61,6 +59,7 @@
     transition-duration: 0.5s;
     transform: rotate(180deg);
   }
+
   .navLInks {
     opacity: 0%;
     background-color: #f9fafb;
@@ -75,6 +74,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    place-items: center;
     position: absolute;
     transition: 0.5s;
     border-radius: 5px;
@@ -82,11 +82,11 @@
   .navLInkItem {
     background-color: transparent;
     color: #020617;
+    background-color: #d8f1ff00;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
   }
-  .homeL {
-    background-color: #f9fafb;
-  }
-
   .navLInkItem:hover {
     background-color: #f9fafb;
     color: #0369a1;
@@ -102,10 +102,25 @@
 
   /* navbar */
   #checkbox:checked ~ .navLInks {
-    top: 65vh;
+    top: 50%;
+    left: 50%;
+    transform: calc(50% 50%);
   }
   .menu-active {
     overflow: hidden;
+  }
+
+  .nuevaClase {
+    height: 280px;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: #020617 0px 0px 225px;
+    position: fixed;
+  }
+  .homeL {
+    background-color: #0369a1;
+    color: #f9fafb;
   }
 }
 @media screen and (width < 755px) {
@@ -133,7 +148,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(255, 255, 255, 0); */
     filter: none; /* Aplica un desenfoque de 5px */
     transition: filter 0.5s ease-in-out; /* Transición suave */
     z-index: -5;
@@ -161,8 +175,6 @@
     position: absolute;
     width: 320px;
     height: 300px;
-    /* background-color: #f9fafb07; */
-    /* color: #020617; */
     z-index: 5;
     top: 50%;
     left: 50%;
@@ -179,9 +191,7 @@
   }
   .carousel-track {
     display: flex;
-    width: calc(
-      14 * (255px + 40px)
-    ); /* 255px element width + 40px margin (20px on each side) */
+    width: calc(14 * (255px + 40px));
     animation: scrolll 30s linear infinite;
   }
   .el {
@@ -192,31 +202,24 @@
     box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
   }
   .elBord {
-    /* border: 1px solid black; */
     text-align: center;
     padding: 20px;
-    /* background-color: #0369a1; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ensures the content is centered */
     box-sizing: border-box;
   }
 }
 @media screen and (width < 550px) {
+  .WelcomeLinks {
+    left: 5%;
+  }
   .navLInks {
     opacity: 0%;
     height: 350px;
     width: 80%;
-    top: 5pc;
-    left: 50%;
-    z-index: 8;
-    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
-    position: absolute;
     transition: 0.5s;
     border-radius: 5px;
   }
@@ -253,27 +256,14 @@
     font-weight: bold;
   }
 }
+
 /* un media queris para el alto */
 @media (max-height: 600px) {
-  .navLInks {
-    height: 280px;
-    width: 80%;
-    top: 55pc;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 5;
-    opacity: 100%;
-  }
   .navLInksC {
     z-index: 1000;
   }
   .navLInkItem {
-    background-color: #d8f1ff;
     width: 50%;
     margin: 10px;
-    border-radius: 5px;
-  }
-  .homeL {
-    background-color: #f9fafb;
   }
 }

@@ -2,10 +2,6 @@
 .colaborationsTitle {
   font-size: 80px;
   top: 16%;
-  font-weight: bold;
-  background: linear-gradient(25deg, #0369a1, #f4f6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .carousel-container {
   overflow: hidden;
