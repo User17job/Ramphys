@@ -1,5 +1,4 @@
 // responsive menu
-
 const checkbox = document.getElementById("checkbox");
 checkbox.addEventListener("change", function () {
   if (this.checked) {

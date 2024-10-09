@@ -20,11 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(
-    #020617 15%,
-    transparent 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 /* Duplicamos las imágenes para que se desplace infinitamente */

@@ -1,90 +1,96 @@
 /* decorations */
-.welcomeSecBackground{
-    width: 56px;
-    height: 56px;
-    border-radius:  55%; 
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 45%, transparent 100%);
-    position: absolute;
-    left: 16px;
-    top: 55.6%;
-    filter: blur(5px);
-    z-index: -5;
-    animation: derecha 5s ease-in-out infinite;
+.welcomeSecBackground {
+  width: 56px;
+  height: 56px;
+  border-radius: 55%;
+  position: absolute;
+  left: 16px;
+  top: 55.6%;
+  filter: blur(5px);
+  z-index: -5;
+  animation: derecha 5s ease-in-out infinite;
 }
 .servicesBackground {
-    width: 456px;
-    height: 456px;
-    border-radius:  55%;
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
-    position: absolute;
-    left: 0%;
-    top: 55.6%;
-    filter: blur(5px);
-    z-index: -5;
-    animation: square 20s infinite ease-in-out;
+  width: 456px;
+  height: 456px;
+  border-radius: 55%;
+  position: absolute;
+  left: 0%;
+  top: 55.6%;
+  filter: blur(5px);
+  z-index: -5;
+  animation: square 20s infinite ease-in-out;
 }
 
+.projectBackground {
+  position: absolute;
+  width: 2166px;
+  height: 2166px;
+  border-radius: 55%;
+  z-index: -5;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
 
-.projectBackground{
-    position: absolute;
-    width: 2166px;
-    height: 2166px;
-    border-radius:  55%;
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
-    z-index: -5;
-    left: 50%;
-    top: 52%;
-    transform: translate(-50%, -50%);
-    /* z-index: 5; */
-    backdrop-filter: 55px;
-    /* animation: animat linear 195s  infinite; */
+  backdrop-filter: 55px;
 }
-.stackBackground{
-    position: absolute;
-    width: 756px;
-    height: 756px;
-    border-radius:  55%;
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
-    z-index: -5;
-    left: 50%;
-    top: 65.6%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: 55px;
+.stackBackground {
+  position: absolute;
+  width: 756px;
+  height: 756px;
+  border-radius: 55%;
+  z-index: -5;
+  left: 50%;
+  top: 65.6%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: 55px;
 }
 
-.AboutBackground{
-    position: absolute;
-    width: 555px;
-    height: 555px;
-    border-radius:  50%;
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
-    z-index: -5;
-    left: 65%;
-    top: 20%;
-    backdrop-filter: 55px;
-    animation: aparecer linear 15s  infinite;
+.AboutBackground {
+  position: absolute;
+  width: 555px;
+  height: 555px;
+  border-radius: 50%;
+  z-index: -5;
+  left: 65%;
+  top: 20%;
+  backdrop-filter: 55px;
+  animation: aparecer linear 15s infinite;
 }
 
-.contactBackground{
-    position: absolute;
-    width: 555px;
-    height: 555px;
-    border-radius:  55%;
-    background-image:  radial-gradient(  #036aa1 16.6%,  #020617 55%, transparent 100%);
-    z-index: -5;
-    left: -15%;
-    top: -55px;
-    backdrop-filter: 55px;
-    animation: animat linear 195s  infinite;
+.contactBackground {
+  position: absolute;
+  width: 555px;
+  height: 555px;
+  border-radius: 55%;
+  z-index: -5;
+  left: -15%;
+  top: -55px;
+  backdrop-filter: 55px;
+  animation: animat linear 195s infinite;
 }
-.contactBackgroundItem{
-    position: absolute;
-    width: 155px;
-    height: 155px;
-    border-radius:  55%;
-    background-image:  radial-gradient(  rgba(5, 5, 255, 0.453) 10%,  #0206179e 45%, transparent 100%);
-    z-index: -55;
-    left: 55px;
-    top: 515px;
-    animation: animat linear 155s  infinite;
+.contactBackgroundItem {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  border-radius: 55%;
+  z-index: -55;
+  left: 55px;
+  top: 515px;
+  animation: animat linear 155s infinite;
+}
+
+.BakiDark {
+  background-image: radial-gradient(#0369a1 10%, #020617 45%, transparent 100%);
+}
+.BakiLight {
+  background-image: radial-gradient(#020617 10%, #f9fafb 55%, transparent 100%);
+}
+.BakiCrazy {
+  background-image: radial-gradient(
+    #ea580c 10%,
+    #036aa1 25%,
+    #ea5a0c2d 55%,
+    transparent 100%
+  );
 }

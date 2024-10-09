@@ -38,9 +38,6 @@
     padding: -5px;
     font-size: 50px;
     font-weight: bold;
-    background: linear-gradient(25deg, #f4f6ff, #0369a1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   .contactFormText {
     color: #94a3b8;

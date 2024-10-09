@@ -49,7 +49,6 @@
 }
 .stackOptions {
   border-radius: 16px;
-  background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);
   overflow: hidden;
 }
 .stackOption {
