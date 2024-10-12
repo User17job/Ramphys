@@ -187,9 +187,11 @@ const forCrazy = document.getElementById("Crazy");
 // Elementos del DOM que serán modificados con el cambio
 const body = document.body;
 const checkboxX = document.querySelector("#checkbox");
+const navbar = document.querySelector("#navbar");
 const backgroundd = document.querySelector(".backgroundColor");
-const Links = document.querySelectorAll(".navLInks a");
+const Links = document.querySelectorAll(".navLInks");
 const Linkss = document.querySelectorAll("a");
+const footLinks = document.querySelectorAll(".footerLink");
 const modeBtn = document.querySelectorAll(".dropdown-item");
 const modeC = document.querySelector(".dropdown-menu");
 const btns = document.querySelectorAll(".Btnss");
@@ -199,6 +201,7 @@ const Back = document.querySelectorAll(".Baki");
 
 const subt = document.querySelector(".subtitle");
 const texto = document.querySelector(".text");
+const ContactText = document.querySelectorAll(".text-b");
 
 const rotateDiv = document.querySelector(".rotateDiv");
 
@@ -211,6 +214,7 @@ const aboutDiv = document.querySelector(".aboutUno");
 const branding = document.querySelectorAll(".Colaborationslogos");
 
 const layout = document.querySelector(".layout");
+const foot = document.querySelector("#footer ");
 
 // Helper para actualizar las clases de múltiples elementos
 function updateClasses(elements, newClass, removeClasses = []) {
@@ -239,6 +243,8 @@ function toDark() {
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+
+  navbar.style.backgroundColor = " #020617";
   body.style.backgroundColor = "#020617";
   body.style.color = "#f9fafb";
   body.style.fontFamily = "sans-serif";
@@ -258,9 +264,11 @@ function toDark() {
   subt.style.color = "#f9fafb";
   modeC.style.backgroundColor = "#020617";
 
-  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   Links.forEach((link) => (link.style.color = "#f9fafb"));
+
+  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
+  ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   texto.style.color = "#f9fafb";
   rotateDiv.style.backgroundColor = "#036aa1";
@@ -282,6 +290,14 @@ function toDark() {
   );
   layout.style.backgroundImage =
     "linear-gradient(265deg, #020617 35%, #036aa136 100%)";
+  document
+    .querySelectorAll("section")
+    .forEach((secs) => secs.classList.remove("animados"));
+
+  foot.style.backgroundColor = "#036aa12e";
+  footLinks.forEach((fLinks) => {
+    fLinks.style.color = "#f9fafb";
+  });
 }
 
 // Función para aplicar modo claro
@@ -289,6 +305,8 @@ function toLight() {
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+  navbar.style.backgroundColor = " #f9fafb";
+
   body.style.backgroundColor = "#f9fafb";
   body.style.color = "#020617";
   body.style.fontFamily = "Graduate";
@@ -314,6 +332,8 @@ function toLight() {
   modeBtn.forEach((mode) => (mode.style.color = "#020617"));
 
   texto.style.color = "#020617";
+  ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
+
   rotateDiv.style.backgroundColor = "#020617";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -334,6 +354,15 @@ function toLight() {
 
   layout.style.backgroundImage =
     "linear-gradient(5deg, #5cc0f531 35%, #94a3b846 100%)";
+
+  document
+    .querySelectorAll("section")
+    .forEach((secs) => secs.classList.remove("animados"));
+
+  foot.style.backgroundColor = "#02061733";
+  footLinks.forEach((fLinks) => {
+    fLinks.style.color = "#020617";
+  });
 }
 
 // Función para aplicar modo loco
@@ -341,6 +370,8 @@ function toCrazy() {
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+  navbar.style.backgroundColor = " #ea580c";
+
   body.style.backgroundColor = "#ea580c";
   body.style.color = "#020617";
   body.style.fontFamily = "'Bangers', system-ui";
@@ -366,6 +397,9 @@ function toCrazy() {
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   texto.style.color = "#020617";
+
+  ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
+
   rotateDiv.style.backgroundColor = "#73ff00";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -385,6 +419,14 @@ function toCrazy() {
   );
   layout.style.backgroundImage =
     "linear-gradient(55deg, #ea580c 35%, #036aa136 100%)";
+
+  document
+    .querySelectorAll("section")
+    .forEach((secs) => secs.classList.add("animados"));
+  foot.style.backgroundColor = "#ea5a0c5d";
+  footLinks.forEach((fLinks) => {
+    fLinks.style.color = "#15da15";
+  });
 }
 
 // Event listeners para aplicar los modos

@@ -1,0 +1,12 @@
+Frases.txt
+
+Larry Page: “Siempre entrega más de lo esperado.”
+“La innovación es el motor de la economía.”
+Mark Zuckerberg: “La gente no se da cuenta de lo rápido que la tecnología está cambiando.”
+Tim Berners-Lee: “La web no está terminada, siempre está cambiando.”
+Elon Musk: “La inteligencia artificial es nuestra mayor amenaza existencial.”
+Steve Jobs: “La innovación es lo que distingue a un líder de los demás.”
+Bill Gates: “La tecnología es solo una herramienta. En términos de motivar a los niños y hacerlos trabajar juntos, el maestro es lo más importante.”
+Andrew Ng: “La inteligencia artificial es la nueva electricidad.”
+Timnit Gebru: “La inteligencia artificial refleja los valores de quienes la construyen.”
+Stephen Hawking: “La inteligencia artificial podría ser el mejor o el peor invento de la humanidad.”

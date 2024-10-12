@@ -14,19 +14,10 @@ checkbox.addEventListener("change", function () {
 let change = 5;
 const navb = document.getElementById("navbar");
 window.addEventListener("scroll", function () {
-  if (window.scrollY < 15) {
-    if (navb.classList == "scrolledDark") {
-      navb.classList.remove("scrolledDark");
-    }
-    if (navb.classList == "scrolledLight") {
-      navb.classList.remove("scrolledLight");
-    } else {
-      navb.classList.remove("scrolledCrazy");
-    }
-  }
   if (this.document.body.className == "crazy") {
     if (window.scrollY > 150) {
       navb.classList.add("scrolledCrazy");
+      navb.style.position = "fixed";
       if (navb.classList == "scrolledDark") {
         navb.classList.remove("scrolledDark");
       }
@@ -36,12 +27,15 @@ window.addEventListener("scroll", function () {
     } else {
       navb.classList.remove("scrolledCrazy");
       navb.style.opacity = "100%";
+      navb.style.position = "relative";
     }
   }
 
   if (this.document.body.className == "dark") {
     if (window.scrollY > 150) {
       navb.classList.add("scrolledDark");
+      navb.style.position = "fixed";
+
       if (navb.classList == "scrolledCrazy") {
         navb.classList.remove("scrolledCrazy");
       }
@@ -51,12 +45,15 @@ window.addEventListener("scroll", function () {
     } else {
       navb.classList.remove("scrolledDark");
       navb.style.opacity = "100%";
+      navb.style.position = "relative";
     }
   }
 
   if (this.document.body.className == "light") {
     if (window.scrollY > 150) {
       navb.classList.add("scrolledLight");
+      navb.style.position = "fixed";
+
       if (navb.classList == "scrolledCrazy") {
         navb.classList.remove("scrolledCrazy");
       }
@@ -66,6 +63,7 @@ window.addEventListener("scroll", function () {
     } else {
       navb.classList.remove("scrolledLight");
       navb.style.opacity = "100%";
+      navb.style.position = "relative";
     }
   }
 });

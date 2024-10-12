@@ -27,6 +27,7 @@
     <img
       src="./public/Imgs/backgroundCrazy.png"
       class="backgroundColor"
+      id="crazyBack"
       alt="background for the crazy Mode"
     />
 
@@ -143,13 +144,15 @@
                   Desarrollador web
                 </h1>
                 <p class="my-4 text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Accusantium aliquam, libero unde porro ipsum ?
+                  Buscas a alguien que Diseñe, Implemente y Desarrolle y
+                  Despliegue tu proximo proyecto? Soy lo que has estado
+                  buscando.
+                  <!-- Una persona llena de curiosidad y ganas de aprender con interes en la tegnologia en diferentes ramas. -->
                 </p>
                 <div class="WelcomeLinks my-5 justify-content-center">
                   <a
                     href="javascript:void(0);"
-                    class="m-3"
+                    class=""
                     onclick="navigateTo('cv')"
                     ><button class="DownloadCv Btnss">Download CV</button></a
                   >
@@ -1242,7 +1245,7 @@
                     alt="blog-background"
                     class="blog5__back position-absolute"
                   />
-                  <h1>UnProgramaYYo</h1>
+                  <h1 class="text-light">UnProgramaYYo</h1>
                 </div>
               </a>
               <p class="subtitle text-light">A new World</p>
@@ -1484,7 +1487,7 @@
                     netlify
                   >
                     <div class="row">
-                      <div class="col-6">
+                      <div class="col-6 text-b">
                         <label for="name" class="form-label">Name</label>
                         <input
                           type="text"
@@ -1494,7 +1497,7 @@
                           aria-label="First name"
                         />
                       </div>
-                      <div class="col-6">
+                      <div class="col-6 text-b">
                         <label for="lastName" class="form-label"
                           >Last name</label
                         >
@@ -1506,7 +1509,7 @@
                           aria-label="Last name"
                         />
                       </div>
-                      <div class="col-6">
+                      <div class="col-6 text-b">
                         <label for="Email" class="form-label">Email</label>
                         <input
                           type="email"
@@ -1516,7 +1519,7 @@
                           aria-label="Email"
                         />
                       </div>
-                      <div class="col-6">
+                      <div class="col-6 text-b">
                         <label for="phoneNumber" class="form-label"
                           >Phone Number</label
                         >
@@ -1528,8 +1531,8 @@
                           aria-label="Phone Number"
                         />
                       </div>
-                      <div class=" ">
-                        <label for="service" class="form-label"
+                      <div class="text-b">
+                        <label for="service" class="form-label text-b"
                           >Elija un servicio</label
                         >
                         <select
@@ -1537,30 +1540,18 @@
                           id="service"
                           aria-label="defaul"
                         >
-                          <option class="text-dark text-b" selected>
+                          <option class="" selected>
                             Opciones de servicios
                           </option>
-                          <option class="text-dark text-b" value="1">
-                            Desarrollo Web
-                          </option>
-                          <option class="text-dark text-b" value="2">
-                            Diseno web
-                          </option>
-                          <option class="text-dark text-b" value="3">
-                            Estilizacion web
-                          </option>
-                          <option class="text-dark text-b" value="4">
-                            Diseno grafico
-                          </option>
-                          <option class="text-dark text-b" value="5">
-                            Microsoft Office
-                          </option>
-                          <option class="text-dark text-b" value="6">
-                            Creacion de marca
-                          </option>
+                          <option class="" value="1">Desarrollo Web</option>
+                          <option class="" value="2">Diseno web</option>
+                          <option class="" value="3">Estilizacion web</option>
+                          <option class="" value="4">Diseno grafico</option>
+                          <option class="" value="5">Microsoft Office</option>
+                          <option class="" value="6">Creacion de marca</option>
                         </select>
                       </div>
-                      <div class="mb-3">
+                      <div class="mb-3 text-b">
                         <label for="Textarea" class="form-label">Coment</label>
                         <textarea
                           class="form-control"
@@ -1589,8 +1580,7 @@
       <div class="row my-">
         <div class="col my-3">
           <section class="row justify-content-center" id="footer">
-            <div class="col-12 text-start my-3">
-              <!-- /* From Uiverse.io by Galahhad */  -->
+            <!-- <div class="col-12 text-start my-3">
               <label class="bb8-toggle">
                 <input
                   class="bb8-toggle__checkbox"
@@ -1628,8 +1618,11 @@
                   </div>
                 </div>
               </label>
-            </div>
+            </div> -->
 
+            <div class="footerBackground BakiDark Baki">
+              <div class="footerBackgroundIn BakiDark Baki"></div>
+            </div>
             <!-- logo -->
             <div class="col-12">
               <figure class="footerLogo d-flex justify-content-center">
@@ -1705,11 +1698,11 @@
               /></b>
             </div>
             <!-- rights -->
-            <div class="col-12 text-center subtitle">
+            <div class="col-12 text-center">
               <b
                 ><a
                   href="javascript:void(0);"
-                  class="mx-3 rights"
+                  class="mx-3 footerLink"
                   onclick="navigateTo('user17job')"
                   >&copy; User17job All rights reserve</a
                 ></b
