@@ -18,6 +18,13 @@
   position: relative;
   top: -18%;
 }
+.h5 {
+  position: absolute;
+  text-align: center;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .imgItem {
   width: 300px;

@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Home</title>
+    <title>Ramphys | About</title>
 
-    <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./public/Css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="./public/Css/index.css" />
 
     <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css" />
-    <link rel="stylesheet" href="./public/Css/charging.css" />
-    <link rel="stylesheet" href="./public/Css/responsive.css" />
+    <!-- <link rel="stylesheet" href="./public/Css/charging.css" /> -->
+    <!-- <link rel="stylesheet" href="./public/Css/responsive.css" /> -->
 
+    <!-- logo -->
     <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg" />
 
+    <!-- font-familys -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- <script type="module" src="script.js" defer></script> -->
   </head>
   <body class="dark">
     <!-- Background -->
@@ -132,7 +136,6 @@
       <!-- welcome section -->
       <div class="row" id="welcome">
         <div class="welcomeSecBackground Baki BakiDark"></div>
-        <div class="welcomeSecBackgroundD Baki BakiDark"></div>
         <div class="welcomeSecBackgroundT Baki BakiDark"></div>
 
         <div class="col" id="welcome-container">
@@ -142,6 +145,11 @@
                 <h2 class="welcome-h2 subtitle text-center my-5">
                   Soy Ramphys
                 </h2>
+                <div class="row h5">
+                  <div class="col">
+                    <h5 class="text-center title">ABOUT</h5>
+                  </div>
+                </div>
 
                 <figure class="imgItem">
                   <div class="rotateDiv"></div>
@@ -156,12 +164,99 @@
                 </figure>
               </section>
             </div>
+          </section>
+        </div>
+      </div>
 
-            <div class="row">
-              <div class="col">
-                <h5 class="text-center subtitle">ABOUT</h5>
+      <!-- presentation -->
+      <div class="row presentation" id="presentation">
+        <div class="col my-3" id="presentation-container">
+          <section class="show-case-slider" id="showCaseSlider">
+            <span class="show-case-slider_wrapper">
+              <div class="item active">
+                <div class="content">
+                  <h1 class="tit">
+                    ¿Por qué usar animaciones <br />
+                    <em class="title"> Personalizadas </em> ?
+                  </h1>
+                  <p>
+                    Las animaciones en los componentes web pueden mejorar la
+                    experiencia del usuario al hacer que la interfaz sea más
+                    interactiva y atractiva.
+                  </p>
+                </div>
+
+                <picture>
+                  <img
+                    draggable="false"
+                    src="https://cdn.pixabay.com/photo/2019/09/19/20/24/city-4490237_640.jpg"
+                    alt="image"
+                  />
+                </picture>
               </div>
-            </div>
+
+              <div class="item">
+                <div class="content">
+                  <h1 class="tit">
+                    Mejor <em class="title"> Experiencia </em>
+                  </h1>
+                  <p>
+                    Las animaciones pueden crear transiciones suaves entre los
+                    estados de los componentes, mostrar cambios dinámicos en los
+                    datos o añadir efectos visuales que hagan que la interfaz
+                    sea más atractiva.
+                  </p>
+                </div>
+
+                <picture>
+                  <img
+                    draggable="false"
+                    src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg"
+                    alt="image"
+                  />
+                </picture>
+              </div>
+
+              <div class="item">
+                <div class="content">
+                  <h1 class="tit"><em class="title"> Interactividad </em></h1>
+                  <p>
+                    Las animaciones pueden ayudar a que un sitio web se sienta
+                    más interactivo y agradable a la vista.
+                  </p>
+                </div>
+                <picture>
+                  <img
+                    draggable="false"
+                    src="https://cdn.pixabay.com/photo/2021/01/09/23/28/mobile-5903726_640.png"
+                    alt="image"
+                  />
+                </picture>
+              </div>
+
+              <div class="item">
+                <div class="content">
+                  <h1 class="tit">
+                    Define la esencia de tu <em class="title"> Sitio Web </em>
+                  </h1>
+                  <p>
+                    Un sitio web es la carta de presentación de tu negocio o
+                    proyecto en internet. Por eso, es importante que sea
+                    atractivo y agradable a la vista para los visitantes. Para
+                    lograrlo, debes definir la esencia de tu sitio web
+                  </p>
+                </div>
+                <picture>
+                  <img
+                    draggable="false"
+                    src="https://cdn.pixabay.com/photo/2017/07/10/23/45/cubes-2492010_1280.jpg"
+                    alt="image"
+                  />
+                </picture>
+              </div>
+            </span>
+
+            <span class="dot-container"></span>
           </section>
         </div>
       </div>
@@ -1658,12 +1753,15 @@
     </main>
 
     <!-- javascript -->
+
     <script src="./public/Js/cursorFollow.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="./public/Js/mode.js"></script>
 
     <script src="./public/Js/responsive.js"></script>
+
+    <script src="./public/Js/Carrucel.js"></script>
 
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
     <script src="./public/Js/externalLinks.js"></script>
@@ -1672,6 +1770,7 @@
     <script src="./public/Js/scrollreveal.js"></script>
     <script src="./public/Js/scrolls.js"></script>
 
-    <script src="./public/Js/index.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <script moule src="./public/Js/index.js" defer></script>
   </body>
 </html>
