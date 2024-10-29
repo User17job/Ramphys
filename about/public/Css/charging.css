@@ -1,12 +1,6 @@
 .charging {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  display: grid;
-  place-items: center;
   transition: 0.6s;
   z-index: 66;
-  background-color: #020617;
 }
 
 .charging {
@@ -16,101 +10,228 @@
 }
 
 .charging.fade-out {
-  border-radius: 50px;
   opacity: 0; /* Opacidad al 0 para desvanecer */
   transform: scale(0.5);
 }
-
-/* From Uiverse.io by kennyotsu */
-.carta {
-  /* color used to softly clip top and bottom of the .words container */
-  --bg-color: #020617;
-  background-color: var(--bg-color);
-  padding: 1rem 2rem;
-  border-radius: 1.25rem;
-}
-.loader {
-  color: rgb(147, 147, 147);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 50px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 65px;
-  padding: 10px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 8px;
+.Container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #020617;
+  transition: 0.5s ease-in;
 }
 
-.words {
-  overflow: hidden;
+.cargando {
+  height: 600px;
+  width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: hidden;
 }
-.words::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    var(--bg-color) 10%,
-    transparent 30%,
-    transparent 70%,
-    var(--bg-color) 90%
-  );
-  z-index: 20;
+/* From Uiverse.io by Cobp */
+.loaderr {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+
+  perspective: 780px;
+  margin: auto;
 }
 
-.word {
-  display: block;
-  height: 100%;
-  padding-left: 6px;
-  font-size: 50px;
-  font-weight: bold;
-  background: linear-gradient(25deg, #f4f6ff, #0369a1);
+.textCharge {
+  font-size: 35px;
+  font-family: fredoka;
+  font-weight: 700;
+  color: #cecece;
+  z-index: 10;
+  background: linear-gradient(to right, #f9fafb, #ea580c, #0369a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: spin_4991 4s infinite;
+  background-clip: text;
+  animation: colores 0.9s ease infinite;
+}
+@keyframes colores {
+  0% {
+    background: linear-gradient(to right, #0369a1, #f9fafb, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  50% {
+    background: linear-gradient(to right, #ea580c, #0369a1, #f9fafb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  100% {
+    background: linear-gradient(to right, #f9fafb, #ea580c, #0369a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
-@keyframes spin_4991 {
-  10% {
-    -webkit-transform: translateY(-102%);
-    transform: translateY(-102%);
-  }
+.load-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
 
-  25% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
+.load-inner.load-one {
+  left: 0%;
+  top: 0%;
+  border-bottom: 3px solid #ea580c;
+  animation: rotate1 1.15s linear infinite;
+}
 
-  35% {
-    -webkit-transform: translateY(-202%);
-    transform: translateY(-202%);
-  }
+.load-inner.load-two {
+  right: 0%;
+  top: 0%;
+  border-right: 3px solid #f9fafb;
+  animation: rotate2 1.15s 0.1s linear infinite;
+}
 
-  50% {
-    -webkit-transform: translateY(-200%);
-    transform: translateY(-200%);
-  }
+.load-inner.load-three {
+  right: 0%;
+  bottom: 0%;
+  border-top: 3px solid #0369a1;
+  animation: rotate3 1.15s 0.15s linear infinite;
+}
 
-  60% {
-    -webkit-transform: translateY(-302%);
-    transform: translateY(-302%);
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
   }
-
-  75% {
-    -webkit-transform: translateY(-300%);
-    transform: translateY(-300%);
-  }
-
-  85% {
-    -webkit-transform: translateY(-402%);
-    transform: translateY(-402%);
-  }
-
   100% {
-    -webkit-transform: translateY(-400%);
-    transform: translateY(-400%);
+    transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
   }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-60deg) rotateY(0deg) rotateZ(360deg);
+  }
+}
+.loader {
+  width: 0;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  animation: animFw 7.7s linear infinite;
+  top: -150px;
+}
+.loaderCLass {
+  width: 0;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  animation: animFw 5.7s linear infinite;
+  top: -150px;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 9px;
+  right: -2px;
+  opacity: 0;
+  transform: rotate(-45deg) translateX(0px);
+  box-sizing: border-box;
+  animation: coli1 0.3s linear infinite;
+}
+.loader::before {
+  top: -4px;
+  transform: rotate(45deg);
+  animation: coli2 0.3s linear infinite;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes coli1 {
+  0% {
+    transform: rotate(-45deg) translateX(0px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(-45deg) translateX(-45px);
+    opacity: 0;
+  }
+}
+
+@keyframes coli2 {
+  0% {
+    transform: rotate(45deg) translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateX(-45px);
+    opacity: 0.7;
+  }
+}
+
+.logo {
+  position: absolute;
+  background-color: #e8eeff00;
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  top: 50%;
+  border: rgba(255, 255, 255, 0) solid;
+  /* overflow: hidden; */
+  transform: translate(-50%, -50%);
+  opacity: 0%;
+  transition: 0.5s ease-in;
+}
+.logo > figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: -0px;
+  top: -5px;
+  transition: 9s ease-in;
+  background-color: #020617;
+}
+.logo > figure > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 0px 55px #0369a1);
 }

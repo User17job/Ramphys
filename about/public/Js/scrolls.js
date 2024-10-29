@@ -10,20 +10,11 @@ window.addEventListener("load", function () {
     duration: 1000,
     origin: "top",
     distance: "100px",
-    reset: true,
   });
 
   sr.reveal(".about", {
     duration: 2500,
     origin: "left",
     distance: "150px",
-    reset: true,
-  });
-
-  sr.reveal(".contact-form", {
-    duration: 2200,
-    origin: "bottom",
-    distance: "150px",
-    reset: true,
   });
 });
