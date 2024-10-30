@@ -13,9 +13,33 @@
   height: 450px;
 }
 
+.textBackDark {
+  background: linear-gradient(25deg, #0369a1, #f4f6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackLight {
+  background: linear-gradient(25deg, #f4f6ff, #0369a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackCrazy {
+  background: linear-gradient(25deg, #020617, #ea580c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
 .WelcomeLinks {
   border: solid #94a3b8;
-  min-width: 380px;
+  width: auto;
   max-width: 400px;
   padding: 5px 7px;
   border-radius: 25px;

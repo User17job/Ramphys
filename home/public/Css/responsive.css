@@ -1,4 +1,7 @@
 @media screen and (width < 860px) {
+  body {
+    background-color: #f9fafb;
+  }
   #checkbox {
     display: none;
   }
@@ -19,7 +22,8 @@
   .bars {
     width: 100%;
     height: 4px;
-    background-color: rgb(176, 92, 255);
+    background-color: #0369a1;
+    background: linear-gradient(180deg, white, #0369a1, #ff6a00);
     border-radius: 4px;
   }
 

@@ -1,196 +1,16 @@
-// const forDark = document.getElementById("Dark");
-// const forLight = document.getElementById("Light");
-// const forCrazy = document.getElementById("Crazy");
-
-// // elementos del dom que seran modificados con el cambio
-// const body = document.body;
-// const backgroundd = document.querySelector(".backgroundColor");
-// const Linkss = document.querySelectorAll(".navLInks a ");
-// const modeBtn = document.querySelectorAll(".dropdown-item");
-// const modeC = document.querySelector(".dropdown-menu");
-// const btns = document.querySelectorAll(".Btnss");
-
-// const titles = document.querySelectorAll(".title");
-// const Back = document.querySelectorAll(".Baki");
-
-// const subt = document.querySelector(".subtitle");
-// const texto = document.querySelector(".text");
-
-// const rotateDiv = document.querySelector(".rotateDiv");
-
-// const services = document.querySelector(".services");
-
-// function updateTitleClasses(newClass, removeClasses = []) {
-//   titles.forEach((title) => {
-//     removeClasses.forEach((removeClass) => {
-//       title.classList.remove(removeClass);
-//     });
-//     title.classList.add(newClass);
-//   });
-// }
-
-// // Function to update button classes
-// function updateBtnclasses(newClass, removeClasses = []) {
-//   btns.forEach((button) => {
-//     removeClasses.forEach((removeClass) => {
-//       button.classList.remove(removeClass);
-//     });
-//     button.classList.add(newClass);
-//   });
-// }
-
-// function updateBacksClasses(newClass, removeClasses = []) {
-//   Back.forEach((backClass) => {
-//     removeClasses.forEach((deleteCLass) => {
-//       backClass.classList.remove(deleteCLass);
-//     });
-//     backClass.classList.add(newClass);
-//   });
-// }
-
-// // Reusable function for scrolling behavior
-// function handleScroll(className) {
-//   if (window.scrollY < 25) {
-//     body.className = className;
-//   } else {
-//     window.scrollTo({ top: 0, behavior: "smooth" });
-//     setTimeout(() => {
-//       body.className = className;
-//     }, 1111);
-//   }
-// }
-
-// // Function to apply dark mode
-// function toDark() {
-//   body.style.backgroundColor = "#020617";
-//   body.style.fontFamily = "sans-serif";
-//   handleScroll("dark");
-//   backgroundd.style.display = "none";
-
-//   // Update .title class
-//   updateTitleClasses("textBackDark", ["textBackLight", "textBackCrazy"]);
-
-//   updateBtnclasses("navbuttonDark", ["navbuttonLight", "navbuttonCrazy"]);
-
-//   updateBacksClasses("BakiDark", ["BakiLight", "BakiCrazy"]);
-
-//   subt.style.fontFamily = "Fredoka";
-//   subt.style.color = "#f9fafb";
-//   modeC.style.backgroundColor = "#020617";
-
-//   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
-//   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
-
-//   texto.style.color = "#f9fafb";
-
-//   rotateDiv.style.backgroundColor = "#036aa1";
-
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-
-//   if ((services.classList = "serviceLight")) {
-//     services.classList.remove("serviceLight");
-//   }
-//   if ((services.classList = "serviceCrazy")) {
-//     services.classList.remove("serviceCrazy");
-//   }
-//   services.classList.add("serviceDark");
-// }
-// toDark();
-
-// // Apply dark mode
-// forDark.addEventListener("click", toDark);
-
-// // Function to apply light mode
-// function toLight() {
-//   body.style.backgroundColor = "#f9fafb";
-//   body.style.color = "#020617";
-//   body.style.fontFamily = "Graduate";
-//   backgroundd.style.display = "none";
-
-//   handleScroll("light");
-
-//   // Update .title class
-//   updateTitleClasses("textBackLight", ["textBackDark", "textBackCrazy"]);
-
-//   updateBtnclasses("navbuttonLight", ["navbuttonDark", "navbuttonCrazy"]);
-
-//   updateBacksClasses("BakiLight", ["BakiDark", "BakiCrazy"]);
-
-//   subt.style.fontFamily = "Graduate";
-//   subt.style.color = "#020617";
-//   modeC.style.backgroundColor = "#f9fafb";
-
-//   Linkss.forEach((link) => (link.style.color = "#020617"));
-//   modeBtn.forEach((mode) => (mode.style.color = "#020617"));
-
-//   texto.style.color = "#020617";
-
-//   rotateDiv.style.backgroundColor = "#020617";
-
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-
-//   if ((services.classList = "serviceDark ")) {
-//     services.classList.remove("serviceDark ");
-//   }
-//   if ((services.classList = "serviceCrazy")) {
-//     services.classList.remove("serviceCrazy");
-//   }
-//   services.classList.add("serviceLight");
-// }
-
-// // Apply light mode
-// forLight.addEventListener("click", toLight);
-
-// // Function to apply crazy mode
-// function toCrazy() {
-//   body.style.backgroundColor = "#ea580c";
-//   body.style.color = "#020617";
-//   body.style.fontFamily = "'Bangers', system-ui";
-//   backgroundd.style.display = "block";
-
-//   handleScroll("crazy");
-
-//   updateTitleClasses("textBackCrazy", ["textBackDark", "textBackLight"]);
-
-//   updateBtnclasses("navbuttonCrazy", ["navbuttonDark", "navbuttonLight"]);
-
-//   updateBacksClasses("BakiCrazy", ["BakiDark", "BakiLight"]);
-
-//   subt.style.fontFamily = "'Bangers', system-ui";
-//   subt.style.color = "#020617";
-
-//   modeC.style.backgroundColor = "#ea580c";
-
-//   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
-//   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
-
-//   texto.style.color = "#020617";
-
-//   rotateDiv.style.backgroundColor = "#73ff00";
-
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-
-//   if ((services.classList = "serviceDark ")) {
-//     services.classList.remove("serviceDark ");
-//   }
-//   if ((services.classList = "serviceLight")) {
-//     services.classList.remove("serviceLight");
-//   }
-//   services.classList.add("serviceDark serviceCrazy");
-// }
-
 // elementos del dom que seran modificados con el cambio
 const forDark = document.getElementById("Dark");
 const forLight = document.getElementById("Light");
 const forCrazy = document.getElementById("Crazy");
-
+// textBackDark
 // Elementos del DOM que serán modificados con el cambio
 const body = document.body;
 const checkboxX = document.querySelector("#checkbox");
 const navbar = document.querySelector("#navbar");
 const backgroundd = document.querySelector(".backgroundColor");
-const Links = document.querySelectorAll(".navLInks");
+const Links = document.querySelectorAll(".span");
 const Linkss = document.querySelectorAll("a");
+
 const footLinks = document.querySelectorAll(".footerLink");
 const modeBtn = document.querySelectorAll(".dropdown-item");
 const modeC = document.querySelector(".dropdown-menu");
@@ -266,7 +86,7 @@ function toDark() {
 
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
-  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
+  // Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
@@ -289,7 +109,7 @@ function toDark() {
         "radial-gradient(#020617 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
   );
   layout.style.backgroundImage =
-    "linear-gradient(265deg, #020617 35%, #036aa136 100%)";
+    "linear-gradient(265deg, #020617 35%, #036aa136 100%)"; /////
   document
     .querySelectorAll("section")
     .forEach((secs) => secs.classList.remove("animados"));
@@ -327,8 +147,14 @@ function toLight() {
   subt.style.color = "#020617";
   modeC.style.backgroundColor = "#f9fafb";
 
-  Linkss.forEach((link) => (link.style.color = "#020617"));
-  Links.forEach((link) => (link.style.color = "#020617"));
+  //Linkss.forEach((link) => (link.style.color = "#020617"));
+
+  if (window.innerWidth < 860) {
+    Links.forEach((link) => (link.style.color = "#f9fafb"));
+  } else {
+    Links.forEach((link) => (link.style.color = "#020617"));
+  }
+
   modeBtn.forEach((mode) => (mode.style.color = "#020617"));
 
   texto.style.color = "#020617";
@@ -353,7 +179,7 @@ function toLight() {
   );
 
   layout.style.backgroundImage =
-    "linear-gradient(5deg, #5cc0f531 35%, #94a3b846 100%)";
+    "linear-gradient(5deg, #5cc0f531 35%, #94a3b846 100%)"; /////
 
   document
     .querySelectorAll("section")
@@ -392,8 +218,9 @@ function toCrazy() {
   subt.style.color = "#020617";
   modeC.style.backgroundColor = "#ea580c";
 
-  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
+  // Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   Links.forEach((link) => (link.style.color = "#f9fafb"));
+
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   texto.style.color = "#020617";
@@ -418,7 +245,7 @@ function toCrazy() {
         "radial-gradient(#ea580c 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
   );
   layout.style.backgroundImage =
-    "linear-gradient(55deg, #ea580c 35%, #036aa136 100%)";
+    "linear-gradient(55deg, #ea580c 35%, #036aa136 100%)"; /////
 
   document
     .querySelectorAll("section")

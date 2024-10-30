@@ -177,31 +177,16 @@ body::-webkit-scrollbar-thumb {
   color: #0369a1;
 }
 
-.textBackDark {
-  background: linear-gradient(25deg, #0369a1, #f4f6ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-.textBackLight {
-  background: linear-gradient(25deg, #f4f6ff, #0369a1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-.textBackCrazy {
-  background: linear-gradient(25deg, #020617, #ea580c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
 /* General */
+.span {
+  color: #f9fafb;
+  text-decoration: none;
+}
+.span:hover {
+  cursor: pointer;
+  color: #0369a1;
+  text-decoration: underline;
+}
 a {
   color: #ffffff00;
   text-decoration: none;
@@ -251,6 +236,12 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+.goUpButton {
+  position: relative;
+  left: 40%;
+  min-width: 140px;
+  padding: 0px;
+}
 .footerLink:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -294,4 +285,15 @@ a:hover {
 .dropdown-item:hover {
   cursor: pointer;
   background-color: #0369a1;
+}
+
+.showA {
+  opacity: 1; /* Inicialmente visible */
+  transform: translateY(0); /* En su posición original */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves */
+}
+
+.showA.hidden {
+  opacity: 0; /* Invisible */
+  transform: translateY(20px); /* Desplazado hacia abajo */
 }
