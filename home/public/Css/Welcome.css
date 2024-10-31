@@ -30,11 +30,12 @@
 }
 
 .textBackCrazy {
-  background: linear-gradient(25deg, #020617, #ea580c);
+  background: linear-gradient(25deg, #1877fc, #020617);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  animation: latir 2s linear infinite;
 }
 
 .WelcomeLinks {

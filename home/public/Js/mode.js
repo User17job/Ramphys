@@ -86,7 +86,8 @@ function toDark() {
 
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
-  // Linkss.forEach((link) => (link.style.color = "#f9fafb"));
+  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
+
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
@@ -98,6 +99,7 @@ function toDark() {
   // Actualizar clases de servicios
   services.classList.remove("serviceLight", "serviceCrazy");
   services.classList.add("serviceDark");
+  serviceDesc.classList.add("DarcK");
   serviceDesc.style.color = "#f9fafb";
 
   aboutDiv.style.backgroundColor = "#f4f6ff";
@@ -147,8 +149,7 @@ function toLight() {
   subt.style.color = "#020617";
   modeC.style.backgroundColor = "#f9fafb";
 
-  //Linkss.forEach((link) => (link.style.color = "#020617"));
-
+  Linkss.forEach((link) => (link.style.color = "#020617"));
   if (window.innerWidth < 860) {
     Links.forEach((link) => (link.style.color = "#f9fafb"));
   } else {
@@ -215,15 +216,15 @@ function toCrazy() {
   ]);
 
   subt.style.fontFamily = "'Bangers', system-ui";
-  subt.style.color = "#020617";
+  subt.style.color = "#f9fafb";
   modeC.style.backgroundColor = "#ea580c";
 
-  // Linkss.forEach((link) => (link.style.color = "#f9fafb"));
+  Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
 
-  texto.style.color = "#020617";
+  texto.style.color = "#f9fafb";
 
   ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
 
@@ -255,6 +256,44 @@ function toCrazy() {
     fLinks.style.color = "#15da15";
   });
 }
+
+// Crear un overlay en el body que oscurecerá el contenido
+const overlay = document.createElement("div");
+overlay.id = "overlay";
+overlay.innerHTML = `
+    <div class="cargando">
+      <div class="loaderr">
+          <div class="load-inner load-one"></div>
+          <div class="load-inner load-two"></div>
+          <div class="load-inner load-three"></div>
+        <span class="textCharge">Loading...</span>
+      </div>
+    </div>
+`;
+document.body.appendChild(overlay);
+
+forCrazy.addEventListener("click", () => {
+  document.querySelector("#container").style.visibility = "hidden";
+  document.body.style.overflow = "hidden";
+  overlay.classList.add("active");
+  document.querySelector("#container").style.display = "block";
+  document.querySelector("#container").classList.add("charge");
+  //////
+  //////
+  // Agregar la clase de desvanecimiento
+  const chargingElement = document.querySelector(".charging");
+  chargingElement.classList.add("fade-out");
+  setTimeout(() => {
+    document.querySelector("#container").style.visibility = "visible";
+    chargingElement.style.display = "none";
+  }, 2000);
+  setTimeout(() => {
+    overlay.classList.remove("active");
+  }, 2500);
+  setTimeout(() => {
+    document.body.style.overflow = "scroll";
+  }, 2800);
+});
 
 // Event listeners para aplicar los modos
 forDark.addEventListener("click", toDark);
