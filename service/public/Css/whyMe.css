@@ -1,0 +1,58 @@
+.whyme {
+  margin-top: 150px;
+  margin-bottom: 80px;
+  position: relative;
+
+  height: auto;
+}
+.whyMeTitle {
+  font-size: 50px;
+}
+.duoCArd {
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 25px;
+}
+
+.duoCArdItem.cardDark {
+  border: solid #116d9e;
+  border-radius: 15px;
+  box-shadow: 5px 6px 12px #116d9e8f, inset 5px 6px 12px #116d9e8f;
+  padding: 6px;
+  background-color: #020d15b1;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto auto;
+}
+
+.duoCArdItem.cardLight {
+  border: solid #00111a;
+  border-radius: 15px;
+  box-shadow: 5px 6px 12px #010d148f, inset 5px 6px 12px #010d148f;
+  padding: 6px;
+  color: whitesmoke;
+  background-color: #010d148f;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto auto;
+}
+.duoCArdItem.cardCrazy {
+  border: solid #ea5a0cb9;
+  border-radius: 15px;
+  box-shadow: 5px 6px 12px #116d9eac, inset 5px 6px 12px #116d9eac;
+  padding: 6px;
+  color: whitesmoke;
+  background-color: #ea5a0c4a;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto auto;
+}
+
+.duoCArdItem figure {
+  border-bottom: solid;
+}

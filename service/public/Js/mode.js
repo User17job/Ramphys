@@ -24,7 +24,7 @@ const subt = document.querySelectorAll(".subtitle");
 const texto = document.querySelector(".text");
 const ContactText = document.querySelectorAll(".text-b");
 
-const rotateDiv = document.querySelector(".rotateDiv");
+const duoCArdItem = document.querySelectorAll(".duoCArdItem");
 
 const services = document.querySelector(".services");
 
@@ -71,9 +71,10 @@ function toDark() {
   updateClasses(titles, "textBackDark", ["textBackLight", "textBackCrazy"]);
   updateClasses(btns, "navbuttonDark", ["navbuttonLight", "navbuttonCrazy"]);
   updateClasses(Back, "BakiDark", ["BakiLight", "BakiCrazy"]);
+  updateClasses(duoCArdItem, "cardDark", ["cardLight", "cardCrazy"]);
 
   subt.forEach((element) => {
-    element.style.fontFamily = "Fredoka";
+    element.style.fontFamily = "Graduate";
     element.style.color = "#f9fafb";
   });
 
@@ -124,11 +125,13 @@ function toLight() {
   updateClasses(titles, "textBackLight", ["textBackDark", "textBackCrazy"]);
   updateClasses(btns, "navbuttonLight", ["navbuttonDark", "navbuttonCrazy"]);
   updateClasses(Back, "BakiLight", ["BakiDark", "BakiCrazy"]);
+  updateClasses(duoCArdItem, "cardLight", ["cardDark", "cardCrazy"]);
 
   subt.forEach((element) => {
-    element.style.fontFamily = "Graduate";
+    element.style.fontFamily = "Fredoka";
     element.style.color = "#020617";
   });
+
   modeC.style.backgroundColor = "#f9fafb";
 
   Linkss.forEach((link) => (link.style.color = "#020617"));
@@ -142,8 +145,6 @@ function toLight() {
 
   texto.style.color = "#020617";
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
-
-  rotateDiv.style.backgroundColor = "#020617";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -181,6 +182,7 @@ function toCrazy() {
   updateClasses(titles, "textBackCrazy", ["textBackDark", "textBackLight"]);
   updateClasses(btns, "navbuttonCrazy", ["navbuttonDark", "navbuttonLight"]);
   updateClasses(Back, "BakiCrazy", ["BakiDark", "BakiLight"]);
+  updateClasses(duoCArdItem, "cardCrazy", ["cardDark", "cardLight"]);
 
   subt.forEach((element) => {
     element.style.fontFamily = "'Bangers', system-ui";
@@ -197,8 +199,6 @@ function toCrazy() {
   texto.style.color = "#f9fafb";
 
   ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
-
-  rotateDiv.style.backgroundColor = "#73ff00";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 

@@ -76,20 +76,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// service fucntion
-function toggleDescription() {
-  const description = document.querySelector(".description");
-  description.classList.toggle("expand");
-
-  let titulo = document.querySelector(".cardName");
-  titulo.classList.toggle("small");
-}
-document
-  .querySelector("#toggleDescription")
-  .addEventListener("click", toggleDescription);
-document
-  .querySelector(".description")
-  .addEventListener("click", toggleDescription);
 // Go Up button
 const goUp = document
   .querySelector(".goUpButton")

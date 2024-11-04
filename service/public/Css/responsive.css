@@ -6,6 +6,10 @@
     display: none;
   }
 
+  .Hi {
+    font-size: 200px;
+    top: 3.5%;
+  }
   .toggle {
     position: relative;
     width: 40px;
@@ -132,6 +136,12 @@
   }
 }
 @media screen and (width < 755px) {
+  .Hi {
+    font-size: 200px;
+    top: 3.5%;
+    left: 13%;
+  }
+
   /* backs */
   .stackBackground {
     width: 656px;
@@ -147,84 +157,10 @@
   .serviceDescription {
     text-align: center;
   }
-  /* stack */
-  #stack_gallery_filter {
-    position: relative;
-    border-radius: 10px;
-    height: 460px;
-    overflow-y: scroll;
-    transition: 0.6s;
-  }
-  #stack_gallery_filter::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: none; /* Aplica un desenfoque de 5px */
-    transition: filter 0.5s ease-in-out; /* Transición suave */
-    z-index: -5;
-  }
 
-  /* about  */
-  .aboutUno {
-    z-index: 6;
-    overflow: hidden;
-    font-size: 17px;
-    font-weight: 500;
-  }
-
-  /*  */
-  .layout {
-    display: none;
-  }
-
-  /*  */
-  .carouselC {
-    display: block;
-    position: relative;
-  }
-  .blogEl {
-    position: absolute;
-    width: 320px;
-    height: 300px;
-    z-index: 5;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .carousel {
-    height: 555px;
+  .etapa {
     display: grid;
-    place-items: center;
-    width: 100%;
-    margin-top: -85px;
-    overflow: hidden;
-    opacity: 55%;
-  }
-  .carousel-track {
-    display: flex;
-    width: calc(14 * (255px + 40px));
-    animation: scrolll 30s linear infinite;
-  }
-  .el {
-    flex: 0 0 255px; /* Fixed width of each element */
-    height: 255px; /* Fixed height of each element */
-    padding: 10px;
-    margin: 0 20px; /* 20px margin on the left and right */
-    box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
-  }
-  .elBord {
-    width: 200px;
-    aspect-ratio: 1;
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    grid-template-columns: 4fr 8fr;
   }
 }
 @media screen and (width < 550px) {
@@ -237,9 +173,9 @@
     );
   }
   .Hi {
-    position: absolute;
-    left: 15%;
-    top: 50%;
+    font-size: 200px;
+    left: 10%;
+    top: 2.5%;
   }
 
   /* navbar */
@@ -258,12 +194,6 @@
     border-radius: 5px;
   }
 
-  /* welcome */
-  .welcome-img {
-    top: -36px;
-    padding: 5px 7px;
-  }
-
   .WelcomeLinks {
     left: 5%;
     padding: 5px 7px;
@@ -275,35 +205,25 @@
   .welcome-img {
     margin-top: 4em;
   }
-  #StackImg {
-    transform: scale(1.6);
-  }
-  .aboutsectionContainer {
-    justify-content: start;
-  }
-  .aboutUno {
-    overflow-y: scroll;
-  }
-  .aboutDos {
-    left: 35px;
-  }
-  .aboutLink {
-    left: 66%;
-    width: 111px;
+  .etapa {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 10fr;
+    margin: 25px 0px;
+    text-align: center;
   }
   .colaborationsTitle {
     font-size: 55px;
     top: 25%;
     font-weight: bold;
   }
-  .about {
-    margin-bottom: 70px;
+  .whymeBackground {
+    left: -75%;
+    top: -20%;
   }
-  .blog {
-    margin-top: 100px;
-  }
-  .contact {
-    margin-top: 50px;
+  .duoCArd {
+    grid-template-columns: 5fr 5fr;
+    gap: 25px;
   }
 
   #footer {
