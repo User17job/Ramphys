@@ -2,14 +2,15 @@
 const forDark = document.getElementById("Dark");
 const forLight = document.getElementById("Light");
 const forCrazy = document.getElementById("Crazy");
-
+// textBackDark
 // Elementos del DOM que serán modificados con el cambio
 const body = document.body;
 const checkboxX = document.querySelector("#checkbox");
 const navbar = document.querySelector("#navbar");
 const backgroundd = document.querySelector(".backgroundColor");
-const Links = document.querySelectorAll(".navLInks");
+const Links = document.querySelectorAll(".span");
 const Linkss = document.querySelectorAll("a");
+
 const footLinks = document.querySelectorAll(".footerLink");
 const modeBtn = document.querySelectorAll(".dropdown-item");
 const modeC = document.querySelector(".dropdown-menu");
@@ -23,10 +24,6 @@ const texto = document.querySelector(".text");
 const ContactText = document.querySelectorAll(".text-b");
 
 const rotateDiv = document.querySelector(".rotateDiv");
-
-const services = document.querySelector(".services");
-const serviceName = document.querySelectorAll(".serviceName");
-const serviceDesc = document.querySelector(".serviceDescription");
 
 const aboutDiv = document.querySelector(".aboutUno");
 
@@ -74,10 +71,6 @@ function toDark() {
   updateClasses(titles, "textBackDark", ["textBackLight", "textBackCrazy"]);
   updateClasses(btns, "navbuttonDark", ["navbuttonLight", "navbuttonCrazy"]);
   updateClasses(Back, "BakiDark", ["BakiLight", "BakiCrazy"]);
-  updateClasses(serviceName, "serviceNameDark", [
-    "serviceNameCrazy",
-    "serviceNameLight",
-  ]);
 
   subt.style.fontFamily = "Fredoka";
   subt.style.color = "#f9fafb";
@@ -86,29 +79,24 @@ function toDark() {
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
-  modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
-  // ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
-  // texto.style.color = "#f9fafb";
+  modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
+  ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
+
+  texto.style.color = "#f9fafb";
   rotateDiv.style.backgroundColor = "#036aa1";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Actualizar clases de servicios
-  // services.classList.remove("serviceLight", "serviceCrazy");
-  // services.classList.add("serviceDark");
-  // serviceDesc.style.color = "#f9fafb";
-
   aboutDiv.style.backgroundColor = "#f4f6ff";
   aboutDiv.style.color = "#000000";
 
-  // branding.forEach(
-  //   (mode) =>
-  //     (mode.style.backgroundImage =
-  //       "radial-gradient(#020617 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
-  // );
-  // layout.style.backgroundImage =
-  //   "linear-gradient(265deg, #020617 35%, #036aa136 100%)";
+  branding.forEach(
+    (mode) =>
+      (mode.style.backgroundImage =
+        "radial-gradient(#020617 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
+  );
+
   document
     .querySelectorAll("section")
     .forEach((secs) => secs.classList.remove("animados"));
@@ -137,42 +125,35 @@ function toLight() {
   updateClasses(titles, "textBackLight", ["textBackDark", "textBackCrazy"]);
   updateClasses(btns, "navbuttonLight", ["navbuttonDark", "navbuttonCrazy"]);
   updateClasses(Back, "BakiLight", ["BakiDark", "BakiCrazy"]);
-  updateClasses(serviceName, "serviceNameLight", [
-    "serviceNameDark",
-    "serviceNameCrazy",
-  ]);
 
   subt.style.fontFamily = "Graduate";
   subt.style.color = "#020617";
   modeC.style.backgroundColor = "#f9fafb";
 
   Linkss.forEach((link) => (link.style.color = "#020617"));
-  Links.forEach((link) => (link.style.color = "#020617"));
+  if (window.innerWidth < 860) {
+    Links.forEach((link) => (link.style.color = "#f9fafb"));
+  } else {
+    Links.forEach((link) => (link.style.color = "#020617"));
+  }
+
   modeBtn.forEach((mode) => (mode.style.color = "#020617"));
 
-  // texto.style.color = "#020617";
-  // ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
+  texto.style.color = "#020617";
+  ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   rotateDiv.style.backgroundColor = "#020617";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Actualizar clases de servicios
-  // services.classList.remove("serviceDark", "serviceCrazy");
-  // services.classList.add("serviceLight");
-  // serviceDesc.style.color = "#020617";
-
   aboutDiv.style.backgroundColor = "#036aa1";
   aboutDiv.style.color = "#fff";
 
-  // branding.forEach(
-  //   (mode) =>
-  //     (mode.style.backgroundImage =
-  //       "radial-gradient(#f4f6ff 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
-  // );
-
-  // layout.style.backgroundImage =
-  //   "linear-gradient(5deg, #5cc0f531 35%, #94a3b846 100%)";
+  branding.forEach(
+    (mode) =>
+      (mode.style.backgroundImage =
+        "radial-gradient(#f4f6ff 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
+  );
 
   document
     .querySelectorAll("section")
@@ -202,42 +183,32 @@ function toCrazy() {
   updateClasses(titles, "textBackCrazy", ["textBackDark", "textBackLight"]);
   updateClasses(btns, "navbuttonCrazy", ["navbuttonDark", "navbuttonLight"]);
   updateClasses(Back, "BakiCrazy", ["BakiDark", "BakiLight"]);
-  updateClasses(serviceName, "serviceNameCrazy", [
-    "serviceNameDark",
-    "serviceNameLight",
-  ]);
 
   subt.style.fontFamily = "'Bangers', system-ui";
-  subt.style.color = "#020617";
+  subt.style.color = "#f9fafb";
   modeC.style.backgroundColor = "#ea580c";
 
   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   Links.forEach((link) => (link.style.color = "#f9fafb"));
+
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
 
-  // texto.style.color = "#020617";
+  texto.style.color = "#f9fafb";
 
-  // ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
+  ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
 
   rotateDiv.style.backgroundColor = "#73ff00";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Actualizar clases de servicios
-  // services.classList.remove("serviceDark", "serviceLight");
-  // services.classList.add("serviceDark", "serviceCrazy");
-  // serviceDesc.style.color = "#f9fafb";
-
   aboutDiv.style.backgroundColor = "#ea580c";
   aboutDiv.style.color = "#fff";
 
-  // branding.forEach(
-  //   (mode) =>
-  //     (mode.style.backgroundImage =
-  //       "radial-gradient(#ea580c 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
-  // );
-  // layout.style.backgroundImage =
-  //   "linear-gradient(55deg, #ea580c 35%, #036aa136 100%)";
+  branding.forEach(
+    (mode) =>
+      (mode.style.backgroundImage =
+        "radial-gradient(#ea580c 15%, transparent 60%, rgba(0, 0, 0, 0) 100%)")
+  );
 
   document
     .querySelectorAll("section")
@@ -247,6 +218,44 @@ function toCrazy() {
     fLinks.style.color = "#15da15";
   });
 }
+
+// Crear un overlay en el body que oscurecerá el contenido
+const overlay = document.createElement("div");
+overlay.id = "overlay";
+overlay.innerHTML = `
+    <div class="cargando">
+      <div class="loaderr">
+          <div class="load-inner load-one"></div>
+          <div class="load-inner load-two"></div>
+          <div class="load-inner load-three"></div>
+        <span class="textCharge">Loading...</span>
+      </div>
+    </div>
+`;
+document.body.appendChild(overlay);
+
+forCrazy.addEventListener("click", () => {
+  document.querySelector("#container").style.visibility = "hidden";
+  document.body.style.overflow = "hidden";
+  overlay.classList.add("active");
+  document.querySelector("#container").style.display = "block";
+  document.querySelector("#container").classList.add("charge");
+  //////
+  //////
+  // Agregar la clase de desvanecimiento
+  const chargingElement = document.querySelector(".charging");
+  chargingElement.classList.add("fade-out");
+  setTimeout(() => {
+    document.querySelector("#container").style.visibility = "visible";
+    chargingElement.style.display = "none";
+  }, 2000);
+  setTimeout(() => {
+    overlay.classList.remove("active");
+  }, 2500);
+  setTimeout(() => {
+    document.body.style.overflow = "scroll";
+  }, 2800);
+});
 
 // Event listeners para aplicar los modos
 forDark.addEventListener("click", toDark);

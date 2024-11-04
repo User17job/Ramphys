@@ -2,6 +2,7 @@
 .services {
   margin-top: 155px;
 }
+
 .serviceDark {
   background-image: linear-gradient(65deg, #020617 35%, #036aa136 100%);
   color: #f9fafb;
@@ -82,6 +83,12 @@
   position: absolute;
   background-color: rgba(4, 201, 255, 0.126);
   filter: blur(5px);
+}
+.CraZy {
+  opacity: 10%;
+}
+.CraZy:hover {
+  opacity: 100%;
 }
 .accordion-body {
   background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);

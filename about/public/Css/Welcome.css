@@ -1,13 +1,13 @@
 /* welcome section styles*/
 #welcome {
   position: relative;
+  margin-bottom: 180px;
 }
 #welcome-container {
   position: relative;
   top: 22px;
   padding: 0% 2%;
 }
-
 .welcome-img {
   height: 450px;
 }
@@ -16,6 +16,7 @@
   font-size: 80px;
   font-weight: bold;
   position: relative;
+  text-align: center;
   top: -18%;
 }
 .h5 {
@@ -39,13 +40,38 @@
     border-radius: 35px;
   }
 }
+
 .rotateDiv {
   transform: rotate(55deg);
   width: 100%;
   height: 100%;
   position: relative;
   border-radius: 65px;
-  background-color: #ced2d438;
-
+  background-color: #0369a1;
   animation: rotate 5s linear infinite;
+}
+
+.textBackDark {
+  background: linear-gradient(25deg, #0369a1, #f4f6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackLight {
+  background: linear-gradient(25deg, #f4f6ff, #0369a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.textBackCrazy {
+  background: linear-gradient(25deg, #1877fc, #020617);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  animation: latir 2s linear infinite;
 }

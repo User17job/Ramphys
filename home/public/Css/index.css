@@ -220,7 +220,6 @@ a:hover {
   background-color: #108fd3;
   height: 449px;
   width: 99%;
-
   background-clip: blur(5px);
   position: relative;
   overflow: hidden;
@@ -239,9 +238,26 @@ a:hover {
 }
 .goUpButton {
   position: relative;
-  left: 40%;
-  min-width: 140px;
+  left: 45%;
+
+  width: 10px;
   padding: 0px;
+  transition: 0.5s;
+}
+.goUpButton img {
+  position: absolute;
+  color: #f9fafb;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  transition: 0.5s;
+}
+.goUpButton img:hover {
+  width: 35px;
+  height: 35px;
+}
+.goUpButton img:active {
+  top: -75px;
 }
 .footerLink:hover {
   cursor: pointer;

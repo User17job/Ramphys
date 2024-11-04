@@ -77,3 +77,32 @@ function goUpp() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 goUpp();
+// Función para comprobar si el elemento está en la vista
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 && // Parte superior del elemento está en la vista
+    rect.left >= 0 && // Parte izquierda del elemento está en la vista
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) && // Parte inferior del elemento en la vista
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) // Parte derecha del elemento en la vista
+  );
+}
+
+// Función para ocultar y mostrar elementos al hacer scroll
+function handleScroll() {
+  const elements = document.querySelectorAll(".showA");
+  elements.forEach((el) => {
+    if (!isElementInViewport(el)) {
+      el.classList.add("hidden"); // Añade la clase 'hidden' si el elemento no está en vista
+    } else {
+      el.classList.remove("hidden"); // Remueve la clase si el elemento está en vista
+    }
+  });
+}
+
+// Escuchar el evento scroll
+window.addEventListener("scroll", handleScroll);
+
+// Llamar a la función al cargar la página para manejar los elementos visibles
+document.addEventListener("DOMContentLoaded", handleScroll);

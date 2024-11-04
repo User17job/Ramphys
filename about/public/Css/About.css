@@ -1,6 +1,7 @@
 /* about styles */
 .about {
-  margin-top: 260px;
+  margin-top: 190px;
+  margin-bottom: 100px;
   color: black;
 }
 .aboutTitle {
@@ -36,7 +37,8 @@
   position: absolute;
   top: 90%;
   left: 85%;
-  width: 90px;
+  min-width: 90px;
+  width: 110px;
   border: #d0c0bc;
   z-index: 55;
 }

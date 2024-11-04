@@ -1,12 +1,588 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service</title>
-</head>
-<body>
-    <h1>Service</h1>
-    
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ramphys | Services</title>
+
+    <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/Css/index.css" />
+
+    <link rel="stylesheet" href="./public/Css/charging.css" />
+    <link rel="stylesheet" href="./public/Css/responsive.css" />
+
+    <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body class="dark">
+    <!-- Background crazy -->
+
+    <video autoplay muted loop class="backgroundColor" id="crazyBack">
+      <source src="./public/fondo.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- charging -->
+    <div class="charging">
+      <div class="row">
+        <div class="col-12">
+          <div class="Container">
+            <div class="cargando">
+              <div class="loaderr">
+                <div class="load-inner load-one"></div>
+                <div class="load-inner load-two"></div>
+                <div class="load-inner load-three"></div>
+                <span class="textCharge">Loading...</span>
+              </div>
+
+              <span class="loader apsm"></span>
+
+              <div class="logo">
+                <figure class="ChargingFigure">
+                  <img src="./public/Imgs/Artybylogo.svg" alt="Logo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container-fluid p-0" id="container">
+      <div class="Hi">HI</div>
+      <!-- navbar -->
+      <div class="row p-0" id="navbar">
+        <div class="col-3">
+          <figure class="navLogo">
+            <img
+              src="./public/Imgs/Artybylogo.svg"
+              width="85"
+              height="85"
+              alt="artyby logo" />
+          </figure>
+        </div>
+
+        <!-- responsive menu -->
+        <div class="col-9 p-3 navLInksC d-flex justify-content-end">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox" class="toggle my-2">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+          </label>
+
+          <section class="navLInks">
+            <!-- <div class="dropdown"> -->
+
+            <div class="dropdown">
+              <a class="m-0 p-3 span homeL">Home+</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" id="Dark">Dark Mode</a></li>
+                <li><a class="dropdown-item" id="Light">Light Mode</a></li>
+                <li><a class="dropdown-item" id="Crazy">Crazy Mode</a></li>
+              </ul>
+            </div>
+
+            <!-- </div> -->
+
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span aboutL"
+              onclick="navigateTo('about')"
+              >About</span
+            >
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span portfolioL"
+              onclick="navigateTo('portfolio')"
+              >Portfolio</span
+            >
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span span serviceL"
+              onclick="navigateTo('services')"
+              >Servicios</span
+            >
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span contactL"
+              onclick="navigateTo('contact')"
+              >Contact</span
+            >
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span blogL"
+              onclick="navigateTo('blog')"
+              >Blog</span
+            >
+          </section>
+
+          <div class="m-2">
+            <button class="navbutton Btnss" onclick="navigateTo('hire')">
+              Hire me
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- welcome section -->
+      <div class="row" id="welcome">
+        <div class="welcomeSecBackground Baki BakiDark">.</div>
+
+        <div class="col" id="welcome-container">
+          <section class="row p-2 gy-3 justify-content-center" id="">
+            <div class="col-12 col-lg-7">
+              <section class="welcome-des p-2 position-relative">
+                <!-- title -->
+                <h2 class="welcome-h2 subtitle text-center">Servicios</h2>
+                <h1 class="welcome-h1 textBackDark my-3 text-center title">
+                  Diseño web
+                  <code class="more"
+                    ><a data-bs-toggle="tooltip" data-bs-title="Hey Dev!"
+                      >+</a
+                    ></code
+                  >
+                  <br />
+                  Desarrollo web
+                </h1>
+                <div class="mensaje">
+                  <p class="my-4 text text-center">
+                    Todo lo que puede decir un programador durante el diseño es
+                    valido mientras no pa sobrepase los limites de la locura sin
+                    mas, Desarrolla tu vida.
+                  </p>
+                </div>
+
+                <div
+                  class="WelcomeLink text-center my-5 justify-content-center">
+                  <a
+                    href="javascript:void(0);"
+                    class=""
+                    onclick="navigateTo('cv')">
+                    <button class="DownloadCv Btnss">Download CV</button>
+                  </a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('linkedin')"
+                    ><img
+                      src="./public/Imgs/LinkedinWhite.svg"
+                      class="welIcon"
+                      alt="icon-linkedin"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('github')"
+                    ><img
+                      src="./public/Imgs/GithubWhite.svg"
+                      class="welIcon"
+                      alt="icon-github"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('instagram')"
+                    ><img
+                      src="./public/Imgs/InstagramWhite.svg"
+                      class="welIcon"
+                      alt="icon-instagram"
+                      width="35"
+                      height="35"
+                  /></a>
+                  <a
+                    href="javascript:void(0);"
+                    class="m-0"
+                    onclick="navigateTo('freecodecamp')"
+                    ><img
+                      src="./public/Imgs/Freecodecampwhite.svg"
+                      class="welIcon"
+                      alt="icon-freecodecamp"
+                      width="35"
+                      height="35"
+                  /></a>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- service section -->
+      <div class="row">
+        <div class="col services serviceDark position-relative">
+          <div class="servicesBackground Baki BakiDark"></div>
+          <!-- title -->
+          <section class="row">
+            <!-- <div class="col">
+              <h3 class="text-center serviceTitle title textBackDark">
+                Servicios
+              </h3>
+            </div> -->
+          </section>
+          <!-- info -->
+          <section class="row justify-content-center">
+            <div class="col-9 my-3">
+              <h3 class="text-center fs-3 subtitle">
+                Siempre doy lo mejor de mí en cada proyecto que realizo, ya sea
+                al buscar ofrecer una excelente experiencia o al garantizar una
+                calidad de producto excepcional.
+              </h3>
+            </div>
+          </section>
+
+          <!-- sercvices -->
+          <section class="row p-3">
+            <div class="col">
+              <section class="servicios p-0 row justify-content-center">
+                <div class="col-11 col-md-5 m-4 servicios__cards p-3">
+                  <div class="card">
+                    <input
+                      type="checkbox"
+                      class="name"
+                      id="toggleDescription"
+                      hidden />
+                    <label for="toggleDescription" class="name cardName">
+                      <h2 class="cardTitle">
+                        <a
+                          data-bs-toggle="tooltip"
+                          class="title"
+                          data-bs-title="CLICK!"
+                          >Desarrollo Web</a
+                        >
+                      </h2>
+                    </label>
+                    <div class="description">
+                      <img
+                        src="./public/Imgs/PeopleAvatar.svg"
+                        alt=""
+                        class="descriptionImg" />
+                      <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae ducimus voluptas porro ullam vel veniam maiores
+                        sequi, nam odio et delectus, nissi numquam cum, tempora
+                        eius ut? Fugiat, accusamus asperiores.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-11 col-md-5 m-4 servicios__cards p-3">
+                  <div class="card">
+                    <input
+                      type="checkbox"
+                      class="name"
+                      id="toggleDescription"
+                      hidden />
+                    <label for="toggleDescription" class="name cardName">
+                      <h2 class="cardTitle">
+                        <a
+                          data-bs-toggle="tooltip"
+                          class="title"
+                          data-bs-title="CLICK!"
+                          >Desarrollo Web</a
+                        >
+                      </h2>
+                    </label>
+                    <div class="description">
+                      <img
+                        src="./public/Imgs/PeopleAvatar.svg"
+                        alt=""
+                        class="descriptionImg" />
+                      <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae ducimus voluptas porro ullam vel veniam maiores
+                        sequi, nam odio et delectus, nissi numquam cum, tempora
+                        eius ut? Fugiat, accusamus asperiores.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-11 col-md-5 m-4 servicios__cards p-3">
+                  <div class="card">
+                    <input
+                      type="checkbox"
+                      class="name"
+                      id="toggleDescription"
+                      hidden />
+                    <label for="toggleDescription" class="name cardName">
+                      <h2 class="cardTitle">
+                        <a
+                          data-bs-toggle="tooltip"
+                          class="title"
+                          data-bs-title="CLICK!"
+                          >Desarrollo Web</a
+                        >
+                      </h2>
+                    </label>
+                    <div class="description">
+                      <img
+                        src="./public/Imgs/PeopleAvatar.svg"
+                        alt=""
+                        class="descriptionImg" />
+                      <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae ducimus voluptas porro ullam vel veniam maiores
+                        sequi, nam odio et delectus, nissi numquam cum, tempora
+                        eius ut? Fugiat, accusamus asperiores.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-11 col-md-5 m-4 servicios__cards p-3">
+                  <div class="card">
+                    <input
+                      type="checkbox"
+                      class="name"
+                      id="toggleDescription"
+                      hidden />
+                    <label for="toggleDescription" class="name cardName">
+                      <h2 class="cardTitle">
+                        <a
+                          data-bs-toggle="tooltip"
+                          class="title"
+                          data-bs-title="CLICK!"
+                          >Desarrollo Web</a
+                        >
+                      </h2>
+                    </label>
+                    <div class="description">
+                      <img
+                        src="./public/Imgs/PeopleAvatar.svg"
+                        alt=""
+                        class="descriptionImg" />
+                      <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae ducimus voluptas porro ullam vel veniam maiores
+                        sequi, nam odio et delectus, nissi numquam cum, tempora
+                        eius ut? Fugiat, accusamus asperiores.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- about section -->
+      <div class="row about">
+        <div class="col my-3 position-relative">
+          <div class="AboutBackground Baki BakiDark"></div>
+
+          <!-- title -->
+          <section class="row">
+            <div class="col">
+              <h3 class="text-center aboutTitle title textBackDark">
+                Acerca de mi
+              </h3>
+            </div>
+          </section>
+
+          <section class="row aboutsectionContainer">
+            <div class="col-md-9 col-11 aboutsection aboutUno p-5">
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quibusdam vitae placeat reiciendis asperiores accusamus iste.
+                Ratione similique voluptatem ex, enim quasi maxime beatae natus
+                autem tempore rem ea, minus eius! <br /><br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                tenetur minus natus necessitatibus eveniet.
+              </p>
+            </div>
+
+            <div class="col-md-9 col-11 aboutsection aboutDos p-3">
+              <p class="aboutLink">
+                <!-- link -->
+                <a href="javascript:void(0);" onclick="navigateTo('about')"
+                  >Ver Mas
+                  <img
+                    src="./public/Imgs/arrowSquare.svg"
+                    width="16"
+                    height="16"
+                    alt="arrowSquare icon" />
+                </a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Collaborations section -->
+      <div class="row collaborations">
+        <div class="col my-3">
+          <!-- content -->
+          <!-- background -->
+
+          <section class="row justify-content-center">
+            <div class="col-12 p-2">
+              <section class="row p-2 carousel-container position-relative">
+                <h2
+                  class="position-absolute colaborationsTitle text-center title textBackDark">
+                  Branding
+                </h2>
+                <div class="carousel-trackk d-flex">
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/Artybylogo.svg"
+                      width="100"
+                      height="100"
+                      alt="Artyby Logo" />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/unprgramayyo.svg"
+                      width="106"
+                      height="106"
+                      alt="Artyby Logo" />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/user17job.svg"
+                      width="106"
+                      height="100"
+                      alt="Artyby Logo" />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/How'stech.svg"
+                      width="76"
+                      height="76"
+                      alt="Artyby Logo" />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/TwoEyesMainLogoTwo.svg"
+                      fill="white"
+                      width="106"
+                      height="176"
+                      alt="Artyby Logo" />
+                  </figure>
+                  <figure class="col-5 Colaborationslogos d-flex mx-4">
+                    <img
+                      src="public/Imgs/SportDream.svg"
+                      fill="white"
+                      width="150"
+                      height="150"
+                      alt="Artyby Logo" />
+                  </figure>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- footer section -->
+      <div class="row my-">
+        <div class="col my-3">
+          <section class="row justify-content-center" id="footer">
+            <div class="footerBackground BakiDark Baki">
+              <div class="footerBackgroundIn BakiDark Baki"></div>
+            </div>
+            <!-- logo -->
+            <div class="col-12">
+              <figure class="footerLogo d-flex justify-content-center">
+                <img
+                  src="./public/Imgs/Artybylogo.svg"
+                  alt="artyby logo"
+                  widthwidth="255"
+                  height="255" />
+              </figure>
+            </div>
+            <!-- links -->
+            <div class="col-12 text-center my-3">
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('home')"
+                  >Home</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('about')"
+                  >About</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('portfolio')"
+                  >Portfolio</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('services')"
+                  >Servicios</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('contact')"
+                  >Contact</a
+                >
+              </b>
+              <b>
+                <a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('blog')"
+                  >Blog</a
+                >
+              </b>
+            </div>
+
+            <!--up  -->
+            <div class="col-2 text-end goUpButton subtitle">
+              <b> <img src="./public/Imgs/Arrow.svg" alt="arrow icon" /></b>
+            </div>
+            <!-- rights -->
+            <div class="col-12 text-center">
+              <b
+                ><a
+                  href="javascript:void(0);"
+                  class="mx-3 footerLink"
+                  onclick="navigateTo('user17job')"
+                  >&copy; User17job All rights reserve</a
+                ></b
+              >
+            </div>
+            <!-- cursor -->
+            <div class="cursor"></div>
+            <!-- cursor -->
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- javascript -->
+    <script src="./public/Js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="./public/Js/links.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./public/Js/externalLinks.js"></script>
+  </body>
 </html>

@@ -5,7 +5,7 @@ const dotContainer = document.querySelector(".dot-container");
 /** @type {HTMLDivElement[]} */
 let dots = [];
 
-const autoSlideInterval = 3000;
+const autoSlideInterval = 6000;
 let index = 0;
 let sliding = false;
 let timer = null;

@@ -1,0 +1,17 @@
+.bienvenida {
+  border: solid;
+  height: 350px;
+  position: relative;
+  margin-bottom: 50px;
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto;
+}
+.bienvenidaTitle {
+  font-size: 60px;
+}
+
+.bienvenidotexto {
+  font-size: 20px;
+  margin-top: -75px;
+}
