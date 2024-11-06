@@ -232,6 +232,31 @@
     left: 0;
   }
 }
+@keyframes giroSombra {
+  0% {
+    filter: drop-shadow(2px -2px 9px #252c337c);
+  }
+  19% {
+    filter: drop-shadow(-1px 0px 4px #0665c479);
+  }
+  36% {
+    filter: drop-shadow(-3px 2px 6px #f9fafb68);
+  }
+
+  55% {
+    filter: drop-shadow(-5px 4px 2px #074d649f);
+  }
+
+  74% {
+    filter: drop-shadow(-3px 2px 6px #f9fafb68);
+  }
+  93% {
+    filter: drop-shadow(-1px 0px 4px #0665c479);
+  }
+  100% {
+    filter: drop-shadow(2px -2px 9px #252c337c);
+  }
+}
 
 @keyframes aparecer {
   0% {

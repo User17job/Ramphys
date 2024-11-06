@@ -1,3 +1,10 @@
+// tooltips
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 // responsive menu
 const checkbox = document.getElementById("checkbox");
 checkbox.addEventListener("change", function () {

@@ -2,26 +2,7 @@
   position: relative;
   top: 20px;
 }
-
-/* body,
-html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-
-  display: -ms-grid;
-
-  display: grid;
-  place-items: center;
-
-  overflow: hidden;
-} */
-
-/* body * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-} */
-
+button
 /* ================ 
 SHOWCASE SLIDER
 ================ */
@@ -209,7 +190,7 @@ SHOWCASE SLIDER ACTIVE
   background: #036aa1;
 }
 
-button {
+.buttonNoSE {
   display: inline-block;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;

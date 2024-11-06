@@ -8,5 +8,5 @@ import "./externalLinks.js";
 import "./Carrucel.js";
 import "./mode.js";
 import "./responsive.js";
-import "https://hammerjs.github.io/dist/hammer.js";
+
 // import "./scrolls.js";

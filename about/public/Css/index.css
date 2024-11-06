@@ -4,8 +4,8 @@
 /* responsive design */
 /* @import url(./responsive.css); */
 
-/* charging styles */
-/* @import url(./charging.css); */
+/* mode styles */
+@import url(./indexMode.css);
 
 /* Welcome styles */
 @import url(./Welcome.css);

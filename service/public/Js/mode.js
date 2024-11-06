@@ -1,8 +1,3 @@
-// elementos del dom que seran modificados con el cambio
-const forDark = document.getElementById("Dark");
-const forLight = document.getElementById("Light");
-const forCrazy = document.getElementById("Crazy");
-// textBackDark
 // Elementos del DOM que serán modificados con el cambio
 const body = document.body;
 const checkboxX = document.querySelector("#checkbox");
@@ -13,7 +8,6 @@ const Linkss = document.querySelectorAll("a");
 
 const footLinks = document.querySelectorAll(".footerLink");
 const modeBtn = document.querySelectorAll(".dropdown-item");
-const modeC = document.querySelector(".dropdown-menu");
 const btns = document.querySelectorAll(".Btnss");
 
 const titles = document.querySelectorAll(".title");
@@ -47,7 +41,7 @@ function handleScroll(className) {
   if (window.scrollY < 25) {
     body.className = className;
   } else {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
       body.className = className;
     }, 1111);
@@ -78,8 +72,6 @@ function toDark() {
     element.style.color = "#f9fafb";
   });
 
-  modeC.style.backgroundColor = "#020617";
-
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
@@ -88,8 +80,6 @@ function toDark() {
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   texto.style.color = "#f9fafb";
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
 
   branding.forEach(
     (mode) =>
@@ -112,6 +102,7 @@ function toLight() {
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+
   navbar.style.backgroundColor = " #f9fafb";
 
   body.style.backgroundColor = "#f9fafb";
@@ -132,8 +123,6 @@ function toLight() {
     element.style.color = "#020617";
   });
 
-  modeC.style.backgroundColor = "#f9fafb";
-
   Linkss.forEach((link) => (link.style.color = "#020617"));
   if (window.innerWidth < 860) {
     Links.forEach((link) => (link.style.color = "#f9fafb"));
@@ -145,8 +134,6 @@ function toLight() {
 
   texto.style.color = "#020617";
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
 
   branding.forEach(
     (mode) =>
@@ -169,6 +156,7 @@ function toCrazy() {
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+  forCrazys();
   navbar.style.backgroundColor = " #ea580c";
 
   body.style.backgroundColor = "#ea580c";
@@ -188,8 +176,6 @@ function toCrazy() {
     element.style.fontFamily = "'Bangers', system-ui";
     element.style.color = "#f9fafb";
   });
-
-  modeC.style.backgroundColor = "#ea580c";
 
   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
   Links.forEach((link) => (link.style.color = "#f9fafb"));
@@ -234,13 +220,14 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-forCrazy.addEventListener("click", () => {
+function forCrazys() {
   document.querySelector("#container").style.visibility = "hidden";
   document.body.style.overflow = "hidden";
   overlay.classList.add("active");
   document.querySelector("#container").style.display = "block";
   document.querySelector("#container").classList.add("charge");
-
+  //////
+  //////
   // Agregar la clase de desvanecimiento
   const chargingElement = document.querySelector(".charging");
   chargingElement.classList.add("fade-out");
@@ -254,12 +241,40 @@ forCrazy.addEventListener("click", () => {
   setTimeout(() => {
     document.body.style.overflow = "scroll";
   }, 2800);
-});
-
-// Event listeners para aplicar los modos
-forDark.addEventListener("click", toDark);
-forLight.addEventListener("click", toLight);
-forCrazy.addEventListener("click", toCrazy);
+}
 
 // Aplicar modo oscuro por defecto al cargar la página
 document.addEventListener("DOMContentLoaded", toDark);
+
+const modeSwitcherButtons = document.querySelectorAll(".mode-switcher-btn");
+
+const themeFunctions = {
+  light: toLight,
+  dark: toDark,
+  crazy: toCrazy,
+};
+
+modeSwitcherButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const themeMode = button.dataset.themeMode;
+
+    // Remove all theme classes
+    body.classList.remove("ms-light-theme", "ms-dark-theme", "ms-crazy-theme");
+
+    // Add new theme class if not light theme
+    if (themeMode !== "light") {
+      body.classList.add(`ms-${themeMode}-theme`);
+    }
+
+    // Update active button state
+    modeSwitcherButtons.forEach((btn) => {
+      btn.classList.remove("ms-active");
+    });
+    button.classList.add("ms-active");
+
+    // Call la función correspondiente al theme
+    if (themeFunctions[themeMode]) {
+      themeFunctions[themeMode]();
+    }
+  });
+});

@@ -23,7 +23,7 @@ const subt = document.querySelector(".subtitle");
 const texto = document.querySelector(".text");
 const ContactText = document.querySelectorAll(".text-b");
 
-const rotateDiv = document.querySelector(".rotateDiv");
+// const rotateDiv = document.querySelector(".rotateDiv");
 
 const services = document.querySelector(".services");
 const serviceName = document.querySelectorAll(".serviceName");
@@ -51,7 +51,7 @@ function handleScroll(className) {
   if (window.scrollY < 25) {
     body.className = className;
   } else {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
       body.className = className;
     }, 1111);
@@ -92,9 +92,7 @@ function toDark() {
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
   texto.style.color = "#f9fafb";
-  rotateDiv.style.backgroundColor = "#036aa1";
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // rotateDiv.style.backgroundColor = "#036aa1";
 
   // Actualizar clases de servicios
   services.classList.remove("serviceLight", "serviceCrazy");
@@ -161,9 +159,7 @@ function toLight() {
   texto.style.color = "#020617";
   ContactText.forEach((mode) => (mode.style.color = "#f9fafb"));
 
-  rotateDiv.style.backgroundColor = "#020617";
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // rotateDiv.style.backgroundColor = "#020617";
 
   // Actualizar clases de servicios
   services.classList.remove("serviceDark", "serviceCrazy");
@@ -194,9 +190,11 @@ function toLight() {
 
 // Función para aplicar modo loco
 function toCrazy() {
+  forCrazys();
   if (checkboxX.checked) {
     checkboxX.checked = false;
   }
+  window.scrollTo({ top: 0, behavior: "smooth" });
   navbar.style.backgroundColor = " #ea580c";
 
   body.style.backgroundColor = "#ea580c";
@@ -228,9 +226,7 @@ function toCrazy() {
 
   ContactText.forEach((mode) => (mode.style.color = "#ea580c"));
 
-  rotateDiv.style.backgroundColor = "#73ff00";
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // rotateDiv.style.backgroundColor = "#73ff00";
 
   // Actualizar clases de servicios
   services.classList.remove("serviceDark", "serviceLight");
@@ -272,7 +268,7 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-forCrazy.addEventListener("click", () => {
+function forCrazys() {
   document.querySelector("#container").style.visibility = "hidden";
   document.body.style.overflow = "hidden";
   overlay.classList.add("active");
@@ -293,7 +289,7 @@ forCrazy.addEventListener("click", () => {
   setTimeout(() => {
     document.body.style.overflow = "scroll";
   }, 2800);
-});
+}
 
 // Event listeners para aplicar los modos
 forDark.addEventListener("click", toDark);
@@ -302,3 +298,36 @@ forCrazy.addEventListener("click", toCrazy);
 
 // Aplicar modo oscuro por defecto al cargar la página
 document.addEventListener("DOMContentLoaded", toDark);
+
+const modeSwitcherButtons = document.querySelectorAll(".mode-switcher-btn");
+
+const themeFunctions = {
+  light: toLight,
+  dark: toDark,
+  crazy: toCrazy,
+};
+
+modeSwitcherButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const themeMode = button.dataset.themeMode;
+
+    // Remove all theme classes
+    body.classList.remove("ms-light-theme", "ms-dark-theme", "ms-crazy-theme");
+
+    // Add new theme class if not light theme
+    if (themeMode !== "light") {
+      body.classList.add(`ms-${themeMode}-theme`);
+    }
+
+    // Update active button state
+    modeSwitcherButtons.forEach((btn) => {
+      btn.classList.remove("ms-active");
+    });
+    button.classList.add("ms-active");
+
+    // Call la función correspondiente al theme
+    if (themeFunctions[themeMode]) {
+      themeFunctions[themeMode]();
+    }
+  });
+});

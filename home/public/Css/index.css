@@ -27,8 +27,9 @@
 
 /* Backgrounds */
 @import url(./Backgrounds.css);
-
 body {
+  scroll-behavior: smooth;
+
   background-color: #020617;
   color: #f9fafb;
   overflow-x: hidden;

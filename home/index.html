@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css" />
     <link rel="stylesheet" href="./public/Css/charging.css" />
+    <link rel="stylesheet" href="./public/Css/indexMode.css" />
     <link rel="stylesheet" href="./public/Css/responsive.css" />
 
     <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg" />
@@ -22,6 +23,57 @@
       rel="stylesheet" />
   </head>
   <body class="dark">
+    <div class="mode-switcher-container">
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Dark">
+        <button class="mode-switcher-btn darx ms-active" data-theme-mode="dark">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </a>
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Light">
+        <button class="mode-switcher-btn lighx" data-theme-mode="light">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+      </a>
+
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Crazy">
+        <button class="mode-switcher-btn craxy" data-theme-mode="crazy">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+        </button>
+      </a>
+    </div>
     <!-- Background crazy -->
 
     <video autoplay muted loop class="backgroundColor" id="crazyBack">
@@ -209,7 +261,9 @@
             <div class="col-12 col-lg-5">
               <section class="welcome-img position-relative">
                 <figure class="imgItem">
-                  <div class="rotateDiv"></div>
+                  <div class="rotateDiv">
+                    <img src="./public/Imgs/rotafond.svg" alt="" />
+                  </div>
                 </figure>
                 <figure class="imgItem">
                   <img
@@ -1552,21 +1606,8 @@
 
     <!-- javascript -->
     <script type="module" src="./public/Js/links.js"></script>
-
-    <!-- <script src="./public/Js/cursorFollow.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- <script src="./public/Js/mode.js"></script> -->
-
-    <!-- <script src="./public/Js/responsive.js"></script> -->
-
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="./public/Js/externalLinks.js"></script> -->
-    <!-- <script src="./public/Js/charging.js"></script> -->
-
     <script src="./public/Js/scrollreveal.js"></script>
-    <!-- <script src="./public/Js/scrolls.js"></script> -->
-
-    <!-- <script src="./public/Js/index.js"></script> -->
   </body>
 </html>
