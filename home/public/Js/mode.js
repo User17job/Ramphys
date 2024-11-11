@@ -1,7 +1,3 @@
-// elementos del dom que seran modificados con el cambio
-const forDark = document.getElementById("Dark");
-const forLight = document.getElementById("Light");
-const forCrazy = document.getElementById("Crazy");
 // textBackDark
 // Elementos del DOM que serán modificados con el cambio
 const body = document.body;
@@ -13,8 +9,6 @@ const Linkss = document.querySelectorAll("a");
 
 const footLinks = document.querySelectorAll(".footerLink");
 const modeBtn = document.querySelectorAll(".dropdown-item");
-const modeC = document.querySelector(".dropdown-menu");
-const btns = document.querySelectorAll(".Btnss");
 
 const titles = document.querySelectorAll(".title");
 const Back = document.querySelectorAll(".Baki");
@@ -73,16 +67,15 @@ function toDark() {
 
   // Actualizar clases
   updateClasses(titles, "textBackDark", ["textBackLight", "textBackCrazy"]);
-  updateClasses(btns, "navbuttonDark", ["navbuttonLight", "navbuttonCrazy"]);
   updateClasses(Back, "BakiDark", ["BakiLight", "BakiCrazy"]);
   updateClasses(serviceName, "serviceNameDark", [
     "serviceNameCrazy",
     "serviceNameLight",
   ]);
+  updateClasses(Links, "linksDark", ["linksLight", "linksCrazy"]);
 
   subt.style.fontFamily = "Fredoka";
   subt.style.color = "#f9fafb";
-  modeC.style.backgroundColor = "#020617";
 
   Links.forEach((link) => (link.style.color = "#f9fafb"));
 
@@ -136,18 +129,17 @@ function toLight() {
 
   // Actualizar clases
   updateClasses(titles, "textBackLight", ["textBackDark", "textBackCrazy"]);
-  updateClasses(btns, "navbuttonLight", ["navbuttonDark", "navbuttonCrazy"]);
   updateClasses(Back, "BakiLight", ["BakiDark", "BakiCrazy"]);
   updateClasses(serviceName, "serviceNameLight", [
     "serviceNameDark",
     "serviceNameCrazy",
   ]);
-
+  updateClasses(Links, "linksLight", ["linksDark", "linksCrazy"]);
   subt.style.fontFamily = "Graduate";
   subt.style.color = "#020617";
-  modeC.style.backgroundColor = "#f9fafb";
 
   Linkss.forEach((link) => (link.style.color = "#020617"));
+
   if (window.innerWidth < 860) {
     Links.forEach((link) => (link.style.color = "#f9fafb"));
   } else {
@@ -206,19 +198,18 @@ function toCrazy() {
 
   // Actualizar clases
   updateClasses(titles, "textBackCrazy", ["textBackDark", "textBackLight"]);
-  updateClasses(btns, "navbuttonCrazy", ["navbuttonDark", "navbuttonLight"]);
+
   updateClasses(Back, "BakiCrazy", ["BakiDark", "BakiLight"]);
   updateClasses(serviceName, "serviceNameCrazy", [
     "serviceNameDark",
     "serviceNameLight",
   ]);
+  updateClasses(Links, "linksCrazy", ["linksDark", "linksLight"]);
 
   subt.style.fontFamily = "'Bangers', system-ui";
   subt.style.color = "#f9fafb";
-  modeC.style.backgroundColor = "#ea580c";
 
   Linkss.forEach((link) => (link.style.color = "#f9fafb"));
-  Links.forEach((link) => (link.style.color = "#f9fafb"));
 
   modeBtn.forEach((mode) => (mode.style.color = "#f9fafb"));
 
@@ -290,11 +281,6 @@ function forCrazys() {
     document.body.style.overflow = "scroll";
   }, 2800);
 }
-
-// Event listeners para aplicar los modos
-forDark.addEventListener("click", toDark);
-forLight.addEventListener("click", toLight);
-forCrazy.addEventListener("click", toCrazy);
 
 // Aplicar modo oscuro por defecto al cargar la página
 document.addEventListener("DOMContentLoaded", toDark);

@@ -126,11 +126,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   top: 15%;
 }
-.serviceL {
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 6px;
-}
 
 .navLInks {
   position: relative;
@@ -344,4 +339,8 @@ a:hover {
   height: 100%;
   opacity: 1;
   pointer-events: all;
+}
+
+.serviceL {
+  text-decoration: underline;
 }

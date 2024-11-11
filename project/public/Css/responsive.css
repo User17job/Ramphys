@@ -1,0 +1,333 @@
+@media screen and (width < 860px) {
+  body {
+    background-color: #f9fafb;
+  }
+  #checkbox {
+    display: none;
+  }
+
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: 0.5s;
+  }
+
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: #0369a1;
+    background: linear-gradient(180deg, white, #0369a1, #ff6a00);
+    border-radius: 4px;
+  }
+
+  #bar2 {
+    transition-duration: 0.8s;
+  }
+
+  #bar1,
+  #bar3 {
+    width: 70%;
+  }
+
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+
+  .navLInks {
+    opacity: 0%;
+    background-color: #020617;
+    height: 455px;
+    width: 65%;
+    top: 85pc;
+    left: 50%;
+    z-index: 8;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    position: absolute;
+    border-radius: 5px;
+  }
+  .navLInkItem {
+    background-color: transparent;
+    color: #020617;
+    background-color: #d8f1ff00;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+  }
+  .navLInkItem:hover {
+    background-color: #0369a1;
+    opacity: 100%;
+    box-shadow: 0px 0px 50;
+  }
+
+  .navLInkItem:active {
+    background-color: #f9fafb5c;
+    transition: 0.5s;
+  }
+
+  /* navbar */
+  #checkbox:checked ~ .navLInks {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: calc(50% 50%);
+  }
+  .menu-active {
+    overflow: hidden;
+  }
+
+  .nuevaClase {
+    height: 280px;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: #020617 0px 0px 225px;
+    position: fixed;
+    background-color: #0d1c5f;
+  }
+
+  .dropdown {
+    border: solid;
+    background-color: #0369a1;
+    width: 50%;
+    height: 55px;
+    border-radius: 5px;
+    margin-top: -25px;
+    display: grid;
+    place-items: center;
+  }
+}
+@media screen and (width < 755px) {
+  /* backs */
+  .stackBackground {
+    width: 656px;
+    height: 656px;
+    top: 77.7%;
+  }
+
+  /*service  */
+  .serviceName {
+    font-size: 26px;
+    text-align: center;
+  }
+  .serviceDescription {
+    text-align: center;
+  }
+  /* stack */
+  #stack_gallery_filter {
+    position: relative;
+    border-radius: 10px;
+    height: 460px;
+    overflow-y: scroll;
+    transition: 0.6s;
+  }
+  #stack_gallery_filter::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: none; /* Aplica un desenfoque de 5px */
+    transition: filter 0.5s ease-in-out; /* Transición suave */
+    z-index: -5;
+  }
+
+  /* about  */
+  .aboutUno {
+    z-index: 6;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  /*  */
+  .layout {
+    display: none;
+  }
+
+  /*  */
+  .carouselC {
+    display: block;
+    position: relative;
+  }
+  .blogEl {
+    position: absolute;
+    width: 320px;
+    height: 300px;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel {
+    height: 555px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: -85px;
+    overflow: hidden;
+    opacity: 55%;
+  }
+  .carousel-track {
+    display: flex;
+    width: calc(14 * (255px + 40px));
+    animation: scrolll 30s linear infinite;
+  }
+  .el {
+    flex: 0 0 255px; /* Fixed width of each element */
+    height: 255px; /* Fixed height of each element */
+    padding: 10px;
+    margin: 0 20px; /* 20px margin on the left and right */
+    box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
+  }
+  .elBord {
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+@media screen and (width < 550px) {
+  /* backs */
+  .BakiLight {
+    background-image: radial-gradient(
+      #02061789 10%,
+      #f9fafb 55%,
+      transparent 100%
+    );
+  }
+  .Hi {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+  }
+
+  /* navbar */
+  .scrolledCrazy,
+  .scrolledDark,
+  .scrolledLight {
+    left: 5.9%;
+  }
+  .navLInks {
+    opacity: 0%;
+    height: 350px;
+    width: 80%;
+    display: flex;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+
+  /* welcome */
+  .welcome-img {
+    top: -36px;
+    padding: 5px 7px;
+  }
+
+  .WelcomeLinks {
+    left: 5%;
+    padding: 5px 7px;
+  }
+
+  .welcome-h1 {
+    font-size: 45px;
+  }
+  .welcome-img {
+    margin-top: 4em;
+  }
+  #StackImg {
+    transform: scale(1.6);
+  }
+  .aboutsectionContainer {
+    justify-content: start;
+  }
+  .aboutUno {
+    overflow-y: scroll;
+  }
+  .aboutDos {
+    left: 35px;
+  }
+  .aboutLink {
+    left: 66%;
+    width: 111px;
+  }
+  .colaborationsTitle {
+    font-size: 55px;
+    top: 25%;
+    font-weight: bold;
+  }
+  .about {
+    margin-bottom: 70px;
+  }
+  .blog {
+    margin-top: 100px;
+  }
+  .contact {
+    margin-top: 50px;
+  }
+
+  #footer {
+    height: 449px;
+    max-width: 96%;
+    left: 0%;
+    margin: auto;
+  }
+  .goUpButton {
+    position: relative;
+    left: 25%;
+    min-width: 140px;
+    padding: 0px;
+  }
+}
+
+/* un media queris para el alto */
+@media (max-height: 600px) {
+  .navLInksC {
+    z-index: 1000;
+  }
+  .navLInkItem,
+  .homeL {
+    width: 50%;
+    margin: 10px;
+  }
+}

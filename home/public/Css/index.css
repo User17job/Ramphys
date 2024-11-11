@@ -25,6 +25,10 @@
 /* Animations */
 @import url(./Animations.css);
 
+* {
+  transition: all 0.5s ease-out;
+}
+
 /* Backgrounds */
 @import url(./Backgrounds.css);
 body {
@@ -94,14 +98,15 @@ body::-webkit-scrollbar-thumb {
   animation: latir 8.5s Linear infinite;
   opacity: 25%;
 }
+
 /* navbar styles */
 /* menu button */
 .toggle,
 #checkbox {
   display: none;
 }
-/* menu button */
 
+/* menu button */
 #navbar {
   font-family: fredoka;
   font-weight: 700;
@@ -122,9 +127,6 @@ body::-webkit-scrollbar-thumb {
 .navLogo > figcaption {
   position: relative;
   top: 15%;
-}
-.homeL {
-  text-decoration: underline;
 }
 
 .navLInks {
@@ -149,7 +151,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbuttonDark {
-  background-image: linear-gradient(55deg, #0369a1 10%, #020617 100%);
+  background-image: linear-gradient(55deg, rgb(3, 105, 161) 10%, #020617 100%);
   border: solid #94a3b8;
   color: #f9fafb;
 }
@@ -178,9 +180,42 @@ body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(55deg, #020617 10%, #ea580c 100%);
   color: #0369a1;
 }
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+
+  padding: 0.8em 1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(
+    0deg,
+    rgb(3, 40, 151) 0%,
+    rgba(3, 105, 161, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #0369a1;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #0369a1;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #0369a1;
+}
 
 /* General */
-.span {
+/* .span {
   color: #f9fafb;
   text-decoration: none;
 }
@@ -188,7 +223,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   color: #0369a1;
   text-decoration: underline;
-}
+} */
 a {
   color: #ffffff00;
   text-decoration: none;
@@ -214,7 +249,7 @@ a:hover {
   color: #f9fafb;
 }
 
-/* /* footer styles */
+/* footer styles */
 #footer {
   font-family: fredoka;
   text-decoration: none;
@@ -306,14 +341,14 @@ a:hover {
 }
 
 .showA {
-  opacity: 1; /* Inicialmente visible */
-  transform: translateY(0); /* En su posición original */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .showA.hidden {
-  opacity: 0; /* Invisible */
-  transform: translateY(20px); /* Desplazado hacia abajo */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* Transición suave de opacidad en el body */
@@ -336,4 +371,8 @@ a:hover {
   height: 100%;
   opacity: 1;
   pointer-events: all;
+}
+
+.homeL {
+  text-decoration: underline;
 }

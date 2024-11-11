@@ -1,0 +1,28 @@
+/* Carousel for Branding */
+.colaborationsTitle {
+  font-size: 80px;
+  top: 16%;
+}
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 10px #0369a1;
+}
+
+.carousel-trackk {
+  display: flex;
+  justify-content: space-between;
+  animation: scroll 50s linear infinite;
+}
+
+.Colaborationslogos {
+  flex: 0 0 16.66%; /* Esto asegura que haya 6 imágenes visibles a la vez */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Duplicamos las imágenes para que se desplace infinitamente */
+.carousel-trackk figure:nth-last-child(-n + 6) {
+  display: block;
+}
