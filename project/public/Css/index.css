@@ -84,21 +84,6 @@ body::-webkit-scrollbar-thumb {
   opacity: 100%;
 }
 
-.Hi {
-  position: absolute;
-  left: 35%;
-  top: 20%;
-  font-family: Graduate;
-  font-size: 250px;
-  text-shadow: 5px 5px 5px;
-  color: transparent; /* Hace que el relleno sea invisible */
-  -webkit-text-stroke: 3px #0097e9;
-  text-align: center;
-  z-index: -555;
-  animation: latir 8.5s Linear infinite;
-  opacity: 25%;
-}
-
 /* navbar styles */
 /* menu button */
 .toggle,
@@ -187,15 +172,10 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   font-weight: 500;
   font-size: 12px;
-
   padding: 0.8em 1em;
   color: white;
-  background: #ad5389;
-  background: linear-gradient(
-    0deg,
-    rgb(3, 40, 151) 0%,
-    rgba(3, 105, 161, 1) 100%
-  );
+  z-index: 1000;
+  background: linear-gradient(0deg, rgb(4, 51, 192) 0%, #0369a1 100%);
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em #0369a1;
   letter-spacing: 0.05em;
@@ -215,15 +195,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* General */
-.span {
-  color: #f9fafb;
-  text-decoration: none;
-}
-.span:hover {
-  cursor: pointer;
-  color: #0369a1;
-  text-decoration: underline;
-}
 a {
   color: #ffffff00;
   text-decoration: none;
@@ -254,9 +225,18 @@ a:hover {
   font-family: fredoka;
   text-decoration: none;
   background-color: #108fd3;
+  background-clip: blur(5px);
+
+  background-image: radial-gradient(at 88% 40%, #14141a 0px, transparent 85%),
+    radial-gradient(at 49% 30%, #020107 0px, transparent 85%),
+    radial-gradient(at 14% 26%, #020d2d 0px, transparent 85%),
+    radial-gradient(at 0% 64%, #002c44 0px, transparent 85%),
+    radial-gradient(at 41% 94%, #0369a1 0px, transparent 85%),
+    radial-gradient(at 100% 99%, #0040ff 0px, transparent 85%);
+
   height: 449px;
   width: 99%;
-  background-clip: blur(5px);
+
   position: relative;
   overflow: hidden;
   left: 1.5%;
@@ -268,7 +248,7 @@ a:hover {
 }
 .footerLink,
 .goUpButton {
-  color: #0369a1;
+  color: #ebf8ff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -304,51 +284,15 @@ a:hover {
   animation: arribaAbajo 1s linear 1;
 }
 
-/*  */
-.dropdown {
-  position: relative;
-  top: 15px;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 75%;
-  left: 30px;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 16px #0000001a;
-  padding: 0;
-  list-style: none;
-  margin: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  cursor: pointer;
-}
-
-.dropdown-item {
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-.dropdown-item:hover {
-  cursor: pointer;
-  background-color: #0369a1;
-}
-
 .showA {
-  opacity: 1; /* Inicialmente visible */
-  transform: translateY(0); /* En su posición original */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .showA.hidden {
-  opacity: 0; /* Invisible */
-  transform: translateY(20px); /* Desplazado hacia abajo */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* Transición suave de opacidad en el body */

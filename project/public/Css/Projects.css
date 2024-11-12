@@ -1,6 +1,6 @@
 /* project styles */
 .projects {
-  margin-top: 195px;
+  margin-top: -5px;
   position: relative;
 }
 .projectsTitle {
@@ -10,163 +10,161 @@
   border-radius: 15px;
   background-color: #1b233d18;
 }
-.projectFigure {
-  height: 555px;
-  border-radius: 15px;
-  background-image: linear-gradient(55deg, #020617 8%, #0369a1 100%);
-  position: relative;
-  box-shadow: 1px 1px 6px #020617;
-  transition: 0.3s ease;
-}
-.projectFigure:hover {
-  cursor: pointer;
-  box-shadow: inset 1px 1px 6px #020617;
-}
-
-.projectImage {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background: #1b233d;
-  padding: 5px;
+.projectsGallery {
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card .top-section {
-  height: 275px;
-  border: solid;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(
-    45deg,
-    rgb(4, 159, 187) 0%,
-    rgb(80, 246, 255) 100%
-  );
   position: relative;
-  transition: 0.5s;
-}
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, #020617 0px, transparent 85%),
+    radial-gradient(at 14% 26%, rgb(19, 26, 48) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, rgb(10, 49, 101) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, rgb(0, 82, 163) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, #0040ff 0px, transparent 85%);
 
-.card .top-section .borde {
-  border-bottom-right-radius: 10px;
-  height: 35px;
-  width: 250px;
-  background: white;
-  background: #1b233d;
-  position: relative;
-  transform: skew(-40deg);
-  box-shadow: -10px -10px 0 0 #1b233d;
-}
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
 
-.card .top-section .borde::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 0;
-  right: -15px;
-  background: rgba(255, 255, 255, 0);
-  border-top-left-radius: 10px;
-  box-shadow: -5px -5px 0 2px #1b233d;
-}
-
-.card .top-section::before {
-  content: "";
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background: rgba(255, 255, 255, 0);
-  height: 15px;
-  width: 15px;
-  z-index: 44;
-  border-top-left-radius: 15px;
-  box-shadow: -5px -5px 0 2px #1b233d;
-}
-
-.card .top-section .icons {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card .top-section .icons .icon {
-  height: 100%;
-  aspect-ratio: 1;
-  padding: 7px 0 9px 15px;
-}
-.card .top-section .icons .icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.card .top-section .icons .icon .top-section {
-  height: 100%;
-}
-
-.card .top-section .icons .info {
-  height: 100%;
-  padding: 8px 15px;
-  display: flex;
-  gap: 7px;
-}
-.projectLink {
-  cursor: pointer;
-}
-.projectLink:hover {
-  fill: white;
-}
-.card .bottom-section {
-  margin-top: 10px;
-  height: 260px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  color: white;
-  padding: 10px 5px;
-}
-.card .bottom-section::-webkit-scrollbar {
-  background-color: #02061711;
-}
-.card .bottom-section .title {
-  display: block;
-  font-size: 17px;
-  font-weight: bolder;
-  color: white;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.card-icons {
-  display: flex;
-  position: relative;
-  overflow: scroll;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 10px;
-  background-image: linear-gradient(-45deg, #036aa1 16.6%, #9daae3 100%);
-}
-.card-icons::-webkit-scrollbar {
-  background-color: transparent;
-}
-.MIcons {
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
+  z-index: 5;
+  max-width: 100%;
+  height: 150vh;
   display: grid;
-  place-items: center;
-  margin: 5px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a1 a1 a1 a2 a2"
+    "a3 a3 a4 a2 a2"
+    "a5 a6 a6 a6 a7"
+    "a5 a6 a6 a6 a7"
+    "b2 b2 a8 a8 b1"
+    "b3 b3 b3 a9 b4";
 }
-.MIcons {
-  transform: scale(1.05);
+.projectsGallery::before {
+  content: "";
+  pointer-events: none;
+
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+
+  width: 200%;
+  height: 10rem;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    #0040ff 40%,
+    #0040ff 60%,
+    hsla(0, 0%, 40%, 0) 100%
+  );
+
+  animation: rotate 11s linear infinite;
+}
+.projectsGallery::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 5;
+  width: 99.5%;
+  height: 99.5%;
+  background-color: rgba(0, 0, 0, 0.005);
+
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, #020617 0px, transparent 85%),
+    radial-gradient(at 14% 26%, rgb(19, 26, 48) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, rgb(10, 49, 101) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, #0052a3 0px, transparent 85%),
+    radial-gradient(at 100% 99%, #025fbd 0px, transparent 85%);
+
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.projectsGallery > .project {
+  z-index: 50;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  border: solid 1px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.a1 {
+  grid-area: a1;
+}
+
+.a2 {
+  grid-area: a2;
+}
+
+.a3 {
+  grid-area: a3;
+}
+
+.a4 {
+  grid-area: a4;
+}
+
+.a7 {
+  grid-area: a7;
+}
+
+.b2 {
+  grid-area: b2;
+}
+
+.b3 {
+  grid-area: b3;
+}
+
+.a6 {
+  grid-area: a6;
+}
+
+.a5 {
+  grid-area: a5;
+}
+
+.a9 {
+  grid-area: a9;
+}
+
+.a8 {
+  grid-area: a8;
+}
+
+.b1 {
+  grid-area: b1;
+}
+
+.b4 {
+  grid-area: b4;
+}
+
+.cssbuttons-io-button2 {
+  margin: auto;
+  margin-top: 25px;
 }

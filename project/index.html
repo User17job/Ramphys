@@ -75,8 +75,8 @@
         </button>
       </a>
     </div>
-    <!-- Background crazy -->
 
+    <!-- Background crazy   -->
     <video autoplay muted loop class="backgroundColor" id="crazyBack">
       <source src="./public/fondo.mp4" type="video/mp4" />
       Tu navegador no soporta el elemento de video.
@@ -109,7 +109,6 @@
     </div>
 
     <main class="container-fluid p-0" id="container">
-      <div class="Hi">HI</div>
       <!-- navbar -->
       <div class="row p-0" id="navbar">
         <div class="col-3">
@@ -134,9 +133,12 @@
           <section class="navLInks">
             <!-- <div class="dropdown"> -->
 
-            <div class="dropdown">
-              <a class="m-0 p-3 span homeL">Home+</a>
-            </div>
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span homeL"
+              onclick="navigateTo('home')"
+              >Home</span
+            >
 
             <!-- </div> -->
 
@@ -220,317 +222,100 @@
               </section>
             </div>
           </section>
-          <div class="row justify-content-center">
-            <div class="col-11">
-              <section class="welcome__i">
-                <div class="row justify-content-center">
-                  <div class="col text-center m-2">
-                    <button
-                      class="Btnss cssbuttons-io-button cssbuttons-io-button2"
-                      onclick="navigateTo('hire')">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 20 20">
-                        <g fill="currentColor">
-                          <path
-                            fill-rule="evenodd"
-                            d="M19.39 9.617a1 1 0 0 0 .457-1.338L17.21 2.89a1 1 0 0 0-1.338-.458l-1.796.88a1 1 0 0 0-.458 1.337l2.638 5.389a1 1 0 0 0 1.338.458zm-3.867-5.623a.75.75 0 1 0 .66 1.347a.75.75 0 0 0-.66-1.347M4.026 2.668a1 1 0 0 0-1.33.48L.147 8.58a1 1 0 0 0 .48 1.33l1.811.85a1 1 0 0 0 1.33-.48l2.55-5.432a1 1 0 0 0-.481-1.33zM2.064 9.204A.75.75 0 1 0 2.7 7.846a.75.75 0 0 0-.637 1.358"
-                            clip-rule="evenodd" />
-                          <path
-                            d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z" />
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.629 4.072a1 1 0 0 0 .742 1.856l.026-.01l.078-.03a49 49 0 0 1 1.18-.448c.337-.123.678-.241.96-.328a6 6 0 0 1 .407-.11l.055.008q.091.014.23.044c.183.041.397.098.606.158a21 21 0 0 1 .712.217l.045.015l.01.004h.003a1 1 0 0 0 .633-1.897l-.309.928l.31-.928l-.007-.002l-.014-.004l-.052-.017a21 21 0 0 0-.782-.24a13 13 0 0 0-.722-.186A3.6 3.6 0 0 0 9 3c-.187 0-.377.04-.501.07c-.147.034-.31.08-.473.13a24 24 0 0 0-1.055.36a50 50 0 0 0-1.23.467l-.082.032zM4.183 9.77l.031.029l.091.084a100 100 0 0 0 1.374 1.252c.394.352.801.708 1.145.992q.26.216.442.352q.12.088.16.113l2.836 1.063a1 1 0 0 0 .991-.168l2.107-1.755a1 1 0 1 1 1.28 1.536l-2.106 1.756a3 3 0 0 1-2.974.504l-2.96-1.11l-.047-.024c-.281-.14-.672-.45-1.004-.726a44 44 0 0 1-1.202-1.04a96 96 0 0 1-1.403-1.28l-.094-.087l-.033-.03A1 1 0 0 1 4.183 9.77m-.748 5.089a1 1 0 0 1 1.409-.126l.958.8a1 1 0 0 0 .502.223l1.237.173a1 1 0 1 1-.278 1.981l-1.236-.173a3 3 0 0 1-1.507-.669l-.958-.8a1 1 0 0 1-.127-1.41"
-                            clip-rule="evenodd" />
-                        </g>
-                      </svg>
-                      <span>Contratar</span>
-                    </button>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
         </div>
       </div>
 
-      <!-- service section -->
-      <div class="row">
-        <div class="col services serviceDark position-relative">
-          <div class="servicesBackground Baki BakiDark"></div>
-          <!-- title -->
-          <section class="row">
-            <div class="col">
-              <h3 class="text-center serviceTitle title textBackDark">
-                Que tengo para ofrecer?
-              </h3>
-            </div>
-          </section>
-          <!-- info -->
-          <section class="row justify-content-center">
-            <div class="col-9 my-3">
-              <h3 class="text-center fs-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-                nemo aliquam deleniti ducimus nisi quas dolores neque vero
-                quisquam consequuntur sapiente laborum. Provident fugit a
-                recusandae incidunt architecto ea esse.z
-              </h3>
-            </div>
-          </section>
-
-          <!-- sercvices -->
-          <section class="row p-3">
-            <div class="col">
-              <section>
-                <!-- Lista original que se muestra solo en pantallas grandes -->
-                <ul class="g-0 serviceList d-none d-md-block">
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-                  <!-- Repite para los demás servicios -->
-                </ul>
-
-                <!-- Acordeón que se muestra solo en pantallas pequeñas -->
-                <div class="accordion d-md-none" id="serviceAccordion">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button
-                        class="accordion-button subtitle subtitle"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne">
-                        Servicio 1
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        Servicio 2
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree">
-                        Servicio 3
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour">
-                        Servicio 4
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive">
-                        Servicio 5
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="serviceLink text-end">
-                  <!-- link -->
-                  <a href="javascript:void(0);" onclick="navigateTo('services')"
-                    >Ver Más
-                    <img
-                      src="./public/Imgs/arrowSquare.svg"
-                      width="16"
-                      height="16"
-                      alt="arrowSquare icon"
-                  /></a>
-                </p>
-              </section>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <!-- Proyects section -->
+      <!-- Projects section -->
       <div class="row">
         <div class="col projects">
           <div class="projectBackground Baki BakiDark"></div>
 
-          <!-- title -->
-          <section class="row">
-            <div class="col">
-              <h3 class="text-center projectsTitle title textBackDark">
-                Referencias de lo que hago?
-              </h3>
-            </div>
-          </section>
-          <!-- info -->
-          <section class="row justify-content-center">
-            <div class="col-9 my-5">
-              <h3 class="text-center fs-6">
-                Como referencia tengo para mostrar proyectos tales como
-                portafolios, landing pages, tiendas online, y algunos proyects
-                personales con los que voy puliendo mis habilidades podran ver
-                mas en la pagina de
-                <i
-                  ><a
-                    href="javascript:void(0);"
-                    onclick="navigateTo('portfolio')"
-                    >proyectos</a
-                  ></i
-                >
-                anda! puedes hechar un vistazo. Puede que te interese uno de los
-                Diseños para tu propia web!
-              </h3>
-            </div>
-          </section>
-
           <!-- Projects -->
-          <section class="row p-2 justify-content-center gx-4 projectsC">
-            <div class="col-11 col-sm-8 col-md-7 col-lg-5 m-2 p-3">
-              <section class=" ">
-                <figure class="p-2 projectFigure">
+          <section class="row p- justify-content-center gx-4 projectsC">
+            <div class="col-12 m-2 p-">
+              <section class="">
+                <div class="projectsGallery p-1">
+                  <div class="a1 project border">
+                    <figure class="projectImages">
+                      <img src="./public/Imgs/projectsImg/Pokedex.png" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a2 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a3 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a4 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a7 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="b2 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="b3 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a6 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a5 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a9 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="a8 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="b1 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                  <div class="b4 project border">
+                    <figure class="projectImages">
+                      <img src="" alt="" />
+                      <figcaption>web</figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <!-- <figure class="p-2 projectFigure">
                   <div class="card">
                     <div class="top-section">
                       <img
@@ -600,22 +385,44 @@
                       </div>
                     </div>
                   </div>
-                </figure>
+                </figure> -->
               </section>
             </div>
-
-            <p class="text-end">
-              <!-- link -->
-              <a href="javascript:void(0);" onclick="navigateTo('portfolio')"
-                >Ver Mas
-                <img
-                  src="./public/Imgs/arrowSquare.svg"
-                  width="16"
-                  height="16"
-                  alt="arrowSquare icon" />
-              </a>
-            </p>
           </section>
+
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <section class="welcome__i">
+                <div class="row justify-content-center">
+                  <div class="col text-center m-2">
+                    <button
+                      class="Btnss cssbuttons-io-button cssbuttons-io-button2"
+                      onclick="navigateTo('hire')">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 20 20">
+                        <g fill="currentColor">
+                          <path
+                            fill-rule="evenodd"
+                            d="M19.39 9.617a1 1 0 0 0 .457-1.338L17.21 2.89a1 1 0 0 0-1.338-.458l-1.796.88a1 1 0 0 0-.458 1.337l2.638 5.389a1 1 0 0 0 1.338.458zm-3.867-5.623a.75.75 0 1 0 .66 1.347a.75.75 0 0 0-.66-1.347M4.026 2.668a1 1 0 0 0-1.33.48L.147 8.58a1 1 0 0 0 .48 1.33l1.811.85a1 1 0 0 0 1.33-.48l2.55-5.432a1 1 0 0 0-.481-1.33zM2.064 9.204A.75.75 0 1 0 2.7 7.846a.75.75 0 0 0-.637 1.358"
+                            clip-rule="evenodd" />
+                          <path
+                            d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.629 4.072a1 1 0 0 0 .742 1.856l.026-.01l.078-.03a49 49 0 0 1 1.18-.448c.337-.123.678-.241.96-.328a6 6 0 0 1 .407-.11l.055.008q.091.014.23.044c.183.041.397.098.606.158a21 21 0 0 1 .712.217l.045.015l.01.004h.003a1 1 0 0 0 .633-1.897l-.309.928l.31-.928l-.007-.002l-.014-.004l-.052-.017a21 21 0 0 0-.782-.24a13 13 0 0 0-.722-.186A3.6 3.6 0 0 0 9 3c-.187 0-.377.04-.501.07c-.147.034-.31.08-.473.13a24 24 0 0 0-1.055.36a50 50 0 0 0-1.23.467l-.082.032zM4.183 9.77l.031.029l.091.084a100 100 0 0 0 1.374 1.252c.394.352.801.708 1.145.992q.26.216.442.352q.12.088.16.113l2.836 1.063a1 1 0 0 0 .991-.168l2.107-1.755a1 1 0 1 1 1.28 1.536l-2.106 1.756a3 3 0 0 1-2.974.504l-2.96-1.11l-.047-.024c-.281-.14-.672-.45-1.004-.726a44 44 0 0 1-1.202-1.04a96 96 0 0 1-1.403-1.28l-.094-.087l-.033-.03A1 1 0 0 1 4.183 9.77m-.748 5.089a1 1 0 0 1 1.409-.126l.958.8a1 1 0 0 0 .502.223l1.237.173a1 1 0 1 1-.278 1.981l-1.236-.173a3 3 0 0 1-1.507-.669l-.958-.8a1 1 0 0 1-.127-1.41"
+                            clip-rule="evenodd" />
+                        </g>
+                      </svg>
+                      <span>Contratar</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -666,6 +473,13 @@
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosCss3.svg"
+                    alt=""
+                    width="55"
+                    height="55" />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/DeviconFigma.svg"
                     alt=""
                     width="55"
                     height="55" />
@@ -794,26 +608,105 @@
           <!-- options -->
           <div class="row">
             <div class="col-5 col-md-4 col-lg-3 p-5 text-center">
-              <div
-                class="row p-0 border d-flex justify-content-center stackOptions Btnss">
-                <div
-                  class="col-12 col-md-5 stackOption subtitle"
-                  id="StackAnimation">
-                  Animation
-                </div>
-                <div
-                  class="col-12 col-md-4 stackOption subtitle"
-                  id="StackGallery">
-                  Gallery
-                </div>
+              <div class="toggle-cont">
+                <input
+                  class="toggle-input"
+                  id="toggle"
+                  name="toggle"
+                  type="checkbox"
+                  checked />
+                <label class="toggle-label" for="toggle">
+                  <div class="cont-icon">
+                    <span
+                      style="--width: 2; --deg: 25; --duration: 11"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 100; --duration: 18"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 280; --duration: 5"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 200; --duration: 3"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 30; --duration: 20"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 300; --duration: 9"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 250; --duration: 4"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 210; --duration: 8"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 100; --duration: 9"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 15; --duration: 13"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 75; --duration: 18"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 65; --duration: 6"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 50; --duration: 7"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 320; --duration: 5"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 220; --duration: 5"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 215; --duration: 2"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 135; --duration: 9"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 45; --duration: 4"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 78; --duration: 16"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 89; --duration: 19"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 65; --duration: 14"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 2; --deg: 97; --duration: 1"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 174; --duration: 10"
+                      class="sparkle"></span>
+                    <span
+                      style="--width: 1; --deg: 236; --duration: 5"
+                      class="sparkle"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 30 30"
+                      class="icon">
+                      <path
+                        d="M0.96233 28.61C1.36043 29.0081 1.96007 29.1255 2.47555 28.8971L10.4256 25.3552C13.2236 24.11 16.4254 24.1425 19.2107 25.4401L27.4152 29.2747C27.476 29.3044 27.5418 29.3023 27.6047 29.32C27.6563 29.3348 27.7079 29.3497 27.761 29.3574C27.843 29.3687 27.9194 29.3758 28 29.3688C28.1273 29.3617 28.2531 29.3405 28.3726 29.2945C28.4447 29.262 28.5162 29.2287 28.5749 29.1842C28.6399 29.1446 28.6993 29.0994 28.7509 29.0477L28.9008 28.8582C28.9468 28.7995 28.9793 28.7274 29.0112 28.656C29.0599 28.5322 29.0811 28.4036 29.0882 28.2734C29.0939 28.1957 29.0868 28.1207 29.0769 28.0415C29.0705 27.9955 29.0585 27.9524 29.0472 27.9072C29.0295 27.8343 29.0302 27.7601 28.9984 27.6901L25.1638 19.4855C23.8592 16.7073 23.8273 13.5048 25.0726 10.7068L28.6145 2.75679C28.8429 2.24131 28.7318 1.63531 28.3337 1.2372C27.9165 0.820011 27.271 0.721743 26.7491 0.9961L19.8357 4.59596C16.8418 6.15442 13.2879 6.18696 10.2615 4.70062L1.80308 0.520214C1.7055 0.474959 1.60722 0.441742 1.50964 0.421943C1.44459 0.409215 1.37882 0.395769 1.3074 0.402133C1.14406 0.395769 0.981436 0.428275 0.818095 0.499692C0.77284 0.519491 0.719805 0.545671 0.67455 0.578198C0.596061 0.617088 0.524653 0.675786 0.4596 0.74084C0.394546 0.805894 0.335843 0.877306 0.296245 0.956502C0.263718 1.00176 0.237561 1.05477 0.217762 1.10003C0.152708 1.24286 0.126545 1.40058 0.120181 1.54978C0.120181 1.61483 0.126527 1.6735 0.132891 1.73219C0.15269 1.85664 0.178881 1.97332 0.237571 2.08434L4.41798 10.5427C5.91139 13.5621 5.8725 17.1238 4.3204 20.1099L0.720514 27.0233C0.440499 27.5536 0.545137 28.1928 0.96233 28.61Z"></path>
+                    </svg>
+                  </div>
+                </label>
               </div>
             </div>
           </div>
 
           <!-- info -->
           <section class="row justify-content-center">
-            <div class="col-9 my-2">
-              <h3 class="text-center fs-6">
+            <div class="col-9 my-0">
+              <h3 class="text-center fs-6 text">
                 Aqui podran ver la gama de herramientas que puedo llegar a usar
                 de acuerdo a 2 cosas, la importancia del proyecto y las
                 preferencias del cliente especificado en el formulario enviado
@@ -862,6 +755,14 @@
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosSass.svg"
                       alt="Sass-icon" />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/DeviconFigma.svg"
+                      alt="figma-icon" />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -982,531 +883,8 @@
         </div>
       </div>
 
-      <!-- about section -->
-      <div class="row about">
-        <div class="col my-3 position-relative">
-          <div class="AboutBackground Baki BakiDark"></div>
-
-          <!-- title -->
-          <section class="row">
-            <div class="col">
-              <h3 class="text-center aboutTitle title textBackDark">
-                Acerca de mi
-              </h3>
-            </div>
-          </section>
-
-          <section class="row aboutsectionContainer">
-            <div class="col-md-9 col-11 aboutsection aboutUno p-5">
-              <p class="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quibusdam vitae placeat reiciendis asperiores accusamus iste.
-                Ratione similique voluptatem ex, enim quasi maxime beatae natus
-                autem tempore rem ea, minus eius! <br /><br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                tenetur minus natus necessitatibus eveniet.
-              </p>
-            </div>
-
-            <div class="col-md-9 col-11 aboutsection aboutDos p-3">
-              <p class="aboutLink">
-                <!-- link -->
-                <a href="javascript:void(0);" onclick="navigateTo('about')"
-                  >Ver Mas
-                  <img
-                    src="./public/Imgs/arrowSquare.svg"
-                    width="16"
-                    height="16"
-                    alt="arrowSquare icon" />
-                </a>
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <!-- Collaborations section -->
-      <div class="row collaborations">
-        <div class="col my-3">
-          <!-- content -->
-          <!-- background -->
-
-          <section class="row justify-content-center">
-            <div class="col-12 p-2">
-              <section class="row p-2 carousel-container position-relative">
-                <h2
-                  class="position-absolute colaborationsTitle text-center title textBackDark">
-                  Branding
-                </h2>
-                <div class="carousel-trackk d-flex">
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/Artybylogo.svg"
-                      width="100"
-                      height="100"
-                      alt="Artyby Logo" />
-                  </figure>
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/unprgramayyo.svg"
-                      width="106"
-                      height="106"
-                      alt="Artyby Logo" />
-                  </figure>
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/user17job.svg"
-                      width="106"
-                      height="100"
-                      alt="Artyby Logo" />
-                  </figure>
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/How'stech.svg"
-                      width="76"
-                      height="76"
-                      alt="Artyby Logo" />
-                  </figure>
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/TwoEyesMainLogoTwo.svg"
-                      fill="white"
-                      width="106"
-                      height="176"
-                      alt="Artyby Logo" />
-                  </figure>
-                  <figure class="col-5 Colaborationslogos d-flex mx-4">
-                    <img
-                      src="public/Imgs/SportDream.svg"
-                      fill="white"
-                      width="150"
-                      height="150"
-                      alt="Artyby Logo" />
-                  </figure>
-                </div>
-              </section>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <!-- Blog Section -->
-      <div class="row">
-        <div class="col blog">
-          <!-- title -->
-          <section class="row">
-            <div class="col">
-              <h3 class="text-center blogTitle title textBackDark">
-                Acerca de Mi Blog
-              </h3>
-            </div>
-          </section>
-          <!-- Info -->
-          <section class="row justify-content-center">
-            <div class="col-9 my-0">
-              <h6 class="text-center">
-                La vida y el crecimiento de un programdor sin importar su area,
-                suele ser una aventura que no muchos estarian dispuestos a
-                Emprender. por eso cree <a href="">UnprogramaYYo</a> y compartir
-                mas acerca del tema y sus aderidos
-              </h6>
-            </div>
-          </section>
-          <!-- Layout for pc design -->
-          <section class="row layout justify-content-center">
-            <div class="col p-3" id="BlogContainer ">
-              <section class="row p-3">
-                <div class="col-3">
-                  <div class="border element blog8">
-                    <img
-                      src="./public/Imgs/blogImgs/computadora1.png"
-                      class="blog8__img"
-                      alt="Laptop-img" />
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="border element blog6">
-                    <img
-                      src="./public/Imgs/blogImgs/hombre.png"
-                      class="blog6__img"
-                      alt="hombre" />
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="border element blog2">
-                    <img
-                      src="./public/Imgs/blogImgs/image.png"
-                      class="blog2__img"
-                      alt="matrix-img" />
-                  </div>
-                </div>
-              </section>
-
-              <section class="row p-3">
-                <div class="col-3 my-2">
-                  <div class="border element blog7">
-                    <img
-                      src="./public/Imgs/blogImgs/lupa.png"
-                      class="blog7__img"
-                      alt="lupa-img" />
-                  </div>
-                </div>
-                <div class="col-6 my-2 blog5" id="blog">
-                  <a href="javascript:void(0);" onclick="navigateTo('blog')">
-                    <div class="border element text-center position-relative">
-                      <img
-                        src="./public/Imgs/blogImgs/fondo.png"
-                        alt="blog-background"
-                        class="blog5__back" />
-                      <h1 class="text-light">UnProgramaYYo</h1>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-3 my-2">
-                  <div class="border lay blog1 position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/WHOA.png"
-                      alt="blog-background"
-                      class="blog1__back position-absolute" />
-                  </div>
-                </div>
-                <div class="col-4 my-2">
-                  <div class="border element layy blog4">
-                    <img
-                      src="./public/Imgs/blogImgs/Bible.svg"
-                      alt="blog-background"
-                      class="blog4__back position-absolute" />
-                    <img
-                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
-                      alt="blog-background"
-                      class="blog4__BBack position-absolute" />
-                  </div>
-                </div>
-                <div class="col-5 my-2">
-                  <div class="border element layy blog3">
-                    <img
-                      src="./public/Imgs/blogImgs/Destino.png"
-                      alt="blog-background"
-                      class="blog3__back position-absolute" />
-                  </div>
-                </div>
-              </section>
-            </div>
-          </section>
-
-          <!-- Carousel for another designs -->
-          <section class="row carouselC justify-content-center">
-            <div class="col-6 my-0 blogEl blog" id="blog">
-              <a href="javascript:void(0);" onclick="navigateTo('blog')">
-                <div class="border element text-center position-relative">
-                  <img
-                    src="./public/Imgs/blogImgs/fondo.png"
-                    alt="blog-background"
-                    class="blog5__back position-absolute" />
-                  <h1 class="text-light">UnProgramaYYo</h1>
-                </div>
-              </a>
-              <p class="subtitle text-light">A new World</p>
-            </div>
-
-            <div class="carousel" id="BlogContainer">
-              <div class="carousel-track">
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Bible.svg"
-                      alt="blog-background"
-                      class="blog4__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Destino.png"
-                      alt="blog-background"
-                      class="blog3__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/WHOA.png"
-                      alt="blog-background"
-                      class="blog1__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/lupa.svg"
-                      class="blog7__img"
-                      alt="lupa-img" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
-                      alt="blog-background"
-                      class="blog4__BBack position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Laptop.svg"
-                      class="blog8__img position-absolute"
-                      alt="Laptop-img" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/image.png"
-                      class="blog2__img position-absolute"
-                      alt="matrix-img" />
-                  </div>
-                </div>
-
-                <!-- Duplicado del contenido para efecto infinito -->
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Bible.svg"
-                      alt="blog-background"
-                      class="blog4__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Destino.png"
-                      alt="blog-background"
-                      class="blog3__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/WHOA.png"
-                      alt="blog-background"
-                      class="blog1__back position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/lupa.svg"
-                      class="blog7__img"
-                      alt="lupa-img" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
-                      alt="blog-background"
-                      class="blog4__BBack position-absolute" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/Laptop.svg"
-                      class="blog8__img position-absolute"
-                      alt="Laptop-img" />
-                  </div>
-                </div>
-                <div class="el">
-                  <div class="elBord position-relative">
-                    <img
-                      src="./public/Imgs/blogImgs/image.png"
-                      class="blog2__img position-absolute"
-                      alt="matrix-img" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <!-- contact section -->
-      <div class="row">
-        <div class="col contact position-relative">
-          <div class="contactBackground Baki BakiDark"></div>
-          <div class="contactBackgroundItem Baki BakiDark"></div>
-          <!-- title -->
-          <section class="row">
-            <div class="col">
-              <h3 class="text-start contactTitle title textBackDark">
-                Informacion de contacto
-              </h3>
-            </div>
-          </section>
-
-          <section class="row justify-content-center p-2">
-            <div class="col-12 p-3">
-              <section class="row">
-                <div class="col-12 col-md-7 p-5 contact-data">
-                  <section
-                    class="ContactData justify-content-center text-center">
-                    <figure>
-                      <img
-                        src="./public/Imgs/ArtybylogoWhiteLogo.svg"
-                        alt="Artybylogo"
-                        width="255"
-                        height="255" />
-                    </figure>
-
-                    <ul class="g-0 contactServiceList p-3">
-                      <li class="row p-0 m-2 contactServiceItem">
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
-                          <b>LLamar </b>
-                        </div>
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
-                          <a
-                            href="javascript:void(0);"
-                            onclick="navigateTo('llamar')"
-                            >555 555 5555</a
-                          >
-                        </div>
-                      </li>
-                      <li class="row p-0 m-2 contactServiceItem">
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
-                          <b>Escribir a WhatsApp</b>
-                        </div>
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
-                          <a
-                            href="javascript:void(0);"
-                            onclick="navigateTo('whatsapp')"
-                            >WhatsApp.yo</a
-                          >
-                        </div>
-                      </li>
-                      <li class="row p-0 m-2 contactServiceItem">
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
-                          <b>Dejar Un Email</b>
-                        </div>
-                        <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
-                          <a
-                            href="javascript:void(0)"
-                            onclick="navigateTo('email')"
-                            >@Ramphys
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="col-12 col-md-5 contact-form">
-                  <!-- title -->
-                  <h2 class="contactFormTitle text-center title textBackDark">
-                    Trabajemos Juntos
-                  </h2>
-                  <br />
-                  <div class="contactFormText text-center">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Ducimus et temporibus quibusdam labore recusandae illum
-                    ipsam sint laboriosam.
-                  </div>
-                  <form
-                    class="contactForm my-5"
-                    method="post"
-                    name="contact"
-                    netlify>
-                    <div class="row">
-                      <div class="col-6 text-b">
-                        <label for="name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="First name"
-                          aria-label="First name" />
-                      </div>
-                      <div class="col-6 text-b">
-                        <label for="lastName" class="form-label"
-                          >Last name</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="lastName"
-                          placeholder="Last name"
-                          aria-label="Last name" />
-                      </div>
-                      <div class="col-6 text-b">
-                        <label for="Email" class="form-label">Email</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          placeholder="Email"
-                          aria-label="Email" />
-                      </div>
-                      <div class="col-6 text-b">
-                        <label for="phoneNumber" class="form-label"
-                          >Phone Number</label
-                        >
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="phoneNumber"
-                          placeholder="Phone number"
-                          aria-label="Phone Number" />
-                      </div>
-                      <div class="text-b">
-                        <label for="service" class="form-label text-b"
-                          >Elija un servicio</label
-                        >
-                        <select
-                          class="form-select"
-                          id="service"
-                          aria-label="defaul">
-                          <option class="" selected>
-                            Opciones de servicios
-                          </option>
-                          <option class="" value="1">Desarrollo Web</option>
-                          <option class="" value="2">Diseno web</option>
-                          <option class="" value="3">Estilizacion web</option>
-                          <option class="" value="4">Diseno grafico</option>
-                          <option class="" value="5">Microsoft Office</option>
-                          <option class="" value="6">Creacion de marca</option>
-                        </select>
-                      </div>
-                      <div class="mb-3 text-b">
-                        <label for="Textarea" class="form-label">Coment</label>
-                        <textarea
-                          class="form-control"
-                          id="Textarea"
-                          placeholder="Comentario"
-                          rows="3"></textarea>
-                      </div>
-                    </div>
-                    <div class="row justify-content-end">
-                      <div class="col-3">
-                        <div class="submitButtonC justify-content-end d-flex">
-                          <button class="p Btnss" type="submit">send</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </section>
-            </div>
-          </section>
-        </div>
-      </div>
-
       <!-- footer section -->
-      <div class="row my-">
+      <div class="row">
         <div class="col my-3">
           <section class="row justify-content-center" id="footer">
             <div class="footerBackground BakiDark Baki">
@@ -1527,7 +905,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('home')"
                   >Home</a
                 >
@@ -1535,20 +913,20 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('about')"
                   >About</a
                 >
               </b>
               <b>
-                <a href="javascript:void(0);" class="mx-3 footerLink"
+                <a href="javascript:void(0);" class="mx-3 footerLink span"
                   >Portfolio</a
                 >
               </b>
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('services')"
                   >Servicios</a
                 >
@@ -1556,7 +934,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('contact')"
                   >Contact</a
                 >
@@ -1564,7 +942,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('blog')"
                   >Blog</a
                 >

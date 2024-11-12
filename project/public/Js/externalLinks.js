@@ -1,6 +1,6 @@
 function navigateTo(page) {
   const urls = {
-    // 'home': 'https://ramphystb.netlify.app/',
+    home: "https://ramphystb.netlify.app/",
     about: "https://ramphystb-about.netlify.app/",
     portfolio: "https://ramphystb-portafolio.netlify.app/",
     services: "https://ramphystb-service.netlify.app/",

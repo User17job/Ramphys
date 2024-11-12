@@ -139,14 +139,6 @@
     top: 77.7%;
   }
 
-  /*service  */
-  .serviceName {
-    font-size: 26px;
-    text-align: center;
-  }
-  .serviceDescription {
-    text-align: center;
-  }
   /* stack */
   #stack_gallery_filter {
     position: relative;
@@ -166,67 +158,8 @@
     transition: filter 0.5s ease-in-out; /* Transición suave */
     z-index: -5;
   }
-
-  /* about  */
-  .aboutUno {
-    z-index: 6;
-    overflow: hidden;
-    font-size: 17px;
-    font-weight: 500;
-  }
-
-  /*  */
-  .layout {
-    display: none;
-  }
-
-  /*  */
-  .carouselC {
-    display: block;
-    position: relative;
-  }
-  .blogEl {
-    position: absolute;
-    width: 320px;
-    height: 300px;
-    z-index: 5;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .carousel {
-    height: 555px;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    margin-top: -85px;
-    overflow: hidden;
-    opacity: 55%;
-  }
-  .carousel-track {
-    display: flex;
-    width: calc(14 * (255px + 40px));
-    animation: scrolll 30s linear infinite;
-  }
-  .el {
-    flex: 0 0 255px; /* Fixed width of each element */
-    height: 255px; /* Fixed height of each element */
-    padding: 10px;
-    margin: 0 20px; /* 20px margin on the left and right */
-    box-sizing: border-box; /* Ensures padding and margin don't affect the total size */
-  }
-  .elBord {
-    width: 200px;
-    aspect-ratio: 1;
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
 }
+
 @media screen and (width < 550px) {
   /* backs */
   .BakiLight {
@@ -236,12 +169,79 @@
       transparent 100%
     );
   }
-  .Hi {
-    position: absolute;
-    left: 15%;
-    top: 50%;
+
+  .projectsGallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "a1 a2 a3"
+      "a1 a4 a3"
+      "a1 a4 a5"
+      "a6 a4 a5"
+      "a6 a7 a5"
+      "a6 a7 a8"
+      "a9 a7 a8"
+      "a9 b1 a8"
+      "a9 b1 b4"
+      "b2 b1 b4"
+      "b2 b3 b4"
+      "b2 b3 b4";
   }
 
+  .a1 {
+    grid-area: a1;
+  }
+
+  .a2 {
+    grid-area: a2;
+  }
+
+  .a3 {
+    grid-area: a3;
+  }
+
+  .a4 {
+    grid-area: a4;
+  }
+
+  .a5 {
+    grid-area: a5;
+  }
+
+  .a6 {
+    grid-area: a6;
+  }
+
+  .a7 {
+    grid-area: a7;
+  }
+
+  .a8 {
+    grid-area: a8;
+  }
+
+  .a9 {
+    grid-area: a9;
+  }
+
+  .b1 {
+    grid-area: b1;
+  }
+
+  .b2 {
+    grid-area: b2;
+  }
+
+  .b3 {
+    grid-area: b3;
+  }
+
+  .b4 {
+    grid-area: b4;
+  }
   /* navbar */
   .scrolledCrazy,
   .scrolledDark,
@@ -281,31 +281,6 @@
   .aboutsectionContainer {
     justify-content: start;
   }
-  .aboutUno {
-    overflow-y: scroll;
-  }
-  .aboutDos {
-    left: 35px;
-  }
-  .aboutLink {
-    left: 66%;
-    width: 111px;
-  }
-  .colaborationsTitle {
-    font-size: 55px;
-    top: 25%;
-    font-weight: bold;
-  }
-  .about {
-    margin-bottom: 70px;
-  }
-  .blog {
-    margin-top: 100px;
-  }
-  .contact {
-    margin-top: 50px;
-  }
-
   #footer {
     height: 449px;
     max-width: 96%;

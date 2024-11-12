@@ -1,18 +1,22 @@
 /* welcome section styles*/
 #welcome {
   position: relative;
+
+  background-image: radial-gradient(at 88% 60%, #14141a 0px, transparent 85%),
+    radial-gradient(at 49% 70%, #020107 0px, transparent 85%),
+    radial-gradient(at 14% 74%, #020d2d 0px, transparent 85%),
+    radial-gradient(at 0% 36%, #002c44 0px, transparent 85%),
+    radial-gradient(at 41% 6%, #0369a1 0px, transparent 85%),
+    radial-gradient(at 100% 1%, #0040ff 0px, transparent 85%);
 }
 #welcome-container {
   position: relative;
   top: 22px;
   padding: 0% 2%;
 }
-
-.welcome-des,
 .welcome-img {
   height: 450px;
 }
-
 .textBackDark {
   background: linear-gradient(25deg, #036aa1, #f4f6ff);
   -webkit-background-clip: text;
@@ -20,7 +24,6 @@
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
-
 .textBackLight {
   background: linear-gradient(25deg, #f4f6ff, #0369a1);
   -webkit-background-clip: text;
@@ -38,28 +41,6 @@
   animation: latir 2s linear infinite;
 }
 
-.WelcomeLinks {
-  border: solid transparent;
-  width: auto;
-  max-width: 400px;
-  padding: 5px 7px;
-  border-radius: 25px;
-  background: transparent;
-
-  transition: ease-out 0.7s;
-}
-.WelcomeLinks:hover {
-  box-shadow: 1px -2px 5px #94a3b8;
-}
-.WelcomeLinks > a > button:hover,
-.WelcomeLinks > a > img:hover {
-  transform: scale(1.05);
-}
-.WelcomeLinks > a > button:active,
-.WelcomeLinks > a > img:active {
-  transform: scale(0.96);
-}
-
 .welcome-h2 {
   font-size: 40px;
   font-weight: bold;
@@ -67,6 +48,7 @@
 .welcome-h1 {
   font-size: 50px;
 }
+
 .slogan {
   color: #94a3b8;
 }
@@ -142,7 +124,58 @@
   font-size: 25px;
   font-weight: 100;
 }
-.cssbuttons-io-button2 {
-  margin: auto;
-  padding: 2.8em 1em;
+
+.linksCrazy {
+  background: linear-gradient(25deg, #f9fafb, #f9fafb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+  transition: 0.5s ease;
+}
+.linksCrazy:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background: linear-gradient(25deg, #0369a1, #f9fafb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.linksDark {
+  background: linear-gradient(25deg, #f9fafb, #f9fafb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+.linksDark:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background: linear-gradient(25deg, #f9fafb, #036aa1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.linksLight {
+  background: linear-gradient(25deg, #020617, #020617);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+.linksLight:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background: linear-gradient(25deg, #f4f6ff, #020617);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
