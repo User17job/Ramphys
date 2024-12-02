@@ -1,0 +1,172 @@
+/* project styles */
+.projects {
+  margin-top: 195px;
+  position: relative;
+}
+.projectsTitle {
+  font-size: 60px;
+}
+.projectsC {
+  border-radius: 15px;
+  background-color: #1b233d18;
+}
+.projectFigure {
+  height: 555px;
+  border-radius: 15px;
+  background-image: linear-gradient(55deg, #020617 8%, #0369a1 100%);
+  position: relative;
+  box-shadow: 1px 1px 6px #020617;
+  transition: 0.3s ease;
+}
+.projectFigure:hover {
+  cursor: pointer;
+  box-shadow: inset 1px 1px 6px #020617;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: #1b233d;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .top-section {
+  height: 275px;
+  border: solid;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    45deg,
+    rgb(4, 159, 187) 0%,
+    rgb(80, 246, 255) 100%
+  );
+  position: relative;
+  transition: 0.5s;
+}
+
+.card .top-section .borde {
+  border-bottom-right-radius: 10px;
+  height: 35px;
+  width: 250px;
+  background: white;
+  background: #1b233d;
+  position: relative;
+  transform: skew(-40deg);
+  box-shadow: -10px -10px 0 0 #1b233d;
+}
+
+.card .top-section .borde::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: -15px;
+  background: rgba(255, 255, 255, 0);
+  border-top-left-radius: 10px;
+  box-shadow: -5px -5px 0 2px #1b233d;
+}
+
+.card .top-section::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: rgba(255, 255, 255, 0);
+  height: 15px;
+  width: 15px;
+  z-index: 44;
+  border-top-left-radius: 15px;
+  box-shadow: -5px -5px 0 2px #1b233d;
+}
+
+.card .top-section .icons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .top-section .icons .icon {
+  height: 100%;
+  aspect-ratio: 1;
+  padding: 7px 0 9px 15px;
+}
+.card .top-section .icons .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .top-section .icons .icon .top-section {
+  height: 100%;
+}
+
+.card .top-section .icons .info {
+  height: 100%;
+  padding: 8px 15px;
+  display: flex;
+  gap: 7px;
+}
+.projectLink {
+  cursor: pointer;
+}
+.projectLink:hover {
+  fill: white;
+}
+.card .bottom-section {
+  margin-top: 10px;
+  height: 260px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  color: white;
+  padding: 10px 5px;
+}
+.card .bottom-section::-webkit-scrollbar {
+  background-color: #02061711;
+}
+.card .bottom-section .title {
+  display: block;
+  font-size: 17px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card-icons {
+  display: flex;
+  position: relative;
+  overflow: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10px;
+  background-image: linear-gradient(-45deg, #036aa1 16.6%, #9daae3 100%);
+}
+.card-icons::-webkit-scrollbar {
+  background-color: transparent;
+}
+.MIcons {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin: 5px;
+}
+.MIcons {
+  transform: scale(1.05);
+}

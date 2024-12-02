@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gracias por tu servicio</title>
+    <link
+      rel="shortcut icon"
+      href="http://localhost:3000/public/imgs/artybylogo.sv" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #020617;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .contenedor {
+        background-color: rgb(240, 248, 255);
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        height: 96vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #logo {
+        max-width: 250px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        color: #036aa1;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #020617;
+        max-width: 500px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+      }
+      .social-links {
+        display: flex;
+        gap: 30px;
+        margin-top: 25px;
+      }
+      .social-logo {
+        width: 80px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .social-logo:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <img id="logo" src="" alt="Logo" />
+      <h1>¡Gracias por adquirir nuestros servicios!</h1>
+      <p>
+        Nos pondremos en contacto contigo muy pronto para comenzar a trabajar en
+        tu proyecto. Estamos emocionados de ayudarte a alcanzar tus objetivos.
+      </p>
+
+      <div class="social-links">
+        <img id="web-logo" class="social-logo" src="" alt="Página Web" />
+        <img id="instagram-logo" class="social-logo" src="" alt="Instagram" />
+      </div>
+    </div>
+
+    <script>
+      // Configuración - Reemplaza estas URL y rutas de imagen con las tuyas
+      const logoUrl = "http://localhost:3000/public/imgs/artybylogoName.svg"; // Ejemplo: 'https://tudominio.com/logo.png'
+      const webUrl = "https://ramphystb.netlify.app"; // Ejemplo: 'https://tudominio.com'
+      const instagramUrl = "https://www.instagram.com/user17job/"; // Ejemplo: 'https://instagram.com/tuusuario'
+
+      const webLogoUrl = "http://localhost:3000/public/imgs/artybylogo.svg"; // Ejemplo: 'https://tudominio.com/web-logo.png'
+      const instagramLogoUrl =
+        "http://localhost:3000/public/imgs/user17job.svg"; // Ejemplo: 'https://tudominio.com/instagram-logo.png'
+
+      // Cargar imágenes
+      document.getElementById("logo").src = logoUrl;
+      document.getElementById("web-logo").src = webLogoUrl;
+      document.getElementById("instagram-logo").src = instagramLogoUrl;
+
+      // Agregar eventos de clic para redireccionar
+      document.getElementById("web-logo").addEventListener("click", () => {
+        window.location.href = webUrl;
+      });
+
+      document
+        .getElementById("instagram-logo")
+        .addEventListener("click", () => {
+          window.open(instagramUrl, "_blank");
+        });
+    </script>
+  </body>
+</html>

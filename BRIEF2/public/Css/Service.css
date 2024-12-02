@@ -1,0 +1,95 @@
+/* service section */
+.services {
+  margin-top: 50px;
+}
+
+.serviceDark {
+  background-image: linear-gradient(65deg, #020617 35%, #036aa136 100%);
+  color: #f9fafb;
+}
+.serviceLight {
+  background-image: linear-gradient(5deg, #f9fafb 35%, #94a3b800 100%);
+  color: #020617;
+}
+.serviceCrazy {
+  background-image: linear-gradient(to left, #f9fafb, #ea580c, #036aa180);
+}
+
+.serviceTitle {
+  font-size: 60px;
+}
+.more {
+  /* color: #0369a1; */
+  font-family: graduate;
+}
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.serviceItem {
+  margin-bottom: 0px;
+  border: solid #0369a1 1px;
+  border-top: solid transparent;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  transition: 0.5s;
+}
+.serviceItem:hover {
+  background-image: linear-gradient(15deg, #21243042 35%, #036aa14a 100%);
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.serviceName {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.serviceNameDark {
+  background: linear-gradient(to right, #8288a1, #f9fafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.serviceNameLight {
+  background: linear-gradient(to right, #071036, #f9fafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.serviceNameCrazy {
+  background: linear-gradient(to right, #8288a1, #036aa1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.accordion-item {
+  background-color: transparent;
+}
+.accordion-header {
+  background-color: transparent;
+  color: rgb(0, 13, 24);
+}
+.accordion-button {
+  color: rgb(0, 13, 24);
+}
+.accordion-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  position: absolute;
+  background-color: rgba(4, 201, 255, 0.126);
+  filter: blur(5px);
+}
+.CraZy {
+  opacity: 10%;
+}
+.CraZy:hover {
+  opacity: 100%;
+}
+.accordion-body {
+  background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);
+}

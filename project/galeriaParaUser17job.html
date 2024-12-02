@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology Stack Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      .card {
+        background: linear-gradient(to right, #4c6fff, #170575);
+        color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+
+      .card ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+
+      .card ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-laptop fa-3x"></i>
+        <h3>Frontend</h3>
+        <ul>
+          <li>React</li>
+          <li>Angular</li>
+          <li>Vue.js</li>
+        </ul>
+      </div>
+      <div class="card">
+        <i class="fas fa-database fa-3x"></i>
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="card">
+        <i class="fas fa-code fa-3x"></i>
+        <h3>Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div class="card">
+        <i class="fas fa-code-branch fa-3x"></i>
+        <h3>Version Control</h3>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitLab</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Stack Carousel</title>
+    <style>
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .carousel-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        background: linear-gradient(to right, #4c6fff, #7b61ff);
+        color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .carousel-item i {
+        font-size: 3rem;
+      }
+
+      .carousel-item h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+
+      .carousel-item ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+
+      .carousel-item ul li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-item">
+        <i class="fas fa-laptop"></i>
+        <h3>Frontend</h3>
+        <ul>
+          <li>React</li>
+          <li>Angular</li>
+          <li>Vue.js</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-database"></i>
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-code"></i>
+        <h3>Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-code-branch"></i>
+        <h3>Version Control</h3>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitLab</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const carousel = document.querySelector(".carousel");
+      let scrollPosition = 0;
+
+      function autoScroll() {
+        scrollPosition += 1;
+        carousel.scrollLeft = scrollPosition;
+        requestAnimationFrame(autoScroll);
+      }
+
+      autoScroll();
+    </script>
+  </body>
+</html>

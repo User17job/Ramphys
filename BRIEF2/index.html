@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ramphys | Brief</title>
+
+    <style>
+      :root {
+        --primary-blue: #0369a1;
+        --light-blue: #f9fafb;
+        --text-black: #020617;
+        --background-white: #f9fafb;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      .form-title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+      }
+
+      .form-section {
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .form-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid var(--primary-blue);
+        padding-bottom: 0.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      .form-control:focus {
+        outline: 2px solid rgba(224, 155, 155, 0.629);
+        outline-offset: 2px;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .submit-btn:hover {
+        background-color: #1d4ed8;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1rem 0.5rem;
+        }
+        .form-title {
+          font-size: 2rem;
+        }
+        .radio-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/Css/index.css" />
+
+    <link rel="stylesheet" href="./public/Css/Backgrounds.css" />
+    <link rel="stylesheet" href="./public/Css/charging.css" />
+    <link rel="stylesheet" href="./public/Css/indexMode.css" />
+    <link rel="stylesheet" href="./public/Css/responsive.css" />
+
+    <link rel="shortcut icon" href="./public/Imgs/Artybylogo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body class="dark">
+    <div class="mode-switcher-container">
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Dark">
+        <button class="mode-switcher-btn darx ms-active" data-theme-mode="dark">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </a>
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Light">
+        <button class="mode-switcher-btn lighx" data-theme-mode="light">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+      </a>
+
+      <a data-bs-toggle="tooltip" class="title" data-bs-title="Crazy">
+        <button class="mode-switcher-btn craxy" data-theme-mode="crazy">
+          <svg
+            class="mode-switcher-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+        </button>
+      </a>
+    </div>
+    <!-- Background crazy -->
+
+    <video autoplay muted loop class="backgroundColor" id="crazyBack">
+      <source src="./public/fondo.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- charging -->
+    <div class="charging">
+      <div class="row">
+        <div class="col-12">
+          <div class="Container">
+            <div class="cargando">
+              <div class="loaderr">
+                <div class="load-inner load-one"></div>
+                <div class="load-inner load-two"></div>
+                <div class="load-inner load-three"></div>
+                <span class="textCharge">Loading...</span>
+              </div>
+
+              <span class="loader apsm"></span>
+
+              <div class="logo">
+                <figure class="ChargingFigure">
+                  <img src="./public/Imgs/Artybylogo.svg" alt="Logo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container-fluid p-0" id="container">
+      <div class="Hi"><img src="./public/Imgs/Artybylogo.svg" alt="" /></div>
+      <!-- navbar -->
+      <div class="row justify-content-center p-0" id="navbar">
+        <div class="col-3">
+          <figure class="navLogo">
+            <img
+              src="./public/Imgs/ArtybylogoName.svg"
+              width="115"
+              height="115"
+              alt="artyby logo" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="container borde">
+        <h1 class="form-title title">Información del proyecto | Brief</h1>
+
+        <form id="unifiedForm">
+          <!-- 1. Información Básica del Cliente -->
+          <section class="form-section services serviceDark">
+            <h2 class="form-section-title subtitle">
+              1. Información Básica del Cliente
+            </h2>
+            <div class="form-group">
+              <label for="fullName">Nombre Completo *</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                class="form-control"
+                required
+                placeholder="Nombre: Ej; Rodlfo Tejada" />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electrónico *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+                placeholder="Gmail: Ej; Rodlf@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Número de Teléfono</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                placeholder="Telefono: Ej; +1 555 555 5555" />
+            </div>
+            <div class="form-group">
+              <label for="companyName">Nombre de la Empresa/Marca</label>
+              <input
+                type="text"
+                id="companyName"
+                name="companyName"
+                class="form-control"
+                placeholder="Nombre de la Empresa o Negocio" />
+            </div>
+            <div class="form-group">
+              <label for="currentWebsite">Sitio Web Actual (si aplica)</label>
+              <input
+                type="url"
+                id="currentWebsite"
+                name="currentWebsite"
+                class="form-control" />
+            </div>
+          </section>
+
+          <!-- 2. Descripción del Proyecto -->
+          <section class="form-section services serviceDark">
+            <h2 class="form-section-title subtitle">
+              2. Descripción del Proyecto
+            </h2>
+            <div class="form-group">
+              <label>¿Qué tipo de proyecto necesitas? *</label>
+              <div class="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="projectType"
+                    value="new-website"
+                    required />
+                  Diseño y desarrollo de un nuevo sitio web
+                </label>
+
+                <label>
+                  <input type="radio" name="projectType" value="redesign" />
+                  Rediseño de un sitio web existente
+                </label>
+
+                <label>
+                  <input type="radio" name="projectType" value="branding" />
+                  Creación de marca
+                </label>
+                <label
+                  ><input type="radio" name="projectType" value="other" />
+                  Otro</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="projectDescription"
+                >Describe brevemente tu proyecto y tus objetivos principales
+                *</label
+              >
+              <textarea
+                id="projectDescription"
+                name="projectDescription"
+                class="form-control"
+                rows="4"
+                required
+                placeholder="Quiero un sitio web O Logotipo emocionante que les brinde informacion a mis clientes acerca de lo que hago y como lo hago..."></textarea>
+            </div>
+          </section>
+
+          <!-- 3. Detalles del Sitio Web -->
+          <section class="form-section services serviceDark">
+            <h2 class="form-section-title subtitle">
+              3. Detalles del Sitio Web
+            </h2>
+            <div class="form-group">
+              <label for="pageCount"
+                >¿Cuántas secciones/páginas tendrá tu sitio web? *</label
+              >
+              <input
+                type="text"
+                id="pageCount"
+                name="pageCount"
+                class="form-control"
+                placeholder="Ej.: Inicio (5), Servicios (3), Contacto (1), Blog (2)"
+                required />
+            </div>
+            <div class="form-group">
+              <label>¿Tienes contenido preparado? *</label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="contentPrepared"
+                    value="fully-prepared"
+                    required />
+                  Sí, tengo todo el contenido listo</label
+                >
+                <label
+                  ><input type="radio" name="contentPrepared" value="partial" />
+                  Tengo contenido parcial</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contentPrepared"
+                    value="no-content" />
+                  No tengo contenido, necesito ayuda</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="specificFunctionalities"
+                >Funcionalidades específicas requeridas</label
+              >
+              <textarea
+                id="specificFunctionalities"
+                name="specificFunctionalities"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: formulario de contacto, tienda en línea, etc."></textarea>
+            </div>
+          </section>
+
+          <!-- 4. Creación de Marca -->
+          <section class="form-section services serviceDark">
+            <h2 class="form-section-title subtitle">4. Creación de Marca</h2>
+            <div class="form-group">
+              <label for="brandMission"
+                >¿Cuál es la misión y visión de tu marca?
+              </label>
+              <textarea
+                id="brandMission"
+                name="brandMission"
+                class="form-control"
+                rows="4"
+                placeholder="Cual es la vision con la que quieres crear esta marca ?"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="targetAudience"
+                >Describe detalladamente a tu público objetivo
+              </label>
+              <textarea
+                id="targetAudience"
+                name="targetAudience"
+                class="form-control"
+                rows="4"
+                placeholder="A que tipo de personas quieres llegar con esto?"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brandLogoIdeas"
+                >¿Tienes ideas específicas para el logotipo o elementos de la
+                marca?</label
+              >
+              <textarea
+                id="brandLogoIdeas"
+                name="brandLogoIdeas"
+                class="form-control"
+                rows="3"
+                placeholder="Tienes algun dibujo u logo en el que quiera que me guie?"></textarea>
+            </div>
+          </section>
+
+          <!-- 5. Información Adicional -->
+          <section class="form-section services serviceDark">
+            <h2 class="form-section-title subtitle">
+              5. Información Adicional
+            </h2>
+            <div class="form-group">
+              <label for="colorPalette"
+                >¿Tienes una paleta de colores preferida?</label
+              >
+              <input
+                type="text"
+                id="colorPalette"
+                name="colorPalette"
+                class="form-control"
+                placeholder="Ej.: Azul (#1e40af), Blanco (#ffffff), Negro (#000000)" />
+            </div>
+            <div class="form-group">
+              <label for="budget">Presupuesto aproximado *</label>
+              <input
+                type="number"
+                id="budget"
+                name="budget"
+                class="form-control"
+                placeholder="Ej.: 500, 1000, etc."
+                required />
+            </div>
+            <div class="form-group">
+              <label for="projectTimeline"
+                >¿Tienes un tiempo definido para esperar el proyecto? *</label
+              >
+              <input
+                type="text"
+                id="projectTimeline"
+                name="projectTimeline"
+                class="form-control"
+                placeholder="Ej.: 2 semanas, 1 mes"
+                required />
+            </div>
+            <div class="form-group">
+              <label>¿Cómo prefieres proceder con el pago? *</label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="paymentTerms"
+                    value="upfront"
+                    required />
+                  Pago completo al inicio</label
+                >
+                <label
+                  ><input type="radio" name="paymentTerms" value="milestones" />
+                  Por plazos, según avance del proyecto</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="paymentTerms"
+                    value="split-50-50" />
+                  Dos partes: 50% al inicio y 50% al final</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="paymentMethod"
+                >¿Qué medio prefieres para realizar el pago?</label
+              >
+              <select
+                id="paymentMethod"
+                name="paymentMethod"
+                class="form-control">
+                <option value="bank-transfer">Transferencia Bancaria</option>
+                <option value="paypal">PayPal</option>
+                <option value="credit-card">Tarjeta de Crédito/Débito</option>
+                <option value="cash">Efectivo</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+          </section>
+
+          <button type="submit" class="submit-btn navbutton">
+            Enviar Formulario
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!-- javascript -->
+    <script type="module" src="./public/Js/links.js"></script>
+    <script src="./public/Js/bootstrap.bundle.min.js"></script>
+
+    <script src="./server.js"></script>
+    <script src="./public/Js/index.js"></script>
+  </body>
+</html>

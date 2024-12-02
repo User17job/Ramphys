@@ -1,0 +1,61 @@
+:root {
+  --ms-primary-bg: #ffffff;
+  --ms-primary-text: #020617;
+  --ms-switch-bg: #f3f4f6;
+  transition: all 0.5s ease;
+}
+
+.mode-switcher-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mode-switcher-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: var(--ms-switch-bg);
+  color: var(--ms-primary-text);
+}
+
+.mode-switcher-btn:hover {
+  transform: scale(1.1);
+}
+
+.mode-switcher-btn.ms-active {
+  background: var(--ms-primary-text);
+  color: var(--ms-primary-bg);
+}
+
+.darx.ms-active {
+  background: linear-gradient(to right, #0369a1, #020617);
+  color: var(--ms-primary-bg);
+}
+.lighx.ms-active {
+  background: linear-gradient(to right, #f9fafb, #020617);
+  color: var(--ms-primary-bg);
+}
+.craxy.ms-active {
+  background: linear-gradient(to right, #ea580c, #020617);
+  color: var(--ms-primary-bg);
+}
+.mode-switcher-icon {
+  width: 20px;
+  height: 20px;
+}

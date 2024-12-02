@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard de Solicitudes de Proyecto</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s, color 0.3s;
+        line-height: 1.6;
+      }
+
+      body.light-theme {
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      body.dark-theme {
+        background-color: #1a1a1a;
+        color: #f4f4f4;
+      }
+
+      .dashboard {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .theme-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .project-card {
+        border: 1px solid #ccc;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-detail {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .project-detail strong {
+        width: 200px;
+        display: inline-block;
+      }
+
+      .dark-theme .project-card {
+        background-color: #2c2c2c;
+        border-color: #444;
+      }
+    </style>
+  </head>
+  <body class="light-theme">
+    <div id="app"></div>
+
+    <script>
+      const projectRequests = [
+        {
+          fullName: "Ramphys Tirana Brito ",
+          email: "user17job@gmail.com",
+          phone: "+1 829 523 7077",
+          companyName: "user17job",
+          currentWebsite: "",
+          projectType: "new-website",
+          projectDescription: "quierso un sito web ",
+          pageCount: "blog, servicios, about, home",
+          contentPrepared: "fully-prepared",
+          specificFunctionalities: "hula \n",
+          brandMission: "biensopn",
+          targetAudience: "1234567890-",
+          brandLogoIdeas: "000101",
+          colorPalette: "#color #color #color #colorn azullll ",
+          budget: "5555",
+          projectTimeline: "1mes",
+          paymentTerms: "split-50-50",
+          paymentMethod: "credit-card",
+        },
+      ];
+
+      const USER_CREDENTIALS = {
+        username: "Ramphys",
+        password: "Holamundo&09872?",
+      };
+
+      class Dashboard {
+        constructor() {
+          this.app = document.getElementById("app");
+          this.isAuthenticated = false;
+          this.theme = "light";
+          this.initApp();
+        }
+
+        initApp() {
+          this.renderLogin();
+          this.setupThemeToggle();
+        }
+
+        setupThemeToggle() {
+          const themeToggle = document.createElement("div");
+          themeToggle.className = "theme-toggle";
+          themeToggle.textContent = "🌓 Cambiar Tema";
+          themeToggle.onclick = () => this.toggleTheme();
+          this.app.appendChild(themeToggle);
+        }
+
+        toggleTheme() {
+          this.theme = this.theme === "light" ? "dark" : "light";
+          document.body.className = `${this.theme}-theme`;
+        }
+
+        renderLogin() {
+          this.app.innerHTML = `
+                    <div class="login-container">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" id="username" placeholder="Usuario">
+                        <input type="password" id="password" placeholder="Contraseña">
+                        <button onclick="dashboard.login()">Entrar</button>
+                    </div>
+                `;
+        }
+
+        login() {
+          const usernameInput = document.getElementById("username");
+          const passwordInput = document.getElementById("password");
+
+          if (
+            usernameInput.value === USER_CREDENTIALS.username &&
+            passwordInput.value === USER_CREDENTIALS.password
+          ) {
+            this.isAuthenticated = true;
+            this.renderDashboard();
+          } else {
+            alert("Credenciales incorrectas");
+          }
+        }
+
+        renderDashboard() {
+          this.app.innerHTML = `
+                    <div class="dashboard">
+                        <h1>Detalles de Solicitud de Proyecto</h1>
+                        ${this.renderProjectDetails()}
+                        <button onclick="dashboard.logout()">Cerrar Sesión</button>
+                    </div>
+                `;
+        }
+
+        renderProjectDetails() {
+          return projectRequests
+            .map(
+              (project) => `
+                    <div class="project-card">
+                        <div class="project-detail">
+                            <strong>Nombre Completo:</strong> ${
+                              project.fullName
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Correo Electrónico:</strong> ${
+                              project.email
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Teléfono:</strong> ${project.phone}
+                        </div>
+                        <div class="project-detail">
+                            <strong>Nombre de Empresa:</strong> ${
+                              project.companyName
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Sitio Web Actual:</strong> ${
+                              project.currentWebsite || "No tiene"
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Tipo de Proyecto:</strong> ${
+                              project.projectType
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Descripción del Proyecto:</strong> ${
+                              project.projectDescription
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Páginas:</strong> ${project.pageCount}
+                        </div>
+                        <div class="project-detail">
+                            <strong>Contenido Preparado:</strong> ${
+                              project.contentPrepared
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Funcionalidades Específicas:</strong> ${
+                              project.specificFunctionalities
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Misión de Marca:</strong> ${
+                              project.brandMission
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Audiencia Objetivo:</strong> ${
+                              project.targetAudience
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Ideas de Logo:</strong> ${
+                              project.brandLogoIdeas
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Paleta de Colores:</strong> ${
+                              project.colorPalette
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Presupuesto:</strong> $${project.budget}
+                        </div>
+                        <div class="project-detail">
+                            <strong>Cronograma del Proyecto:</strong> ${
+                              project.projectTimeline
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Términos de Pago:</strong> ${
+                              project.paymentTerms
+                            }
+                        </div>
+                        <div class="project-detail">
+                            <strong>Método de Pago:</strong> ${
+                              project.paymentMethod
+                            }
+                        </div>
+                    </div>
+                `
+            )
+            .join("");
+        }
+
+        logout() {
+          this.isAuthenticated = false;
+          this.renderLogin();
+        }
+      }
+
+      // Inicializar dashboard
+      const dashboard = new Dashboard();
+    </script>
+  </body>
+</html>

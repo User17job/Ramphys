@@ -1,0 +1,206 @@
+/* Service styles */
+@import url(./Service.css);
+
+/* Animations */
+@import url(./Animations.css);
+
+* {
+  transition: all 0.5s ease-out;
+}
+
+/* Backgrounds */
+@import url(./Backgrounds.css);
+body {
+  scroll-behavior: smooth;
+
+  background-color: #020617;
+  color: #f9fafb;
+  overflow-x: hidden;
+  transition: 0.6s;
+  font-family: fredoka;
+  font-weight: 650;
+  padding: 0px;
+}
+body::-webkit-scrollbar {
+  background-color: #02061700;
+  background-image: linear-gradient(to top, #0081c727 30%, #02061776 100%);
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #0369a1 30%, #020617 100%);
+  border-radius: 6px;
+}
+.backgroundColor {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -5555;
+  transition: ease-in 1.5s;
+  display: none;
+}
+
+/* seguir el mouse */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(55deg, #0369a1 30%, #020617 100%);
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, background-color 0.2s ease;
+  z-index: 1000;
+  animation: rotate 5s linear infinite;
+}
+
+/*  */
+.container-fluid {
+  max-width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 5;
+}
+.charge {
+  opacity: 100%;
+}
+
+.Hi {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -555;
+  animation: latir 8.5s Linear infinite;
+  opacity: 25%;
+
+  img {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* navbar styles */
+/* menu button */
+.toggle,
+#checkbox {
+  display: none;
+}
+
+/* menu button */
+#navbar {
+  font-family: fredoka;
+  font-weight: 700;
+  height: 90px;
+  width: 100%;
+  left: 1%;
+  z-index: 555;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.navLogo {
+  height: 100%;
+  margin: 0% 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.navLogo > figcaption {
+  position: relative;
+  top: 0%;
+}
+
+.navLInks {
+  position: relative;
+  display: flex;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 6px;
+  transition: 0.6s;
+}
+.navbutton {
+  font-weight: 500;
+  padding: 5px 26px;
+
+  background-image: linear-gradient(55deg, rgb(3, 105, 161) 10%, #020617 100%);
+  border: solid #94a3b88e;
+  color: #f9fafb;
+}
+.navbutton:hover {
+  transform: scale(1.01);
+  transition: 0.1s;
+}
+.navbutton:active {
+  transform: scale(1);
+  background-image: linear-gradient(-55deg, rgb(3, 105, 161) 10%, #020617 100%);
+}
+
+a {
+  color: #ffffff00;
+  text-decoration: none;
+}
+a:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+.borde {
+  border: 1px solid #94a3b8;
+  border-radius: 15px;
+}
+.title {
+  font-family: fredoka;
+  font-weight: 600;
+}
+.subtitle {
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.text {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #f9fafb;
+}
+
+.showA {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.showA.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Transición suave de opacidad en el body */
+#overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: black;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+#overlay.active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.homeL {
+  text-decoration: underline;
+}
+
+.invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6; /* Color de fondo suave para mayor contraste */
+}
