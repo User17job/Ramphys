@@ -9,7 +9,10 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname))); // Sirve archivos estáticos como index.html
 
-const filePath = path.join(__dirname, "formdb.json");
+const filePath = path.join(
+  __dirname,
+  "https://user17job-brief.netlify.app/formdb.json"
+);
 
 // Ruta para guardar datos
 app.post("/save-data", (req, res) => {
