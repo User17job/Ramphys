@@ -85,13 +85,16 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
 
   // Enviar los datos a Google Sheets usando fetch
 
-  fetch("https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
+  fetch(
+    "https://script.google.com/macros/s/AKfycbyBuiPjF_TpvPiL_SdeVTC_2VW11_Vkc4ojH3R1XHKfee-5JnQdconYnzm1LqtXU9Hx/exec",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
+  )
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
