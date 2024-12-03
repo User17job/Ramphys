@@ -84,7 +84,6 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
   const data = Object.fromEntries(formData.entries()); // Convierte FormData en un objeto JSON
 
   // Enviar los datos a Google Sheets usando fetch
-
   fetch(
     "https://script.google.com/macros/s/AKfycbyND2qTI0al_B9nOoTyE3qlXsu7AI3XI8Sgb4YN3KcUy_mIjO2lTAzJz5vwDUzTKYmw/exec",
     {
@@ -99,16 +98,23 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json(); // Verifica que la respuesta sea JSON
+      return response.json(); // Verifica que la respuesta sea JSON válida
     })
     .then((result) => {
       if (result.status === "success") {
+        // Mostrar un mensaje de éxito
         alert("Formulario enviado exitosamente.");
+        console.log("Respuesta del servidor:", result);
+        // Opcional: Limpiar el formulario después del envío exitoso
+        e.target.reset();
       } else {
+        // Manejar el mensaje de error específico
         alert("Hubo un problema al enviar el formulario: " + result.message);
+        console.error("Error del servidor:", result);
       }
     })
     .catch((error) => {
+      // Mostrar errores de red o de fetch
       console.error("Error al enviar los datos:", error);
       alert(`Error: ${error.message}`);
     });
