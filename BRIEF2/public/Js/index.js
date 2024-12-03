@@ -96,9 +96,11 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
   )
     .then((response) => {
       if (!response.ok) {
+        // Manejar errores HTTP
+        console.error(`HTTP error! status: ${response.status}`);
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json(); // Asegúrate de que el servidor devuelve JSON válido
+      return response.json(); // Verificar que la respuesta sea JSON válida
     })
     .then((result) => {
       if (result.status === "success") {
@@ -108,7 +110,8 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
       }
     })
     .catch((error) => {
-      console.error("Error:", error);
-      alert("Error al enviar los datos.");
+      // Mostrar errores más específicos
+      console.error("Error al enviar los datos:", error);
+      alert(`Error: ${error.message}`);
     });
 });
