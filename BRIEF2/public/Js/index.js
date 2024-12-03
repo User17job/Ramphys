@@ -76,48 +76,39 @@ function isElementInViewport(el) {
   );
 }
 
-document
-  .getElementById("unifiedForm")
-  .addEventListener("submit", function (event) {
-    if (!this.checkValidity()) {
-      event.preventDefault(); // Evita el envío si la validación falla
-      this.reportValidity(); // Muestra los cuadros de diálogo nativos
-      return; // Detiene la ejecución
-    }
+document.getElementById("unifiedForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
 
-    event.preventDefault(); // Evita el envío tradicional del formulario
+  // Capturar los datos del formulario
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries()); // Convierte FormData en un objeto JSON
 
-    const formData = new FormData(this); // Obtiene los datos del formulario
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
-
-    // Realiza la solicitud POST al servidor
-    fetch("/save-data", {
+  // Enviar los datos a Google Sheets usando fetch
+  fetch(
+    "https://script.google.com/macros/s/AKfycbz_sjKqClPDSxBdMtxAiiiPmZmBjrPSpFva_HV_Tg67G4PaVZMRqiskC_7qy6UxBMSU/exec",
+    {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data), // Convierte los datos a formato JSON
+      body: JSON.stringify(data),
+    }
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json(); // Asegúrate de que el servidor devuelve JSON válido
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al guardar los datos.");
-        }
-        return response.text();
-      })
-      .then((message) => {
-        console.log(message); // Muestra el mensaje de éxito
-
-        // Resetea el formulario
-        document.getElementById("unifiedForm").reset();
-
-        // Redirige a otra página
-        window.location.href = "/gracias.html"; // Cambia a la página que desees
-      })
-      .catch((error) => {
-        console.error(error);
-        alert("Hubo un error al guardar los datos. Intenta nuevamente.");
-      });
-  });
+    .then((result) => {
+      if (result.status === "success") {
+        alert("Formulario enviado exitosamente.");
+      } else {
+        alert("Hubo un problema al enviar el formulario: " + result.message);
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Error al enviar los datos.");
+    });
+});
