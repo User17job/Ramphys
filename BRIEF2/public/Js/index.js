@@ -84,23 +84,19 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
   const data = Object.fromEntries(formData.entries()); // Convierte FormData en un objeto JSON
 
   // Enviar los datos a Google Sheets usando fetch
-  fetch(
-    "https://script.google.com/macros/s/AKfycbz_sjKqClPDSxBdMtxAiiiPmZmBjrPSpFva_HV_Tg67G4PaVZMRqiskC_7qy6UxBMSU/exec",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }
-  )
+
+  fetch("https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
     .then((response) => {
       if (!response.ok) {
-        // Manejar errores HTTP
-        console.error(`HTTP error! status: ${response.status}`);
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json(); // Verificar que la respuesta sea JSON válida
+      return response.json(); // Verifica que la respuesta sea JSON
     })
     .then((result) => {
       if (result.status === "success") {
@@ -110,7 +106,6 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
       }
     })
     .catch((error) => {
-      // Mostrar errores más específicos
       console.error("Error al enviar los datos:", error);
       alert(`Error: ${error.message}`);
     });
