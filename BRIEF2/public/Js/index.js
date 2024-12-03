@@ -144,7 +144,7 @@ document.getElementById("unifiedForm").addEventListener("submit", function (e) {
 
   // Enviar los datos a Google Sheets usando fetch
   fetch(
-    "https://script.google.com/macros/s/AKfycbylIE0sJ0TJkgp-xxnnzOjm7tL7nswL5Y5qd4yPg91ha2loSuAEw5NwaYs-gPCk61aF/exec",
+    "https://script.google.com/macros/s/AKfycbxE1hJHzfas1VNpLly7hWb72pTqRneEiio-YMf7uWXdmlO5jcnCTxNr6BlTsyrGHtlK/exec",
     {
       method: "POST",
       headers: {
