@@ -76,106 +76,35 @@ function isElementInViewport(el) {
   );
 }
 
-document.getElementById("unifiedForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Evita el envío predeterminado del formulario
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyHXkmNGDqz2B9ww67lBsnj0gItJbBf53ELYlz3Yb9OcRG4C4kMbanqfh-bI6dtBEQ/exec";
 
-  // Capturar los datos del formulario
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries()); // Convertir FormData en un objeto JSON
+const form = document.getElementById("unifiedForm");
+const submitButton = document.getElementById("submitButton");
 
-  // Validar que los campos obligatorios estén completos
-  const requiredFields = ["fullName", "email", "phone", "companyName"];
-  for (const field of requiredFields) {
-    if (!data[field] || data[field].trim() === "") {
-      alert(`El campo ${field} es obligatorio.`);
-      return;
-    }
-  }
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  // Validar el formato del correo electrónico
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(data.email)) {
-    alert("Por favor, introduce un correo válido.");
-    return;
-  }
-
-  // Validar el formato del teléfono (opcional, puedes personalizar el patrón)
-  const phonePattern = /^\+?[0-9\s-]{7,15}$/;
-  if (!phonePattern.test(data.phone)) {
-    alert("Por favor, introduce un número de teléfono válido.");
-    return;
-  }
-
-  // Asignar valores predeterminados a los campos opcionales
-  const optionalFieldsDefaults = {
-    currentWebsite: "No especificado",
-    projectType: "General",
-    projectDescription: "No se proporcionó una descripción.",
-    pageCount: "Sin definir",
-    contentPrepared: "No especificado",
-    specificFunctionalities: "No especificado",
-    brandMission: "No especificado",
-    targetAudience: "No especificado",
-    brandLogoIdeas: "No especificado",
-    colorPalette: "No especificado",
-    budget: "Por definir",
-    projectTimeline: "Por definir",
-    paymentTerms: "No especificado",
-    paymentMethod: "No especificado",
-  };
-
-  // Completar los datos opcionales con valores predeterminados si están vacíos
-  Object.keys(optionalFieldsDefaults).forEach((field) => {
-    if (!data[field] || data[field].trim() === "") {
-      data[field] = optionalFieldsDefaults[field];
-    }
-  });
-
-  // Mostrar los datos en la consola para depuración
-  console.log("Datos enviados:", data);
-
-  // Indicador visual en el botón de envío
-  const submitButton = document.querySelector("#submitButton");
-
-  if (submitButton) {
-    submitButton.disabled = true; // Desactiva el botón mientras se envía
+  if (submitButton.textContent === "Enviando...") {
+    submitButton.disabled = true; // Desactiva el botón
     submitButton.textContent = "Enviando..."; // Cambia el texto del botón
+    return; // Evita procesar si ya está enviando
   }
 
-  // Enviar los datos a Google Sheets usando fetch
-  fetch(
-    "https://script.google.com/macros/s/AKfycbzNCJHIunVwL8kkMEYgqFS1qorFLMfsgw8vYvE7bR7O0-V1G0eVebcHnkTjXx99Ho4/exec",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json(); // Verifica que la respuesta sea JSON
-    })
-    .then((result) => {
-      if (result.status === "success") {
-        alert("Formulario enviado exitosamente.");
-        e.target.reset(); // Limpiar el formulario después del envío
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.result === "success") {
+        alert("Formulario enviado con éxito. Gracias.");
+        form.reset(); // Limpia el formulario después de enviar
       } else {
-        const errorMessage = result.message || "Hubo un error inesperado.";
-        alert(`Hubo un problema al enviar el formulario: ${errorMessage}`);
+        alert(`Error al enviar el formulario: ${data.error}`);
       }
     })
     .catch((error) => {
-      console.error("Error al enviar los datos:", error);
-      alert(`Error: ${error.message}`);
+      alert(`Hubo un error al enviar el formulario: ${error.message}`);
     })
     .finally(() => {
-      if (submitButton) {
-        submitButton.disabled = false; // Habilita el botón nuevamente
-        submitButton.textContent = "Enviar"; // Restaura el texto del botón
-      }
+      submitButton.disabled = false;
     });
 });
