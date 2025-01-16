@@ -20,8 +20,6 @@ const ContactText = document.querySelectorAll(".text-b");
 // const rotateDiv = document.querySelector(".rotateDiv");
 
 const services = document.querySelector(".services");
-const serviceName = document.querySelectorAll(".serviceName");
-const serviceDesc = document.querySelector(".serviceDescription");
 
 const aboutDiv = document.querySelector(".aboutUno");
 
@@ -68,10 +66,7 @@ function toDark() {
   // Actualizar clases
   updateClasses(titles, "textBackDark", ["textBackLight", "textBackCrazy"]);
   updateClasses(Back, "BakiDark", ["BakiLight", "BakiCrazy"]);
-  updateClasses(serviceName, "serviceNameDark", [
-    "serviceNameCrazy",
-    "serviceNameLight",
-  ]);
+
   updateClasses(Links, "linksDark", ["linksLight", "linksCrazy"]);
 
   subt.style.fontFamily = "Fredoka";
@@ -90,8 +85,6 @@ function toDark() {
   // Actualizar clases de servicios
   services.classList.remove("serviceLight", "serviceCrazy");
   services.classList.add("serviceDark");
-  serviceDesc.classList.add("DarcK");
-  serviceDesc.style.color = "#f9fafb";
 
   aboutDiv.style.backgroundColor = "#f4f6ff";
   aboutDiv.style.color = "#000000";
@@ -130,10 +123,7 @@ function toLight() {
   // Actualizar clases
   updateClasses(titles, "textBackLight", ["textBackDark", "textBackCrazy"]);
   updateClasses(Back, "BakiLight", ["BakiDark", "BakiCrazy"]);
-  updateClasses(serviceName, "serviceNameLight", [
-    "serviceNameDark",
-    "serviceNameCrazy",
-  ]);
+
   updateClasses(Links, "linksLight", ["linksDark", "linksCrazy"]);
   subt.style.fontFamily = "Graduate";
   subt.style.color = "#020617";
@@ -156,7 +146,6 @@ function toLight() {
   // Actualizar clases de servicios
   services.classList.remove("serviceDark", "serviceCrazy");
   services.classList.add("serviceLight");
-  serviceDesc.style.color = "#020617";
 
   aboutDiv.style.backgroundColor = "#036aa1";
   aboutDiv.style.color = "#fff";
@@ -200,10 +189,7 @@ function toCrazy() {
   updateClasses(titles, "textBackCrazy", ["textBackDark", "textBackLight"]);
 
   updateClasses(Back, "BakiCrazy", ["BakiDark", "BakiLight"]);
-  updateClasses(serviceName, "serviceNameCrazy", [
-    "serviceNameDark",
-    "serviceNameLight",
-  ]);
+
   updateClasses(Links, "linksCrazy", ["linksDark", "linksLight"]);
 
   subt.style.fontFamily = "'Bangers', system-ui";
@@ -222,7 +208,6 @@ function toCrazy() {
   // Actualizar clases de servicios
   services.classList.remove("serviceDark", "serviceLight");
   services.classList.add("serviceDark", "serviceCrazy");
-  serviceDesc.style.color = "#f9fafb";
 
   aboutDiv.style.backgroundColor = "#ea580c";
   aboutDiv.style.color = "#fff";

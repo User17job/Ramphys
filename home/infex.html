@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee+Outline&family=Fredoka:wght@300..700&family=Moirai+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        place-content: center;
+        height: 100%;
+      }
+      .card {
+        width: 250px;
+        height: 95px;
+        background: #020617;
+        position: relative;
+        display: grid;
+        place-content: center;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        margin: 55px;
+      }
+
+      #logo-main,
+      #logo-second {
+        height: 100%;
+      }
+
+      #logo-main {
+        fill: #bd9f67;
+        width: 95%;
+        max-width: 100%;
+        margin: -3%;
+        aspect-ratio: 1;
+        position: relative;
+      }
+
+      #logo-second {
+        padding-bottom: 10px;
+        fill: none;
+        stroke: #0369a1;
+        stroke-width: 1px;
+      }
+
+      .border {
+        position: absolute;
+        inset: 0px;
+        border: 2px solid #ffffff;
+        opacity: 0;
+        transform: rotate(10deg);
+        transition: all 0.5s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .bottom-text {
+        position: absolute;
+        left: 50%;
+        bottom: 13px;
+        transform: translateX(-50%);
+        font-size: 6px;
+        text-transform: uppercase;
+        padding: 0px 5px 0px 8px;
+        color: #020617;
+        background: #020617;
+        opacity: 0;
+        letter-spacing: 7px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .content {
+        transition: all 0.5s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .content .logo {
+        height: 35px;
+        position: relative;
+        width: 33px;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+      }
+
+      .content .logo .logo1 {
+        height: 36.6px;
+        aspect-ratio: 1;
+        position: absolute;
+        left: 0;
+      }
+
+      .content .logo .logo2 {
+        height: 33px;
+        position: absolute;
+        left: 33px;
+      }
+      .content .logo .logo2 h1 {
+        color: aliceblue;
+        position: absolute;
+        top: -0.9em;
+        margin-left: 5px;
+        font-size: 45px;
+        font-family: "Fredoka", serif;
+        font-weight: 600;
+      }
+
+      .content .logo .trail {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+      }
+
+      .content .logo-bottom-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 30px;
+        color: aliceblue;
+        padding-left: 8px;
+        font-size: 11px;
+        opacity: 0;
+        letter-spacing: none;
+        text-wrap: nowrap;
+        transition: all 0.5s ease-in-out 0.5s;
+      }
+
+      .card:hover {
+        /* border-radius: 0; */
+        transform: scale(1.1);
+      }
+
+      .card:hover .logo {
+        width: 195px;
+        animation: opacity 1s ease-in-out;
+      }
+
+      .card:hover .border {
+        inset: 15px;
+        opacity: 1;
+        transform: rotate(0);
+      }
+
+      .card:hover .bottom-text {
+        letter-spacing: 5px;
+        text-wrap: nowrap;
+        opacity: 1;
+        transform: translateX(-50%);
+        color: #020617;
+        background: #020617;
+      }
+
+      .card:hover .content .logo-bottom-text {
+        opacity: 1;
+        letter-spacing: 9.5px;
+        z-index: 5;
+      }
+
+      .card:hover .trail {
+        animation: trail 1s ease-in-out;
+      }
+
+      @keyframes opacity {
+        0% {
+          border-right: 1px solid transparent;
+        }
+
+        10% {
+          border-right: 1px solid #bd9f67;
+        }
+
+        80% {
+          border-right: 1px solid #bd9f67;
+        }
+
+        100% {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      @keyframes trail {
+        0% {
+          background: linear-gradient(
+            90deg,
+            rgba(189, 159, 103, 0) 90%,
+            rgb(73, 65, 197) 100%
+          );
+          opacity: 0;
+        }
+
+        30% {
+          background: linear-gradient(
+            90deg,
+            rgba(189, 159, 103, 0) 70%,
+            rgb(76, 64, 182) 100%
+          );
+          opacity: 1;
+        }
+
+        70% {
+          background: linear-gradient(
+            90deg,
+            rgba(189, 159, 103, 0) 70%,
+            rgb(58, 46, 224) 100%
+          );
+          opacity: 1;
+        }
+
+        95% {
+          background: linear-gradient(
+            90deg,
+            rgba(189, 159, 103, 0) 90%,
+            rgb(21, 10, 121) 100%
+          );
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="border"></div>
+      <div class="content">
+        <div class="logo">
+          <div class="logo1">
+            <img
+              src="./public/Imgs/branding.svg"
+              alt="branding"
+              id="logo-main"
+            />
+          </div>
+          <div class="logo2">
+            <h1>BRAND</h1>
+          </div>
+          <span class="trail"></span>
+        </div>
+        <span class="logo-bottom-text">Branding</span>
+      </div>
+      <span class="bottom-text">Branding serv</span>
+    </div>
+    <div class="card">
+      <div class="border"></div>
+      <div class="content">
+        <div class="logo">
+          <div class="logo1">
+            <img
+              src="./public/Imgs/WebDesign.svg"
+              alt="WebDesign"
+              id="logo-main"
+            />
+          </div>
+          <div class="logo2">
+            <h1>WebDs</h1>
+          </div>
+          <span class="trail"></span>
+        </div>
+        <span class="logo-bottom-text">Web Design</span>
+      </div>
+      <span class="bottom-text">Branding services</span>
+    </div>
+
+    <div class="card">
+      <div class="border"></div>
+      <div class="content">
+        <div class="logo">
+          <div class="logo1">
+            <img
+              src="./public/Imgs/webDeveloping.svg"
+              alt="webDeveloping"
+              id="logo-main"
+            />
+          </div>
+          <div class="logo2">
+            <h1>WebDv</h1>
+          </div>
+          <span class="trail"></span>
+        </div>
+        <span class="logo-bottom-text">Web Developing</span>
+      </div>
+      <span class="bottom-text">Branding services hdbjk</span>
+    </div>
+
+    <div class="card">
+      <div class="border"></div>
+      <div class="content">
+        <div class="logo">
+          <div class="logo1">
+            <img
+              src="./public/Imgs/webStyling.svg"
+              alt="webStyling"
+              id="logo-main"
+            />
+          </div>
+          <div class="logo2">
+            <h1>WebSt</h1>
+          </div>
+          <span class="trail"></span>
+        </div>
+        <span class="logo-bottom-text">Web Styling</span>
+      </div>
+      <span class="bottom-text">Branding servicesv</span>
+    </div>
+  </body>
+</html>

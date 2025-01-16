@@ -1,10 +1,11 @@
 /* service section */
 .services {
   margin-top: 155px;
+  margin-bottom: 9rem;
 }
 
 .serviceDark {
-  background-image: linear-gradient(65deg, #020617 35%, #036aa136 100%);
+  background-image: linear-gradient(65deg, #020617 35%, #094cdb36 100%);
   color: #f9fafb;
 }
 .serviceLight {
@@ -18,15 +19,8 @@
 .serviceTitle {
   font-size: 60px;
 }
-.more {
-  /* color: #0369a1; */
-  font-family: graduate;
-}
-.serviceList {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
+
+/*
 .serviceItem {
   margin-bottom: 0px;
   border: solid #0369a1 1px;
@@ -63,27 +57,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-.accordion-item {
-  background-color: transparent;
-}
-.accordion-header {
-  background-color: transparent;
-  color: rgb(0, 13, 24);
-}
-.accordion-button {
-  color: rgb(0, 13, 24);
-}
-.accordion-button::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0%;
-  position: absolute;
-  background-color: rgba(4, 201, 255, 0.126);
-  filter: blur(5px);
-}
+} */
 .CraZy {
   opacity: 10%;
 }
@@ -92,4 +66,157 @@
 }
 .accordion-body {
   background-image: linear-gradient(15deg, #020617 35%, #036aa1 100%);
+}
+.servicios {
+  position: relative;
+}
+.Services_Item {
+  position: relative;
+  /* background-color: antiquewhite; */
+}
+.S_I_card {
+  width: 100%;
+  height: 110px;
+  background: #020617;
+  position: relative;
+  z-index: 55;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: 10px auto;
+  box-shadow: -1px -1px 5px #d4e8f5;
+}
+
+#logo-main {
+  height: 100%;
+}
+
+#logo-main {
+  fill: #bd9f67;
+  width: 95%;
+  max-width: 100%;
+  margin: -3%;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.S_I_border {
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #ffffff;
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.S_I_bottom-text {
+  position: absolute;
+  left: 50%;
+  bottom: 13px;
+  transform: translateX(-50%);
+  font-size: 6px;
+  text-transform: uppercase;
+  padding: 0px 5px 0px 8px;
+  color: #020617;
+  background: #020617;
+  opacity: 0;
+  letter-spacing: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.S_I_content {
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.S_I_content .S_I_logo {
+  height: 35px;
+  position: relative;
+  width: 33px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.S_I_content .S_I_logo .S_I_logo1 {
+  height: 36.6px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 0;
+}
+
+.S_I_content .S_I_logo .S_I_logo2 {
+  height: 33px;
+  position: absolute;
+  left: 33px;
+}
+.S_I_content .S_I_logo .S_I_logo2 h1 {
+  color: aliceblue;
+  position: absolute;
+  top: -0.22em;
+  margin-left: 5px;
+  font-size: 45px;
+  font-family: "Fredoka", serif;
+  font-weight: 600;
+}
+
+.S_I_content .S_I_logo .S_I_trail {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.S_I_content .S_I_logo_bottom-text {
+  position: absolute;
+  left: 50%;
+  top: 56.6%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  color: aliceblue;
+  padding-left: 8px;
+  font-size: 11px;
+  opacity: 0;
+  letter-spacing: none;
+  text-wrap: nowrap;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.S_I_card:hover {
+  /* border-radius: 0; */
+  box-shadow: 1px 1px 5px #f9fafb;
+  transform: scale(1.1);
+}
+
+.S_I_card:hover .S_I_logo {
+  width: 195px;
+  animation: opacity 1s ease-in-out;
+}
+
+.S_I_card:hover .S_I_border {
+  inset: 15px;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.S_I_card:hover .S_I_bottom-text {
+  letter-spacing: 5px;
+  text-wrap: nowrap;
+  opacity: 1;
+  transform: translateX(-50%);
+  color: #020617;
+  background: #020617;
+}
+
+.S_I_card:hover .S_I_content .S_I_logo_bottom-text {
+  opacity: 1;
+  letter-spacing: 9.5px;
+  z-index: 5;
+}
+
+.S_I_card:hover .S_I_trail {
+  animation: trail 1s ease-in-out;
 }

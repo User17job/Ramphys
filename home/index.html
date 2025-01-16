@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
     <link rel="stylesheet" href="./public/Css/index.css" />
 
-    <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css" />
+    <!-- <link rel="stylesheet" href="./public/Css/toggleButtonStyles.css" /> -->
     <link rel="stylesheet" href="./public/Css/Backgrounds.css" />
     <link rel="stylesheet" href="./public/Css/charging.css" />
     <link rel="stylesheet" href="./public/Css/indexMode.css" />
@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
   </head>
   <body class="dark">
     <div class="mode-switcher-container">
@@ -32,12 +33,14 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
           </svg>
         </button>
       </a>
@@ -48,12 +51,14 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
           </svg>
         </button>
       </a>
@@ -65,18 +70,20 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+            />
           </svg>
         </button>
       </a>
     </div>
-    <!-- Background crazy -->
 
+    <!-- Background crazy -->
     <video autoplay muted loop class="backgroundColor" id="crazyBack">
       <source src="./public/fondo.mp4" type="video/mp4" />
       Tu navegador no soporta el elemento de video.
@@ -118,7 +125,8 @@
               src="./public/Imgs/Artybylogo.svg"
               width="85"
               height="85"
-              alt="artyby logo" />
+              alt="artyby logo"
+            />
           </figure>
         </div>
 
@@ -134,21 +142,22 @@
           <section class="navLInks">
             <!-- <div class="dropdown"> -->
 
-            <div class="dropdown">
-              <a class="m-0 p-3 span homeL">Home+</a>
-            </div>
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span homeL"
+              onclick="navigateTo('home')"
+              >Home</span
+            >
 
             <!-- </div> -->
             <span
               href="javascript:void(0);"
-              class="m-0 p-3 span aboutL"
-              onclick="navigateTo('about')"
-              >About</span
+              class="m-0 p-3 span serviceL"
+              onclick="navigateTo('services')"
+              >Servicios</span
             >
-            <span
-              href="javascript:void(0);"
-              class="m-0 p-3 span portfolioL"
-              onclick="navigateTo('portfolio')"
+
+            <span href="javascript:void(0);" class="m-0 p-3 span portfolioL"
               >Portfolio</span
             >
             <span
@@ -159,38 +168,50 @@
             >
             <span
               href="javascript:void(0);"
-              class="m-0 p-3 span contactL"
-              onclick="navigateTo('contact')"
-              >Contact</span
+              class="m-0 p-3 span aboutL"
+              onclick="navigateTo('about')"
+              >About</span
             >
+
             <span
               href="javascript:void(0);"
               class="m-0 p-3 span blogL"
               onclick="navigateTo('blog')"
               >Blog</span
             >
+            <span
+              href="javascript:void(0);"
+              class="m-0 p-3 span contactL"
+              onclick="navigateTo('contact')"
+              >Contact</span
+            >
           </section>
 
           <div class="m-2">
             <button
               class="Btnss cssbuttons-io-button"
-              onclick="navigateTo('hire')">
+              onclick="navigateTo('hire')"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                viewBox="0 0 20 20">
+                viewBox="0 0 20 20"
+              >
                 <g fill="currentColor">
                   <path
                     fill-rule="evenodd"
                     d="M19.39 9.617a1 1 0 0 0 .457-1.338L17.21 2.89a1 1 0 0 0-1.338-.458l-1.796.88a1 1 0 0 0-.458 1.337l2.638 5.389a1 1 0 0 0 1.338.458zm-3.867-5.623a.75.75 0 1 0 .66 1.347a.75.75 0 0 0-.66-1.347M4.026 2.668a1 1 0 0 0-1.33.48L.147 8.58a1 1 0 0 0 .48 1.33l1.811.85a1 1 0 0 0 1.33-.48l2.55-5.432a1 1 0 0 0-.481-1.33zM2.064 9.204A.75.75 0 1 0 2.7 7.846a.75.75 0 0 0-.637 1.358"
-                    clip-rule="evenodd" />
+                    clip-rule="evenodd"
+                  />
                   <path
-                    d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z" />
+                    d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z"
+                  />
                   <path
                     fill-rule="evenodd"
                     d="M5.629 4.072a1 1 0 0 0 .742 1.856l.026-.01l.078-.03a49 49 0 0 1 1.18-.448c.337-.123.678-.241.96-.328a6 6 0 0 1 .407-.11l.055.008q.091.014.23.044c.183.041.397.098.606.158a21 21 0 0 1 .712.217l.045.015l.01.004h.003a1 1 0 0 0 .633-1.897l-.309.928l.31-.928l-.007-.002l-.014-.004l-.052-.017a21 21 0 0 0-.782-.24a13 13 0 0 0-.722-.186A3.6 3.6 0 0 0 9 3c-.187 0-.377.04-.501.07c-.147.034-.31.08-.473.13a24 24 0 0 0-1.055.36a50 50 0 0 0-1.23.467l-.082.032zM4.183 9.77l.031.029l.091.084a100 100 0 0 0 1.374 1.252c.394.352.801.708 1.145.992q.26.216.442.352q.12.088.16.113l2.836 1.063a1 1 0 0 0 .991-.168l2.107-1.755a1 1 0 1 1 1.28 1.536l-2.106 1.756a3 3 0 0 1-2.974.504l-2.96-1.11l-.047-.024c-.281-.14-.672-.45-1.004-.726a44 44 0 0 1-1.202-1.04a96 96 0 0 1-1.403-1.28l-.094-.087l-.033-.03A1 1 0 0 1 4.183 9.77m-.748 5.089a1 1 0 0 1 1.409-.126l.958.8a1 1 0 0 0 .502.223l1.237.173a1 1 0 1 1-.278 1.981l-1.236-.173a3 3 0 0 1-1.507-.669l-.958-.8a1 1 0 0 1-.127-1.41"
-                    clip-rule="evenodd" />
+                    clip-rule="evenodd"
+                  />
                 </g>
               </svg>
               <span>Contratar</span>
@@ -223,7 +244,8 @@
                   <a
                     href="javascript:void(0);"
                     class=""
-                    onclick="navigateTo('cv')">
+                    onclick="navigateTo('cv')"
+                  >
                     <button class="welcomeBtn Btnss title">Curriculum</button>
                   </a>
                   <a
@@ -285,7 +307,8 @@
                     src="./public/Imgs/PeopleAvatar.svg"
                     alt="welcome Picture"
                     width="100%"
-                    height="100%" />
+                    height="100%"
+                  />
                 </figure>
               </section>
             </div>
@@ -293,74 +316,32 @@
           <div class="row justify-content-center">
             <div class="col-11">
               <section class="welcome__i">
-                <!-- <ul class="welcome__items">
-                  <li class="welcome__item">
-                    <figure>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="70"
-                        height="70"
-                        viewBox="0 0 24 24">
-                        <path
-                          fill="#ffffff"
-                          d="M22 2H8v5.15A7.5 7.5 0 1 0 16.85 16H22zm-5.016 12A7.5 7.5 0 0 0 10 7.016V4h10v10zM9.5 9a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11" />
-                      </svg>
-                      <figcaption>CREATIVIDAD</figcaption>
-                    </figure>
-                  </li>
-                  <li class="welcome__item">
-                    <figure>
-                      <img
-                        src="./public/Imgs/Info.svg"
-                        width="70"
-                        height="70"
-                        alt="qualitys icon" />
-                      <figcaption>Creatividad</figcaption>
-                    </figure>
-                  </li>
-                  <li class="welcome__item">
-                    <figure>
-                      <img
-                        src="./public/Imgs/Info.svg"
-                        width="70"
-                        height="70"
-                        alt="qualitys icon" />
-                      <figcaption>Creatividad</figcaption>
-                    </figure>
-                  </li>
-                  <li class="welcome__item">
-                    <figure>
-                      <img
-                        src="./public/Imgs/Info.svg"
-                        width="70"
-                        height="70"
-                        alt="qualitys icon" />
-                      <figcaption>Creatividad</figcaption>
-                    </figure>
-                  </li>
-                </ul> -->
-
                 <div class="row justify-content-center">
                   <div class="col text-center m-2">
                     <button
                       class="Btnss cssbuttons-io-button cssbuttons-io-button2"
-                      onclick="navigateTo('hire')">
+                      onclick="navigateTo('hire')"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="25"
                         height="25"
-                        viewBox="0 0 20 20">
+                        viewBox="0 0 20 20"
+                      >
                         <g fill="currentColor">
                           <path
                             fill-rule="evenodd"
                             d="M19.39 9.617a1 1 0 0 0 .457-1.338L17.21 2.89a1 1 0 0 0-1.338-.458l-1.796.88a1 1 0 0 0-.458 1.337l2.638 5.389a1 1 0 0 0 1.338.458zm-3.867-5.623a.75.75 0 1 0 .66 1.347a.75.75 0 0 0-.66-1.347M4.026 2.668a1 1 0 0 0-1.33.48L.147 8.58a1 1 0 0 0 .48 1.33l1.811.85a1 1 0 0 0 1.33-.48l2.55-5.432a1 1 0 0 0-.481-1.33zM2.064 9.204A.75.75 0 1 0 2.7 7.846a.75.75 0 0 0-.637 1.358"
-                            clip-rule="evenodd" />
+                            clip-rule="evenodd"
+                          />
                           <path
-                            d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z" />
+                            d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z"
+                          />
                           <path
                             fill-rule="evenodd"
                             d="M5.629 4.072a1 1 0 0 0 .742 1.856l.026-.01l.078-.03a49 49 0 0 1 1.18-.448c.337-.123.678-.241.96-.328a6 6 0 0 1 .407-.11l.055.008q.091.014.23.044c.183.041.397.098.606.158a21 21 0 0 1 .712.217l.045.015l.01.004h.003a1 1 0 0 0 .633-1.897l-.309.928l.31-.928l-.007-.002l-.014-.004l-.052-.017a21 21 0 0 0-.782-.24a13 13 0 0 0-.722-.186A3.6 3.6 0 0 0 9 3c-.187 0-.377.04-.501.07c-.147.034-.31.08-.473.13a24 24 0 0 0-1.055.36a50 50 0 0 0-1.23.467l-.082.032zM4.183 9.77l.031.029l.091.084a100 100 0 0 0 1.374 1.252c.394.352.801.708 1.145.992q.26.216.442.352q.12.088.16.113l2.836 1.063a1 1 0 0 0 .991-.168l2.107-1.755a1 1 0 1 1 1.28 1.536l-2.106 1.756a3 3 0 0 1-2.974.504l-2.96-1.11l-.047-.024c-.281-.14-.672-.45-1.004-.726a44 44 0 0 1-1.202-1.04a96 96 0 0 1-1.403-1.28l-.094-.087l-.033-.03A1 1 0 0 1 4.183 9.77m-.748 5.089a1 1 0 0 1 1.409-.126l.958.8a1 1 0 0 0 .502.223l1.237.173a1 1 0 1 1-.278 1.981l-1.236-.173a3 3 0 0 1-1.507-.669l-.958-.8a1 1 0 0 1-.127-1.41"
-                            clip-rule="evenodd" />
+                            clip-rule="evenodd"
+                          />
                         </g>
                       </svg>
                       <span>Contratar</span>
@@ -398,211 +379,108 @@
           </section>
 
           <!-- sercvices -->
+
           <section class="row p-3">
             <div class="col">
               <section>
-                <!-- Lista original que se muestra solo en pantallas grandes -->
-                <ul class="g-0 serviceList d-none d-md-block">
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-
-                  <li class="row p-2 serviceItem">
-                    <div
-                      class="col-12 col-md-4 p-3 serviceName serviceNameDark subtitle">
-                      -- Service
-                    </div>
-                    <div class="col-12 col-md-8 serviceDescription">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Facilis fuga officiis molestiae dolor, atque quod sapiente
-                      veritatis.
-                    </div>
-                  </li>
-                  <!-- Repite para los demás servicios -->
-                </ul>
-
-                <!-- Acordeón que se muestra solo en pantallas pequeñas -->
-                <div class="accordion d-md-none" id="serviceAccordion">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button
-                        class="accordion-button subtitle subtitle"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne">
-                        Servicio 1
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
+                <div class="row justify-content-center p-2 servicios">
+                  <div class="col col-9 col-md-6 col-lg-3 my-2 Services_Item">
+                    <div class="S_I_card">
+                      <div class="S_I_border"></div>
+                      <div class="S_I_content">
+                        <div class="S_I_logo">
+                          <div class="S_I_logo1">
+                            <img
+                              src="./public/Imgs/webDeveloping.svg"
+                              alt="webDeveloping"
+                              id="logo-main"
+                            />
+                          </div>
+                          <div class="S_I_logo2">
+                            <h1>WebDv</h1>
+                          </div>
+                          <span class="S_I_trail"></span>
+                        </div>
+                        <span class="S_I_logo_bottom-text"
+                          >Web Development</span
+                        >
                       </div>
+                      <span class="S_I_bottom-text"
+                        >Branding ser v ices h d b j k</span
+                      >
                     </div>
                   </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        Servicio 2
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
+                  <div class="col col-9 col-md-6 col-lg-3 my-2 Services_Item">
+                    <div class="S_I_card">
+                      <div class="S_I_border"></div>
+                      <div class="S_I_content">
+                        <div class="S_I_logo">
+                          <div class="S_I_logo1">
+                            <img
+                              src="./public/Imgs/WebDesign.svg"
+                              alt="WebDesign"
+                              id="logo-main"
+                            />
+                          </div>
+                          <div class="S_I_logo2">
+                            <h1>WebDs</h1>
+                          </div>
+                          <span class="S_I_trail"></span>
+                        </div>
+                        <span class="S_I_logo_bottom-text">Web Design</span>
                       </div>
+                      <span class="S_I_bottom-text">Branding ser v ice </span>
                     </div>
                   </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree">
-                        Servicio 3
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
+                  <div class="col col-9 col-md-6 col-lg-3 my-2 Services_Item">
+                    <div class="S_I_card">
+                      <div class="S_I_border"></div>
+                      <div class="S_I_content">
+                        <div class="S_I_logo">
+                          <div class="S_I_logo1">
+                            <img
+                              src="./public/Imgs/webStyling.svg"
+                              alt="webStyling"
+                              id="logo-main"
+                            />
+                          </div>
+                          <div class="S_I_logo2">
+                            <h1>WebSt</h1>
+                          </div>
+                          <span class="S_I_trail"></span>
+                        </div>
+                        <span class="S_I_logo_bottom-text">Web Styling</span>
                       </div>
+                      <span class="S_I_bottom-text">Branding ser v ices</span>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour">
-                        Servicio 4
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
+                  <div class="col col-9 col-md-6 col-lg-3 my-2 Services_Item">
+                    <div class="S_I_card">
+                      <div class="S_I_border"></div>
+                      <div class="S_I_content">
+                        <div class="S_I_logo">
+                          <div class="S_I_logo1">
+                            <img
+                              src="./public/Imgs/branding.svg"
+                              alt="Branding"
+                              id="logo-main"
+                            />
+                          </div>
+                          <div class="S_I_logo2">
+                            <h1>Brand</h1>
+                          </div>
+                          <span class="S_I_trail"></span>
+                        </div>
+                        <span class="S_I_logo_bottom-text"
+                          >Branding service</span
+                        >
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                      <button
-                        class="accordion-button subtitle collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive">
-                        Servicio 5
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#serviceAccordion">
-                      <div class="accordion-body text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis fuga officiis molestiae dolor, atque quod
-                        sapiente veritatis.
-                      </div>
+                      <span class="S_I_bottom-text"
+                        >Branding ser v ice s h d b j k</span
+                      >
                     </div>
                   </div>
                 </div>
-
-                <p class="serviceLink text-end">
-                  <!-- link -->
-                  <a href="javascript:void(0);" onclick="navigateTo('services')"
-                    >Ver Más
-                    <img
-                      src="./public/Imgs/arrowSquare.svg"
-                      width="16"
-                      height="16"
-                      alt="arrowSquare icon"
-                  /></a>
-                </p>
               </section>
             </div>
           </section>
@@ -643,96 +521,142 @@
             </div>
           </section>
 
-          <!-- Projects -->
-          <section class="row p-2 justify-content-center gx-4 projectsC">
-            <div class="col-11 col-sm-8 col-md-7 col-lg-5 m-2 p-3">
-              <section class=" ">
-                <figure class="p-2 projectFigure">
-                  <div class="card">
-                    <div class="top-section">
-                      <img
-                        src="./public/Imgs/projectsImg/Pokedex.png"
-                        class="projectImage"
-                        alt="" />
+          <!-- Projects section -->
+          <div class="row">
+            <div class="col projects">
+              <div class="projectBackground Baki BakiDark"></div>
 
-                      <div class="borde"></div>
-                      <div class="icons">
-                        <div class="icon">
+              <!-- Projects -->
+              <section class="row p- justify-content-center gx-4 projectsC">
+                <div class="col-12 m-2 p-">
+                  <section class="">
+                    <div class="projectsGallery p-1">
+                      <div class="a1 project border">
+                        <figure class="projectImages">
                           <img
-                            src="./public/Imgs/projectsImg/pokedexIcon.png"
-                            alt="project" />
-                        </div>
-                        <div class="info">
-                          <a
-                            href="javascript:void(0);"
-                            onclick="navigateTo('project1')">
-                            <img
-                              src="./public/Imgs/PArrow.svg"
-                              class="projectLink"
-                              width="25"
-                              height="25"
-                              alt="arrowSquare icon" />
-                          </a>
-                          <a
-                            href="javascript:void(0);"
-                            onclick="navigateTo('github')">
-                            <img
-                              src="./public/Imgs/Info.svg"
-                              class="projectLink"
-                              width="25"
-                              height="25"
-                              alt="arrowSquare icon" />
-                          </a>
-                        </div>
+                            src="./public/Imgs/projectsImg/Pokedex.png"
+                            alt=""
+                          />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a2 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a3 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a4 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a7 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="b2 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="b3 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a6 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a5 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a9 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="a8 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="b1 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
+                      </div>
+                      <div class="b4 project border">
+                        <figure class="projectImages">
+                          <img src="" alt="" />
+                          <figcaption>web</figcaption>
+                        </figure>
                       </div>
                     </div>
-                    <div class="bottom-section">
-                      <span class="title fs-4">Pokedex</span>
-                      <div class="square row my-3">
-                        <div class="col-6 text-center">
-                          <h5>Información</h5>
-                          <div class="text">
-                            Si eres fan de pokemon, este es un proyecto donde
-                            podras acceder a una amplia variedad de pokenmos
-                            buscando por nombre o id. vamos pruebalo!!
-                          </div>
-                        </div>
-                        <div class="col-6 text-center">
-                          <h5>Tecnologías</h5>
-                          <div class="card-icons p-1">
-                            <img
-                              class="MIcons"
-                              src="./public/Imgs/stackImgs/LogosHtml5.svg" />
-                            <img
-                              class="MIcons"
-                              src="./public/Imgs/stackImgs/LogosCss3.svg" />
-                            <img
-                              class="MIcons"
-                              src="./public/Imgs/stackImgs/LogosJavascript.svg" />
-                            <img
-                              class="MIcons"
-                              src="./public/Imgs/stackImgs/LogosTypescript.svg" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
+                  </section>
+                </div>
               </section>
-            </div>
 
-            <p class="text-end">
-              <!-- link -->
-              <a href="javascript:void(0);" onclick="navigateTo('portfolio')"
-                >Ver Mas
-                <img
-                  src="./public/Imgs/arrowSquare.svg"
-                  width="16"
-                  height="16"
-                  alt="arrowSquare icon" />
-              </a>
-            </p>
-          </section>
+              <div class="row justify-content-center">
+                <div class="col-11">
+                  <section class="welcome__i">
+                    <div class="row justify-content-center">
+                      <div class="col text-center m-2">
+                        <button
+                          class="Btnss cssbuttons-io-button cssbuttons-io-button2"
+                          onclick="navigateTo('hire')"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 20 20"
+                          >
+                            <g fill="currentColor">
+                              <path
+                                fill-rule="evenodd"
+                                d="M19.39 9.617a1 1 0 0 0 .457-1.338L17.21 2.89a1 1 0 0 0-1.338-.458l-1.796.88a1 1 0 0 0-.458 1.337l2.638 5.389a1 1 0 0 0 1.338.458zm-3.867-5.623a.75.75 0 1 0 .66 1.347a.75.75 0 0 0-.66-1.347M4.026 2.668a1 1 0 0 0-1.33.48L.147 8.58a1 1 0 0 0 .48 1.33l1.811.85a1 1 0 0 0 1.33-.48l2.55-5.432a1 1 0 0 0-.481-1.33zM2.064 9.204A.75.75 0 1 0 2.7 7.846a.75.75 0 0 0-.637 1.358"
+                                clip-rule="evenodd"
+                              />
+                              <path
+                                d="m14.113 5.494l.014-.002h.003a1 1 0 0 0 .717-.46l.145-.662a1 1 0 0 0-1.123-.861h-.006l-.02.003l-.067.01l-.246.036c-.208.031-.5.078-.835.14c-.661.121-1.531.306-2.272.553c-.425.142-.847.403-1.218.675c-.383.28-.772.615-1.138.955a29 29 0 0 0-1.853 1.92c-.557.63-.715 1.679-.017 2.436c.346.376.92.888 1.691 1.12c.828.25 1.766.14 2.682-.535l.721-.466q.119.09.27.218c.25.21.525.459.784.703a34 34 0 0 1 .866.847l.055.055l.013.014l.004.004l.118.122l.152.075c.58.29 1.183.17 1.573.04c.417-.141.814-.371 1.134-.583a9.4 9.4 0 0 0 1.137-.898l.02-.019l.007-.006l.002-.002h.001a1 1 0 0 0-1.376-1.452l-.001.001l-.011.01l-.05.046a8 8 0 0 1-.837.654a3 3 0 0 1-.666.354l-.023.007l-.042-.042a36 36 0 0 0-.634-.616l-.07-.067a21 21 0 0 0-.871-.78c-.277-.232-.593-.478-.876-.633c-.633-.347-1.23-.076-1.499.097l-1.043.674L9.4 9.2c-.431.323-.723.306-.935.242c-.226-.068-.454-.225-.66-.42a26 26 0 0 1 1.624-1.677c.332-.309.659-.587.956-.805c.31-.226.536-.347.67-.391c.608-.203 1.369-.368 2-.484a26 26 0 0 1 1-.163z"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                d="M5.629 4.072a1 1 0 0 0 .742 1.856l.026-.01l.078-.03a49 49 0 0 1 1.18-.448c.337-.123.678-.241.96-.328a6 6 0 0 1 .407-.11l.055.008q.091.014.23.044c.183.041.397.098.606.158a21 21 0 0 1 .712.217l.045.015l.01.004h.003a1 1 0 0 0 .633-1.897l-.309.928l.31-.928l-.007-.002l-.014-.004l-.052-.017a21 21 0 0 0-.782-.24a13 13 0 0 0-.722-.186A3.6 3.6 0 0 0 9 3c-.187 0-.377.04-.501.07c-.147.034-.31.08-.473.13a24 24 0 0 0-1.055.36a50 50 0 0 0-1.23.467l-.082.032zM4.183 9.77l.031.029l.091.084a100 100 0 0 0 1.374 1.252c.394.352.801.708 1.145.992q.26.216.442.352q.12.088.16.113l2.836 1.063a1 1 0 0 0 .991-.168l2.107-1.755a1 1 0 1 1 1.28 1.536l-2.106 1.756a3 3 0 0 1-2.974.504l-2.96-1.11l-.047-.024c-.281-.14-.672-.45-1.004-.726a44 44 0 0 1-1.202-1.04a96 96 0 0 1-1.403-1.28l-.094-.087l-.033-.03A1 1 0 0 1 4.183 9.77m-.748 5.089a1 1 0 0 1 1.409-.126l.958.8a1 1 0 0 0 .502.223l1.237.173a1 1 0 1 1-.278 1.981l-1.236-.173a3 3 0 0 1-1.507-.669l-.958-.8a1 1 0 0 1-.127-1.41"
+                                clip-rule="evenodd"
+                              />
+                            </g>
+                          </svg>
+                          <span>Contratar</span>
+                        </button>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -746,7 +670,8 @@
             <div class="stackNameC">
               <div
                 class="d-flex left p-2 justify-content-center"
-                id="StackNames">
+                id="StackNames"
+              >
                 <span class="m-3">Html</span>
                 <span class="m-3">Css</span>
                 <span class="m-3">JavaScript</span>
@@ -772,125 +697,151 @@
             <div class="stackIconsC">
               <div
                 class="d-flex right p-2 justify-content-center"
-                id="StackIcons">
+                id="StackIcons"
+              >
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosHtml5.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosCss3.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
+                </span>
+                <span class="StackIcon m-2">
+                  <img
+                    src="public/Imgs/stackImgs/DeviconFigma.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosJavascript.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosTypescript.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosBootstrap.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosSass.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosPhp.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosMysql.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosLaravel.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosPython.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosDjango.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosMiro.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosWix.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosExcel.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosCanva.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosInkscape.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <span class="StackIcon m-2">
                   <img
                     src="public/Imgs/stackImgs/LogosCapcut.svg"
                     alt=""
                     width="55"
-                    height="55" />
+                    height="55"
+                  />
                 </span>
                 <!-- <span class="StackIcon m-2">
                                  <img src="public/Imgs/stackImgs/" alt="" width="55" height="55">
@@ -903,7 +854,7 @@
           <section class="row">
             <div class="col">
               <h3 class="text-center stackTitle title textBackDark">
-                Que tegnologias suelo usar?
+                Mi Stack
               </h3>
             </div>
           </section>
@@ -911,26 +862,132 @@
           <!-- options -->
           <div class="row">
             <div class="col-5 col-md-4 col-lg-3 p-5 text-center">
-              <div
-                class="row p-0 border d-flex justify-content-center stackOptions Btnss">
-                <div
-                  class="col-12 col-md-5 stackOption subtitle"
-                  id="StackAnimation">
-                  Animation
-                </div>
-                <div
-                  class="col-12 col-md-4 stackOption subtitle"
-                  id="StackGallery">
-                  Gallery
-                </div>
+              <div class="toggle-cont">
+                <input
+                  class="toggle-input"
+                  id="toggle"
+                  name="toggle"
+                  type="checkbox"
+                  checked
+                />
+                <label class="toggle-label" for="toggle">
+                  <div class="cont-icon">
+                    <span
+                      style="--width: 2; --deg: 25; --duration: 11"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 100; --duration: 18"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 280; --duration: 5"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 200; --duration: 3"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 30; --duration: 20"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 300; --duration: 9"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 250; --duration: 4"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 210; --duration: 8"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 100; --duration: 9"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 15; --duration: 13"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 75; --duration: 18"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 65; --duration: 6"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 50; --duration: 7"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 320; --duration: 5"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 220; --duration: 5"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 215; --duration: 2"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 135; --duration: 9"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 45; --duration: 4"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 78; --duration: 16"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 89; --duration: 19"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 65; --duration: 14"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 2; --deg: 97; --duration: 1"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 174; --duration: 10"
+                      class="sparkle"
+                    ></span>
+                    <span
+                      style="--width: 1; --deg: 236; --duration: 5"
+                      class="sparkle"
+                    ></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 30 30"
+                      class="icon"
+                    >
+                      <path
+                        d="M0.96233 28.61C1.36043 29.0081 1.96007 29.1255 2.47555 28.8971L10.4256 25.3552C13.2236 24.11 16.4254 24.1425 19.2107 25.4401L27.4152 29.2747C27.476 29.3044 27.5418 29.3023 27.6047 29.32C27.6563 29.3348 27.7079 29.3497 27.761 29.3574C27.843 29.3687 27.9194 29.3758 28 29.3688C28.1273 29.3617 28.2531 29.3405 28.3726 29.2945C28.4447 29.262 28.5162 29.2287 28.5749 29.1842C28.6399 29.1446 28.6993 29.0994 28.7509 29.0477L28.9008 28.8582C28.9468 28.7995 28.9793 28.7274 29.0112 28.656C29.0599 28.5322 29.0811 28.4036 29.0882 28.2734C29.0939 28.1957 29.0868 28.1207 29.0769 28.0415C29.0705 27.9955 29.0585 27.9524 29.0472 27.9072C29.0295 27.8343 29.0302 27.7601 28.9984 27.6901L25.1638 19.4855C23.8592 16.7073 23.8273 13.5048 25.0726 10.7068L28.6145 2.75679C28.8429 2.24131 28.7318 1.63531 28.3337 1.2372C27.9165 0.820011 27.271 0.721743 26.7491 0.9961L19.8357 4.59596C16.8418 6.15442 13.2879 6.18696 10.2615 4.70062L1.80308 0.520214C1.7055 0.474959 1.60722 0.441742 1.50964 0.421943C1.44459 0.409215 1.37882 0.395769 1.3074 0.402133C1.14406 0.395769 0.981436 0.428275 0.818095 0.499692C0.77284 0.519491 0.719805 0.545671 0.67455 0.578198C0.596061 0.617088 0.524653 0.675786 0.4596 0.74084C0.394546 0.805894 0.335843 0.877306 0.296245 0.956502C0.263718 1.00176 0.237561 1.05477 0.217762 1.10003C0.152708 1.24286 0.126545 1.40058 0.120181 1.54978C0.120181 1.61483 0.126527 1.6735 0.132891 1.73219C0.15269 1.85664 0.178881 1.97332 0.237571 2.08434L4.41798 10.5427C5.91139 13.5621 5.8725 17.1238 4.3204 20.1099L0.720514 27.0233C0.440499 27.5536 0.545137 28.1928 0.96233 28.61Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </label>
               </div>
             </div>
           </div>
 
           <!-- info -->
           <section class="row justify-content-center">
-            <div class="col-9 my-2">
-              <h3 class="text-center fs-6">
+            <div class="col-9 my-0">
+              <h3 class="text-center fs-6 text">
                 Aqui podran ver la gama de herramientas que puedo llegar a usar
                 de acuerdo a 2 cosas, la importancia del proyecto y las
                 preferencias del cliente especificado en el formulario enviado
@@ -949,20 +1006,22 @@
                   <img
                     src="./public/Imgs/Artybylogo.svg"
                     alt="Logo-image"
-                    id="StackImg" />
+                    id="StackImg"
+                  />
                 </figure>
               </section>
             </div>
 
             <!-- second option for Stack -->
-            <div class="col-12 col-md-10 border" id="stack_gallery_filter">
+            <div class="col-12 col-md-10" id="stack_gallery_filter">
               <section class="row text-center Gallery p-2">
                 <div class="col-4 col-md-2 p-2">
                   <div class="GalleryIcon">
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosHtml5.svg"
-                      alt="html-icon" />
+                      alt="html-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -970,7 +1029,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosCss3.svg"
-                      alt="Css-icon" />
+                      alt="Css-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -978,7 +1038,17 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosSass.svg"
-                      alt="Sass-icon" />
+                      alt="Sass-icon"
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-md-2 p-2">
+                  <div class="GalleryIcon">
+                    <img
+                      class="inconImg"
+                      src="./public/Imgs/stackImgs/DeviconFigma.svg"
+                      alt="figma-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -986,7 +1056,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosBootstrap.svg"
-                      alt="bootstrap-icon" />
+                      alt="bootstrap-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -994,7 +1065,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosJavascript.svg"
-                      alt="javascript-icon" />
+                      alt="javascript-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1002,7 +1074,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosTypescript.svg"
-                      alt="TypeScript-icon" />
+                      alt="TypeScript-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1010,7 +1083,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosPhp.svg"
-                      alt="Php-icon" />
+                      alt="Php-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1018,7 +1092,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosLaravel.svg"
-                      alt="Laravel-icon" />
+                      alt="Laravel-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1026,7 +1101,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosMysql.svg"
-                      alt="Mysql-icon" />
+                      alt="Mysql-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1034,7 +1110,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosPython.svg"
-                      alt="python-icon" />
+                      alt="python-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1042,7 +1119,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosDjango.svg"
-                      alt="Django-icon" />
+                      alt="Django-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1050,7 +1128,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosMiro.svg"
-                      alt="Miro-icon" />
+                      alt="Miro-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1058,7 +1137,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosWix.svg"
-                      alt="wix-icon" />
+                      alt="wix-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1066,7 +1146,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosCanva.svg"
-                      alt="canva-icon" />
+                      alt="canva-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1074,7 +1155,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosCapcut.svg"
-                      alt="capcut-icon" />
+                      alt="capcut-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1082,7 +1164,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosExcel.svg"
-                      alt="excel-icon" />
+                      alt="excel-icon"
+                    />
                   </div>
                 </div>
                 <div class="col-4 col-md-2 p-2">
@@ -1090,7 +1173,8 @@
                     <img
                       class="inconImg"
                       src="./public/Imgs/stackImgs/LogosInkscape.svg"
-                      alt="Inkspace-icon" />
+                      alt="Inkspace-icon"
+                    />
                   </div>
                 </div>
               </section>
@@ -1134,7 +1218,8 @@
                     src="./public/Imgs/arrowSquare.svg"
                     width="16"
                     height="16"
-                    alt="arrowSquare icon" />
+                    alt="arrowSquare icon"
+                  />
                 </a>
               </p>
             </div>
@@ -1152,7 +1237,8 @@
             <div class="col-12 p-2">
               <section class="row p-2 carousel-container position-relative">
                 <h2
-                  class="position-absolute colaborationsTitle text-center title textBackDark">
+                  class="position-absolute colaborationsTitle text-center title textBackDark"
+                >
                   Branding
                 </h2>
                 <div class="carousel-trackk d-flex">
@@ -1161,28 +1247,32 @@
                       src="public/Imgs/Artybylogo.svg"
                       width="100"
                       height="100"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                   <figure class="col-5 Colaborationslogos d-flex mx-4">
                     <img
                       src="public/Imgs/unprgramayyo.svg"
                       width="106"
                       height="106"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                   <figure class="col-5 Colaborationslogos d-flex mx-4">
                     <img
                       src="public/Imgs/user17job.svg"
                       width="106"
                       height="100"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                   <figure class="col-5 Colaborationslogos d-flex mx-4">
                     <img
                       src="public/Imgs/How'stech.svg"
                       width="76"
                       height="76"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                   <figure class="col-5 Colaborationslogos d-flex mx-4">
                     <img
@@ -1190,7 +1280,8 @@
                       fill="white"
                       width="106"
                       height="176"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                   <figure class="col-5 Colaborationslogos d-flex mx-4">
                     <img
@@ -1198,7 +1289,8 @@
                       fill="white"
                       width="150"
                       height="150"
-                      alt="Artyby Logo" />
+                      alt="Artyby Logo"
+                    />
                   </figure>
                 </div>
               </section>
@@ -1238,7 +1330,8 @@
                     <img
                       src="./public/Imgs/blogImgs/computadora1.png"
                       class="blog8__img"
-                      alt="Laptop-img" />
+                      alt="Laptop-img"
+                    />
                   </div>
                 </div>
                 <div class="col-3">
@@ -1246,7 +1339,8 @@
                     <img
                       src="./public/Imgs/blogImgs/hombre.png"
                       class="blog6__img"
-                      alt="hombre" />
+                      alt="hombre"
+                    />
                   </div>
                 </div>
                 <div class="col-6">
@@ -1254,7 +1348,8 @@
                     <img
                       src="./public/Imgs/blogImgs/image.png"
                       class="blog2__img"
-                      alt="matrix-img" />
+                      alt="matrix-img"
+                    />
                   </div>
                 </div>
               </section>
@@ -1265,7 +1360,8 @@
                     <img
                       src="./public/Imgs/blogImgs/lupa.png"
                       class="blog7__img"
-                      alt="lupa-img" />
+                      alt="lupa-img"
+                    />
                   </div>
                 </div>
                 <div class="col-6 my-2 blog5" id="blog">
@@ -1274,7 +1370,8 @@
                       <img
                         src="./public/Imgs/blogImgs/fondo.png"
                         alt="blog-background"
-                        class="blog5__back" />
+                        class="blog5__back"
+                      />
                       <h1 class="text-light">UnProgramaYYo</h1>
                     </div>
                   </a>
@@ -1284,7 +1381,8 @@
                     <img
                       src="./public/Imgs/blogImgs/WHOA.png"
                       alt="blog-background"
-                      class="blog1__back position-absolute" />
+                      class="blog1__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="col-4 my-2">
@@ -1292,11 +1390,13 @@
                     <img
                       src="./public/Imgs/blogImgs/Bible.svg"
                       alt="blog-background"
-                      class="blog4__back position-absolute" />
+                      class="blog4__back position-absolute"
+                    />
                     <img
                       src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
                       alt="blog-background"
-                      class="blog4__BBack position-absolute" />
+                      class="blog4__BBack position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="col-5 my-2">
@@ -1304,7 +1404,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Destino.png"
                       alt="blog-background"
-                      class="blog3__back position-absolute" />
+                      class="blog3__back position-absolute"
+                    />
                   </div>
                 </div>
               </section>
@@ -1319,7 +1420,8 @@
                   <img
                     src="./public/Imgs/blogImgs/fondo.png"
                     alt="blog-background"
-                    class="blog5__back position-absolute" />
+                    class="blog5__back position-absolute"
+                  />
                   <h1 class="text-light">UnProgramaYYo</h1>
                 </div>
               </a>
@@ -1333,7 +1435,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Bible.svg"
                       alt="blog-background"
-                      class="blog4__back position-absolute" />
+                      class="blog4__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1341,7 +1444,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Destino.png"
                       alt="blog-background"
-                      class="blog3__back position-absolute" />
+                      class="blog3__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1349,7 +1453,8 @@
                     <img
                       src="./public/Imgs/blogImgs/WHOA.png"
                       alt="blog-background"
-                      class="blog1__back position-absolute" />
+                      class="blog1__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1357,7 +1462,8 @@
                     <img
                       src="./public/Imgs/blogImgs/lupa.svg"
                       class="blog7__img"
-                      alt="lupa-img" />
+                      alt="lupa-img"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1365,7 +1471,8 @@
                     <img
                       src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
                       alt="blog-background"
-                      class="blog4__BBack position-absolute" />
+                      class="blog4__BBack position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1373,7 +1480,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Laptop.svg"
                       class="blog8__img position-absolute"
-                      alt="Laptop-img" />
+                      alt="Laptop-img"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1381,7 +1489,8 @@
                     <img
                       src="./public/Imgs/blogImgs/image.png"
                       class="blog2__img position-absolute"
-                      alt="matrix-img" />
+                      alt="matrix-img"
+                    />
                   </div>
                 </div>
 
@@ -1391,7 +1500,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Bible.svg"
                       alt="blog-background"
-                      class="blog4__back position-absolute" />
+                      class="blog4__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1399,7 +1509,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Destino.png"
                       alt="blog-background"
-                      class="blog3__back position-absolute" />
+                      class="blog3__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1407,7 +1518,8 @@
                     <img
                       src="./public/Imgs/blogImgs/WHOA.png"
                       alt="blog-background"
-                      class="blog1__back position-absolute" />
+                      class="blog1__back position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1415,7 +1527,8 @@
                     <img
                       src="./public/Imgs/blogImgs/lupa.svg"
                       class="blog7__img"
-                      alt="lupa-img" />
+                      alt="lupa-img"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1423,7 +1536,8 @@
                     <img
                       src="./public/Imgs/blogImgs/IconParkOutlineHeart.svg"
                       alt="blog-background"
-                      class="blog4__BBack position-absolute" />
+                      class="blog4__BBack position-absolute"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1431,7 +1545,8 @@
                     <img
                       src="./public/Imgs/blogImgs/Laptop.svg"
                       class="blog8__img position-absolute"
-                      alt="Laptop-img" />
+                      alt="Laptop-img"
+                    />
                   </div>
                 </div>
                 <div class="el">
@@ -1439,7 +1554,8 @@
                     <img
                       src="./public/Imgs/blogImgs/image.png"
                       class="blog2__img position-absolute"
-                      alt="matrix-img" />
+                      alt="matrix-img"
+                    />
                   </div>
                 </div>
               </div>
@@ -1467,23 +1583,27 @@
               <section class="row">
                 <div class="col-12 col-md-7 p-5 contact-data">
                   <section
-                    class="ContactData justify-content-center text-center">
+                    class="ContactData justify-content-center text-center"
+                  >
                     <figure>
                       <img
                         src="./public/Imgs/ArtybylogoWhiteLogo.svg"
                         alt="Artybylogo"
                         width="255"
-                        height="255" />
+                        height="255"
+                      />
                     </figure>
 
                     <ul class="g-0 contactServiceList p-3">
                       <li class="row p-0 m-2 contactServiceItem">
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
                           <b>LLamar </b>
                         </div>
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
                           <a
                             href="javascript:void(0);"
                             onclick="navigateTo('llamar')"
@@ -1493,25 +1613,29 @@
                       </li>
                       <li class="row p-0 m-2 contactServiceItem">
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
                           <b>Escribir a WhatsApp</b>
                         </div>
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
                           <a
                             href="javascript:void(0);"
                             onclick="navigateTo('whatsapp')"
-                            >WhatsApp.yo</a
+                            >WhatsApp.Ramphys</a
                           >
                         </div>
                       </li>
                       <li class="row p-0 m-2 contactServiceItem">
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle">
+                          class="col-12 col-md-6 p-1 fs-3 text-start contactServiceName subtitle"
+                        >
                           <b>Dejar Un Email</b>
                         </div>
                         <div
-                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription">
+                          class="col-12 col-md-6 p-1 fs-3 contactServiceDescription"
+                        >
                           <a
                             href="javascript:void(0)"
                             onclick="navigateTo('email')"
@@ -1537,7 +1661,8 @@
                     class="contactForm my-5"
                     method="post"
                     name="contact"
-                    netlify>
+                    netlify
+                  >
                     <div class="row">
                       <div class="col-6 text-b">
                         <label for="name" class="form-label">Name</label>
@@ -1546,7 +1671,8 @@
                           class="form-control"
                           id="name"
                           placeholder="First name"
-                          aria-label="First name" />
+                          aria-label="First name"
+                        />
                       </div>
                       <div class="col-6 text-b">
                         <label for="lastName" class="form-label"
@@ -1557,7 +1683,8 @@
                           class="form-control"
                           id="lastName"
                           placeholder="Last name"
-                          aria-label="Last name" />
+                          aria-label="Last name"
+                        />
                       </div>
                       <div class="col-6 text-b">
                         <label for="Email" class="form-label">Email</label>
@@ -1566,7 +1693,8 @@
                           class="form-control"
                           id="email"
                           placeholder="Email"
-                          aria-label="Email" />
+                          aria-label="Email"
+                        />
                       </div>
                       <div class="col-6 text-b">
                         <label for="phoneNumber" class="form-label"
@@ -1577,7 +1705,8 @@
                           class="form-control"
                           id="phoneNumber"
                           placeholder="Phone number"
-                          aria-label="Phone Number" />
+                          aria-label="Phone Number"
+                        />
                       </div>
                       <div class="text-b">
                         <label for="service" class="form-label text-b"
@@ -1586,7 +1715,8 @@
                         <select
                           class="form-select"
                           id="service"
-                          aria-label="defaul">
+                          aria-label="defaul"
+                        >
                           <option class="" selected>
                             Opciones de servicios
                           </option>
@@ -1604,7 +1734,8 @@
                           class="form-control"
                           id="Textarea"
                           placeholder="Comentario"
-                          rows="3"></textarea>
+                          rows="3"
+                        ></textarea>
                       </div>
                     </div>
                     <div class="row justify-content-end">
@@ -1623,7 +1754,7 @@
       </div>
 
       <!-- footer section -->
-      <div class="row my-">
+      <div class="row">
         <div class="col my-3">
           <section class="row justify-content-center" id="footer">
             <div class="footerBackground BakiDark Baki">
@@ -1636,7 +1767,8 @@
                   src="./public/Imgs/Artybylogo.svg"
                   alt="artyby logo"
                   widthwidth="255"
-                  height="255" />
+                  height="255"
+                />
               </figure>
             </div>
             <!-- links -->
@@ -1644,7 +1776,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('home')"
                   >Home</a
                 >
@@ -1652,23 +1784,20 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('about')"
                   >About</a
                 >
               </b>
               <b>
-                <a
-                  href="javascript:void(0);"
-                  class="mx-3 footerLink"
-                  onclick="navigateTo('portfolio')"
+                <a href="javascript:void(0);" class="mx-3 footerLink span"
                   >Portfolio</a
                 >
               </b>
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('services')"
                   >Servicios</a
                 >
@@ -1676,7 +1805,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('contact')"
                   >Contact</a
                 >
@@ -1684,7 +1813,7 @@
               <b>
                 <a
                   href="javascript:void(0);"
-                  class="mx-3 footerLink"
+                  class="mx-3 footerLink span"
                   onclick="navigateTo('blog')"
                   >Blog</a
                 >

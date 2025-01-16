@@ -75,36 +75,43 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+const toggleInput = document.getElementById("toggle");
 
-// stack changes
-const optionOne = document.getElementById("StackGallery");
-const optiontwo = document.getElementById("StackAnimation");
+// Selecciona los elementos que deseas mostrar/ocultar
+const gallery_filter = document.querySelector("#stack_gallery_filter");
+const anim_cont = document.querySelector("#animContainer");
+const img_cont = document.querySelector("#stackImage");
 
-const img_cont = document.getElementById("stackImage");
-const anim_cont = document.getElementById("animContainer");
-const gallery_filter = document.getElementById("stack_gallery_filter");
+// Agrega un event listener al checkbox
+toggleInput.addEventListener("change", function () {
+  if (toggleInput.checked) {
+    // Si el switch está activado, muestra la animación
+    showOptionTwo();
+  } else {
+    // Si el switch está desactivado, muestra la galería
+    showOptionOne();
+  }
+});
 
-optionOne.addEventListener("click", showOptionOne);
-optiontwo.addEventListener("click", showOptionTwo);
-
+// Las funciones para mostrar/ocultar elementos
 function showOptionTwo() {
   gallery_filter.style.display = "none";
-
   anim_cont.style.display = "block";
   img_cont.style.display = "block";
 }
 
 function showOptionOne() {
   gallery_filter.style.display = "block";
-
   anim_cont.style.display = "none";
   img_cont.style.display = "none";
 }
+
+// Llama a showOptionOne() al cargar la página para que la galería se muestre por defecto
 showOptionOne();
 
 setTimeout(() => {
   showOptionTwo();
-}, 3000);
+}, 2000);
 
 // Go Up button
 const goUp = document
