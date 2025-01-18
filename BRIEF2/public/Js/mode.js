@@ -23,6 +23,48 @@ function updateClasses(elements, newClass, removeClasses = []) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const savedMode = localStorage.getItem("themeMode") || "dark"; // Predeterminado: oscuro
+  setMode(savedMode); // Aplicar el modo guardado
+});
+
+const modeSwitcherButtons = document.querySelectorAll(".mode-switcher-btn");
+
+const themeFunctions = {
+  light: toLight,
+  dark: toDark,
+  crazy: toCrazy,
+};
+// Escuchar los clics en los botones de cambio de modo
+modeSwitcherButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const themeMode = button.dataset.themeMode;
+    setMode(themeMode); // Cambiar al tema seleccionado
+  });
+});
+
+function setMode(themeMode) {
+  // Eliminar todas las clases de tema del body
+  body.classList.remove("ms-light-theme", "ms-dark-theme", "ms-crazy-theme");
+
+  // Añadir la clase correspondiente si no es el tema claro
+  if (themeMode !== "light") {
+    body.classList.add(`ms-${themeMode}-theme`);
+  }
+
+  // Actualizar el estado del botón activo
+  modeSwitcherButtons.forEach((btn) => {
+    btn.classList.toggle("ms-active", btn.dataset.themeMode === themeMode);
+  });
+
+  // Llamar a la función correspondiente al tema
+  if (themeFunctions[themeMode]) {
+    themeFunctions[themeMode]();
+  }
+
+  // Guardar el tema en el localStorage
+  localStorage.setItem("themeMode", themeMode);
+}
 // Función reutilizable para el comportamiento de desplazamiento
 function handleScroll(className) {
   if (window.scrollY < 25) {
@@ -170,17 +212,6 @@ function forCrazys() {
     document.body.style.overflow = "scroll";
   }, 2800);
 }
-
-// Aplicar modo oscuro por defecto al cargar la página
-document.addEventListener("DOMContentLoaded", toDark);
-
-const modeSwitcherButtons = document.querySelectorAll(".mode-switcher-btn");
-
-const themeFunctions = {
-  light: toLight,
-  dark: toDark,
-  crazy: toCrazy,
-};
 
 modeSwitcherButtons.forEach((button) => {
   button.addEventListener("click", () => {

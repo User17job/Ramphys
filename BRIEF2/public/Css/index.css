@@ -112,7 +112,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   top: 0%;
 }
-
+/* //+ */
 .navLInks {
   position: relative;
   display: flex;
@@ -136,11 +136,13 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1);
   background-image: linear-gradient(-55deg, rgb(3, 105, 161) 10%, #020617 100%);
 }
+/* //+ */
 
 a {
   color: #ffffff00;
   text-decoration: none;
 }
+
 a:hover {
   color: #0369a1;
   text-decoration: underline;
@@ -194,10 +196,6 @@ a:hover {
   height: 100%;
   opacity: 1;
   pointer-events: all;
-}
-
-.homeL {
-  text-decoration: underline;
 }
 
 .invalid {

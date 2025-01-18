@@ -13,14 +13,84 @@
         --text-black: #020617;
         --background-white: #f9fafb;
       }
+      * {
+        transition: all 0.5s ease-out;
+      }
+      body {
+        scroll-behavior: smooth;
 
+        background-color: #020617;
+        color: #f9fafb;
+        overflow-x: hidden;
+        transition: 0.6s;
+        font-family: fredoka;
+        font-weight: 650;
+        padding: 0px;
+      }
+      body::-webkit-scrollbar {
+        background-color: #02061700;
+        background-image: linear-gradient(
+          to top,
+          #0081c727 30%,
+          #02061776 100%
+        );
+      }
+      body::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to bottom, #0369a1 30%, #020617 100%);
+        border-radius: 6px;
+      }
+      .backgroundColor {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: -5555;
+        transition: ease-in 1.5s;
+        display: none;
+      }
+      .toggle,
+      #checkbox {
+        display: none;
+      }
+
+      /* menu button */
+      #navbar {
+        font-family: fredoka;
+        font-weight: 700;
+        height: 90px;
+        width: 100%;
+        left: 1%;
+        z-index: 555;
+        transition: 0.5s;
+        background-color: transparent;
+      }
+
+      .navLogo {
+        height: 100%;
+        margin: 0% 5%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .navLogo > figcaption {
+        position: relative;
+        top: 0%;
+      }
       .container {
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
         padding: 2rem 1rem;
       }
-
+      .container-fluid {
+        max-width: 100%;
+        min-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        z-index: 5;
+      }
+      .charge {
+        opacity: 100%;
+      }
       .form-title {
         text-align: center;
         margin-bottom: 1rem;
@@ -73,22 +143,146 @@
         align-items: center;
         gap: 0.5rem;
       }
+      .Hi {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: -555;
+        animation: latir 8.5s Linear infinite;
+        opacity: 25%;
+
+        img {
+          width: 400px;
+          height: 400px;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
 
       .submit-btn {
         display: block;
         width: 100%;
         padding: 1rem;
-        color: white;
-        border: none;
         border-radius: 4px;
         font-size: 1.2rem;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        background-image: linear-gradient(
+          55deg,
+          rgb(3, 105, 161) 10%,
+          #020617 100%
+        );
         margin-top: 1rem;
+        border: solid #94a3b88e;
+        color: #f9fafb;
+        font-weight: 500;
+        padding: 5px 26px;
       }
 
       .submit-btn:hover {
         background-color: #1d4ed8;
+        background-image: linear-gradient(
+          -55deg,
+          rgb(3, 105, 161) 10%,
+          #020617 100%
+        );
+      }
+      a {
+        color: #ffffff00;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #0369a1;
+        text-decoration: underline;
+      }
+
+      .borde {
+        border: 1px solid #94a3b8;
+        border-radius: 15px;
+      }
+      .title {
+        font-family: fredoka;
+        font-weight: 600;
+      }
+      .subtitle {
+        font-family: sans-serif;
+        font-weight: 600;
+      }
+      .text {
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 400;
+        color: #f9fafb;
+      }
+
+      .showA {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+      .showA.hidden {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      /* Transición suave de opacidad en el body */
+      #overlay {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: black;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 0.5s ease;
+        z-index: 1000;
+      }
+
+      #overlay.active {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .invalid {
+        border: 2px solid red;
+        background-color: #ffe6e6; /* Color de fondo suave para mayor contraste */
+      }
+      .service-button {
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: #f3f4f6;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        text-align: center;
+        color: #020617;
+      }
+
+      .service-button:hover {
+        background-color: #e5e7eb;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .selected {
+        background-color: #0369a1;
+        color: #fff;
+      }
+
+      .service-button.selected:hover {
+        background-color: #075985;
       }
 
       @media (max-width: 600px) {
@@ -105,8 +299,9 @@
     </style>
 
     <link rel="stylesheet" href="./public/Css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./public/Css/index.css" />
+    <!-- <link rel="stylesheet" href="./public/Css/index.cs" /> -->
 
+    <link rel="stylesheet" href="./public/Css/animations.css" />
     <link rel="stylesheet" href="./public/Css/Backgrounds.css" />
     <link rel="stylesheet" href="./public/Css/charging.css" />
     <link rel="stylesheet" href="./public/Css/indexMode.css" />
@@ -118,7 +313,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Graduate&family=Gravitas+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body class="dark">
     <div class="mode-switcher-container">
@@ -129,12 +329,14 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
           </svg>
         </button>
       </a>
@@ -145,12 +347,14 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
           </svg>
         </button>
       </a>
@@ -162,12 +366,14 @@
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+            />
           </svg>
         </button>
       </a>
@@ -215,7 +421,8 @@
               src="./public/Imgs/ArtybylogoName.svg"
               width="115"
               height="115"
-              alt="artyby logo" />
+              alt="artyby logo"
+            />
           </figure>
         </div>
       </div>
@@ -224,8 +431,14 @@
         <h1 class="form-title title">Información del proyecto | Brief</h1>
 
         <form id="unifiedForm">
+          <input
+            type="hidden"
+            id="selectedServices"
+            name="selectedServices"
+            value=""
+          />
           <!-- 1. Información Básica del Cliente -->
-          <section class="form-section services serviceDark">
+          <section class="form-section services serviceDark InfoPersonal">
             <h2 class="form-section-title subtitle">
               1. Información Básica del Cliente
             </h2>
@@ -237,7 +450,8 @@
                 name="fullName"
                 class="form-control"
                 required
-                placeholder="Nombre: Ej; Rodlfo Tejada" />
+                placeholder="Nombre: Ej; Rodlfo Tejada"
+              />
             </div>
             <div class="form-group">
               <label for="email">Correo Electrónico *</label>
@@ -247,7 +461,8 @@
                 name="email"
                 class="form-control"
                 required
-                placeholder="Gmail: Ej; Rodlf@gmail.com" />
+                placeholder="Gmail: Ej; Rodlf@gmail.com"
+              />
             </div>
             <div class="form-group">
               <label for="phone">Número de Teléfono *</label>
@@ -257,7 +472,8 @@
                 name="phone"
                 class="form-control"
                 required
-                placeholder="Telefono: Ej; +1 555 555 5555" />
+                placeholder="Telefono: Ej; +1 555 555 5555"
+              />
             </div>
             <div class="form-group">
               <label for="companyName">Nombre de la Empresa/Marca</label>
@@ -266,7 +482,8 @@
                 id="companyName"
                 name="companyName"
                 class="form-control"
-                placeholder="Nombre de la Empresa o Negocio" />
+                placeholder="Nombre de la Empresa o Negocio"
+              />
             </div>
             <div class="form-group">
               <label for="currentWebsite">Sitio Web Actual (si aplica)</label>
@@ -274,12 +491,16 @@
                 type="url"
                 id="currentWebsite"
                 name="currentWebsite"
-                class="form-control" />
+                class="form-control"
+              />
             </div>
           </section>
 
           <!-- 2. Descripción del Proyecto -->
-          <section class="form-section services serviceDark">
+          <section
+            class="form-section services serviceDark DescripcionP"
+            id="DescripcionP"
+          >
             <h2 class="form-section-title subtitle">
               2. Descripción del Proyecto
             </h2>
@@ -291,7 +512,8 @@
                     type="radio"
                     name="projectType"
                     value="new-website"
-                    required />
+                    required
+                  />
                   Diseño y desarrollo de un nuevo sitio web
                 </label>
 
@@ -321,105 +543,362 @@
                 class="form-control"
                 rows="4"
                 required
-                placeholder="Quiero un sitio web O Logotipo emocionante que les brinde informacion a mis clientes acerca de lo que hago y como lo hago..."></textarea>
+                placeholder="Quiero un sitio web O Logotipo emocionante que les brinde informacion a mis clientes acerca de lo que hago y como lo hago..."
+              ></textarea>
             </div>
           </section>
 
           <!-- 3. Detalles del Sitio Web -->
-          <section class="form-section services serviceDark">
+          <section
+            class="form-section services serv serviceDark DesignORDevWeb"
+            id="DesignORDevWeb"
+          >
             <h2 class="form-section-title subtitle">
               3. Detalles del Sitio Web
             </h2>
             <div class="form-group">
-              <label for="pageCount"
-                >¿Cuántas secciones/páginas tendrá tu sitio web?
-              </label>
+              <label for="purpose"
+                >¿Cuál es el propósito principal de su sitio web?</label
+              >
               <input
                 type="text"
-                id="pageCount"
-                name="pageCount"
+                id="purpose"
+                name="purpose"
                 class="form-control"
-                placeholder="Ej.: Inicio (5), Servicios (3), Contacto (1), Blog (2)" />
+                placeholder="Ej.: Informar, vender productos, blog personal"
+              />
             </div>
             <div class="form-group">
-              <label>¿Tienes contenido preparado? </label>
-              <div class="radio-group">
-                <label
-                  ><input
-                    type="radio"
-                    name="contentPrepared"
-                    value="fully-prepared" />
-                  Sí, tengo todo el contenido listo</label
-                >
-                <label
-                  ><input type="radio" name="contentPrepared" value="partial" />
-                  Tengo contenido parcial</label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    name="contentPrepared"
-                    value="no-content" />
-                  No tengo contenido, necesito ayuda</label
-                >
-              </div>
+              <label for="targetAudience"
+                >¿Quién es el público objetivo de su sitio web?</label
+              >
+              <input
+                type="text"
+                id="targetAudience"
+                name="targetAudience"
+                class="form-control"
+                placeholder="Ej.: Jóvenes entre 18 y 25 años, profesionales de la salud"
+              />
             </div>
             <div class="form-group">
-              <label for="specificFunctionalities"
-                >Funcionalidades específicas requeridas</label
+              <label for="features"
+                >¿Qué características o funcionalidades específicas necesita su
+                sitio web (por ejemplo, e-commerce, blogs, foros)?</label
               >
               <textarea
-                id="specificFunctionalities"
-                name="specificFunctionalities"
+                id="features"
+                name="features"
                 class="form-control"
                 rows="3"
-                placeholder="Ej.: formulario de contacto, tienda en línea, etc."></textarea>
+                placeholder="Ej.: Carrito de compras, sistema de comentarios, integración con redes sociales"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="examples"
+                >¿Puede proporcionar ejemplos de sitios web que le gusten o que
+                sirvan como referencia?</label
+              >
+              <textarea
+                id="examples"
+                name="examples"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: www.ejemplo1.com, www.ejemplo2.com"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="technicalRequirements"
+                >¿Cuáles son los requisitos técnicos específicos (plataforma de
+                hosting, CMS, integración de API)?</label
+              >
+              <textarea
+                id="technicalRequirements"
+                name="technicalRequirements"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: WordPress, Shopify, integración con Google Analytics"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="budget"
+                >¿Cuál es su presupuesto y plazo para el desarrollo del sitio
+                web?</label
+              >
+              <input
+                type="text"
+                id="budget"
+                name="budget"
+                class="form-control"
+                placeholder="Ej.: $3000, 2 meses"
+              />
+            </div>
+            <div class="form-group">
+              <label for="image"
+                >¿Qué imagen o sensación desea transmitir a los visitantes de su
+                sitio web?</label
+              >
+              <input
+                type="text"
+                id="image"
+                name="image"
+                class="form-control"
+                placeholder="Ej.: Profesional, amigable, innovador"
+              />
+            </div>
+            <div class="form-group">
+              <label for="style"
+                >¿Qué estilo visual prefiere para su sitio web?</label
+              >
+              <select id="style" name="style" class="form-control">
+                <option value="minimalista">Minimalista</option>
+                <option value="moderno">Moderno</option>
+                <option value="clasico">Clásico</option>
+                <option value="jugueton">Juguetón</option>
+                <option value="empresarial">Empresarial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="colors">¿Tiene alguna preferencia de colores?</label>
+              <input
+                type="text"
+                id="colors"
+                name="colors"
+                class="form-control"
+                placeholder="Ej.: Azul y blanco, rojo y negro"
+              />
+            </div>
+            <div class="form-group">
+              <label for="typography">¿Qué tipografía prefiere?</label>
+              <input
+                type="text"
+                id="typography"
+                name="typography"
+                class="form-control"
+                placeholder="Ej.: Arial, Times New Roman, Helvetica"
+              />
+            </div>
+            <div class="form-group">
+              <label for="brandElements"
+                >¿Dispone de un logotipo y otros elementos de marca que deban
+                integrarse en el diseño?</label
+              >
+              <textarea
+                id="brandElements"
+                name="brandElements"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Sí, tengo un logotipo en formato PNG"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="visualContent"
+                >¿Qué tipo de contenido visual necesita (imágenes, vídeos,
+                gráficos)?</label
+              >
+              <textarea
+                id="visualContent"
+                name="visualContent"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Fotografías de productos, videos promocionales"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="navigationDesign"
+                >¿Tiene alguna preferencia por el diseño de la navegación y la
+                estructura del sitio?</label
+              >
+              <textarea
+                id="navigationDesign"
+                name="navigationDesign"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Menú desplegable, navegación lateral"
+              ></textarea>
             </div>
           </section>
 
           <!-- 4. Creación de Marca -->
-          <section class="form-section services serviceDark">
+          <section
+            class="form-section services serv serviceDark Branding"
+            id="Branding"
+          >
             <h2 class="form-section-title subtitle">4. Creación de Marca</h2>
             <div class="form-group">
               <label for="brandMission"
-                >¿Cuál es la misión y visión de tu marca?
-              </label>
+                >¿Cuál es la misión de su empresa?</label
+              >
               <textarea
                 id="brandMission"
                 name="brandMission"
                 class="form-control"
-                rows="4"
-                placeholder="Cual es la vision con la que quieres crear esta marca ?"></textarea>
+                rows="2"
+                placeholder="Ej.: Ofrecer servicios de calidad en XYZ"
+              ></textarea>
             </div>
             <div class="form-group">
-              <label for="targetAudience"
-                >Describe detalladamente a tu público objetivo
-              </label>
+              <label for="brandVision">¿Cuál es la visión de su empresa?</label>
               <textarea
-                id="targetAudience"
-                name="targetAudience"
+                id="brandVision"
+                name="brandVision"
                 class="form-control"
-                rows="4"
-                placeholder="A que tipo de personas quieres llegar con esto?"></textarea>
+                rows="2"
+                placeholder="Ej.: Convertirse en líder del mercado en XYZ"
+              ></textarea>
             </div>
             <div class="form-group">
-              <label for="brandLogoIdeas"
-                >¿Tienes ideas específicas para el logotipo o elementos de la
-                marca?</label
+              <label for="brandValues"
+                >¿Qué valores desea que represente su marca?</label
               >
               <textarea
-                id="brandLogoIdeas"
-                name="brandLogoIdeas"
+                id="brandValues"
+                name="brandValues"
                 class="form-control"
                 rows="3"
-                placeholder="Tienes algun dibujo u logo en el que quiera que me guie?"></textarea>
+                placeholder="Ej.: Integridad, Innovación, Compromiso"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="competitors"
+                >¿Quiénes son sus principales competidores?</label
+              >
+              <textarea
+                id="competitors"
+                name="competitors"
+                class="form-control"
+                rows="2"
+                placeholder="Ej.: Empresa ABC, Empresa XYZ"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brandDifferentiation"
+                >¿Cómo se diferencia su marca de la competencia?</label
+              >
+              <textarea
+                id="brandDifferentiation"
+                name="brandDifferentiation"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Ofrecemos un servicio al cliente excepcional y productos personalizados"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brandMessage"
+                >¿Cuál es el mensaje clave que desea comunicar a su
+                audiencia?</label
+              >
+              <textarea
+                id="brandMessage"
+                name="brandMessage"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Somos tu aliado confiable en XYZ"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="slogan"
+                >¿Tiene un lema o eslogan que deba incorporarse en la
+                marca?</label
+              >
+              <input
+                type="text"
+                id="slogan"
+                name="slogan"
+                class="form-control"
+                placeholder="Ej.: Calidad y Confianza"
+              />
+            </div>
+            <div class="form-group">
+              <label for="visualElements"
+                >¿Qué elementos visuales (colores, tipografía, logotipo) asocia
+                con su marca?</label
+              >
+              <textarea
+                id="visualElements"
+                name="visualElements"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Colores azul y blanco, tipografía Arial, logotipo en formato PNG"
+              ></textarea>
             </div>
           </section>
 
-          <!-- 5. Información Adicional -->
+          <!-- 5. Estilización Web -->
+          <section
+            class="form-section services serv serviceDark Estilizacion"
+            id="Estilizacion"
+          >
+            <h2 class="form-section-title subtitle">5. Estilización Web</h2>
+            <div class="form-group">
+              <label for="visualStyle"
+                >¿Qué estilo visual prefiere para su sitio web?</label
+              >
+              <select id="visualStyle" name="visualStyle" class="form-control">
+                <option value="minimalista">Minimalista</option>
+                <option value="moderno">Moderno</option>
+                <option value="clasico">Clásico</option>
+                <option value="jugueton">Juguetón</option>
+                <option value="empresarial">Empresarial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="designPattern"
+                >¿Hay algún patrón de diseño específico que desea
+                implementar?</label
+              >
+              <textarea
+                id="designPattern"
+                name="designPattern"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Diseño en rejilla, diseño asimétrico"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="spacingPreferences"
+                >¿Cuáles son sus preferencias en cuanto a la disposición y los
+                espaciados de los elementos en la página?</label
+              >
+              <textarea
+                id="spacingPreferences"
+                name="spacingPreferences"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Espaciado amplio, diseño compacto"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="imageGuidelines"
+                >¿Tiene directrices específicas para el uso de imágenes y
+                gráficos?</label
+              >
+              <textarea
+                id="imageGuidelines"
+                name="imageGuidelines"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Uso de imágenes de alta resolución, gráficos vectoriales"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="interactions"
+                >¿Qué tipo de interacciones y animaciones prefiere en su sitio
+                web?</label
+              >
+              <textarea
+                id="interactions"
+                name="interactions"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.: Animaciones al pasar el cursor, efectos de transición"
+              ></textarea>
+            </div>
+          </section>
+
+          <!-- 6. Información Adicional -->
           <section class="form-section services serviceDark">
             <h2 class="form-section-title subtitle">
-              5. Información Adicional
+              6. Información Adicional
             </h2>
             <div class="form-group">
               <label for="colorPalette"
@@ -430,7 +909,8 @@
                 id="colorPalette"
                 name="colorPalette"
                 class="form-control"
-                placeholder="Ej.: Azul (#1e40af), Blanco (#ffffff), Negro (#000000)" />
+                placeholder="Ej.: Azul (#1e40af), Blanco (#ffffff), Negro (#000000)"
+              />
             </div>
             <div class="form-group">
               <label for="budget">Presupuesto aproximado *</label>
@@ -440,7 +920,8 @@
                 name="budget"
                 class="form-control"
                 placeholder="Ej.: 500, 1000, etc."
-                required />
+                required
+              />
             </div>
             <div class="form-group">
               <label for="projectTimeline"
@@ -452,7 +933,8 @@
                 name="projectTimeline"
                 class="form-control"
                 placeholder="Ej.: 2 semanas, 1 mes"
-                required />
+                required
+              />
             </div>
             <div class="form-group">
               <label>¿Cómo prefieres proceder con el pago? *</label>
@@ -462,7 +944,8 @@
                     type="radio"
                     name="paymentTerms"
                     value="upfront"
-                    required />
+                    required
+                  />
                   Pago completo al inicio</label
                 >
                 <label
@@ -473,7 +956,8 @@
                   ><input
                     type="radio"
                     name="paymentTerms"
-                    value="split-50-50" />
+                    value="split-50-50"
+                  />
                   Dos partes: 50% al inicio y 50% al final</label
                 >
               </div>
@@ -486,7 +970,8 @@
                 id="paymentMethod"
                 name="paymentMethod"
                 class="form-control"
-                required>
+                required
+              >
                 <option value="bank-transfer">Transferencia Bancaria</option>
                 <option value="paypal">PayPal</option>
                 <option value="credit-card">Tarjeta de Crédito/Débito</option>
@@ -495,7 +980,14 @@
               </select>
             </div>
           </section>
-
+          <button
+            type="button"
+            onclick="openServiceDialog()"
+            class="submit-btn navbutton"
+            style="margin-bottom: 1rem"
+          >
+            Cambiar Servicios Seleccionados
+          </button>
           <button type="submit" id="submitButton" class="submit-btn navbutton">
             Enviar Formulario
           </button>
@@ -506,5 +998,6 @@
     <!-- javascript -->
     <script type="module" src="./public/Js/links.js"></script>
     <script src="./public/Js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

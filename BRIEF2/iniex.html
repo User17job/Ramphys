@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Servicios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .service-button {
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: #f3f4f6;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        text-align: center;
+      }
+
+      .service-button:hover {
+        background-color: #e5e7eb;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .selected {
+        background-color: #4f46e5;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="serviceForm" action="/submit" method="POST">
+      <section id="DesignORDevWeb" class="hidden">
+        <h2>3. Detalles del Sitio Web</h2>
+      </section>
+      <section id="Estilizacion" class="hidden">
+        <h2>5. Estilización Web</h2>
+      </section>
+      <section id="Branding" class="hidden">
+        <h2>4. Creación de Marca</h2>
+      </section>
+      <!-- Campo oculto para enviar servicios seleccionados -->
+      <input
+        type="hidden"
+        id="selectedServices"
+        name="selectedServices"
+        value=""
+      />
+      <button type="submit">Enviar Formulario</button>
+    </form>
+
+    <!-- Botón para modificar la selección -->
+    <button onclick="openServiceDialog()">
+      Cambiar Servicios Seleccionados
+    </button>
+
+    <script>
+      const services = [
+        { id: "DesignORDevWeb", name: "Diseño y Desarrollo Web" },
+        { id: "Estilizacion", name: "Estilización Web" },
+        { id: "Branding", name: "Creación de Marca" },
+      ];
+
+      let selectedServices = []; // Para almacenar los servicios seleccionados
+
+      function openServiceDialog() {
+        Swal.fire({
+          title: "<strong>Selecciona el/los Servicio(s)</strong>",
+          html: `
+        <div class="service-grid">
+          ${services
+            .map(
+              (service) => `
+            <button 
+              class="service-button" 
+              id="btn-${service.id}" 
+              onclick="toggleService('${service.id}', this)"
+            >
+              ${service.name}
+            </button>
+          `
+            )
+            .join("")}
+        </div>
+      `,
+          showCancelButton: true,
+          confirmButtonText: "Confirmar",
+          cancelButtonText: "Cancelar",
+          width: "500px",
+          allowOutsideClick: true,
+          preConfirm: () => {
+            if (selectedServices.length === 0) {
+              Swal.showValidationMessage(
+                "Por favor selecciona al menos un servicio."
+              );
+              return false;
+            }
+            return selectedServices;
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            handleServiceSelect(result.value);
+          }
+        });
+      }
+
+      function toggleService(serviceId, button) {
+        if (selectedServices.includes(serviceId)) {
+          // Deseleccionar
+          selectedServices = selectedServices.filter((id) => id !== serviceId);
+          button.classList.remove("selected");
+        } else {
+          // Seleccionar
+          selectedServices.push(serviceId);
+          button.classList.add("selected");
+        }
+        console.log(`Servicios seleccionados: ${selectedServices.join(", ")}`);
+      }
+
+      function handleServiceSelect(selected) {
+        // Esconde todas las secciones
+        document
+          .querySelectorAll("section")
+          .forEach((section) => section.classList.add("hidden"));
+
+        // Muestra las secciones seleccionadas
+        selected.forEach((serviceId) => {
+          const section = document.getElementById(serviceId);
+          if (section) section.classList.remove("hidden");
+        });
+
+        // Actualiza el campo oculto con los servicios seleccionados
+        document.getElementById("selectedServices").value = selected.join(",");
+        console.log(`Servicios enviados: ${selected.join(", ")}`);
+      }
+
+      // Mostrar alerta al cargar la página
+      document.addEventListener("DOMContentLoaded", () => openServiceDialog());
+    </script>
+  </body>
+</html>
