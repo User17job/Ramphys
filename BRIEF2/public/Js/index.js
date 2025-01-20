@@ -1,10 +1,17 @@
-// Inicialización de tooltips
-const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]'
-);
-const tooltipList = [...tooltipTriggerList].map(
-  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-);
+// Wait for loading to complete before initializing tooltips
+function initializeTooltips() {
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+}
+
+// Only initialize tooltips after loading is complete
+window.addEventListener("loadingComplete", () => {
+  initializeTooltips();
+});
 
 // Configuración de servicios disponibles
 const services = [
@@ -18,7 +25,7 @@ let selectedServices = []; // Almacena los servicios seleccionados
 // Función para abrir el diálogo de selección de servicios
 window.openServiceDialog = function () {
   Swal.fire({
-    title: "<strong>Selecciona el/los Servicio(s)</strong>",
+    title: "<strong class='subt'>Selecciona el/los Servicio(s)</strong>",
     html: `
       <div class="service-grid">
         ${services
@@ -26,7 +33,7 @@ window.openServiceDialog = function () {
             (service) => `
           <button 
             type="button"
-            class="service-button ${
+            class="service-button subt ${
               selectedServices.includes(service.id) ? "selected" : ""
             }" 
             data-service-id="${service.id}"
@@ -187,5 +194,12 @@ form.addEventListener("submit", (e) => {
 
 // Mostrar diálogo de servicios al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
-  openServiceDialog();
+  // Only show service dialog after loading is complete
+  if (window.loadingComplete) {
+    openServiceDialog();
+  } else {
+    window.addEventListener("loadingComplete", () => {
+      openServiceDialog();
+    });
+  }
 });

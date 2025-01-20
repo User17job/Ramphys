@@ -258,11 +258,11 @@
         font-size: 1.25rem;
         font-weight: 500;
         cursor: pointer;
-        background-color: #f3f4f6;
+        background-color: #f9fafb;
         border: 1px solid #d1d5db;
         border-radius: 0.5rem;
         text-align: center;
-        color: #020617;
+        color: #91a2b3;
       }
 
       .service-button:hover {
@@ -274,15 +274,16 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 1rem;
+        font-family: fredoka;
       }
 
       .selected {
-        background-color: #0369a1;
+        background-image: linear-gradient(55deg, #0369a1 10%, #020617 100%);
         color: #fff;
       }
 
       .service-button.selected:hover {
-        background-color: #075985;
+        background-image: linear-gradient(-55deg, #0369a1 10%, #020617 100%);
       }
 
       @media (max-width: 600px) {
@@ -440,7 +441,7 @@
           <!-- 1. Información Básica del Cliente -->
           <section class="form-section services serviceDark InfoPersonal">
             <h2 class="form-section-title subtitle">
-              1. Información Básica del Cliente
+              -. Información Básica del Cliente
             </h2>
             <div class="form-group">
               <label for="fullName">Nombre Completo *</label>
@@ -492,6 +493,7 @@
                 id="currentWebsite"
                 name="currentWebsite"
                 class="form-control"
+                placeholder="Enter the website URL:https://tusitio"
               />
             </div>
           </section>
@@ -502,7 +504,7 @@
             id="DescripcionP"
           >
             <h2 class="form-section-title subtitle">
-              2. Descripción del Proyecto
+              -. Descripción del Proyecto
             </h2>
             <div class="form-group">
               <label>¿Qué tipo de proyecto necesitas? *</label>
@@ -554,9 +556,26 @@
             id="DesignORDevWeb"
           >
             <h2 class="form-section-title subtitle">
-              3. Detalles del Sitio Web
+              -. Detalles del Sitio Web
             </h2>
+
             <div class="form-group">
+              <div class="form-group">
+                <label for="pageCount"
+                  >¿Cuántas secciones/páginas tendrá tu sitio web?
+                </label>
+
+                <input
+                  type="text"
+                  id="pageCount"
+                  name="pageCount"
+                  id="purpose"
+                  name="purpose"
+                  class="form-control"
+                  placeholder="Ej.: Inicio (5), Servicios (3), Contacto (1), Blog (2)"
+                />
+              </div>
+
               <label for="purpose"
                 >¿Cuál es el propósito principal de su sitio web?</label
               >
@@ -568,6 +587,48 @@
                 placeholder="Ej.: Informar, vender productos, blog personal"
               />
             </div>
+
+            <div class="form-group">
+              <label>¿Tienes contenido preparado? </label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="contentPrepared"
+                    value="fully-prepared"
+                  />
+
+                  Sí, tengo todo el contenido listo</label
+                >
+                <label
+                  ><input type="radio" name="contentPrepared" value="partial" />
+                  Tengo contenido parcial</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contentPrepared"
+                    value="no-content"
+                  />
+                  No tengo contenido, necesito ayuda</label
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="features"
+                >¿Qué características o funcionalidades específicas necesita su
+                sitio web (por ejemplo, e-commerce, blogs, foros)?</label
+              >
+              <textarea
+                id="features"
+                name="features"
+                class="form-control"
+                rows="3"
+                placeholder="Ej.:formulario de contacto, carrito de compras, sistema de comentarios, integración con redes sociales"
+              ></textarea>
+            </div>
+
             <div class="form-group">
               <label for="targetAudience"
                 >¿Quién es el público objetivo de su sitio web?</label
@@ -580,19 +641,7 @@
                 placeholder="Ej.: Jóvenes entre 18 y 25 años, profesionales de la salud"
               />
             </div>
-            <div class="form-group">
-              <label for="features"
-                >¿Qué características o funcionalidades específicas necesita su
-                sitio web (por ejemplo, e-commerce, blogs, foros)?</label
-              >
-              <textarea
-                id="features"
-                name="features"
-                class="form-control"
-                rows="3"
-                placeholder="Ej.: Carrito de compras, sistema de comentarios, integración con redes sociales"
-              ></textarea>
-            </div>
+
             <div class="form-group">
               <label for="examples"
                 >¿Puede proporcionar ejemplos de sitios web que le gusten o que
@@ -619,19 +668,7 @@
                 placeholder="Ej.: WordPress, Shopify, integración con Google Analytics"
               ></textarea>
             </div>
-            <div class="form-group">
-              <label for="budget"
-                >¿Cuál es su presupuesto y plazo para el desarrollo del sitio
-                web?</label
-              >
-              <input
-                type="text"
-                id="budget"
-                name="budget"
-                class="form-control"
-                placeholder="Ej.: $3000, 2 meses"
-              />
-            </div>
+
             <div class="form-group">
               <label for="image"
                 >¿Qué imagen o sensación desea transmitir a los visitantes de su
@@ -657,16 +694,7 @@
                 <option value="empresarial">Empresarial</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="colors">¿Tiene alguna preferencia de colores?</label>
-              <input
-                type="text"
-                id="colors"
-                name="colors"
-                class="form-control"
-                placeholder="Ej.: Azul y blanco, rojo y negro"
-              />
-            </div>
+
             <div class="form-group">
               <label for="typography">¿Qué tipografía prefiere?</label>
               <input
@@ -723,7 +751,7 @@
             class="form-section services serv serviceDark Branding"
             id="Branding"
           >
-            <h2 class="form-section-title subtitle">4. Creación de Marca</h2>
+            <h2 class="form-section-title subtitle">-. Creación de Marca</h2>
             <div class="form-group">
               <label for="brandMission"
                 >¿Cuál es la misión de su empresa?</label
@@ -810,7 +838,7 @@
             </div>
             <div class="form-group">
               <label for="visualElements"
-                >¿Qué elementos visuales (colores, tipografía, logotipo) asocia
+                >¿Qué elementos visuales (iconos, tipografía, logotipo) asocia
                 con su marca?</label
               >
               <textarea
@@ -818,7 +846,7 @@
                 name="visualElements"
                 class="form-control"
                 rows="3"
-                placeholder="Ej.: Colores azul y blanco, tipografía Arial, logotipo en formato PNG"
+                placeholder="Ej.: tipografía Arial, logotipo en formato PNG, iconos, "
               ></textarea>
             </div>
           </section>
@@ -828,7 +856,7 @@
             class="form-section services serv serviceDark Estilizacion"
             id="Estilizacion"
           >
-            <h2 class="form-section-title subtitle">5. Estilización Web</h2>
+            <h2 class="form-section-title subtitle">-. Estilización Web</h2>
             <div class="form-group">
               <label for="visualStyle"
                 >¿Qué estilo visual prefiere para su sitio web?</label
@@ -898,7 +926,7 @@
           <!-- 6. Información Adicional -->
           <section class="form-section services serviceDark">
             <h2 class="form-section-title subtitle">
-              6. Información Adicional
+              -. Información Adicional
             </h2>
             <div class="form-group">
               <label for="colorPalette"
@@ -919,7 +947,7 @@
                 id="budget"
                 name="budget"
                 class="form-control"
-                placeholder="Ej.: 500, 1000, etc."
+                placeholder="Ej.: USD$200, 1000, etc."
                 required
               />
             </div>
