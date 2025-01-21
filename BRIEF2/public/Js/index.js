@@ -172,7 +172,8 @@ form.addEventListener("submit", (e) => {
         Swal.fire({
           icon: "success",
           title: "¡Éxito!",
-          text: "Formulario enviado correctamente. Gracias.",
+          text: "Formulario enviado correctamente. Gracias. ",
+          footer: "<i>Revisa tu Email para verificarla confirmacion</i>",
         });
         form.reset();
       } else {
