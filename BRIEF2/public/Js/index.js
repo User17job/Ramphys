@@ -173,7 +173,7 @@ form.addEventListener("submit", (e) => {
           icon: "success",
           title: "¡Éxito!",
           text: "Formulario enviado correctamente. Gracias. ",
-          footer: "<i>Revisa tu Email para verificarla confirmacion</i>",
+          footer: "<i>Revisa tu Email para verificar la confirmacion</i>",
         });
         form.reset();
       } else {
